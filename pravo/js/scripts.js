@@ -69,3 +69,7 @@ $(".open_arrow").click(function(){
     $(this).toggleClass("open")
     $(this).closest(".office_wrapper").find(".office_content").slideToggle()
 })
+$(".current_lang").click(function(){
+    $(this).toggleClass("open")
+    $(".lang_list").slideToggle().css("display","flex")
+})
