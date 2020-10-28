@@ -259,6 +259,7 @@ footer .additional_button:after {
 	display: block;
 }
 .slider_conteiner{
+    width: 100%;
     overflow: hidden;
 }
 /* SLIDER PRELOADER */
@@ -272,7 +273,7 @@ footer .additional_button:after {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 3;
 }
 
 .circle {
@@ -558,7 +559,7 @@ header {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
             justify-content: space-between;
-    z-index: 2;
+    z-index: 5;
 }
 .advantages_wrapper.top {
 	top: -150px;
