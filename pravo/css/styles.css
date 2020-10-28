@@ -258,6 +258,87 @@ footer .additional_button:after {
 	background: url(../img/svg/review-arrow.svg) center no-repeat;
 	display: block;
 }
+
+/* SLIDER PRELOADER */
+.slider_preloader{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: scale 2s infinite 
+      cubic-bezier(0, 0, 0.49, 1.02);
+}
+.circle-1{
+    background-color:  #926def;
+}
+.circle-1:before{
+    background-color:  #926def;
+    animation-delay: 200ms * 1;
+}
+.circle-2{
+    background-color:  #8c6ced;
+}
+.circle-2:before{
+    background-color:  #8c6ced;
+    animation-delay: 200ms * 2;
+}
+.circle-3{
+    background-color:  #876beb;
+}
+.circle-3:before{
+    background-color: #876beb;
+    animation-delay: 200ms * 3;
+}
+.circle-4{
+    background-color:  #6565dd;
+}
+.circle-4:before{
+    background-color:  #6565dd;
+    animation-delay: 200ms * 4;
+}
+.circle-5{
+    background-color:  #5f64db;
+}
+.circle-5:before{
+    background-color: #5f64db;
+    animation-delay: 200ms * 5;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50%, 75% {
+    transform: scale(2.5);
+  }
+  78%, 100% {
+    opacity: 0;
+  }
+}
+
 /* HEADER */
 
 header {
@@ -474,7 +555,8 @@ header {
 	display: flex;
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
-	        justify-content: space-between;
+            justify-content: space-between;
+    z-index: 2;
 }
 .advantages_wrapper.top {
 	top: -150px;

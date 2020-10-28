@@ -1,4 +1,6 @@
 window.onload = function() {
+  $(".slider_preloader").css("display","none")
+
 	$(".main_slider .slide_wrapper").slick({
 		infinite: true,
 		slidesToShow: 1,
