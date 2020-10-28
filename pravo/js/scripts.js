@@ -1,6 +1,7 @@
 window.onload = function() {
   $(".slider_preloader").css("display","none")
   $(".slider_conteiner").css("overflow","visible")
+  $(".reviews_slider_wrapper").removeClass("load")
 
 	$(".main_slider .slide_wrapper").slick({
 		infinite: true,

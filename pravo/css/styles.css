@@ -732,6 +732,10 @@ header {
 .reviews_slider_wrapper {
 	margin: -25px -15px;
 }
+.reviews_slider_wrapper.load{
+	max-height: 500px;
+	overflow: hidden;
+}
 .reviews_element {
 	width: calc(50% - 15px);
 	margin: 25px 15px;
