@@ -1,0 +1,144 @@
+@import "../fonts/Proxima_Nova/stylesheet.css";
+*{
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Proxima Nova", Helvetica, sans-serif;
+    position: relative;
+}
+.container{
+    width: 100%;
+    max-width: 1680px;
+    margin: 0 auto;
+    height: 100%;
+    
+}
+.catalog{
+    
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -25px;
+}
+
+.catalog .catalog_element{
+    width: calc(33.333% - 50px);
+    margin: 90px 25px;
+}
+.catalog_element_tag{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    border-radius: 0 0 15px 0;
+    padding: 0 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    font-size: 14px;
+}
+.catalog_element_tag.new{
+    font-weight: bold;
+}
+.catalog_element .img{
+    min-height: 360px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.catalog_element .content_box{
+    width: 100%;
+    padding: 60px 40px 0;
+}
+.catalog_element_name{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 0;
+    text-decoration: none;
+    color: #000;
+    font-family: "Proxima Nova Lt", Helvetica, sans-serif;
+}
+.catalog_element_text{
+    display: inline-block;
+    color: rgb( 122, 126, 134 );
+    margin: 20px 0;
+    line-height: 30px;
+    font-family: "Proxima Nova Cn Rg", Helvetica, sans-serif;
+    font-size: 20px;
+    min-height: 90px;
+}
+.catalog_element .bottom_bar{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.rating_box{
+    padding: 8px 15px;
+    border-radius: 20px;
+    background: #f5fafa;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 40px;
+}
+.rating_box .fa-star{
+    margin-right: 5px;
+}
+.rating_box .fa-star.empty{
+    color: #ddebeb;
+}
+.rating_box .fa-star.full{
+    color: #f9c802;
+}
+.review_text{
+    padding-left: 10px;
+    color: #7a7e86;
+    line-height: 0.559;
+    font-size: 14px;
+}
+.price_box{
+    font-weight: bold;
+    color: #000;
+    font-size: 24px;
+}
+.price_box .currency{
+    font-weight: normal;
+    color: #7a7e86;
+    font-size: 18px;
+}
+.catalog_element .btn{
+    width: 100%;
+    max-width: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    height: 90px;
+    background-image: -moz-linear-gradient( 90deg, rgb(230,133,154) 0%, rgb(243,149,169) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(230,133,154) 0%, rgb(243,149,169) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(230,133,154) 0%, rgb(243,149,169) 100%);
+    box-shadow: 0px 0px 50px -15px rgb( 235, 161, 177 );
+    border-radius: 10px;
+    font-weight: bold;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-top: 40px;
+    text-decoration: none;
+}
+
+.catalog_element.double{
+    width: calc(66.666% - 50px);
+}
+
+.catalog_element.post{
+/*     margin: -25px 0; */
+}
+.catalog_element.post .post_element{
+    width: 100%;
+    height: calc(50% - 20px);
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 40px;
+}
+.catalog_element.post .post_element:last-child{
+    margin-bottom: 0;
+}
