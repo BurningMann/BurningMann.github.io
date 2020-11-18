@@ -1,13 +1,10 @@
 @import "../fonts/Proxima_Nova/stylesheet.css";
 
-*{
+body *{
     box-sizing: border-box;
     outline: none;
     font-family: "Proxima Nova", Helvetica, sans-serif;
     position: relative;
-}
-body{
-    padding-bottom: 400px;
 }
 .container{
     width: 100%;
