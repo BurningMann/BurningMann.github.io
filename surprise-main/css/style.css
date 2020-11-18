@@ -1,9 +1,13 @@
 @import "../fonts/Proxima_Nova/stylesheet.css";
+
 *{
     box-sizing: border-box;
     outline: none;
     font-family: "Proxima Nova", Helvetica, sans-serif;
     position: relative;
+}
+body{
+    padding-bottom: 400px;
 }
 .container{
     width: 100%;
@@ -12,11 +16,81 @@
     height: 100%;
     
 }
+.category_slider_wrapper{
+    display: flex !important;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid#ebebeb;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1980px;
+    margin: 0 auto 20px;
+}
+.category_slider_wrapper .category_element{
+    height: 200px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right:1px solid#ebebeb;
+    text-decoration: none;
+    color: #000;
+    font-family: "Proxima Nova Lt";
+    display: flex;
+}
+.category_slider_wrapper .slick-arrow{
+    position: absolute;
+    top: 0;
+    width: 15px;
+    height: 100%;
+    cursor: pointer;
+    background: url(https://surprise.by/bitrix/templates/surprize2020/right-arrow-black.svg) center/contain no-repeat;
+    right: 0;
+    z-index: 10;
+}
+.category_slider_wrapper .slick-arrow.prev{
+    transform: rotate(180deg);
+    right: auto;
+    left: 0;
+}
+.category_slider_wrapper .ico{
+    width: 40px;
+    height: 40px;
+}
+.category_slider_wrapper .ico.fly{
+    background: url(../img/ico.png) center no-repeat;
+}
+.main_foto{
+    width: 100%;
+    max-width: 1860px;
+    height: 380px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 145px;
+}
+.main_foto .content_box p{
+    font-family: "Proxima Nova Lt";
+font-weight: bold;
+font-size: 22px;
+margin-bottom: 20px;
+}
+.main_foto .content_box a{
+width: 345px;
+height: 60px;
+display: flex;
+align-items: center;
+justify-content: center;
+border: 1px solid black;
+border-radius: 50px;
+text-decoration: none;
+color: #000;
+
+}
 .catalog{
-    
     display: flex;
     flex-wrap: wrap;
     margin: 0 -25px;
+    padding-bottom: 150px;
 }
 
 .catalog .catalog_element{
@@ -129,9 +203,6 @@
     width: calc(66.666% - 50px);
 }
 
-.catalog_element.post{
-/*     margin: -25px 0; */
-}
 .catalog_element.post .post_element{
     width: 100%;
     height: calc(50% - 20px);
@@ -141,4 +212,214 @@
 }
 .catalog_element.post .post_element:last-child{
     margin-bottom: 0;
+}
+
+.catalog .see_more{
+    width: 100%;
+    height: 90px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px -15px rgba( 50, 62, 66, .2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.slider .slick-arrow{
+    position: absolute;
+    top: -90px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #fff;
+    background-image: url(https://surprise.by/bitrix/templates/surprize2020/right-arrow-black.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 13px 25px;
+    border-radius: 50%;
+    right: 30px;
+}
+
+.slider .slick-arrow.prev{
+    right: 200px;
+    transform: rotate(180deg);
+}
+.slider .slick-arrow.active {
+    box-shadow: 0px 0px 30px 0 rgba(0,0,0,0.2);
+}
+.slider .slider_counter {
+    position: absolute;
+    top: -75px;
+    font-weight: normal;
+    right: 115px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+.slider .slider_counter span{
+padding: 0 10px;
+}
+.slider .slider_counter .current_slide {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.slider .slick-slide{
+    display: flex !important;
+    justify-content: center;
+}
+.section_title{
+    font-weight: bold !important;
+    font-size: 30px !important;
+    padding: 3rem 0;
+    display: block;
+}
+.main_section{
+    margin-bottom: 150px;
+}
+
+
+.about_wrapper{
+    display: flex;
+}
+.left_column{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 80px;
+}
+.left_column .title{
+    font-size: 32px;
+    margin-bottom: 60px;
+}
+.left_column .subtitle{
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 40px;
+    font-weight: bold;
+    font-family: 'Proxima Nova Lt';
+}
+.left_column .text{
+    font-size: 20px;
+    line-height: 35px;
+    color: rgb( 122, 126, 134 );
+}
+.right_column{
+    width: 60%;
+}
+.dropp_list_wrapper{
+    display: flex;
+    flex-direction: column;
+    
+}
+.dropp_list_wrapper .dropp_element{
+    padding: 60px 30px 50px 100px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 0px 0px 50px -15px rgba( 50, 62, 66, .2);
+    margin-bottom: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 22px;
+    border-radius: 5px;
+}
+.dropp_list_wrapper .dropp_element *{
+    font-family: 'Proxima Nova Lt';
+}
+.dropp_list_wrapper .dropp_element .title{
+    display: inline-block;
+    width: fit-content;
+}
+.dropp_list_wrapper .dropp_element .title:before{
+    content: "";
+    display: block;
+    width: 12px;
+    height: 9px;
+    background: url(https://surprise.by/bitrix/templates/surprize2020/list-arrow.png) center/contain no-repeat;
+    position: absolute;
+    left: -40px;
+    top: calc(50% - 4.5px); 
+}
+.dropp_list_wrapper .dropp_element .title::after{
+    content: ".................................................................................................................................................";
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    color: rgb( 154, 159, 169 );
+    font-size: 14px;
+    line-height: 0;
+    /* background: url(https://surprise.by/bitrix/templates/surprize2020/list-arrow.png) center/contain no-repeat; */
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    letter-spacing: 3px;
+    overflow: hidden;
+}
+.dropp_list_wrapper .dropp_element .dropp{
+    margin-top: 40px;
+    font-size: 18px;
+
+    display: none;
+}
+
+.doted::after{
+    content: ".................................................................................................................................................";
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    color: rgb( 154, 159, 169 );
+    font-size: 14px;
+    line-height: 0;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    letter-spacing: 3px;
+    overflow: hidden;
+}
+
+.filtred_buttons_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: bold;
+    font-family: 'Proxima Nova Lt';
+}
+.filtred_buttons_wrapper .section_title{
+    margin-right: 40px;
+    padding: 0;
+}
+.filtred_buttons_wrapper .buttons{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+.filtred_buttons_wrapper .buttons li{
+    flex-grow: 1;
+    margin: 0 50px;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 0 30px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.filtred_buttons_wrapper .buttons li span{
+    width: fit-content;
+    display: inline-block;
+}
+.filtred_buttons_wrapper .buttons li.active{
+
+    box-shadow: 0px 0px 50px -15px rgba( 50, 62, 66, .5);
+}
+.offer_wrapper{
+    margin: 0 -20px;
+}
+.offer_wrapper img{
+    margin: 20px;
 }
