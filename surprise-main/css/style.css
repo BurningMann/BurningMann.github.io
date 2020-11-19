@@ -1,10 +1,19 @@
 @import "../fonts/Proxima_Nova/stylesheet.css";
 
-body *{
+*{
     box-sizing: border-box;
     outline: none;
     font-family: "Proxima Nova", Helvetica, sans-serif;
     position: relative;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    padding-bottom: 400px;
+}
+img{
+    max-width: 100%;
 }
 .container{
     width: 100%;
@@ -40,14 +49,18 @@ body *{
     width: 15px;
     height: 100%;
     cursor: pointer;
-    background: url(https://surprise.by/bitrix/templates/surprize2020/right-arrow-black.svg) center/contain no-repeat;
-    right: 0;
+    background-image: url(https://surprise.by/bitrix/templates/surprize2020/right-arrow-black.svg);
+    background-position:center ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #ffffff;
+    right: -1px;
     z-index: 10;
 }
 .category_slider_wrapper .slick-arrow.prev{
     transform: rotate(180deg);
     right: auto;
-    left: 0;
+    left: -1px;
 }
 .category_slider_wrapper .ico{
     width: 40px;
@@ -64,6 +77,7 @@ body *{
     display: flex;
     align-items: center;
     padding: 0 145px;
+    background:url(../img/main.png) center/cover no-repeat;
 }
 .main_foto .content_box p{
     font-family: "Proxima Nova Lt";
@@ -123,7 +137,7 @@ color: #000;
 .catalog_element_name{
     font-size: 30px;
     font-weight: bold;
-    line-height: 0;
+    line-height: 24px;
     text-decoration: none;
     color: #000;
     font-family: "Proxima Nova Lt", Helvetica, sans-serif;
@@ -269,9 +283,14 @@ padding: 0 10px;
 }
 .section_title{
     font-weight: bold !important;
-    font-size: 30px !important;
+    font-size: 40px !important;
     padding: 3rem 0;
     display: block;
+    font-family: 'Proxima Nova Lt';
+}
+.catalog .section_title{
+    width: calc(100% - 50px);
+    margin:auto;
 }
 .main_section{
     margin-bottom: 150px;
@@ -281,29 +300,29 @@ padding: 0 10px;
 .about_wrapper{
     display: flex;
 }
-.left_column{
+.about_wrapper .left_column{
     width: 40%;
     display: flex;
     flex-direction: column;
     padding-right: 80px;
 }
-.left_column .title{
+.about_wrapper .left_column .title{
     font-size: 32px;
     margin-bottom: 60px;
 }
-.left_column .subtitle{
+.about_wrapper .left_column .subtitle{
     font-size: 24px;
     margin-bottom: 20px;
     line-height: 40px;
     font-weight: bold;
     font-family: 'Proxima Nova Lt';
 }
-.left_column .text{
+.about_wrapper .left_column .text{
     font-size: 20px;
     line-height: 35px;
     color: rgb( 122, 126, 134 );
 }
-.right_column{
+.about_wrapper .right_column{
     width: 60%;
 }
 .dropp_list_wrapper{
@@ -348,7 +367,6 @@ padding: 0 10px;
     color: rgb( 154, 159, 169 );
     font-size: 14px;
     line-height: 0;
-    /* background: url(https://surprise.by/bitrix/templates/surprize2020/list-arrow.png) center/contain no-repeat; */
     position: absolute;
     left: 0;
     bottom: -3px;
@@ -386,6 +404,8 @@ padding: 0 10px;
 .filtred_buttons_wrapper .section_title{
     margin-right: 40px;
     padding: 0;
+    display: flex;
+    align-items: center;
 }
 .filtred_buttons_wrapper .buttons{
     display: flex;
@@ -396,7 +416,7 @@ padding: 0 10px;
 }
 .filtred_buttons_wrapper .buttons li{
     flex-grow: 1;
-    margin: 0 50px;
+    margin: 0 20px;
     cursor: pointer;
     border-radius: 50px;
     padding: 0 30px;
@@ -419,4 +439,156 @@ padding: 0 10px;
 }
 .offer_wrapper img{
     margin: 20px;
+}
+.mobile_search{
+    display: none;
+}
+/* MEDIA */
+
+@media screen and (max-width:1680px){
+    .container{
+        padding: 0 20px;
+        
+    }
+}
+@media screen and (max-width:1400px){
+    .catalog_element .bottom_bar{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .rating_box{
+        margin: 0 0 20px 0;
+    }
+    .filtred_buttons_wrapper .buttons{
+        width: 100%;
+        justify-content: center;
+        margin: 20px 0 0;
+        flex-wrap: wrap;
+    }
+    .filtred_buttons_wrapper .buttons li{
+        flex-grow: 0;
+    }
+    .catalog_element.double .bottom_bar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+@media screen and (max-width:1200px){
+    .catalog_element_name{
+        min-height: 65px;
+        display: inline-block;
+    }
+    .catalog_element_text{
+        min-height: 120px;
+    }
+    .catalog .catalog_element{
+        width: calc(50% - 50px);
+    }
+    .catalog_element .bottom_bar{
+        justify-content: space-between;
+        align-items: center;
+    }
+    .rating_box{
+        margin: 0 20px 0 0;
+    }
+    .about_wrapper{
+        flex-wrap: wrap;
+    }
+    .about_wrapper .left_column{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 40px;
+    }
+    .about_wrapper .right_column{
+        width: 100%;
+    }
+    .catalog .see_more{
+        width: calc(100% - 50px);
+    margin: auto;
+    }
+}
+@media screen and (max-width:720px){
+    .container{
+        padding: 0 30px;
+        
+    }
+    .main_foto{
+        background: url(../img/mobile-main.png) center/cover no-repeat;
+        height: 600px;
+        border-radius: 20px;
+        width: calc(100% - 60px);
+        padding: 80px 0 0;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .main_foto .content_box p{
+        font-size: 24px;
+    }
+    .main_foto .content_box a{
+        display: none;
+    }
+    .log img{
+        display: block;
+        margin: 0 auto;
+    }
+    .mobile_search{
+        display: block;
+        width:calc(100% - 100px);
+        position: absolute;
+        bottom: 50px;
+    }
+    .mobile_search input{
+        width:100%;
+        height: 90px;
+        background: #ffffff;
+        border-radius: 20px;
+        border: none;
+        padding-left: 80px;
+        font-size: 22px;
+    }
+    .mobile_search button{
+        background:none;
+        border: none;
+        position: absolute;
+        left: 20px;
+        top: calc(50% - 15.5px);
+    }
+    .catalog .catalog_element{
+        width: 100%;
+        margin: 40px 0;
+    }
+    .catalog {
+        margin: 0;
+    }
+    .catalog_element .btn{
+        margin: 40px auto 0;
+    }
+    .catalog_element.post .post_element{
+        display: flex;
+        justify-content: center;
+    }
+    .slider .slider_counter{
+        display: none;
+    }
+    .slider .slick-arrow{
+        box-shadow:none !important;
+    }
+    .slider .slick-arrow.prev{
+        right: 100px;
+    }
+    .scrolled{
+        width: 100%;
+        overflow: overlay;
+        padding: 0;
+        padding: 40px 0;
+        margin: -20px 0 -80px;
+        z-index: 10;
+    }
+    .scrolled .buttons{
+        width: max-content;
+    }
+    .filtred_buttons_wrapper .buttons li{
+        margin: 0 10px;
+    }
 }
