@@ -1,5 +1,6 @@
 @import "../fonts/Proxima_Nova/stylesheet.css";
 @import "header.css";
+@import "activation_page.css";
 @import "footer.css";
 
 *{
@@ -8,9 +9,12 @@
 
     position: relative;
 }
+
+/* common styles */
 html{
     overflow-x: hidden;
 }
+
 body{
     width: 100%;
     max-width: 1980px;
@@ -22,7 +26,6 @@ body{
     margin: 0 auto;
 }
 
-/* common styles */
 img{
     max-width: 100%;
 }
@@ -65,12 +68,46 @@ strong{
     letter-spacing: 3px;
     overflow: hidden;
 }
+h1{
+    width: 100%;
+    display: inline-block;
+    font-size: 34px;
+    font-weight: 500;
+    margin: 20px 0 40px;
+}
 /* end common styles */
 
 
 
 
+/* breadcrumbs  */
 
+.breadcrumbs_wrapper{
+    display: flex;
+    align-items: center;
+}
+.breadcrumb_item{
+    display: flex;
+    align-items: center;
+}
+.breadcrumb_item:after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/bread_arrow.png) center no-repeat;
+    margin: 0 15px;
+}
+.breadcrumb_item:last-child::after{
+    display: none;
+}
+.breadcrumb_item span{ 
+    color: rgb( 169, 171, 175 );
+    font-size: 14px;
+}
+/* end breadcrumbs  */
 
 
 
