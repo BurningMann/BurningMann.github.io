@@ -447,6 +447,7 @@ padding: 0 10px;
     display: flex;
     flex-wrap: wrap;
     font-weight: bold;
+    padding: 50px 0;
 }
 .filtred_buttons_wrapper .section_title{
     margin-right: 120px;
@@ -506,9 +507,6 @@ padding: 0 10px;
     }
 }
 @media screen and (max-width:1500px){
-    .filtred_buttons_wrapper .buttons{
-        padding: 50px 0;
-    }
     .filtred_buttons_wrapper .buttons li{
         height: 50px;
     }
