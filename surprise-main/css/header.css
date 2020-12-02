@@ -1,0 +1,76 @@
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+}
+header .left_panel,header .center_panel,header .right_panel{
+    display: flex;
+    align-items: center;
+}
+.burger_menu{
+    margin-right: 70px;
+}
+header .center_panel a{
+    margin-right: 180px;
+}
+header .center_panel a:last-child{
+    margin-right: 0;
+}
+header .right_panel .telephone{
+    margin-right: 70px;
+    font-weight: bold;
+    color: #000;
+    font-size: 18px;
+}
+header .right_panel .header_ico{
+    margin-right: 50px;
+    max-width: 23px;
+}
+header .right_panel .header_ico:last-child{
+    margin-right: 0;
+}
+.user-ico{
+    width: 18px;
+}
+.prduct_in_cart{
+    background: #e7ff51;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: -13px;
+    bottom: -7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 900;
+    font-size: 12px;
+}
+@media screen and (max-width:1400px){
+    header .center_panel{
+        display: none;
+    }
+
+}
+@media screen and (max-width:780px){
+    header .right_panel .telephone{
+        display: none;
+    }
+    .menu_ico{
+        width: 25px;
+        overflow: hidden;
+    }
+    .menu_ico img{
+        max-width: none;
+    }
+
+}
+@media screen and (max-width:500px){
+    .burger_menu{
+        margin-right:0;
+    }
+    header .logo{
+        display: none;
+    }
+}

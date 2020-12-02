@@ -65,7 +65,7 @@ $slider.slick({
         slidesToScroll: 3,
         infinite:true
       }
-    },
+    }
   ]     
   });
 }
@@ -83,11 +83,6 @@ var updateSliderCounterr = function(slick, currentIndex) {
     OfferSlidesCount = slick.slideCount - slick.breakpointSettings[breakepoint].slidesToShow + 1;
     
   }else{
-/*     if(slick.originalSettings.slidesToScroll > 0){
-      console.log(slick.slickCurrentSlide())
-      console.log(slick.originalSettings.slidesToScroll )
-      OfferCurrentSlide = slick.slickCurrentSlide() - slick.originalSettings.slidesToScroll
-    } */
     OfferSlidesCount = slick.slideCount - slick.originalSettings.slidesToShow + 1;
   }
   OfferCurrentSlide = slick.slickCurrentSlide() + 1;
@@ -112,7 +107,7 @@ $offer_slider.on('afterChange', function(event, slick, OfferCurrentSlide) {
   updateSliderCounterr(slick, OfferCurrentSlide);
 });
 $offer_slider.slick({
-  slidesToShow: 2,
+  slidesToShow: 3,
   slidesToScroll: 1,
   infinite: false, 
   prevArrow: '<div class="prev"></div>',
@@ -152,5 +147,11 @@ responsive: [
       slidesToShow: 4,
     }
   },
+  {
+    breakpoint: 500,
+    settings: {
+      slidesToShow: 2,
+    }
+  }
 ]     
 });
