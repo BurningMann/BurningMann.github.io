@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+</head>
+<body>
+    <div class="container">
+        <div class="cart_tabs_line">
+            <div class="tab " data-tab="items">01 Корзина</div>
+            <div class="tab " data-tab="package">02 Доставка и упаковка</div>
+            <div class="tab active" data-tab="text">03 Текст поздравления</div>
+            <div class="tab">04 Оформление заказа</div>
+        </div>
+        <div class="cart">
+            <div class="cart-wrap">
+                <div class="tab_content" id="items">
+                    <div class="cart-item basket-item">
+                        <div class="cart-item-image">
+                            <a href="/catalog/gust_kulinarnyy_master_klass/">
+                                <img src="img/cart_img.png" alt="Густ. Кулинарный мастер-класс?>">
+                            </a>
+                        </div>
+                        <div class="cart_content_box">
+                            <div class="cart-item-content">
+                                <a href="/catalog/gust_kulinarnyy_master_klass/">Густ. Кулинарный мастер-класс</a>
+                                <!-- <div class="cart-item-desc"></*?=$arItem["OFFER_NAME"]?*/></div> -->
+                            </div>
+                                                <div class="cart-item-price"><span>55</span> BYN</div>
+                            <div class="cart-item-spinner">
+                            <div class="spinner">
+                                <div class="spinner-min" onclick="setQuantity(159938, 1, 'down', false);"></div>
+                                <input type="hidden" id="QUANTITY_159938" name="QUANTITY_159938" value="1">
+                                <input type="text" class="spinner-control" id="QUANTITY_INPUT_159938" name="QUANTITY_INPUT_159938" min="1" max="0" step="1" value="1" onchange="updateQuantity('QUANTITY_INPUT_159938', '159938', 1, false)">
+                                <div class="spinner-max" onclick="setQuantity(159938, 1, 'up', false);"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item-remove"><a href="/personal/order/make/?basketAction=delete&amp;id=159938"></a></div>
+                    </div>
+                    <div class="cart-item basket-item">
+                        <div class="cart-item-image">
+                            <a href="/catalog/gust_kulinarnyy_master_klass/">
+                                <img src="img/cart_img.png" alt="Густ. Кулинарный мастер-класс?>">
+                            </a>
+                        </div>
+                        <div class="cart_content_box">
+                            <div class="cart-item-content">
+                                <a href="/catalog/gust_kulinarnyy_master_klass/">Густ. Кулинарный мастер-класс</a>
+                                <!-- <div class="cart-item-desc"></*?=$arItem["OFFER_NAME"]?*/></div> -->
+                            </div>
+                                                <div class="cart-item-price"><span>55</span> BYN</div>
+                            <div class="cart-item-spinner">
+                            <div class="spinner">
+                                <div class="spinner-min" onclick="setQuantity(159938, 1, 'down', false);"></div>
+                                <input type="hidden" id="QUANTITY_159938" name="QUANTITY_159938" value="1">
+                                <input type="text" class="spinner-control" id="QUANTITY_INPUT_159938" name="QUANTITY_INPUT_159938" min="1" max="0" step="1" value="1" onchange="updateQuantity('QUANTITY_INPUT_159938', '159938', 1, false)">
+                                <div class="spinner-max" onclick="setQuantity(159938, 1, 'up', false);"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item-remove"><a href="/personal/order/make/?basketAction=delete&amp;id=159938"></a></div>
+                    </div>
+                </div>
+                <div class="tab_content " id="package">
+                    <div class="package_wrapper">
+                        
+                        <div class="package">
+                            <div class="img_box"><img src="img/cart_img.png" ></div>
+                            <label class="package_radio">
+                                <input type="radio" name="package" value="electronic certificate">
+                                <span class="check"></span>
+                                <span class="title">Электронный сертификат</span>
+                                <p class="text">Моментальная доставка на e-mail после оплаты</p>
+                            </label>
+                        </div>
+
+                        <div class="package">
+                            <div class="img_box"><img src="img/cart_img.png" ></div>
+                            <label class="package_radio">
+                                <input type="radio" name="package" value="gift wrap">
+                                <span class="check"></span>
+                                <span class="title">Подарочная упаковка</span>
+                                <p class="text">самовывоз или доставка сертификата в стильном конверте</p>
+                            </label>
+                            <input type="hidden" class="package_type">
+                            <div class="gift_package_type parrent">
+                                <span class="main_name">Конверт</span>
+                                <div class="drop">
+                                    <div class="drop_element current" data-to="package_type"><span>Конверт</span> </div>
+                                    <div class="drop_element" data-to="package_type"><span>1</span> </div>
+                                    <div class="drop_element" data-to="package_type"><span>2</span></div>
+                                    <div class="drop_element" data-to="package_type"><span>3</span></div>
+                                    <div class="drop_element" data-to="package_type"><span>4</span></div>
+                                </div>
+                            </div>
+                            <input type="hidden" class="package_color">
+                            <div class="gift_package_color parrent">
+                                <div class="color main_color"  style="background: #006270"></div>
+                                <span class="main_name">Бирюзовый</span>
+                                <div class="drop">
+                                    <div class="drop_element current" data-to="package_color">
+                                        <div class="color "  style="background: red"></div>
+                                        <span>Бирюзовый</span></div>
+                                    <div class="drop_element" data-to="package_color">
+                                        <div class="color"  style="background: #000"></div>
+                                        <span>Лимонный</span> 
+                                    </div>
+                                    <div class="drop_element" data-to="package_color">
+                                        <div class="color"  style="background: yellow"></div>
+                                        <span>Розовый</span></div>
+                                    <div class="drop_element" data-to="package_color">
+                                        <div class="color"  style="background: pink"></div>
+                                        <span>Синий</span></div>
+                                    <div class="drop_element" data-to="package_color">
+                                        <div class="color"  style="background: #000055"></div>
+                                        <span>Узор #1</span></div>
+                                    <div class="drop_element" data-to="package_color">
+                                        <div class="color"  style="background: #012301"></div>
+                                        <span>Узор #2</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="tab_content active" id="text">
+
+                    <div class="cart-item basket-item">
+                        <div class="cart-item-image">
+                            <a href="#">
+                                <img src="img/cart_img.png" alt="Густ. Кулинарный мастер-класс?>">
+                            </a>
+                        </div>
+                        <div class="cart_content_box">
+                            <div class="cart-item-content">
+                                <a href="#">Густ. Кулинарный мастер-класс</a>
+                            </div>
+                            <div class="cart-item-price"><span>55</span> BYN</div>
+                        </div>
+                        <div class="cart-item-remove"><a href="#"></a></div>
+                        <div class="cart-item_detal_wrapper">
+                            <div class="control_box">
+                                <div class="cart_title">
+                                    Выберите текст заголовка
+                                </div>
+                                <input type="hidden" class="title_choise">
+                                <div class="parrent">
+                                    <span class="main_name">текст 1</span>
+                                    <div class="drop title_choise_list">
+                                        <div class="drop_element current" data-to="title_choise">
+                                            <span>текст 1</span></div>
+                                        <div class="drop_element" data-to="title_choise">
+                                            <span>текст 2</span> 
+                                        </div>
+                                        <div class="drop_element" data-to="title_choise">
+                                            <span>текст 3</span></div>
+                                        <div class="drop_element" data-to="title_choise">
+                                            <span>текст 4</span></div>
+                                        <div class="drop_element" data-to="title_choise">
+                                            <span>текст 5</span></div>
+                                        <div class="drop_element your_title" data-to="title_choise">
+                                            <span>Свой</span></div>
+                                    </div>
+                                </div>
+                                <div class="cart_title textarea_title disabel">
+                                    Или напишите свой <span>(максимум 50 символов)</span>
+                                </div>
+                                <textarea name="" maxlength="50" class="my_title" style="display:none;"></textarea>
+                                <label class="present_name" data-text="Название сертификата">
+                                    <input type="radio" name="present_name"  checked>
+                                    <span class="check"></span>
+                                    Указать название подарка на бланке
+                                </label>
+                                <label class="present_name" data-text="Вас ждёт приятный сюрприз">
+                                    <input type="radio" name="present_name">
+                                    <span class="check"></span>
+                                    Сделать сюрприз
+                                </label>
+                            </div>
+                            <div class="sample_box">
+                                <div class="cart_title">
+                                    Ваш подарок будет выглядеть так
+                                </div>
+                                <div class="present_sample">
+                                    <span class="title">Поздравляю</span>
+                                    <span class="name">Название сертификата</span>
+                                    <p class="text">Скорее переходите по QR-коду и активируёте свой подарок, чтобы узнать что внутри</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                </div>
+                <div class="tab_content"></div>
+            </div>
+            <div class="cart-sidebar">
+                <div class="cart-order" id="cart-sidebar" style="top: 10px;">
+                    <input id="is_ajax_summary" name="is_ajax_summary" type="hidden" value="N">
+                    <h3>Ваш заказ</h3>
+                    <ul class="order">
+                        <li class="order-item">
+                            <div class="order-item-title">
+                                <span>1</span>&nbsp;сертификат
+                            </div>
+                            <div class="order-item-price">
+                                <span id="cert_price">55</span>&nbsp;BYN
+                            </div>
+                        </li>
+                        <li class="order-item">
+                            <div class="order-item-title">
+                                Упаковка
+                            </div>
+                            <div class="order-item-price">
+                                <span id="box_price">0</span>&nbsp;BYN
+                            </div>
+                        </li>
+                        <li class="order-item">
+                            <div class="order-item-title">
+                                Доставка
+                            </div>
+                            <div class="order-item-price">
+                                <span id="delivery_price">0</span>&nbsp;BYN
+                            </div>
+                        </li>
+                        <li class="order-item">
+                            <div class="order-item-title">
+                                Скидка
+                            </div>
+                            <div class="order-item-price">
+                                <span id="discount_price">0</span>&nbsp;BYN
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="order-total">
+                        <input id="order-total-price-base" type="hidden" value="55">
+                        <div class="order-total-title">
+                            К оплате:
+                        </div>
+                        <div class="order-total-price">
+                            <span id="total_price">55</span>&nbsp;BYN
+                        </div>
+                    </div>
+                    <div class="order-submit">
+                        <button class="btn btn1 notready" onclick="submitForm('Y'); return false;">Оформить заказ</button>
+                    </div>
+                    <div class="order-submit-rules">
+                        Нажимая эту кнопку вы соглашаетесь<br>
+                        с <a href="/about/public/" target="_blank">договором публичной оферты</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/scripts.js"></script>
+</html>

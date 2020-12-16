@@ -1,5 +1,7 @@
 @import "../fonts/Proxima_Nova/stylesheet.css";
 @import "header.css";
+@import "product-card.css";
+@import "product-cart.css";
 @import "activation_page.css";
 @import "footer.css";
 
@@ -11,21 +13,6 @@
 }
 
 /* common styles */
-html{
-    overflow-x: hidden;
-}
-
-body{
-    width: 100%;
-    max-width: 1980px;
-    min-height: 100vh;
-    font-family: "Proxima Nova", Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    color: #000;
-    margin: 0 auto;
-}
-
 img{
     max-width: 100%;
 }
@@ -35,6 +22,10 @@ a{
     color: #666666;
     text-decoration: none;
     font-size: 17px;
+}
+i.fas,i.fab{
+    font-family: FontAwesome;
+    font-style: normal;
 }
 .underline::after{
     content: "";
@@ -68,12 +59,17 @@ strong{
     letter-spacing: 3px;
     overflow: hidden;
 }
-h1{
+.mobile_visible{
+    display: none;
     width: 100%;
-    display: inline-block;
-    font-size: 34px;
-    font-weight: 500;
-    margin: 20px 0 40px;
+}
+@media screen and (max-width: 780px){
+    .mobile_visible{
+        display: block;
+    }
+    .mobile_hidden{
+        display: none !important;
+    }
 }
 /* end common styles */
 
