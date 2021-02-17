@@ -1082,7 +1082,7 @@ section.our_partners {
     top: 25px;
     width: 45px;
     height: 38px;
-    background: url(/assets/img/svg/quotes.svg) center no-repeat;
+    background: url(../img/svg/quotes.svg) center no-repeat;
 }
 
 .reviews_wrapper .reviews_element .top_line {
@@ -1113,11 +1113,11 @@ section.our_partners {
     margin: 0;
     width: 20px;
     height: 20px;
-    background: url(/assets/img/svg/full-star.svg) center no-repeat;
+    background: url(../img/svg/full-star.svg) center no-repeat;
 }
 
 .reviews_wrapper .reviews_element .top_line .stars .star.empty {
-    background: url(/assets/img/svg/empty-star.svg) center no-repeat;
+    background: url(../img/svg/empty-star.svg) center no-repeat;
 }
 
 .control_line {
@@ -1143,7 +1143,7 @@ section.our_partners {
     content: "";
     width: 5px;
     height: 10px;
-    background: url(/assets/img/svg/control-arrow.svg) center no-repeat;
+    background: url(../img/svg/control-arrow.svg) center no-repeat;
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
     margin-right: 5px;
@@ -1165,7 +1165,7 @@ section.our_partners {
     content: "";
     width: 5px;
     height: 10px;
-    background: url(/assets/img/svg/control-arrow.svg) center no-repeat;
+    background: url(../img/svg/control-arrow.svg) center no-repeat;
     margin-left: 5px;
 }
 
@@ -1247,7 +1247,7 @@ section.review_mail .review_mail_slider .slick-arrow.next {
     width: 16px;
     height: 16px;
     display: block;
-    background: url(/assets/img/svg/plus.svg) center no-repeat;
+    background: url(../img/svg/plus.svg) center no-repeat;
     margin-right: 10px;
 }
 
@@ -1256,7 +1256,7 @@ section.review_mail .review_mail_slider .slick-arrow.next {
 }
 
 .review_form_button.active::before {
-    background: url(/assets/img/svg/minus.svg) center no-repeat;
+    background: url(../img/svg/minus.svg) center no-repeat;
 }
 
 .review_form_wrapper {
@@ -1298,12 +1298,12 @@ section.review_mail .review_mail_slider .slick-arrow.next {
     margin: 0;
     width: 20px;
     height: 20px;
-    background: url(/assets/img/svg/empty-star.svg) center no-repeat;
+    background: url(../img/svg/empty-star.svg) center no-repeat;
     cursor: pointer;
 }
 
 .review_form_wrapper form label .stars .star.active {
-    background: url(/assets/img/svg/full-star.svg) center no-repeat;
+    background: url(../img/svg/full-star.svg) center no-repeat;
 }
 
 .review_form_wrapper form label .stars .star input {
