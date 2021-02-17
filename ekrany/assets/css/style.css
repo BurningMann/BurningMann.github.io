@@ -511,7 +511,13 @@ form button {
     font-size: 64px;
     line-height: 100%;
     text-align: left;
-    margin-bottom: 15px;
+    margin: 0 0 15px;
+    max-width: 660px;
+    padding: 0;
+}
+
+.main_section_wrapepr .text_box .main_section_title::before {
+    display: none;
 }
 
 .main_section_wrapepr .text_box p {
@@ -1437,6 +1443,10 @@ section.review_mail .review_mail_slider .slick-arrow.next {
 
     section {
         padding: 40px 0 60px;
+    }
+
+    .main_section_wrapepr .text_box .main_section_title {
+        max-width: 100%;
     }
 
     .main_section_wrapepr .img_box {
