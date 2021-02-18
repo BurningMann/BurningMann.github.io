@@ -1927,7 +1927,11 @@ section.review_mail .review_mail_slider .slick-arrow.next {
         width: 100%;
         max-width: 100%;
     }
-
+    
+    .error_img{
+        left:-25px;
+    }
+    
     .error_title {
         font-size: 24px;
         line-height: 24px;
