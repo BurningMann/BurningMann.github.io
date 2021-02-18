@@ -69,6 +69,14 @@ window.onload = function(){
           $($(".review_form_wrapper .star")[i]).addClass("active")
         }
     })
+    if(window.innerWidth <= 1000){
+      $(".mobile_menu").append($(".header_line nav"))
+      $(".mobile_menu").append($(".header_line .header_contact"))
+      $(".mobile_burger").click(function(){
+        $(".mobile_menu").fadeToggle()
+      })
+    }
+
 };       
          
         
