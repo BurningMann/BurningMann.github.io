@@ -4,8 +4,29 @@ window.onload = function(){
         dots:true
     })
     $(".our_partners_wrapepr").slick({
+        slidesToShow: 5,
         prevArrow: "<div class='prev'><img src='assets/img/svg/slider-arrow.svg'></div>",
         nextArrow: "<div class='next'><img src='assets/img/svg/slider-arrow.svg'></div>",
+        responsive: [
+          {
+            breakpoint: 1000,
+            settings: {
+              slidesToShow: 3,
+            }
+          },
+          {
+            breakpoint: 780,
+            settings: {
+              slidesToShow: 2,
+            }
+          },
+          {
+            breakpoint: 500,
+            settings: {
+              slidesToShow: 1,
+            }
+          },
+        ]
     })
     $(".review_mail_slider").slick({
         slidesToShow: 4,
