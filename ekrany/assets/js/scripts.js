@@ -97,7 +97,15 @@ window.onload = function(){
         $(".mobile_menu").fadeToggle()
       })
     }
-
+    $(".example_element").mouseover(function(){
+      let posTop = $(this).offset().top
+      let posLeft = $(this).offset().left
+      let detail = $(this).data("detail")
+      $(".photo_example_box").offset({left:posLeft - 97,top:posTop - 130}).css("visibility","visible").find("img").attr("src",detail)
+    })
+    $(".example_wrapper").mouseleave(function(){
+        $(".photo_example_box").css("visibility","hidden")
+    })
 };       
          
         
