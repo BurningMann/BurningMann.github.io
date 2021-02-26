@@ -1919,6 +1919,10 @@ section.review_mail .review_mail_slider .slick-arrow.next {
     .review_form_wrapper form input {
         max-width: 100%;
     }
+
+    .card_wrapepr .example_box .example_wrapper .example_element .photo_example_box {
+        display: none !important;
+    }
 }
 
 @media screen and (max-width: 500px) {
