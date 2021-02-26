@@ -98,10 +98,20 @@ window.onload = function(){
       })
     }
     $(".example_element").mouseover(function(){
+      $(".preloader_img").css("display","block")
+      $(".main_img").css("display","none")
       let posTop = $(this).offset().top
       let posLeft = $(this).offset().left
       let detail = $(this).data("detail")
-      $(".photo_example_box").offset({left:posLeft - 97,top:posTop - 130}).css("visibility","visible").find("img").attr("src",detail)
+      $(".photo_example_box").offset({left:posLeft - 97,top:posTop - 130}).css("visibility","visible")
+      $(".main_img").attr("src",detail)
+      var $img = $(".main_img")
+      $img
+          .on('load',function(){
+            $(".preloader_img").css("display","none")
+            $(".main_img").css("display","block")
+          })
+          
     })
     $(".example_wrapper").mouseleave(function(){
         $(".photo_example_box").css("visibility","hidden")

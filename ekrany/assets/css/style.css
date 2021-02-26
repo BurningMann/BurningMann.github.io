@@ -1572,6 +1572,14 @@ section.review_mail .review_mail_slider .slick-arrow.next {
     object-fit: cover;
 }
 
+.photo_example_box .preloader_img {
+    display: block;
+}
+
+.photo_example_box .main_img {
+    display: none;
+}
+
 @media screen and (max-width: 1170px) {
     .container {
         padding: 0 20px;
