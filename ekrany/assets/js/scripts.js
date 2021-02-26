@@ -97,7 +97,7 @@ window.onload = function(){
         $(".mobile_menu").fadeToggle()
       })
     }
-    $(".example_element").mouseover(function(){
+/*     $(".example_element").mouseover(function(){
       $(".preloader_img").css("display","block")
       $(".main_img").css("display","none")
       let posTop = $(this).offset().top
@@ -111,11 +111,11 @@ window.onload = function(){
             $(".preloader_img").css("display","none")
             $(".main_img").css("display","block")
           })
-          
-    })
+         
+    }) 
     $(".example_wrapper").mouseleave(function(){
         $(".photo_example_box").css("visibility","hidden")
-    })
+    }) */
 };       
          
         

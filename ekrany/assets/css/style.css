@@ -955,6 +955,43 @@ section.advantages {
     margin: 5px;
 }
 
+.card_wrapepr .example_box .example_wrapper .example_element .photo_example_box {
+    width: 240px;
+    height: 120px;
+    border: 5px solid #AC9573;
+    z-index: 5;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: calc(50% - 120px);
+    -webkit-filter: drop-shadow(0px 0px 10px rgba(172, 149, 115, 0.6));
+    filter: drop-shadow(0px 0px 10px rgba(172, 149, 115, 0.6));
+    bottom: calc(100% - 1px);
+    transition: .5s;
+}
+
+.card_wrapepr .example_box .example_wrapper .example_element .photo_example_box::after {
+    content: "";
+    width: 13px;
+    height: 8px;
+    background: url(../img/svg/down-arrow.svg) center/100% no-repeat;
+    position: absolute;
+    left: calc(50% - 6.5px);
+    bottom: -12px;
+}
+
+.card_wrapepr .example_box .example_wrapper .example_element .photo_example_box img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.card_wrapepr .example_box .example_wrapper .example_element:hover .photo_example_box {
+    visibility: visible;
+    opacity: 1;
+}
+
 .card_wrapepr .example_box .example_wrapper .price_example {
     width: 160px;
     margin: 20px 100px 0 0;
@@ -1540,44 +1577,6 @@ section.review_mail .review_mail_slider .slick-arrow.next {
     width: 20px;
     height: 20px;
     cursor: pointer;
-}
-
-.photo_example_box {
-    width: 240px;
-    height: 120px;
-    border: 5px solid #AC9573;
-    z-index: 5;
-    visibility: hidden;
-    position: absolute;
-    left: 0;
-    top: 0;
-    -webkit-filter: drop-shadow(0px 0px 10px rgba(172, 149, 115, 0.6));
-    filter: drop-shadow(0px 0px 10px rgba(172, 149, 115, 0.6));
-}
-
-.photo_example_box::after {
-    content: "";
-    width: 13px;
-    height: 8px;
-    background: url(../img/svg/down-arrow.svg) center/100% no-repeat;
-    position: absolute;
-    left: calc(50% - 6.5px);
-    top: 100%;
-}
-
-.photo_example_box img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-}
-
-.photo_example_box .preloader_img {
-    display: block;
-}
-
-.photo_example_box .main_img {
-    display: none;
 }
 
 @media screen and (max-width: 1170px) {
