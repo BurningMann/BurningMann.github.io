@@ -41,10 +41,27 @@ window.onload = function(){
   $("input[name='phone']").mask('+375 (00) 000-00-00');
 
   $(".footer__drop .title").click(function(){
-    $(this).toggleClass("active")
-    $(this).siblings(".footer__links").slideToggle().css("display", "flex")
+    if(window.innerWidth <= 600){
+      $(this).toggleClass("active")
+      $(this).siblings(".footer__links").slideToggle().css("display", "flex")
+    }
   })
 
+  $(".switch").click(function(){
+    $(this).toggleClass("switch--active")
+  })
+  
+  $(".sort_chose").click(function(){
+    $(this).toggleClass("sort_chose--active")
+    $(this).find(".sort_variants").slideToggle('fast')
+  })
+
+  $(".filter_section .title").click(function(){
+    if(window.innerWidth <= 1000){
+      $(this).toggleClass("active")
+      $(this).siblings(".filter_box").slideToggle().css("display", "flex")
+    }
+  })
   /* SLIDERS */
 
   $(".main_page_slider").slick({

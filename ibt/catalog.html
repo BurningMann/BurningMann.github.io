@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/slick.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head><body>
+  <header class="header">
+    <div class="d-flex-alig-center justify-content-between">
+      <a href="/" class="header__logo">
+        <img src="assets/img/logo.png">
+      </a>
+      <div class="header__info d-flex-center">
+        <a href="mailto:info@ibtc.by" class="link email">E-mail: info@ibtc.by </a>
+        <span class="work">Время работы: 9:00-17:30</span>
+        <div class="dropdown d-flex-center phone">
+          <a href="tel:+375 33 373 33 88" class="dropdown__main">+375 33 373 33 88</a>
+          <div class="dropdown__arrow"></div>
+          <div class="dropdown__drop">
+            <div class="d-f-column align-items-center">
+              <a href="tel:+375 17 224 33 88" class="dropdown__element">+375 17 224 33 88</a>
+              <span class="dropdown__element">Заказать звонок</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__controll d-flex-center">
+        <a href="#" class="favorite"><span class="text">Избранные товары</span></a>
+        <div class="btn btn--cart">
+          <div class="cart">
+            <img src="assets/img/icons/cart-ico.svg">
+            <span class="cart__counter">1</span>
+          </div> 
+          <span class="text">Корзина</span>
+        </div>
+        <div class="menu mobile_visible">
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="nav_menu d-flex-center">
+    <div class="nav_menu__menu d-flex-center ">
+      <div class="nav_menu__menu_element">
+        <a href="#">О компании</a>
+      </div>
+      <div class="nav_menu__menu_element">
+        <a href="#">Каталог</a>
+      </div>
+      <div class="nav_menu__menu_element">
+        <a href="#">Услуги</a>
+        <div class="nav_menu__drop_menu d-f-column">
+          <a href="#" class="drop_menu_element">IT аудит</a>
+          <a href="#" class="drop_menu_element">Проектирование</a>
+          <a href="#" class="drop_menu_element">Пусконаладочные работы</a>
+          <a href="#" class="drop_menu_element">Монтаж</a>
+          <a href="#" class="drop_menu_element">Обслуживание</a>
+          <a href="#" class="drop_menu_element">Дизайн проект помещения для мультимедийных систем </a>
+          <a href="#" class="drop_menu_element">Тестирование оборудования</a>
+        </div>
+      </div>
+      <div class="nav_menu__menu_element">
+        <a href="#">Решения</a>
+      </div>
+      <div class="nav_menu__menu_element">
+        <a href="#">Портфолио</a>
+      </div>
+    </div>
+    <div class="phone mobile_visible">
+      <a href="tel:+375 (17) 336-33-36">+375 (17) 336-33-36 </a>
+    </div>
+    <div class="nav_menu__search">
+      <img src="assets/img/icons/search.svg" alt="">
+    </div>
+  </div>  
+  <main>
+  <div class="container">
+    <div class="breadcrumbs">
+      <a href="#" class="breadcrumbs__element">Главная</a>
+      <a href="#" class="breadcrumbs__element">Главная</a>
+      <a href="#" class="breadcrumbs__element">Главная</a>
+      <a href="#" class="breadcrumbs__element">Главная</a>
+    </div>
+    <div class="catalog_control_bar d-flex justify-content-between">
+      <div class="filter d-flex">
+        <span class="title h3">Фильтр</span>
+        <div class="switch">
+          <div class="slide"></div>
+        </div>
+      </div>
+      <div class="sort d-flex">
+        <div class="sort__wrapper">
+          <div class="sort_chose">
+            <div class="main_sort d-flex">Сортировка</div>
+            <div class="sort_variants">
+              <span>Сортировка 1</span>
+              <span>Сортировка 2</span>
+              <span>Сортировка 3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="catalog_page d-flex">
+      <div class="sidebar">
+        <div class="filter_section">
+          <span class="title h3">Категория</span>
+          <div class="filter_box d-flex-column">
+            <label class="d-flex">
+              <input type="checkbox" name="category"> 
+              <span class="name d-flex-alig-center">IP телефоны</span>
+            </label>
+            <label class="d-flex">
+              <input type="checkbox" name="category"> 
+              <span class="name d-flex-alig-center">IP телефоны</span>
+            </label>
+            <label class="d-flex">
+              <input type="checkbox" name="category"> 
+              <span class="name d-flex-alig-center">IP телефоны</span>
+            </label>
+            <label class="d-flex">
+              <input type="checkbox" name="category"> 
+              <span class="name d-flex-alig-center">IP телефоны</span>
+            </label>
+            <label class="d-flex">
+              <input type="checkbox" name="category"> 
+              <span class="name d-flex-alig-center">IP телефоны</span>
+            </label>
+          </div>
+        </div>
+        <div class="filter_section">
+          <span class="title h3">Бренд</span>
+          <div class="filter_box d-flex-wrap">
+            <label class="d-flex w-5">
+              <input type="checkbox" name="brand"> 
+              <span class="name d-flex-alig-center">Samsung</span>
+            </label>
+            <label class="d-flex  w-5">
+              <input type="checkbox" name="brand"> 
+              <span class="name d-flex-alig-center">Sharp</span>
+            </label>
+            <label class="d-flex  w-5">
+              <input type="checkbox" name="brand"> 
+              <span class="name d-flex-alig-center">Cover</span>
+            </label>
+            <label class="d-flex  w-5">
+              <input type="checkbox" name="brand"> 
+              <span class="name d-flex-alig-center">LG</span>
+            </label>
+            <label class="d-flex  w-5">
+              <input type="checkbox" name="brand"> 
+              <span class="name d-flex-alig-center">Shure</span>
+            </label>
+            <label class="d-flex  w-5">
+              <input type="checkbox" name="brand"> 
+              <span class="name d-flex-alig-center">Delta</span>
+            </label>
+          </div>
+        </div>
+        <div class="filter_section sort">
+          <span class="title h3">Сортировка</span>
+          <div class="filter_box d-flex-wrap">
+            <label class="d-flex w-5">
+              <input type="radio" name="sort"> 
+              <span class="name d-flex-alig-center">Сортировка 1</span>
+            </label>
+            <label class="d-flex  w-5">
+              <input type="radio" name="sort"> 
+              <span class="name d-flex-alig-center">Сортировка 2</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="catalog">
+        <div class="catalog__wrapper d-flex-wrap">
+          <div class="catalog__box w-3">
+            <div class="catalog_card">
+              <div class="catalog_card__img_box">
+                <img src="assets/img/card-1.png" alt="">
+              </div>
+              <div class="catalog_card__content_box">
+                <span class="title">Профессиональный ЖК дисплей 32″ Samsung PM32F</span>
+                <div class="description">24-7, 1920х1080, E-LED, 400 нит, 5000:1, Haze 2%, DVI/HDMI/DP/USB, Audio In/Out, RS232 In/Out, SSSP 4.0, RJ45, WiFi,[...]</div>
+              </div>
+              <div class="catalog_card__bottom_line">
+                <div class="price">Br 2,648.45</div>
+                <a href="#" class="btn">В корзину</a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__box w-3">
+            <div class="catalog_card">
+              <div class="catalog_card__img_box">
+                <img src="assets/img/card-1.png" alt="">
+              </div>
+              <div class="catalog_card__content_box">
+                <span class="title">Профессиональный ЖК дисплей 32″ Samsung PM32F</span>
+                <div class="description">24-7, 1920х1080, E-LED, 400 нит, 5000:1, Haze 2%, DVI/HDMI/DP/USB, Audio In/Out, RS232 In/Out, SSSP 4.0, RJ45, WiFi,[...]</div>
+              </div>
+              <div class="catalog_card__bottom_line">
+                <div class="price">Br 2,648.45</div>
+                <a href="#" class="btn">В корзину</a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__box w-3">
+            <div class="catalog_card">
+              <div class="catalog_card__img_box">
+                <img src="assets/img/card-1.png" alt="">
+              </div>
+              <div class="catalog_card__content_box">
+                <span class="title">Профессиональный ЖК дисплей 32″ Samsung PM32F</span>
+                <div class="description">24-7, 1920х1080, E-LED, 400 нит, 5000:1, Haze 2%, DVI/HDMI/DP/USB, Audio In/Out, RS232 In/Out, SSSP 4.0, RJ45, WiFi,[...]</div>
+              </div>
+              <div class="catalog_card__bottom_line">
+                <div class="price">Br 2,648.45</div>
+                <a href="#" class="btn">В корзину</a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__box w-3">
+            <div class="catalog_card">
+              <div class="catalog_card__img_box">
+                <img src="assets/img/card-1.png" alt="">
+              </div>
+              <div class="catalog_card__content_box">
+                <span class="title">Профессиональный ЖК дисплей 32″ Samsung PM32F</span>
+                <div class="description">24-7, 1920х1080, E-LED, 400 нит, 5000:1, Haze 2%, DVI/HDMI/DP/USB, Audio In/Out, RS232 In/Out, SSSP 4.0, RJ45, WiFi,[...]</div>
+              </div>
+              <div class="catalog_card__bottom_line">
+                <div class="price">Br 2,648.45</div>
+                <a href="#" class="btn">В корзину</a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__box w-3">
+            <div class="catalog_card">
+              <div class="catalog_card__img_box">
+                <img src="assets/img/card-1.png" alt="">
+              </div>
+              <div class="catalog_card__content_box">
+                <span class="title">Профессиональный ЖК дисплей 32″ Samsung PM32F</span>
+                <div class="description">24-7, 1920х1080, E-LED, 400 нит, 5000:1, Haze 2%, DVI/HDMI/DP/USB, Audio In/Out, RS232 In/Out, SSSP 4.0, RJ45, WiFi,[...]</div>
+              </div>
+              <div class="catalog_card__bottom_line">
+                <div class="price">Br 2,648.45</div>
+                <a href="#" class="btn">В корзину</a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__box w-3">
+            <div class="catalog_card">
+              <div class="catalog_card__img_box">
+                <img src="assets/img/card-1.png" alt="">
+              </div>
+              <div class="catalog_card__content_box">
+                <span class="title">Профессиональный ЖК дисплей 32″ Samsung PM32F</span>
+                <div class="description">24-7, 1920х1080, E-LED, 400 нит, 5000:1, Haze 2%, DVI/HDMI/DP/USB, Audio In/Out, RS232 In/Out, SSSP 4.0, RJ45, WiFi,[...]</div>
+              </div>
+              <div class="catalog_card__bottom_line">
+                <div class="price">Br 2,648.45</div>
+                <a href="#" class="btn">В корзину</a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__box w-3">
+            <div class="catalog_card">
+              <div class="catalog_card__img_box">
+                <img src="assets/img/card-1.png" alt="">
+              </div>
+              <div class="catalog_card__content_box">
+                <span class="title">Профессиональный ЖК дисплей 32″ Samsung PM32F</span>
+                <div class="description">24-7, 1920х1080, E-LED, 400 нит, 5000:1, Haze 2%, DVI/HDMI/DP/USB, Audio In/Out, RS232 In/Out, SSSP 4.0, RJ45, WiFi,[...]</div>
+              </div>
+              <div class="catalog_card__bottom_line">
+                <div class="price">Br 2,648.45</div>
+                <a href="#" class="btn">В корзину</a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__box w-3">
+            <div class="catalog_card">
+              <div class="catalog_card__img_box">
+                <img src="assets/img/card-1.png" alt="">
+              </div>
+              <div class="catalog_card__content_box">
+                <span class="title">Профессиональный ЖК дисплей 32″ Samsung PM32F</span>
+                <div class="description">24-7, 1920х1080, E-LED, 400 нит, 5000:1, Haze 2%, DVI/HDMI/DP/USB, Audio In/Out, RS232 In/Out, SSSP 4.0, RJ45, WiFi,[...]</div>
+              </div>
+              <div class="catalog_card__bottom_line">
+                <div class="price">Br 2,648.45</div>
+                <a href="#" class="btn">В корзину</a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__box w-3">
+            <div class="catalog_card">
+              <div class="catalog_card__img_box">
+                <img src="assets/img/card-1.png" alt="">
+              </div>
+              <div class="catalog_card__content_box">
+                <span class="title">Профессиональный ЖК дисплей 32″ Samsung PM32F</span>
+                <div class="description">24-7, 1920х1080, E-LED, 400 нит, 5000:1, Haze 2%, DVI/HDMI/DP/USB, Audio In/Out, RS232 In/Out, SSSP 4.0, RJ45, WiFi,[...]</div>
+              </div>
+              <div class="catalog_card__bottom_line">
+                <div class="price">Br 2,648.45</div>
+                <a href="#" class="btn">В корзину</a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__box w-3">
+            <div class="catalog_card">
+              <div class="catalog_card__img_box">
+                <img src="assets/img/card-1.png" alt="">
+              </div>
+              <div class="catalog_card__content_box">
+                <span class="title">Профессиональный ЖК дисплей 32″ Samsung PM32F</span>
+                <div class="description">24-7, 1920х1080, E-LED, 400 нит, 5000:1, Haze 2%, DVI/HDMI/DP/USB, Audio In/Out, RS232 In/Out, SSSP 4.0, RJ45, WiFi,[...]</div>
+              </div>
+              <div class="catalog_card__bottom_line">
+                <div class="price">Br 2,648.45</div>
+                <a href="#" class="btn">В корзину</a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__box w-3">
+            <div class="catalog_card">
+              <div class="catalog_card__img_box">
+                <img src="assets/img/card-1.png" alt="">
+              </div>
+              <div class="catalog_card__content_box">
+                <span class="title">Профессиональный ЖК дисплей 32″ Samsung PM32F</span>
+                <div class="description">24-7, 1920х1080, E-LED, 400 нит, 5000:1, Haze 2%, DVI/HDMI/DP/USB, Audio In/Out, RS232 In/Out, SSSP 4.0, RJ45, WiFi,[...]</div>
+              </div>
+              <div class="catalog_card__bottom_line">
+                <div class="price">Br 2,648.45</div>
+                <a href="#" class="btn">В корзину</a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__box w-3">
+            <div class="catalog_card">
+              <div class="catalog_card__img_box">
+                <img src="assets/img/card-1.png" alt="">
+              </div>
+              <div class="catalog_card__content_box">
+                <span class="title">Профессиональный ЖК дисплей 32″ Samsung PM32F</span>
+                <div class="description">24-7, 1920х1080, E-LED, 400 нит, 5000:1, Haze 2%, DVI/HDMI/DP/USB, Audio In/Out, RS232 In/Out, SSSP 4.0, RJ45, WiFi,[...]</div>
+              </div>
+              <div class="catalog_card__bottom_line">
+                <div class="price">Br 2,648.45</div>
+                <a href="#" class="btn">В корзину</a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__box w-3">
+            <div class="catalog_card">
+              <div class="catalog_card__img_box">
+                <img src="assets/img/card-1.png" alt="">
+              </div>
+              <div class="catalog_card__content_box">
+                <span class="title">Профессиональный ЖК дисплей 32″ Samsung PM32F</span>
+                <div class="description">24-7, 1920х1080, E-LED, 400 нит, 5000:1, Haze 2%, DVI/HDMI/DP/USB, Audio In/Out, RS232 In/Out, SSSP 4.0, RJ45, WiFi,[...]</div>
+              </div>
+              <div class="catalog_card__bottom_line">
+                <div class="price">Br 2,648.45</div>
+                <a href="#" class="btn">В корзину</a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__box w-3">
+            <div class="catalog_card">
+              <div class="catalog_card__img_box">
+                <img src="assets/img/card-1.png" alt="">
+              </div>
+              <div class="catalog_card__content_box">
+                <span class="title">Профессиональный ЖК дисплей 32″ Samsung PM32F</span>
+                <div class="description">24-7, 1920х1080, E-LED, 400 нит, 5000:1, Haze 2%, DVI/HDMI/DP/USB, Audio In/Out, RS232 In/Out, SSSP 4.0, RJ45, WiFi,[...]</div>
+              </div>
+              <div class="catalog_card__bottom_line">
+                <div class="price">Br 2,648.45</div>
+                <a href="#" class="btn">В корзину</a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__box w-3">
+            <div class="catalog_card">
+              <div class="catalog_card__img_box">
+                <img src="assets/img/card-1.png" alt="">
+              </div>
+              <div class="catalog_card__content_box">
+                <span class="title">Профессиональный ЖК дисплей 32″ Samsung PM32F</span>
+                <div class="description">24-7, 1920х1080, E-LED, 400 нит, 5000:1, Haze 2%, DVI/HDMI/DP/USB, Audio In/Out, RS232 In/Out, SSSP 4.0, RJ45, WiFi,[...]</div>
+              </div>
+              <div class="catalog_card__bottom_line">
+                <div class="price">Br 2,648.45</div>
+                <a href="#" class="btn">В корзину</a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__box w-3">
+            <div class="catalog_card">
+              <div class="catalog_card__img_box">
+                <img src="assets/img/card-1.png" alt="">
+              </div>
+              <div class="catalog_card__content_box">
+                <span class="title">Профессиональный ЖК дисплей 32″ Samsung PM32F</span>
+                <div class="description">24-7, 1920х1080, E-LED, 400 нит, 5000:1, Haze 2%, DVI/HDMI/DP/USB, Audio In/Out, RS232 In/Out, SSSP 4.0, RJ45, WiFi,[...]</div>
+              </div>
+              <div class="catalog_card__bottom_line">
+                <div class="price">Br 2,648.45</div>
+                <a href="#" class="btn">В корзину</a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__box w-3">
+            <div class="catalog_card">
+              <div class="catalog_card__img_box">
+                <img src="assets/img/card-1.png" alt="">
+              </div>
+              <div class="catalog_card__content_box">
+                <span class="title">Профессиональный ЖК дисплей 32″ Samsung PM32F</span>
+                <div class="description">24-7, 1920х1080, E-LED, 400 нит, 5000:1, Haze 2%, DVI/HDMI/DP/USB, Audio In/Out, RS232 In/Out, SSSP 4.0, RJ45, WiFi,[...]</div>
+              </div>
+              <div class="catalog_card__bottom_line">
+                <div class="price">Br 2,648.45</div>
+                <a href="#" class="btn">В корзину</a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__box w-3">
+            <div class="catalog_card">
+              <div class="catalog_card__img_box">
+                <img src="assets/img/card-1.png" alt="">
+              </div>
+              <div class="catalog_card__content_box">
+                <span class="title">Профессиональный ЖК дисплей 32″ Samsung PM32F</span>
+                <div class="description">24-7, 1920х1080, E-LED, 400 нит, 5000:1, Haze 2%, DVI/HDMI/DP/USB, Audio In/Out, RS232 In/Out, SSSP 4.0, RJ45, WiFi,[...]</div>
+              </div>
+              <div class="catalog_card__bottom_line">
+                <div class="price">Br 2,648.45</div>
+                <a href="#" class="btn">В корзину</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pagination">
+          <div class="pagination__wrapper">
+            <a href="#"><img src="assets/img/icons/pagination-prev.svg"></a>
+            <a href="#"  class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">...</a>
+            <a href="#">7</a>
+            <a href="#"><img src="assets/img/icons/pagination-next.svg"></a>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+  </div>
+
+
+  <section class="map_section">
+    <div class="d-flex-wrap">
+      <div class="w-5 map_section__box map_section__img" >
+        <img src="assets/img/map-section-bg.png" alt="">
+      </div>
+      <div class="w-5 map_section__box map_section__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2351.2166968092793!2d27.50803563298504!3d53.89235228297562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbd115d345b6ef%3A0x70a031277ffff3fa!2z0J7QntCeICLQkNCZINCR0Jgg0KLQmCDQmtCe0JzQn9CQ0J3QmCI!5e0!3m2!1sru!2sby!4v1627213870376!5m2!1sru!2sby" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+  <section class="question_form_section">
+    <div class="d-flex-center">
+      <div class="question_form_box">
+        <div class="title_box">
+          <span class="title h2">задайте вопрос специалисту</span>
+          <p>Оставьте ваши контактные данные и наш консультат свяжется с вами</p>
+        </div>
+        <form action="#" class="question_form">
+          <div class="d-flex input_box">
+            <input type="text" name="name" placeholder="Имя">
+            <input type="text" name="phone" placeholder="+375 (_ _)  _ _ _- _ _ -_ _">
+          </div>
+          <textarea placeholder="Вопрос"></textarea>
+          <button type="submit" class="btn btn--slider">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__wrapper d-flex-wrap">
+        <div class="footer__element w-1">
+          <div class="d-flex-column">
+            <span class="title">Мы в социальных сетях</span>
+            <div class="footer__social d-flex">
+              <a href="#"><img src="assets/img/icons/facebook-ico.svg"></a>
+              <a href="#"><img src="assets/img/icons/instagram-ico.svg"></a>
+              <a href="#"><img src="assets/img/icons/whatsapp-ico.svg"></a>
+            </div>
+            <div class="footer__adress">
+              <p>ООО «АЙ БИ ТИ КОМПАНИ»</p>
+              <p>Адрес офиса и склада:</p>
+              <p>220062, Республика Беларусь</p>
+              <p>г. Минск, ул. Ратомская, д.48-2</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__element w-1 footer__drop">
+          <div class="d-flex-column">
+            <span class="title">Каталог</span>
+            <div class="footer__links">
+              <a href="#">ЖК диплеи для видеостен</a>
+              <a href="#">Профессиональные ЖК диплеи</a>
+              <a href="#">Системы видеоконференцсвязи</a>
+              <a href="#">IP телефоны</a>
+              <a href="#">Медиоплееры</a>
+              <a href="#">Проекционные кубы</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__element w-1 footer__drop">
+          <div class="d-flex-column">
+            <span class="title">Услуги</span>
+            <div class="footer__links">
+              <a href="#">IT аудит</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Пусконаладочные работы</a>
+              <a href="#">Монтаж</a>
+              <a href="#">Дизайн проект помещения</a>
+              <a href="#">Тестирование оборудования</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__element w-1 footer__drop">
+          <div class="d-flex-column">
+            <span class="title">Решения</span>
+            <div class="footer__links">
+              <a href="#">Интерактивные музеи</a>
+              <a href="#">Системы безопасности</a>
+              <a href="#">Программное обеспечение</a>
+              <a href="#">Мультимедийные системы</a>
+              <a href="#">Локально-вычислительная сеть</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__element w-1 footer__drop">
+          <div class="d-flex-column">
+            <span class="title">Информация</span>
+            <div class="footer__links">
+              <a href="#">О компании</a>
+              <a href="#">Вакансии</a>
+              <a href="#">Отзывы</a>
+              <a href="#">Политика конфиденциальности</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="modal_bg"></div>
+  <script type="text/javascript" src="./assets/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="./assets/js/slick.min.js"></script>
+  <script type="text/javascript" src="./assets/js/jquery.mask.min.js"></script>
+  <script src="./assets/js/scripts.js"></script></body>
+</html>
