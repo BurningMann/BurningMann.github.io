@@ -62,6 +62,24 @@ window.onload = function(){
       $(this).siblings(".filter_box").slideToggle().css("display", "flex")
     }
   })
+
+  /* COUNTER */
+
+  $(".product_counter")
+  $(".product_counter__minus").click(function(){
+    let counter = $(this).siblings(".product_counter__count").find("input")
+    let val = $(counter).val()
+    if(val - 1 > 0){
+      $(counter).val(val - 1)
+    }
+  })
+  $(".product_counter__plus").click(function(){
+    let counter = $(this).siblings(".product_counter__count").find("input")
+    let val = parseInt($(counter).val())
+    $(counter).val(val + 1)
+  })
+
+
   /* SLIDERS */
 
   $(".main_page_slider").slick({
@@ -139,8 +157,54 @@ window.onload = function(){
     }else{
       $(".comand__wrapper").slick('unslick');
     }
-  }
-  
-    comandSlider()
+  }comandSlider()
 
+  $(".product_card__slider").slick({
+    arrows: false,
+    fade: true,
+    swipe: false,
+    asNavFor: '.product_card__control_slider',
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          dots: true,
+          adaptiveHeight: true,
+          swipe: true,
+        }
+      },
+    ]
+  })
+  $(".product_card__control_slider").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    asNavFor: '.product_card__slider',
+    focusOnSelect: true
+  })
+  $(".similar_products__wrapper").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          arrows: true,
+          prevArrow: '<div class="prev"><img src="assets/img/icons/slider-arrow-gray.svg"></div>',
+          nextArrow: '<div class="next"><img src="assets/img/icons/slider-arrow-gray.svg"></div>',
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+          arrows: true,
+          prevArrow: '<div class="prev"><img src="assets/img/icons/slider-arrow-gray.svg"></div>',
+          nextArrow: '<div class="next"><img src="assets/img/icons/slider-arrow-gray.svg"></div>',
+        }
+      },
+    ]
+  })
 }
