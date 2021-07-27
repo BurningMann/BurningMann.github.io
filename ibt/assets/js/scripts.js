@@ -79,7 +79,18 @@ window.onload = function(){
     $(counter).val(val + 1)
   })
 
-
+  $(".popup_btn").click(function(){
+    let popup = $(this).data("popup")
+    $(`.modal_overlay.${popup}`).fadeToggle()
+  })
+  $(".modal .close").click(function(){
+    $(this).closest(".modal_overlay").fadeOut()
+  })
+  $(".modal").click(function(EO){
+    if(!$(EO.target).closest(".modal__content").length ){
+      $(".modal_overlay").fadeOut()
+    }
+  })
   /* SLIDERS */
 
   $(".main_page_slider").slick({
