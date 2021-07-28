@@ -428,7 +428,7 @@ h3, .h3 {
 }
 
 .btn:hover {
-    background: #fff;
+    background: #3AFFDC;
 }
 
 .btn--slider {
@@ -635,6 +635,12 @@ ul.check li:before {
     background: rgba(2, 50, 74, 0.5);
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
+}
+
+.nav_menu--blur {
+    background: rgba(255, 255, 255, 0.2);
+    margin-bottom: -70px;
+    z-index: 99;
 }
 
 .nav_menu__menu {
@@ -1492,7 +1498,12 @@ ul.check li:before {
 
 .reviews__wrapper {
     background: #E2F5EF;
-    padding: 70px 80px;
+}
+
+.reviews__element {
+    background: #E2F5EF;
+    margin: 15px 0;
+    padding: 50px 80px;
 }
 
 .reviews__element .review_img {
@@ -1516,6 +1527,10 @@ ul.check li:before {
     width: 100%;
     text-align: right;
     text-decoration: underline;
+}
+
+.reviews__page {
+    margin-bottom: 100px;
 }
 
 .portfolio__slide {
@@ -2041,6 +2056,10 @@ ul.check li:before {
     margin-bottom: 10px;
 }
 
+.content_page img {
+    margin: 20px auto;
+}
+
 .content_page__order_block {
     margin-bottom: 100px;
 }
@@ -2055,6 +2074,7 @@ ul.check li:before {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
+    margin: 0;
 }
 
 .content_page__order_block .description {
@@ -2166,6 +2186,168 @@ ul.check li:before {
     border: none;
     height: 60px;
     width: 240px;
+}
+
+.news_page {
+    padding-bottom: 100px;
+}
+
+.news_page__wrapper {
+    margin: 0 -15px;
+}
+
+.news_page__element {
+    padding: 15px;
+}
+
+.news_page__element .img_box img {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.news_page__element .date_line {
+    font-size: 14px;
+    border-bottom: 2px solid #34EBB0;
+    padding: 5px 0;
+    margin-bottom: 30px;
+}
+
+.news_page__element .title {
+    margin-bottom: 20px;
+}
+
+.news_page__element .btn {
+    width: 250px;
+    height: 60px;
+    margin-top: 50px;
+}
+
+.detail_news .title_box {
+    border-bottom: 2px solid #34EBB0;
+    padding-bottom: 10px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.detail_news .title_box .title {
+    margin: 0;
+    text-align: left;
+}
+
+.detail_news__date {
+    font-size: 14px;
+    margin-bottom: 60px;
+}
+
+.detail_news__preview_img_box {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 100px;
+}
+
+.detail_news__preview_img_box img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.about_company {
+    color: #fff;
+    height: 420px;
+    margin-bottom: 100px;
+}
+
+.about_company::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(270deg, #142139 0%, rgba(48, 63, 86, 0.6) 51.06%, rgba(33, 33, 33, 0) 100.84%), rgba(34, 34, 34, 0.3);
+    -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.about_company .container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.about_company .breadcrumbs__element {
+    color: #fff;
+}
+
+.about_company .breadcrumbs__element::after {
+    border-color: #fff;
+}
+
+.about_company .title_box {
+    text-align: left;
+}
+
+.about_company .title_box .title {
+    margin: 0;
+    text-transform: initial;
+}
+
+.about_company .btn {
+    margin-top: 50px;
+    padding: 15px 60px;
+    height: auto;
+    color: #02324A;
+}
+
+.politic_list li {
+    margin: 30px 0;
+}
+
+.error_page {
+    height: calc(100vh - 96px);
+    background: url(../img/error-bg.png) center/cover no-repeat;
+}
+
+.error_page + footer {
+    display: none;
+}
+
+.error_page .eror_text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 50px;
+    color: #fff;
+}
+
+.error_page .eror_text .title {
+    margin-bottom: 10px;
+}
+
+.error_page .eror_text .sub_title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.error_page .eror_text .text {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.error_page .eror_text .text a, .error_page .eror_text .text .back_link {
+    color: #34EBB0;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1400px) {
@@ -2532,17 +2714,18 @@ ul.check li:before {
     .reviews {
         background: #E2F5EF;
         margin-top: -40px;
-        padding: 40px;
+        padding: 40px 0 0;
     }
 
-    .reviews__wrapper {
-        padding: 0 30px 50px;
+    .reviews .title {
+        margin-bottom: 10px;
     }
 
     .reviews__element {
         -ms-flex-direction: column;
         flex-direction: column;
         font-size: 14px;
+        padding: 20px 30px 50px;
     }
 
     .reviews__element .review_img {
@@ -2557,6 +2740,10 @@ ul.check li:before {
 
     .reviews__element .more_review {
         text-align: center !important;
+    }
+
+    .reviews__page {
+        margin-bottom: 40px;
     }
 
     .portfolio__slide {
@@ -2608,6 +2795,49 @@ ul.check li:before {
         -ms-flex-pack: start;
         justify-content: flex-start;
         height: auto;
+    }
+
+    .news_page__element {
+        width: 100%;
+        margin-bottom: 50px;
+        padding: 0;
+    }
+
+    .news_page__element .title {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .news_page__element .preview_text {
+        display: none;
+    }
+
+    .news_page__element .btn {
+        margin: 20px auto 0;
+    }
+
+    .error_page {
+        height: calc(100vh - 64px);
+    }
+
+    .error_wrapper {
+        padding: 0 20px;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .error_wrapper .error_name {
+        margin-bottom: 40px;
+    }
+
+    .error_wrapper .title {
+        width: 100%;
+    }
+
+    .error_wrapper .eror_text {
+        padding: 0;
+        text-align: center;
     }
 }
 
@@ -2731,6 +2961,11 @@ ul.check li:before {
 }
 
 @media screen and (max-width: 500px) {
+    h2, .h2 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
     .input_box {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -2755,6 +2990,27 @@ ul.check li:before {
     .modal__content form input {
         width: 100%;
         margin: 5px 0;
+    }
+
+    .detail_news__date {
+        margin-bottom: 20px;
+    }
+
+    .detail_news__preview_img_box {
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .about_company {
+        margin-bottom: 40px;
+    }
+
+    .about_company .breadcrumbs {
+        padding-top: 0;
+    }
+
+    .about_company .title_box .title {
+        font-size: 18px;
     }
 }
 

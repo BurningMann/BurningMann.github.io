@@ -91,6 +91,12 @@ window.onload = function(){
       $(".modal_overlay").fadeOut()
     }
   })
+  if($(".about_company").length || $(".main_page_slider_box").length || $(".error_page").length){
+    $(".nav_menu").addClass("nav_menu--blur")
+  }
+  $(".back_link").click(function(EO){
+    history.go(-1);
+  })
   /* SLIDERS */
 
   $(".main_page_slider").slick({
