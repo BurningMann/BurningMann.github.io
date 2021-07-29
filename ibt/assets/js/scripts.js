@@ -24,9 +24,22 @@ window.onload = function(){
     }
     $(".modal_bg").toggleClass("active")
     $(".nav_menu__menu").toggleClass("active")
+    $("body").toggleClass("hidden")
   });
 
+  if(window.innerWidth <= 780){
+    $(".nav_menu__menu_element.parent").click(function(EO){
+      EO.preventDefault()
+      $(this).toggleClass("active")
+      $(this).find(".nav_menu__drop_menu").slideToggle()
+    })
+    $('.modal_bg').click(function(EO){
+      $(".menu").toggleClass("active")
+      $(".modal_bg").toggleClass("active")
+      $(".nav_menu__menu").toggleClass("active")
+    })
 
+  }
 
 
   /* TABS */
