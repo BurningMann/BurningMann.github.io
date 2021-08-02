@@ -649,15 +649,34 @@ ul.check li:before {
     height: 70px;
     padding: 0 20px;
     background: rgba(2, 50, 74, 0.5);
-    -webkit-backdrop-filter: blur(30px);
-    backdrop-filter: blur(30px);
     z-index: 9999;
 }
 
 .nav_menu--blur {
-    background: rgba(255, 255, 255, 0.2);
+    background: none;
     margin-bottom: -70px;
     z-index: 9999;
+}
+
+.nav_menu--blur::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+}
+
+.nav_menu--blur .nav_menu__drop_menu {
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    border-radius: 0px 0px 5px 5px;
+    z-index: 99999;
 }
 
 .nav_menu__menu {
@@ -703,6 +722,29 @@ ul.check li:before {
 
 .nav_menu__search {
     cursor: pointer;
+}
+
+.nav_menu__search--open {
+    right: 40px;
+    top: 3px;
+}
+
+.nav_menu__search_input {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    width: calc(100% + 30px);
+    max-width: 800px;
+    padding: 0 20px;
+    display: none;
+    left: 12px;
+}
+
+.nav_menu__search_input input {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 0 40px 0 0;
 }
 
 /* BURGER */
@@ -988,6 +1030,10 @@ ul.check li:before {
     background: linear-gradient(270deg, #142139 0%, rgba(50, 66, 90, 0.6) 38.01%, rgba(0, 27, 78, 0) 78.45%);
 }
 
+.main_page_slider__element .content {
+    max-width: none;
+}
+
 .main_page_slider .slide_text {
     font-weight: 600;
     font-size: 50px;
@@ -1121,6 +1167,18 @@ ul.check li:before {
 
 .services__buttons {
     margin-bottom: 40px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.services__buttons .btn {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin: 5px 15px;
+}
+
+.services__buttons .btn:hover {
+    background: #fff;
 }
 
 .services__content {
@@ -1693,23 +1751,23 @@ ul.check li:before {
 }
 
 .question_form_section input::-webkit-input-placeholder {
-    color: #fff;
+    color: #E6E6E6;
 }
 
 .question_form_section input::-moz-placeholder {
-    color: #fff;
+    color: #E6E6E6;
 }
 
 .question_form_section input:-ms-input-placeholder {
-    color: #fff;
+    color: #E6E6E6;
 }
 
 .question_form_section input::-ms-input-placeholder {
-    color: #fff;
+    color: #E6E6E6;
 }
 
 .question_form_section input::placeholder {
-    color: #fff;
+    color: #E6E6E6;
 }
 
 .question_form_section textarea {
@@ -1722,23 +1780,23 @@ ul.check li:before {
 }
 
 .question_form_section textarea::-webkit-input-placeholder {
-    color: #fff;
+    color: #E6E6E6;
 }
 
 .question_form_section textarea::-moz-placeholder {
-    color: #fff;
+    color: #E6E6E6;
 }
 
 .question_form_section textarea:-ms-input-placeholder {
-    color: #fff;
+    color: #E6E6E6;
 }
 
 .question_form_section textarea::-ms-input-placeholder {
-    color: #fff;
+    color: #E6E6E6;
 }
 
 .question_form_section textarea::placeholder {
-    color: #fff;
+    color: #E6E6E6;
 }
 
 .question_form_section .btn {
@@ -1748,6 +1806,10 @@ ul.check li:before {
 
 .product_card {
     margin-bottom: 100px;
+}
+
+.product_card__mobile_info_box {
+    display: none;
 }
 
 .product_card__wrapper {
@@ -2054,12 +2116,17 @@ ul.check li:before {
     flex-grow: 1;
     margin: 15px;
     padding: 0 20px;
+    width: calc(100% / 3);
 }
 
 .contact_form .form .btn {
     margin: 15px;
     padding: 0 40px;
     border: none;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    color: #02324A;
+    width: calc(100% / 3);
 }
 
 .content_page h1, .content_page h2, .content_page h3 {
@@ -2294,6 +2361,10 @@ ul.check li:before {
     justify-content: center;
 }
 
+.about_company .breadcrumbs {
+    padding-bottom: 40px;
+}
+
 .about_company .breadcrumbs__element {
     color: #fff;
 }
@@ -2456,6 +2527,7 @@ ul.check li:before {
 
 .contact_page .form .btn {
     margin: 20px auto;
+    color: #02324A;
 }
 
 .portfolio_page {
@@ -2645,6 +2717,14 @@ ul.check li:before {
 
     .catalog_page .sidebar .filter_box label {
         width: 100%;
+    }
+
+    .product_card__mobile_info_box {
+        display: block;
+    }
+
+    .product_card__mobile_info_box .title_box {
+        text-align: left;
     }
 
     .product_card__wrapper {
@@ -2842,10 +2922,11 @@ ul.check li:before {
         position: relative;
         width: 100%;
         top: auto;
+        background: none !important;
     }
 
     .main_page_slider_box {
-        height: calc(100vh - 134px);
+        height: calc(100vh - 64px);
     }
 
     .main_page_slider__element {
@@ -2875,6 +2956,15 @@ ul.check li:before {
     .advantages__element {
         width: 50%;
         margin-bottom: 40px;
+        padding: 5px;
+    }
+
+    .advantages__element .title {
+        font-size: 20px;
+    }
+
+    .advantages__element p {
+        font-size: 16px;
     }
 
     .services__wrapper {
@@ -2902,6 +2992,7 @@ ul.check li:before {
         flex-grow: 1;
         width: auto;
         min-width: auto;
+        width: 100px;
     }
 
     .catalog_tabs {
@@ -2970,14 +3061,43 @@ ul.check li:before {
         margin-bottom: 40px;
     }
 
+    .portfolio__slider {
+        height: 520px;
+    }
+
+    .portfolio__slider .slick-list, .portfolio__slider .slick-track {
+        height: 100%;
+    }
+
+    .portfolio__slider .title {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .portfolio__slider .description {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
     .portfolio__slide {
-        padding: 20px;
+        padding: 20px 5px;
     }
 
     .portfolio__content {
         margin: 0;
         font-size: 14px;
         padding: 0 20px;
+        height: 100%;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+
+    .portfolio .portfolio_slider_navigation .slick-arrow {
+        width: 15px;
     }
 
     .vendors__wrapper {
@@ -2988,6 +3108,10 @@ ul.check li:before {
     .vendors__element {
         width: calc(100% / 3);
         margin-bottom: 20px;
+    }
+
+    .comand__element {
+        padding: 0 35px;
     }
 
     .map_section__box {
@@ -3123,6 +3247,10 @@ ul.check li:before {
     .portfolio_page__box .btn {
         margin: 20px auto 0;
     }
+
+    .content_page h3 {
+        font-size: 18px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -3193,6 +3321,10 @@ ul.check li:before {
         margin-bottom: 40px;
     }
 
+    .product_card__mobile_info_box .title_box {
+        font-size: 20px;
+    }
+
     .product_card__control_box .product_counter {
         margin: 10px;
     }
@@ -3221,7 +3353,7 @@ ul.check li:before {
 
     .product_card__description .tabs__control_line {
         margin: 0 -20px 20px;
-        padding: 5px 40px;
+        padding: 5px 0;
         -ms-flex-pack: center;
         justify-content: center;
     }

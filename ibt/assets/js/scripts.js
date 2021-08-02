@@ -110,6 +110,33 @@ window.onload = function(){
   $(".back_link").click(function(EO){
     history.go(-1);
   })
+
+  $(".nav_menu__search").click(function(EO){
+    if(innerWidth >= 780){
+      if($(this).hasClass("nav_menu__search--open")){
+        $(".nav_menu__menu").css("display","flex")
+        $(".nav_menu__search_input").css("display","none")
+        $(this).removeClass("nav_menu__search--open")
+      }else{
+        $(".nav_menu__menu").css("display","none")
+        $(".nav_menu__search_input").css("display","block")
+        $(this).addClass("nav_menu__search--open")
+      }
+    }else{
+      if($(this).hasClass("nav_menu__search--open")){
+        $(".nav_menu .phone").css("display","block")
+        $(".nav_menu__search_input").css("display","none")
+        $(this).removeClass("nav_menu__search--open")
+      }else{
+        $(".nav_menu .phone").css("display","none")
+        $(".nav_menu__search_input").css("display","block")
+        $(this).addClass("nav_menu__search--open")
+      }
+    }
+  })
+
+
+
   /* SLIDERS */
 
   $(".main_page_slider").slick({
@@ -119,8 +146,6 @@ window.onload = function(){
     lazyLoad: 'ondemand',
     dots: true
   })
-
-
 
   $(".catalog_slider").map(function(element,index){
     $(this).on('init reInit afterChange', function(event, slick, direction){
@@ -179,16 +204,17 @@ window.onload = function(){
 
   function comandSlider(){
     if(window.innerWidth <= 900){
-      console.log($(".comand__wrapper"))
       $(".comand__wrapper").slick({
         prevArrow: '<div class="prev"><img src="assets/img/icons/slider-arrow-gray.svg"></div>',
         nextArrow: '<div class="next"><img src="assets/img/icons/slider-arrow-gray.svg"></div>',
       })
-    }else{
-      $(".comand__wrapper").slick('unslick');
     }
   }comandSlider()
 
+  $(window).resize(function(){
+    comandSlider()
+  })
+  
   $(".product_card__slider").slick({
     arrows: false,
     fade: true,
