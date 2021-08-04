@@ -2610,6 +2610,123 @@ ul.check li:before {
     color: #34EBB0;
 }
 
+.product_table {
+    margin-bottom: 100px;
+}
+
+.product_table__title_line {
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #B2B2B2;
+}
+
+.product_table__box {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.product_table__main_content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.product_table__element {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    border-bottom: 1px solid #B2B2B2;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.product_table__element .product_ontrol_box {
+    padding-top: 50px;
+}
+
+.product_table .title {
+    margin-bottom: 10px;
+    color: #02324A;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: underline;
+    text-align: left;
+    width: 100%;
+    display: inline-block;
+}
+
+.product_table .product_info_box {
+    width: 30%;
+}
+
+.product_table .product_info_box .img_box {
+    border: 1px solid #B2B2B2;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.product_table .product_info_box .dell {
+    color: red;
+}
+
+.product_table .product_description_box {
+    width: 50%;
+}
+
+.product_table .product_description_box .description {
+    padding: 0 80px;
+    text-align: left;
+}
+
+.product_table .product_ontrol_box {
+    width: 20%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.confirm {
+    margin-bottom: 100px;
+}
+
+.confirm .form {
+    margin: -15px -15px 0;
+}
+
+.confirm .form input, .confirm .form textarea {
+    margin: 15px;
+}
+
+.confirm .form .btn {
+    margin: 30px auto 0;
+}
+
+.confirm__text {
+    padding: 0 20px 0 20px;
+}
+
+.confirm__text p, .confirm__text a {
+    margin-bottom: 20px;
+}
+
+.confirm .form_error {
+    color: red;
+    position: absolute;
+    top: -30px;
+    left: 15px;
+}
+
 @media screen and (max-width: 1400px) {
     .header .favorite .text {
         display: none;
@@ -2820,6 +2937,63 @@ ul.check li:before {
 
     .content_page__order_block .box.description .btn {
         margin: 0 auto;
+    }
+
+    .product_table__title_line {
+        display: none;
+    }
+
+    .product_table__element {
+        border: none;
+        padding: 10px;
+    }
+
+    .product_table__element .title {
+        text-decoration: none;
+        margin-bottom: 0;
+        line-height: 20px;
+        font-size: 14px;
+        border-right: 1px solid #B2B2B2;
+        border-left: 1px solid #B2B2B2;
+        border-top: 1px solid #B2B2B2;
+        padding: 10px 40px 10px 10px;
+    }
+
+    .product_table__element .product_ontrol_box {
+        padding-top: 20px;
+    }
+
+    .product_table .product_description_box {
+        display: none;
+    }
+
+    .product_table .product_info_box {
+        width: 100%;
+        border-right: 1px solid #B2B2B2;
+        border-left: 1px solid #B2B2B2;
+        border-bottom: 1px solid #B2B2B2;
+    }
+
+    .product_table .product_info_box .img_box {
+        border: none;
+    }
+
+    .product_table .product_info_box .dell {
+        display: none;
+    }
+
+    .product_table .mobile_dell {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .confirm__text {
+        display: none;
+    }
+
+    .confirm .form {
+        width: 100%;
     }
 }
 
@@ -3251,6 +3425,19 @@ ul.check li:before {
     .content_page h3 {
         font-size: 18px;
     }
+
+    .confirm .title {
+        margin-bottom: 10px;
+    }
+
+    .confirm .form_error {
+        position: relative;
+        top: 0;
+    }
+
+    .confirm .form {
+        margin-top: 0;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -3373,6 +3560,20 @@ ul.check li:before {
     .modal__content {
         padding: 0 20px;
     }
+
+    .confirm .form {
+        margin: 0;
+        margin: 0;
+    }
+
+    .confirm .form input, .confirm .form textarea {
+        margin: 5px;
+        width: 100%;
+    }
+
+    .confirm .form_error {
+        left: 0;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -3445,6 +3646,10 @@ ul.check li:before {
     .project_gallery_box img {
         padding: 0;
         width: 100%;
+    }
+
+    .confirm .form input, .confirm .form textarea {
+        margin: 5px 0;
     }
 }
 
