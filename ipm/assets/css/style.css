@@ -277,7 +277,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     width: 100%;
-    padding: 0 100px 0 200px;
+    padding: 0 60px 0 200px;
     letter-spacing: 1px;
 }
 
@@ -401,7 +401,7 @@ textarea {
 
 /* END common styles */
 .header {
-    padding: 0 30px;
+    padding: 0 50px;
     width: 100%;
     height: 150px;
     display: -ms-flexbox;
@@ -471,25 +471,40 @@ textarea {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     margin-left: 20px;
+    top: 0;
+    position: relative;
 }
 
 .main_menu__element .dropdown_menu {
     display: none;
-    padding: 15px 40px;
+    padding: 15px 0;
     position: absolute;
     top: 100%;
     left: -40px;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    border: 1px solid #f3f3f3;
-    border-top: none;
+    border: 2px solid #f3f3f3;
     z-index: 5;
     background: #ffffff;
 }
 
 .main_menu__element .dropdown_menu a {
     margin: 8px 0;
+}
+
+.main_menu__element .dropdown_menu .link_element {
+    padding: 0 40px;
+}
+
+.main_menu__element .dropdown_menu .dropdown_menu {
+    display: none;
+    left: 100%;
+    top: 0;
+}
+
+.main_menu__element .dropdown_menu .parent:hover .dropdown_menu {
+    display: block;
 }
 
 .main_menu__element:hover .parent::after {
@@ -499,7 +514,7 @@ textarea {
     position: relative;
 }
 
-.main_menu__element:hover .dropdown_menu {
+.main_menu__element:hover > .dropdown_menu {
     display: block;
 }
 
@@ -515,7 +530,7 @@ textarea {
 
 .left_sidebar .logo_block {
     height: 150px;
-    padding: 0 30px;
+    padding: 0 10px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: end;
@@ -581,7 +596,7 @@ textarea {
     content: "";
     display: block;
     height: 30px;
-    background: #78b7d4;
+    background: #0076AE;
     width: 2px;
     position: absolute;
     left: 100%;
@@ -593,7 +608,7 @@ textarea {
     position: fixed;
     right: 0;
     top: 0;
-    width: 100px;
+    width: 60px;
     border-left: 2px solid #f3f3f3;
 }
 
@@ -623,7 +638,7 @@ textarea {
     width: 700px;
     background: #f7f7f7;
     height: 100%;
-    right: calc(-200% - 500px);
+    right: calc(-100% - 700px);
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -637,6 +652,8 @@ textarea {
 .right_sidebar .search_box__section input {
     width: 100%;
     padding: 0 40px;
+    border: 2px solid #f3f3f3;
+    border-bottom: none;
 }
 
 .right_sidebar .search_box__search_container {
@@ -646,8 +663,7 @@ textarea {
 .right_sidebar .search_box__search_container .result_box {
     position: absolute;
     top: 100%;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -ms-flex-direction: column;
     flex-direction: column;
     background: #ffffff;
@@ -688,7 +704,7 @@ textarea {
 }
 
 .main_page_slider {
-    padding: 50px 100px;
+    padding: 50px;
     border-bottom: 2px solid #f3f3f3;
     margin-bottom: 50px;
 }
@@ -731,7 +747,7 @@ textarea {
     width: 0%;
     height: 2px;
     display: block;
-    background: #78b7d4;
+    background: #0076AE;
     position: absolute;
     left: 0;
     transition: 1s;
@@ -758,11 +774,11 @@ textarea {
 .category_section__element a:hover span {
     -webkit-transform: translate(-10%, 0);
     transform: translate(-10%, 0);
-    color: #78b7d4;
+    color: #0076AE;
 }
 
 .category_section__element a:hover::before {
-    width: 50%;
+    width: 100%;
 }
 
 .category_section__element a:hover::after {
@@ -823,7 +839,7 @@ textarea {
 }
 
 .about__element .title {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 20px;
     line-height: 28px;
     text-transform: inherit;
@@ -854,7 +870,7 @@ textarea {
 }
 
 .about__grade .grade_box .title {
-    height: 60px;
+    height: 80px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -891,7 +907,7 @@ textarea {
 .about__grade .grade_box .btn_order {
     text-transform: uppercase;
     background: #ffffff;
-    padding: 15px 30px;
+    padding: 20px 30px;
     cursor: pointer;
     overflow: hidden;
     transition: .5s;
@@ -940,7 +956,7 @@ textarea {
 }
 
 .reviews__slider {
-    padding: 25px 50px;
+    padding: 50px 50px 25px;
 }
 
 .reviews__slider .review_title {
@@ -1006,10 +1022,13 @@ textarea {
     align-items: center;
     transition: .5s;
     cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .width_animate_arrow .animate_arrow {
-    width: 60px;
+    width: 45px;
     height: 35px;
     margin-left: 20px;
 }
@@ -1021,11 +1040,18 @@ textarea {
     transition: .5s;
 }
 
-.width_animate_arrow .animate_arrow .back_arrow polygon {
+.width_animate_arrow .animate_arrow .cls-1 {
+    fill: none;
+    stroke: #d6d6d6;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+}
+
+.width_animate_arrow .animate_arrow .back_arrow line {
     fill: #cccccc;
 }
 
-.width_animate_arrow .animate_arrow .front_arrow polygon {
+.width_animate_arrow .animate_arrow .front_arrow line, .width_animate_arrow .animate_arrow .front_arrow polyline {
     transition: .5s;
 }
 
@@ -1043,8 +1069,8 @@ textarea {
     transform: translate(10px, 0);
 }
 
-.width_animate_arrow:hover .animate_arrow .front_arrow polygon {
-    fill: #006699;
+.width_animate_arrow:hover .animate_arrow .front_arrow line, .width_animate_arrow:hover .animate_arrow .front_arrow polyline {
+    stroke: #006699;
 }
 
 .about_company_section {
@@ -1054,7 +1080,7 @@ textarea {
 
 .about_company_section .description_box {
     width: 50%;
-    padding: 20px 50px;
+    padding: 50px;
 }
 
 .about_company_section .description_box .text {
@@ -1064,12 +1090,12 @@ textarea {
 
 .about_company_section .description_box .text::before {
     content: "";
-    width: 2px;
+    width: 3px;
     height: 40%;
-    background: #78b7d4;
+    background: #0076AE;
     display: block;
     position: absolute;
-    left: calc(100% + 1px);
+    left: 100%;
     top: 0;
 }
 
@@ -1082,7 +1108,7 @@ textarea {
 }
 
 .about_company_section .description_box p {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     line-height: 24px;
 }
 
@@ -1116,10 +1142,21 @@ textarea {
 
 .about_company_section .numbers_box__element {
     width: 50%;
-    margin-bottom: 40px;
     border-bottom: 2px solid #f3f3f3;
     border-right: 2px solid #f3f3f3;
-    padding: 0 30px 10px;
+    padding: 20px 30px 0;
+}
+
+.about_company_section .numbers_box__element:nth-child(even) {
+    border-right: none;
+}
+
+.about_company_section .numbers_box__element:nth-child(3) {
+    border-bottom: none;
+}
+
+.about_company_section .numbers_box__element:nth-child(4) {
+    border-bottom: none;
 }
 
 .about_company_section .numbers_box__element .number {
@@ -1127,6 +1164,7 @@ textarea {
     font-weight: 600;
     color: #cccccc;
     transition: 2s;
+    margin-bottom: 10px;
 }
 
 .about_company_section .numbers_box__element .number--black {
@@ -1142,6 +1180,10 @@ textarea {
 
 .about_company_section .numbers_box__element a {
     font-weight: 600;
+}
+
+.advantages {
+    padding-top: 40px;
 }
 
 .advantages .top {
@@ -1206,6 +1248,10 @@ textarea {
 
 .advantages__element:hover .icon .cls-1, .advantages__element:hover .icon .cls-2 {
     stroke: #006699;
+    fill: none;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    transition: 1s;
 }
 
 .advantages__element:hover .title {
@@ -1213,37 +1259,59 @@ textarea {
     transform: translate(60px, 0);
 }
 
+.team {
+    margin-top: -20px;
+}
+
 .team .top {
-    padding: 15px 50px;
+    padding: 35px 0 15px 50px;
     font-size: 28px;
     text-transform: uppercase;
+    width: calc(100% / 4);
+    border-right: 2px solid #f3f3f3;
+}
+
+.team .top::after {
+    content: "";
+    height: 2px;
+    width: calc(100% * 3 + 8px);
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 100%;
+    background: #f3f3f3;
 }
 
 .team__wrapper {
     display: -ms-flexbox;
     display: flex;
-    padding: 0 50px;
 }
 
 .team__element {
     width: calc(100% / 4);
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    overflow: hidden;
     border-right: 2px solid #f3f3f3;
+    padding-bottom: 300px;
 }
 
 .team__element:last-child {
     border-right: none;
 }
 
+.team__element .content {
+    padding-top: 20px;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
 .team__element .info_box {
     position: absolute;
     top: calc(100% - 4px);
     right: 100%;
-    background: rgba(0, 102, 153, 0.5);
+    background: rgba(0, 102, 153, 0.8);
     color: #ffffff;
     width: 100%;
     height: 100%;
@@ -1261,7 +1329,7 @@ textarea {
 
 .team__element .info_box .department {
     border-bottom: 2px solid #ffffff;
-    padding: 30px 20px 5px;
+    padding: 30px 20px 10px 30px;
     text-transform: uppercase;
     margin-bottom: 40px;
 }
@@ -1269,45 +1337,42 @@ textarea {
 .team__element .info_box .name {
     font-weight: 600;
     margin-bottom: 5px;
-    padding: 0 20px;
+    padding: 0 20px 0 30px;
 }
 
 .team__element .info_box .position {
     margin-bottom: 50px;
-    padding: 0 20px;
+    padding: 0 20px 0 30px;
     font-size: 16px;
 }
 
 .team__element .info_box .phone, .team__element .info_box .email {
     font-weight: 600;
     margin-bottom: 5px;
-    padding: 0 20px;
+    padding: 0 20px 0 30px;
 }
 
 .team__element .info_box a {
     color: #ffffff;
 }
 
-.team__element:hover .info_box {
+.team__element .content:hover .info_box {
     right: 0;
     top: 0;
 }
 
-.team__element:hover .info_box .content {
+.team__element .content:hover .info_box .content {
     transition-delay: 1s;
     opacity: 1;
 }
 
-.clients {
-    margin-top: 200px;
-}
-
 .clients .top {
-    padding: 30px 0 30px 0;
+    padding: 30px 0 30px 50px;
     font-size: 28px;
     text-transform: uppercase;
     width: calc(100% / 4);
-    margin-left: 50px;
+    position: absolute;
+    top: -120px;
 }
 
 .clients__wrapper {
@@ -1321,7 +1386,6 @@ textarea {
     width: calc(100% / 4);
     border-bottom: 2px solid #f3f3f3;
     border-right: 2px solid #f3f3f3;
-    border-top: 2px solid #f3f3f3;
     overflow: hidden;
     display: -ms-flexbox;
     display: flex;
@@ -1329,6 +1393,14 @@ textarea {
     align-items: center;
     -ms-flex-pack: center;
     justify-content: center;
+}
+
+.clients__element:nth-child(-n + 4) {
+    border-top: 2px solid #f3f3f3;
+}
+
+.clients__element:nth-child(4n + 4) {
+    border-right: none;
 }
 
 .clients__element.empty {
@@ -1339,6 +1411,9 @@ textarea {
     transition: 1s;
     -webkit-transform: translate(0, 100%);
     transform: translate(0, 100%);
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
 }
 
 .clients.visible img {
@@ -1353,7 +1428,7 @@ textarea {
 
 .empty_blocks_afterclients .block {
     width: calc(100% / 4);
-    height: 300px;
+    height: 250px;
     border-right: 2px solid #f3f3f3;
     border-bottom: 2px solid #f3f3f3;
 }
@@ -1377,8 +1452,9 @@ textarea {
     bottom: 0;
     left: 0;
     background: url(../img/IPM.svg) center/cover no-repeat;
-    width: 600px;
-    padding-top: 70%;
+    width: 500px;
+    height: 180px;
+    z-index: -1;
 }
 
 .news {
@@ -1395,6 +1471,7 @@ textarea {
     height: 250px;
     padding: 40px 20px 0;
     border-bottom: 2px solid #f3f3f3;
+    border-right: 2px solid #f3f3f3;
 }
 
 .news__element::before {
@@ -1404,10 +1481,14 @@ textarea {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 102, 153, 0.5);
+    background: rgba(0, 102, 153, 0.8);
     opacity: 0;
     z-index: 3;
     transition: 1s;
+}
+
+.news__element:last-child {
+    border-right: none;
 }
 
 .news__element .bg_img {
@@ -1433,7 +1514,6 @@ textarea {
     left: 20px;
     bottom: 0;
     padding: 10px 20px;
-    border-top: 2px solid #f3f3f3;
     width: calc(100% - 40px);
     display: -ms-flexbox;
     display: flex;
@@ -1443,12 +1523,21 @@ textarea {
     justify-content: space-between;
     z-index: 5;
     overflow: hidden;
+    transition-delay: 1s;
+}
+
+.news__element .bottom .cls-1 {
+    fill: none;
+    stroke: #006699;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    transition: 1s;
 }
 
 .news__element .bottom::before {
     content: "";
     display: block;
-    width: 40%;
+    width: 100%;
     height: 2px;
     background: #ffffff;
     position: absolute;
@@ -1457,6 +1546,20 @@ textarea {
     -webkit-transform: translate(-100%, 0);
     transform: translate(-100%, 0);
     transition: 1s;
+    z-index: 5;
+}
+
+.news__element .bottom::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #f3f3f3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    transition-delay: 1s;
 }
 
 .news__element .bottom.empty::before {
@@ -1480,34 +1583,31 @@ textarea {
     max-height: 100%;
 }
 
-.news__element .bottom .link svg polygon {
-    fill: #006699;
-    transition: 1s;
-}
-
-.news__element:hover .bg_img {
+.news__element:not(.empty):hover .bg_img {
     opacity: 1;
 }
 
-.news__element:hover::before {
+.news__element:not(.empty):hover::before {
     opacity: 1;
 }
 
-.news__element:hover .bottom {
-    border-top: none;
+.news__element:not(.empty):hover .bottom::after {
+    transition: 0s;
+    transition-delay: 0s;
+    opacity: 0;
 }
 
-.news__element:hover .bottom::before {
+.news__element:not(.empty):hover .bottom::before {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
 }
 
-.news__element:hover .date, .news__element:hover .text {
+.news__element:not(.empty):hover .date, .news__element:not(.empty):hover .text {
     color: #ffffff;
 }
 
-.news__element:hover .link svg polygon {
-    fill: #ffffff;
+.news__element:not(.empty):hover .link svg line, .news__element:not(.empty):hover .link svg polyline {
+    stroke: #ffffff;
 }
 
 .footer__first {
@@ -1599,4 +1699,10 @@ textarea {
     height: 50px;
     text-align: left;
     padding: 0 20px;
+}
+
+@media screen and (max-width: 1400px) {
+    .header__tagline {
+        display: none;
+    }
 }

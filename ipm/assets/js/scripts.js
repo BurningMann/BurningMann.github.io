@@ -20,13 +20,21 @@ window.onload = function(){
     })
   }
 }
-
+$(document).on('input', '.search_box__section input', function () {
+  console.log()
+  if($(this).val()){
+    $(".search_box__search_container .result_box").css("display","flex")
+  }else{
+    $(".search_box__search_container .result_box").css("display","none")
+  }
+});
 
 $(".reviews__slider").slick({
   infinite: true,
   fade: true,
   cssEase: 'linear',
   arrows:false,
+  adaptiveHeight: true,
 })
 $(".reviews__slider_button .width_animate_arrow").click(function(){
   $(".reviews__slider").slick('slickNext')
