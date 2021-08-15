@@ -1,4 +1,5 @@
 window.onload = function(){
+
   let clients = $(".clients")[0]
   let about = $(".about_company_section")[0]
   if(this.pageYOffset + (window.innerHeight / 1.5) >= $(clients).offset().top){
@@ -12,10 +13,20 @@ window.onload = function(){
   }
   if(this.pageYOffset + (window.innerHeight / 1.5) >= $(about).offset().top){
     $(about).find(".number").addClass('number--black')
+    $(about).find(".number").delay(500).spincrement({
+      thousandSeparator: "",
+      duration: 3000,
+      leeway: 0,
+    });
   }else{
     $(window).scroll(function(){
-      if(this.pageYOffset + (window.innerHeight / 1.5) >= $(about).offset().top ){
+      if(this.pageYOffset + (window.innerHeight / 1.5) >= $(about).offset().top && !$(about).find(".number").hasClass('number--black')){
         $(about).find(".number").addClass('number--black')
+        $(about).find(".number").delay(500).spincrement({
+          thousandSeparator: "",
+          duration: 3000,
+          leeway: 0
+        });
       }
     })
   }

@@ -1162,13 +1162,15 @@ textarea {
 .about_company_section .numbers_box__element .number {
     font-size: 60px;
     font-weight: 600;
-    color: #cccccc;
+    color: #000;
     transition: 2s;
     margin-bottom: 10px;
+    opacity: 0 !important;
+    transition: 3s;
 }
 
 .about_company_section .numbers_box__element .number--black {
-    color: #000;
+    opacity: 1 !important;
 }
 
 .about_company_section .numbers_box__element .sub {
