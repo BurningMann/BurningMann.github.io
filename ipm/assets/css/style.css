@@ -497,17 +497,30 @@ textarea {
     padding: 0 40px;
 }
 
+.main_menu__element .dropdown_menu .link_element:hover {
+    background: #f3f3f3;
+}
+
+.main_menu__element .dropdown_menu .link_element a.link_element:hover {
+    background: #f3f3f3;
+}
+
+.main_menu__element .dropdown_menu a.link_element {
+    padding: 8px 40px;
+    margin: 0;
+}
+
 .main_menu__element .dropdown_menu .dropdown_menu {
     display: none;
     left: 100%;
-    top: 0;
+    top: -17px;
 }
 
 .main_menu__element .dropdown_menu .parent:hover .dropdown_menu {
     display: block;
 }
 
-.main_menu__element:hover .parent::after {
+.main_menu__element:hover > .parent::after {
     -webkit-transform: rotate(-135deg);
     transform: rotate(-135deg);
     top: 3px;
@@ -976,6 +989,7 @@ textarea {
 .reviews__slider .link_box a {
     font-size: 24px;
     text-transform: uppercase;
+    font-weight: normal;
 }
 
 .reviews__slider .link_box a::after {
@@ -1292,7 +1306,7 @@ textarea {
 .team__element {
     width: calc(100% / 4);
     border-right: 2px solid #f3f3f3;
-    padding-bottom: 300px;
+    padding-bottom: 250px;
 }
 
 .team__element:last-child {
@@ -1644,9 +1658,10 @@ textarea {
 
 .footer__column .column_title {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 20px;
     min-height: 20px;
+    text-transform: uppercase;
 }
 
 .footer__column a {
