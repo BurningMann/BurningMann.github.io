@@ -2,11 +2,11 @@ window.onload = function(){
 
   let clients = $(".clients")[0]
   let about = $(".about_company_section")[0]
-  if(this.pageYOffset + (window.innerHeight / 1.5) >= $(clients).offset().top){
+  if(this.pageYOffset + (window.innerHeight / 2) >= $(clients).offset().top){
     $(clients).addClass('visible')
   }else{
     $(window).scroll(function(){
-      if(this.pageYOffset + (window.innerHeight / 1.5) >= $(clients).offset().top ){
+      if(this.pageYOffset + (window.innerHeight / 2) >= $(clients).offset().top ){
         $(clients).addClass('visible')
       }
     })
@@ -40,6 +40,28 @@ $(document).on('input', '.search_box__section input', function () {
   }
 });
 
+
+$('.main_page_slider__wrapper').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  asNavFor: '.main_page_slider__dots_box',
+  fade: true,
+  speed: 1000,
+  prevArrow: '<div class="prev"></div>',
+  nextArrow: '<div class="next"></div>'
+})
+
+$('.main_page_slider__dots_box').slick({
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  asNavFor: '.main_page_slider__wrapper',
+  arrows:false,
+  focusOnSelect: true,
+  vertical: true
+});
+
+
+
 $(".reviews__slider").slick({
   infinite: true,
   fade: true,
@@ -47,6 +69,6 @@ $(".reviews__slider").slick({
   arrows:false,
   adaptiveHeight: true,
 })
-$(".reviews__slider_button .width_animate_arrow").click(function(){
+$(".reviews__slider_button").click(function(){
   $(".reviews__slider").slick('slickNext')
 })
