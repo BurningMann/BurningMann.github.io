@@ -30,6 +30,8 @@ window.onload = function(){
       }
     })
   }
+  $(".description_box .text").mCustomScrollbar();
+
 }
 $(document).on('input', '.search_box__section input', function () {
   console.log()
