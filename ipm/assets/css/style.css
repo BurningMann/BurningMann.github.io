@@ -835,11 +835,35 @@ textarea {
     justify-content: center;
     text-align: center;
     text-transform: uppercase;
+    overflow: hidden;
 }
 
 .main_page_slider__dots_box .dot.slick-current {
     background: #0ba4f6;
     color: #fff;
+}
+
+.main_page_slider__dots_box .dot.slick-current::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    transition: .5s;
+}
+
+.main_page_slider__dots_box .dot:hover {
+    color: #000;
+}
+
+.main_page_slider__dots_box .dot:hover::before {
+    top: 0;
+}
+
+.main_page_slider__dots_box .dot:last-child {
+    margin-bottom: 0;
 }
 
 .main_page_slider__dots_box .slick-track {
@@ -893,12 +917,17 @@ textarea {
     display: flex;
     -ms-flex-pack: end;
     justify-content: flex-end;
+    -ms-flex-align: center;
+    align-items: center;
     margin-top: 20px;
 }
 
 .main_page_slider__wrapper .slider_element .service_box .link .arrow {
     width: 40px;
     margin-left: 50px;
+    position: relative;
+    top: -1px;
+    transition: .5s;
 }
 
 .main_page_slider__wrapper .slider_element .service_box .link .cls-1 {
@@ -906,6 +935,11 @@ textarea {
     stroke: #0ba4f6;
     stroke-linecap: round;
     stroke-miterlimit: 10;
+}
+
+.main_page_slider__wrapper .slider_element .service_box .link:hover .arrow {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
 }
 
 .main_page_slider__wrapper .slider_element .service_box .call_back_btn {
@@ -922,6 +956,27 @@ textarea {
     color: #fff;
     text-transform: uppercase;
     margin-top: 50px;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.main_page_slider__wrapper .slider_element .service_box .call_back_btn::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    transition: .5s;
+}
+
+.main_page_slider__wrapper .slider_element .service_box .call_back_btn:hover {
+    color: #000;
+}
+
+.main_page_slider__wrapper .slider_element .service_box .call_back_btn:hover::before {
+    top: 0;
 }
 
 .main_page_slider__wrapper .slider_element .img_box img {
@@ -1019,6 +1074,7 @@ textarea {
     width: calc(100% - 350px);
     height: 406px;
     border-bottom: 2px solid #f3f3f3;
+    padding: 0 0 0 30px;
 }
 
 .about__content::before {
@@ -1206,13 +1262,18 @@ textarea {
 }
 
 .reviews__slider .link_box a {
-    font-size: 24px;
+    font-size: 18px;
     text-transform: uppercase;
-    color: #0ba4f6;
+    color: #d6d6d6;
+    transition: .5s;
 }
 
 .reviews__slider .link_box a::after {
     content: "";
+}
+
+.reviews__slider .link_box:hover a {
+    color: #0ba4f6;
 }
 
 .reviews__right_bar {
@@ -1249,14 +1310,26 @@ textarea {
     height: calc(100% - 60px);
     transition: .5s;
     cursor: pointer;
+    overflow: hidden;
 }
 
-.reviews__slider_button:hover {
+.reviews__slider_button:before {
+    content: "";
+    width: 100%;
+    height: 100%;
     background: #0ba4f6;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    transition: .5s;
 }
 
 .reviews__slider_button:hover .arrow .cls-1 {
     stroke: #fff;
+}
+
+.reviews__slider_button:hover:before {
+    top: 0;
 }
 
 .reviews__slider_button .arrow {
@@ -1336,7 +1409,7 @@ textarea {
 
 .about_company_section .description_box {
     width: 50%;
-    padding: 50px;
+    padding: 50px 50px 100px;
     background: #f5fafe;
     margin-right: 30px;
 }
@@ -1386,6 +1459,9 @@ textarea {
     display: flex;
     -ms-flex-pack: end;
     justify-content: flex-end;
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
 }
 
 .about_company_section .description_box .link a {
@@ -1416,7 +1492,7 @@ textarea {
     width: 50%;
     border-bottom: 2px solid #f3f3f3;
     border-right: 2px solid #f3f3f3;
-    padding: 50px 30px 0;
+    padding: 30px 30px 0;
 }
 
 .about_company_section .numbers_box__element:nth-child(1) {
@@ -1455,11 +1531,17 @@ textarea {
     font-size: 16px;
     display: block;
     line-height: 22px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .about_company_section .numbers_box__element a {
     font-weight: 600;
+}
+
+.about_company_section .numbers_box__element .width_animate_arrow {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
 }
 
 .advantages {
@@ -1594,15 +1676,19 @@ textarea {
     overflow: hidden;
 }
 
+.team__element .content img {
+    max-height: 275px;
+}
+
 .team__element .info_box {
     position: absolute;
-    top: calc(100% - 4px);
-    right: 100%;
+    top: 100%;
+    right: 0;
     background: rgba(11, 164, 246, 0.6);
     color: #ffffff;
     width: 100%;
     height: 100%;
-    transition: right .3s, top .3s .3s;
+    transition: top .5s;
 }
 
 .team__element .info_box .content {
@@ -1645,12 +1731,10 @@ textarea {
 }
 
 .team__element .content:hover .info_box {
-    right: 0;
     top: 0;
 }
 
 .team__element .content:hover .info_box .content {
-    transition-delay: .7s;
     opacity: 1;
 }
 
@@ -1773,14 +1857,14 @@ textarea {
 .news__element::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 100%;
     left: 0;
     right: 0;
     bottom: 0;
     background: rgba(11, 164, 246, 0.6);
     opacity: 0;
     z-index: 3;
-    transition: 1s;
+    transition: .5s;
 }
 
 .news__element:last-child {
@@ -1838,9 +1922,9 @@ textarea {
     position: absolute;
     top: 0;
     left: 0;
-    -webkit-transform: translate(calc(-100% + 40px), 0);
-    transform: translate(calc(-100% + 40px), 0);
-    transition: 1s;
+    -webkit-transform: translate(calc(-100% - 20px), 0);
+    transform: translate(calc(-100% - 20px), 0);
+    transition: .5s;
     z-index: 5;
 }
 
@@ -1883,6 +1967,7 @@ textarea {
 }
 
 .news__element:not(.empty):hover::before {
+    top: 0;
     opacity: 1;
 }
 
@@ -1998,6 +2083,12 @@ textarea {
     text-align: left;
     padding: 0 20px;
     border: none;
+}
+
+@media screen and (max-width: 1900px) {
+    .main_page_slider__dots_box .dot {
+        margin-bottom: 16px;
+    }
 }
 
 @media screen and (max-width: 1400px) {
