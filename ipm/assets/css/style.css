@@ -548,7 +548,7 @@ textarea {
 }
 
 .header .main_menu__element .dropdown_menu .link_element:hover {
-    background: #f3f3f3;
+    background: #f5fafe;
 }
 
 .header .main_menu__element .dropdown_menu .link_element a.link_element:hover {
@@ -741,6 +741,11 @@ textarea {
 
 .right_sidebar .search_box:hover .search_box__icon path {
     fill: #0ba4f6;
+}
+
+.right_sidebar .search_box .search_title {
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
 .right_sidebar .social {
