@@ -32,9 +32,18 @@ window.onload = function(){
   }
   $(".description_box .text").mCustomScrollbar();
 
+  $('.main_menu__element .parent').click(function(){
+    $(this).siblings('.dropdown_menu').slideToggle()
+    $(this).toggleClass('active')
+  })
+
+  $('.hamburger1').click(function(){
+    $('.header .main_menu').fadeToggle()
+    console.log(1)
+  })
+  
 }
 $(document).on('input', '.search_box__section input', function () {
-  console.log()
   if($(this).val()){
     $(".search_box__search_container .result_box").css("display","flex")
   }else{
@@ -59,7 +68,25 @@ $('.main_page_slider__dots_box').slick({
   asNavFor: '.main_page_slider__wrapper',
   arrows:false,
   focusOnSelect: true,
-  vertical: true
+  vertical: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow:3,
+        vertical: false,
+        centerMode: true,
+      }
+    },
+    {
+      breakpoint: 780,
+      settings: {
+        slidesToShow:3,
+        vertical: false,
+        centerMode: true,
+      }
+    },
+  ]
 });
 
 
@@ -70,7 +97,18 @@ $(".reviews__slider").slick({
   cssEase: 'linear',
   arrows:false,
   adaptiveHeight: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        arrows:true,
+        prevArrow: '<div class="prev"></div>',
+        nextArrow: '<div class="next"></div>'
+      }
+    },
+  ]
 })
+
 $(".reviews__slider_button").click(function(){
   $(".reviews__slider").slick('slickNext')
 })
