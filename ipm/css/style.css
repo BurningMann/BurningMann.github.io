@@ -291,6 +291,12 @@ body.hidden {
     padding: 0 50px;
 }
 
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
 p {
     margin: 0;
 }
@@ -679,6 +685,7 @@ textarea {
 .tab_section .accordion_box__element .content {
     display: none;
     padding: 20px 50px 40px;
+    line-height: 20px;
 }
 
 /* END common styles */
@@ -2407,10 +2414,27 @@ textarea {
 }
 
 @media screen and (max-width: 780px) {
+    .question_answer {
+        margin-bottom: 30px;
+    }
+
+    .tab_section .accordion_box__element .opener {
+        padding: 10px 20px;
+    }
+
+    .tab_section .accordion_box__element .opener::after {
+        right: 10px;
+    }
+
+    .tab_section .accordion_box__element .content {
+        padding: 20px 20px 30px;
+    }
+
     .link_box_with_bg {
         -ms-flex-direction: column;
         flex-direction: column;
         height: auto;
+        margin-bottom: 20px;
     }
 
     .link_box_with_bg__element {
