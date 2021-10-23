@@ -2,7 +2,8 @@ window.onload = function(){
 
   let clients = $(".clients")[0]
   let about = $(".about_company_section")[0]
-  if(this.pageYOffset + (window.innerHeight / 2) >= $(clients).offset().top){
+
+  if(clients && this.pageYOffset + (window.innerHeight / 2) >= $(clients).offset().top){
     $(clients).addClass('visible')
   }else{
     $(window).scroll(function(){
@@ -11,7 +12,7 @@ window.onload = function(){
       }
     })
   }
-  if(this.pageYOffset + (window.innerHeight / 1.5) >= $(about).offset().top){
+  if(clients && this.pageYOffset + (window.innerHeight / 1.5) >= $(about).offset().top){
     $(about).find(".number").addClass('number--black')
     $(about).find(".number").delay(500).spincrement({
       thousandSeparator: "",
@@ -42,6 +43,24 @@ window.onload = function(){
     console.log(1)
   })
   
+  $('.tab_section__tab').click(function(){
+    if(!$(this).hasClass('disabled') && !$(this).hasClass('active')){
+      let tabClass  = $(this).data('tab')
+      let tabContainer = $(this).closest('.tab_section')
+      $(tabContainer).find('.tab_section__tab.active').removeClass('active')
+      $(this).addClass('active')
+      $(tabContainer).find('.tab_section__content_tab.active').removeClass('active')
+      $(tabContainer).find(`.${tabClass}_tab`).addClass('active')
+      $('.area').map(function(index,element){
+        $(element).removeAttr('style')
+      })
+    }
+  })
+
+  $('.accordion_box__element .opener').click(function(){
+    $(this).toggleClass('active')
+    $(this).siblings('.content').slideToggle()
+  })
 }
 $(document).on('input', '.search_box__section input', function () {
   if($(this).val()){
