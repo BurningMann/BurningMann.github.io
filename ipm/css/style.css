@@ -703,7 +703,7 @@ textarea {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     background: #fff;
 }
 
@@ -963,7 +963,7 @@ textarea {
     top: 0;
     width: 80px;
     border-left: 2px solid #f3f3f3;
-    z-index: 101;
+    z-index: 10000;
 }
 
 .right_sidebar .search_box {
@@ -2583,6 +2583,22 @@ textarea {
 }
 
 @media screen and (max-width: 1024px) {
+    .right_sidebar .search_box__section {
+        position: fixed;
+        left: 0;
+        right: auto !important;
+        width: calc(100% - 80px);
+        height: 100px;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .right_sidebar .search_box:hover .search_box__section {
+        opacity: 1;
+        visibility: visible;
+    }
+
     .main_page_slider {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
