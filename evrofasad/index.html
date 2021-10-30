@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" id="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+  <body>
+    <header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__line">
+        <a href="#" class="geo"><img src="./img/icons/geo.svg" alt=""> Москва</a>
+        <div class="header__additional_menu">
+          <a href="#">О компании</a>
+          <a href="#">Акции</a>
+          <a href="#">Контакты</a>
+          <a href="tel:+7 495 477-10-82" class="phone">+7 495 477-10-82</a>
+          <div class="callback_btn">
+            заказать звонок
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__main">
+    <div class="container">
+      <div class="header__line">
+        <a href="/" class="logo">
+          <svg width="248" height="80" viewBox="0 0 248 80" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="248" height="80" fill="url(#pattern0)"/>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_292:21" transform="translate(0 -0.0246154) scale(0.00307692 0.00953846)"/>
+</pattern>
+<image id="image0_292:21" width="325" height="110" xlink:href="data:image/png;base64,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"/>
+</defs>
+</svg>
+
+        </a>
+        <div class="header__main_menu">
+          <div class="memu_item">
+            <a href="#">Пластиковые окна</a>
+          </div>
+          <div class="memu_item">
+            <a href="#">алюминиевые окна</a>
+          </div>
+          <div class="memu_item">
+            <a href="#">балконы</a>
+          </div>
+          <div class="memu_item">
+            <a href="#">услуги</a>
+          </div>
+        </div>
+        <div class="froze">
+          <img src="./img/icons/froze.svg" alt="">
+          <span>оставить заявку на <br>замер</span>
+        </div>
+        <div class="burger">
+          <span class="burger__line line-1"></span>
+          <span class="burger__line line-2"></span>
+          <span class="burger__line line-3"></span>
+          <span class="burger__line line-4"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <div class="main_banner section">
+      <img src="./img/banner-1.png" class="main_banner__image fit">
+      <div class="container">
+        <div class="main_banner__content">
+          <span class="main_banner__title">
+            Заказывайте <br>окна не выходя <br>из дома <br>
+            <span class="light_blue">со скидкой 55%</span>
+          </span>
+          <p class="main_banner__text">Окна REHAU от производителя по лучшей цене — <span class="light_blue">от 2 660 ₽/м²</span></p>
+          <a href="#" class="btn">рассчитать стоимость</a>
+        </div>
+      </div>
+    </div>
+    <main>
+      <div class="advantages section">
+  <div class="container">
+    <div class="title_wrapper"><span class="title">преимущества</span></div>
+    <div class="advantages__wrapper">
+      <div class="advantages__element">
+        <div class="advantages__icon"><img src="./img/icons/sound.svg"></div>
+        <span class="advantages__text">Хорошая шумоизоляция</span>
+      </div>
+      <div class="advantages__element">
+        <div class="advantages__icon"><img src="./img/icons/sheet.svg"></div>
+        <span class="advantages__text">Экологичный материал</span>
+      </div>
+      <div class="advantages__element">
+        <div class="advantages__icon"><img src="./img/icons/sheeld.svg"></div>
+        <span class="advantages__text">Надежность профиля</span>
+      </div>
+      <div class="advantages__element">
+        <div class="advantages__icon"><img src="./img/icons/sun.svg"></div>
+        <span class="advantages__text">Пропускает <br>больше света</span>
+      </div>
+      <div class="advantages__element">
+        <div class="advantages__icon"><img src="./img/icons/cloud.svg"></div>
+        <span class="advantages__text">Высокая теплоизодяция</span>
+      </div>
+      <div class="advantages__element">
+        <div class="advantages__icon"><img src="./img/icons/clock.svg"></div>
+        <span class="advantages__text">Длительный срок эксплуатации</span>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="section section--background">
+        <div class="container">
+          <div class="about">
+  <div class="title_wrapper"><span class="title">о компании</span></div>
+  <div class="description section">Компания «Подольский оконный завод» – крупная компания, которая работает 15 лет и каждый год развивает современные технологии производства и сервиса. Мы производим и устанавливаем оконные системы любой сложности. Свое производство пластиковых окон позволяет нам гарантировать качество на всех этапах изготовления и уменьшать стоимость изделий. Наши производственные мощности находятся в Чехове, а головной офис расположен в Подольске. Завод оснащен немецким, итальянским и венгерским оборудованием. Индивидуальный подход к каждому клиенту для нас не просто слова, а стиль нашей работы. Наши менеджеры подбирают лучшие по цене и качеству варианты остекления, основываясь на потребностях и пожеланиях клиентов.</div>
+
+  <div class="tab_section">
+    <div class="tab_section__tab_container">
+      <div class="tab_section__tab active" data-tab="all_products">Все</div>
+      <div class="tab_section__tab" data-tab="cold_all">Холодный алюминий</div>
+      <div class="tab_section__tab" data-tab="hot_all">Теплый алюминий</div>
+      <div class="tab_section__tab" data-tab="facade_sus">Фасадные системы</div>
+    </div>
+
+    <div class="tab_section__content">
+      <div class="tab_section__content_tab all_products_tab active">
+        <div class="product_wrapper">
+          <div class="product_slider">
+            <div class="product">
+              <span class="product__title title">Алютекс ALT</span>
+              <div class="img_box product__img">
+                <img src="./img/product-example-3.png" alt="" class="fit">
+              </div>
+              
+              <div class="product__sizes">
+                <div class="size"><span>Воздушных камер</span> <span>4 мм</span></div>
+                <div class="size"><span>Толщина стекла</span> <span>26 мм</span></div>
+                <div class="size"><span>Глубина</span> <span>32 мм</span></div>
+              </div>
+              <div class="img_box product__img">
+                <img src="./img/product-example-4.png" alt="" class="fit">
+              </div>
+              <div class="product__price">от 226 руб</div>
+              <a href="#" class="product__link">Подробнее</a>
+            </div>
+            <div class="product">
+              <span class="product__title title">Алютекс ALT</span>
+              <div class="img_box product__img">
+                <img src="./img/product-example-2.png" alt="" class="fit">
+              </div>
+              
+              <div class="product__sizes">
+                <div class="size"><span>Воздушных камер</span> <span>4 мм</span></div>
+                <div class="size"><span>Толщина стекла</span> <span>26 мм</span></div>
+                <div class="size"><span>Глубина</span> <span>32 мм</span></div>
+              </div>
+              <div class="img_box product__img">
+                <img src="./img/product-example-4.png" alt="" class="fit">
+              </div>
+              <div class="product__price">от 226 руб</div>
+              <a href="#" class="product__link">Подробнее</a>
+            </div>
+            <div class="product">
+              <span class="product__title title">Алютекс ALT</span>
+              <div class="img_box product__img">
+                <img src="./img/product-example-1.png" alt="" class="fit">
+              </div>
+              
+              <div class="product__sizes">
+                <div class="size"><span>Воздушных камер</span> <span>4 мм</span></div>
+                <div class="size"><span>Толщина стекла</span> <span>26 мм</span></div>
+                <div class="size"><span>Глубина</span> <span>32 мм</span></div>
+              </div>
+              <div class="img_box product__img">
+                <img src="./img/product-example-4.png" alt="" class="fit">
+              </div>
+              <div class="product__price">от 226 руб</div>
+              <a href="#" class="product__link">Подробнее</a>
+            </div>
+            <div class="product">
+              <span class="product__title title">Алютекс ALT</span>
+              <div class="img_box product__img">
+                <img src="./img/product-example-3.png" alt="" class="fit">
+              </div>
+              
+              <div class="product__sizes">
+                <div class="size"><span>Воздушных камер</span> <span>4 мм</span></div>
+                <div class="size"><span>Толщина стекла</span> <span>26 мм</span></div>
+                <div class="size"><span>Глубина</span> <span>32 мм</span></div>
+              </div>
+              <div class="img_box product__img">
+                <img src="./img/product-example-4.png" alt="" class="fit">
+              </div>
+              <div class="product__price">от 226 руб</div>
+              <a href="#" class="product__link">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab_section__content_tab cold_all_tab">
+        <div class="product_wrapper">
+          <div class="product_slider">
+            <div class="product">
+              <span class="product__title title">Алютекс ALT</span>
+              <div class="img_box product__img">
+                <img src="./img/product-example-3.png" alt="" class="fit">
+              </div>
+              
+              <div class="product__sizes">
+                <div class="size"><span>Воздушных камер</span> <span>4 мм</span></div>
+                <div class="size"><span>Толщина стекла</span> <span>26 мм</span></div>
+                <div class="size"><span>Глубина</span> <span>32 мм</span></div>
+              </div>
+              <div class="img_box product__img">
+                <img src="./img/product-example-4.png" alt="" class="fit">
+              </div>
+              <div class="product__price">от 226 руб</div>
+              <a href="#" class="product__link">Подробнее</a>
+            </div>
+            <div class="product">
+              <span class="product__title title">Алютекс ALT</span>
+              <div class="img_box product__img">
+                <img src="./img/product-example-2.png" alt="" class="fit">
+              </div>
+              
+              <div class="product__sizes">
+                <div class="size"><span>Воздушных камер</span> <span>4 мм</span></div>
+                <div class="size"><span>Толщина стекла</span> <span>26 мм</span></div>
+                <div class="size"><span>Глубина</span> <span>32 мм</span></div>
+              </div>
+              <div class="img_box product__img">
+                <img src="./img/product-example-4.png" alt="" class="fit">
+              </div>
+              <div class="product__price">от 226 руб</div>
+              <a href="#" class="product__link">Подробнее</a>
+            </div>
+            <div class="product">
+              <span class="product__title title">Алютекс ALT</span>
+              <div class="img_box product__img">
+                <img src="./img/product-example-1.png" alt="" class="fit">
+              </div>
+              
+              <div class="product__sizes">
+                <div class="size"><span>Воздушных камер</span> <span>4 мм</span></div>
+                <div class="size"><span>Толщина стекла</span> <span>26 мм</span></div>
+                <div class="size"><span>Глубина</span> <span>32 мм</span></div>
+              </div>
+              <div class="img_box product__img">
+                <img src="./img/product-example-4.png" alt="" class="fit">
+              </div>
+              <div class="product__price">от 226 руб</div>
+              <a href="#" class="product__link">Подробнее</a>
+            </div>
+            <div class="product">
+              <span class="product__title title">Алютекс ALT</span>
+              <div class="img_box product__img">
+                <img src="./img/product-example-3.png" alt="" class="fit">
+              </div>
+              
+              <div class="product__sizes">
+                <div class="size"><span>Воздушных камер</span> <span>4 мм</span></div>
+                <div class="size"><span>Толщина стекла</span> <span>26 мм</span></div>
+                <div class="size"><span>Глубина</span> <span>32 мм</span></div>
+              </div>
+              <div class="img_box product__img">
+                <img src="./img/product-example-4.png" alt="" class="fit">
+              </div>
+              <div class="product__price">от 226 руб</div>
+              <a href="#" class="product__link">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab_section__content_tab hot_all_tab">
+        <div class="product_wrapper">
+          <div class="product_slider">
+            <div class="product">
+              <span class="product__title title">Алютекс ALT</span>
+              <div class="img_box product__img">
+                <img src="./img/product-example-3.png" alt="" class="fit">
+              </div>
+              
+              <div class="product__sizes">
+                <div class="size"><span>Воздушных камер</span> <span>4 мм</span></div>
+                <div class="size"><span>Толщина стекла</span> <span>26 мм</span></div>
+                <div class="size"><span>Глубина</span> <span>32 мм</span></div>
+              </div>
+              <div class="img_box product__img">
+                <img src="./img/product-example-4.png" alt="" class="fit">
+              </div>
+              <div class="product__price">от 226 руб</div>
+              <a href="#" class="product__link">Подробнее</a>
+            </div>
+            <div class="product">
+              <span class="product__title title">Алютекс ALT</span>
+              <div class="img_box product__img">
+                <img src="./img/product-example-2.png" alt="" class="fit">
+              </div>
+              
+              <div class="product__sizes">
+                <div class="size"><span>Воздушных камер</span> <span>4 мм</span></div>
+                <div class="size"><span>Толщина стекла</span> <span>26 мм</span></div>
+                <div class="size"><span>Глубина</span> <span>32 мм</span></div>
+              </div>
+              <div class="img_box product__img">
+                <img src="./img/product-example-4.png" alt="" class="fit">
+              </div>
+              <div class="product__price">от 226 руб</div>
+              <a href="#" class="product__link">Подробнее</a>
+            </div>
+            <div class="product">
+              <span class="product__title title">Алютекс ALT</span>
+              <div class="img_box product__img">
+                <img src="./img/product-example-1.png" alt="" class="fit">
+              </div>
+              
+              <div class="product__sizes">
+                <div class="size"><span>Воздушных камер</span> <span>4 мм</span></div>
+                <div class="size"><span>Толщина стекла</span> <span>26 мм</span></div>
+                <div class="size"><span>Глубина</span> <span>32 мм</span></div>
+              </div>
+              <div class="img_box product__img">
+                <img src="./img/product-example-4.png" alt="" class="fit">
+              </div>
+              <div class="product__price">от 226 руб</div>
+              <a href="#" class="product__link">Подробнее</a>
+            </div>
+            <div class="product">
+              <span class="product__title title">Алютекс ALT</span>
+              <div class="img_box product__img">
+                <img src="./img/product-example-3.png" alt="" class="fit">
+              </div>
+              
+              <div class="product__sizes">
+                <div class="size"><span>Воздушных камер</span> <span>4 мм</span></div>
+                <div class="size"><span>Толщина стекла</span> <span>26 мм</span></div>
+                <div class="size"><span>Глубина</span> <span>32 мм</span></div>
+              </div>
+              <div class="img_box product__img">
+                <img src="./img/product-example-4.png" alt="" class="fit">
+              </div>
+              <div class="product__price">от 226 руб</div>
+              <a href="#" class="product__link">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab_section__content_tab facade_sus_tab">
+        <div class="product_wrapper">
+          <div class="product_slider">
+            <div class="product">
+              <span class="product__title title">Алютекс ALT</span>
+              <div class="img_box product__img">
+                <img src="./img/product-example-3.png" alt="" class="fit">
+              </div>
+              
+              <div class="product__sizes">
+                <div class="size"><span>Воздушных камер</span> <span>4 мм</span></div>
+                <div class="size"><span>Толщина стекла</span> <span>26 мм</span></div>
+                <div class="size"><span>Глубина</span> <span>32 мм</span></div>
+              </div>
+              <div class="img_box product__img">
+                <img src="./img/product-example-4.png" alt="" class="fit">
+              </div>
+              <div class="product__price">от 226 руб</div>
+              <a href="#" class="product__link">Подробнее</a>
+            </div>
+            <div class="product">
+              <span class="product__title title">Алютекс ALT</span>
+              <div class="img_box product__img">
+                <img src="./img/product-example-2.png" alt="" class="fit">
+              </div>
+              
+              <div class="product__sizes">
+                <div class="size"><span>Воздушных камер</span> <span>4 мм</span></div>
+                <div class="size"><span>Толщина стекла</span> <span>26 мм</span></div>
+                <div class="size"><span>Глубина</span> <span>32 мм</span></div>
+              </div>
+              <div class="img_box product__img">
+                <img src="./img/product-example-4.png" alt="" class="fit">
+              </div>
+              <div class="product__price">от 226 руб</div>
+              <a href="#" class="product__link">Подробнее</a>
+            </div>
+            <div class="product">
+              <span class="product__title title">Алютекс ALT</span>
+              <div class="img_box product__img">
+                <img src="./img/product-example-1.png" alt="" class="fit">
+              </div>
+              
+              <div class="product__sizes">
+                <div class="size"><span>Воздушных камер</span> <span>4 мм</span></div>
+                <div class="size"><span>Толщина стекла</span> <span>26 мм</span></div>
+                <div class="size"><span>Глубина</span> <span>32 мм</span></div>
+              </div>
+              <div class="img_box product__img">
+                <img src="./img/product-example-4.png" alt="" class="fit">
+              </div>
+              <div class="product__price">от 226 руб</div>
+              <a href="#" class="product__link">Подробнее</a>
+            </div>
+            <div class="product">
+              <span class="product__title title">Алютекс ALT</span>
+              <div class="img_box product__img">
+                <img src="./img/product-example-3.png" alt="" class="fit">
+              </div>
+              
+              <div class="product__sizes">
+                <div class="size"><span>Воздушных камер</span> <span>4 мм</span></div>
+                <div class="size"><span>Толщина стекла</span> <span>26 мм</span></div>
+                <div class="size"><span>Глубина</span> <span>32 мм</span></div>
+              </div>
+              <div class="img_box product__img">
+                <img src="./img/product-example-4.png" alt="" class="fit">
+              </div>
+              <div class="product__price">от 226 руб</div>
+              <a href="#" class="product__link">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="container">
+          <div class="glazing">
+  <div class="title_wrapper"><span class="title">остекление для разного типа жилья</span></div>
+  <div class="glazing__wrapper">
+    <div class="glazing__element">
+      <div class="img_box">
+        <img src="./img/osteklenie-1.png" alt="" class="fit">
+      </div>
+      <a href="#" class="glazing__link">остекление веранды и террасы</a>
+    </div>
+    <div class="glazing__element">
+      <div class="img_box">
+        <img src="./img/osteklenie-2.png" alt="" class="fit">
+      </div>
+      <a href="#" class="glazing__link">остекление ДАЧ И КОТТЕДЖЕЙ</a>
+    </div>
+    <div class="glazing__element">
+      <div class="img_box">
+        <img src="./img/osteklenie-3.png" alt="" class="fit">
+      </div>
+      <a href="#" class="glazing__link">ОСТЕКЛЕНИЕ БАЛКОНОВ И ЛОДЖИЙ</a>
+    </div>
+    <div class="glazing__element">
+      <div class="img_box">
+        <img src="./img/osteklenie-4.png" alt="" class="fit">
+      </div>
+      <a href="#" class="glazing__link">ПЛАСТИКОВЫЕ ОКНА для квартиры</a>
+    </div>
+    <div class="glazing__element">
+      <div class="img_box">
+        <img src="./img/osteklenie-2.png" alt="" class="fit">
+      </div>
+      <a href="#" class="glazing__link">остекление ДАЧ И КОТТЕДЖЕЙ</a>
+    </div>
+    <div class="glazing__element">
+      <div class="img_box">
+        <img src="./img/osteklenie-1.png" alt="" class="fit">
+      </div>
+      <a href="#" class="glazing__link">остекление веранды и террасы</a>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+
+      <div class="section">
+          <div class="froze_form">
+    <div class="container">
+      <div class="froze_form__wrapper">
+        <div class="title_wrapper"><span class="title">закажите бесплатный замер</span></div>
+        <form action="#" class="froze_form__form">
+          <input type="text" placeholder="Ваше имя">
+          <input type="text" placeholder="Телефон">
+          <button type="submit"  class="btn btn--revers">отправить</button>
+          <p class="froze_form__text">Нажимая “Отправить” вы соглашаетесь с политикой конфиденциальности</p>
+        </form>
+      </div>
+    </div>
+</div>
+      </div>
+      <div class="section">
+        <div class="container">
+          <div class="links_section">
+  <div class="links_section__wrapper">
+    <a href="#" class="links_section__element">
+      <img src="./img/icons/froze-blue.svg" class="icon">
+      <span class="text">Вызов замерщика</span>
+    </a>
+    <a href="#" class="links_section__element">
+      <img src="./img/icons/calc.svg" class="icon">
+      <span class="text">Калькулятор</span>
+    </a>
+    <a href="#" class="links_section__element">
+      <img src="./img/icons/present.svg" class="icon">
+      <span class="text">Скидки и акции</span>
+    </a>
+    <a href="#" class="links_section__element">
+      <img src="./img/icons/contacts.svg" class="icon">
+      <span class="text">Контакты</span>
+    </a>
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="section window_map_section">
+        <div class="container">
+          <div class="title_wrapper"><span class="title">дома, где уже стоят наши окна! </span></div>
+          <div class="window_map">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa776f10abc461892f3a948279c8f05864156c8aecac550c514a78c3dd58e334f&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="section section--width_slider">
+        <div class="container">
+          <div class="examples">
+  <div class="title_wrapper"><span class="title">дома, где уже стоят наши окна! </span></div>
+  <div class="examples__wrapper">
+    <div class="examples__slider">
+      <div class="img_box">
+        <img src="./img/dom.png" alt="" class="fit">
+      </div>
+      <div class="img_box">
+        <img src="./img/dom.png" alt="" class="fit">
+      </div>
+      <div class="img_box">
+        <img src="./img/dom.png" alt="" class="fit">
+      </div>
+    </div>
+    <div class="examples__statistic">
+      <div class="stat">
+        <span class="count">1200</span>
+        <span class="text">довольных клиентов</span>
+      </div>
+      <div class="stat">
+        <span class="count">87</span>
+        <span class="text">производителей окон</span>
+      </div>
+      <div class="stat">
+        <span class="count">3400</span>
+        <span class="text">окон установлено</span>
+      </div>
+      <div class="stat">
+        <span class="count">95%</span>
+        <span class="text"> рекомендуют нас</span>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="section section--background section--background_small section--width_slider">
+        <div class="container">
+          <div class="reviews">
+  <div class="title_wrapper"><span class="title">отзывы наших клиентов</span></div>
+  <div class="reviews__wrapper">
+    <div class="reviews__element">
+      <div class="top">
+        <span class="name">Татьяна </span>
+        <span class="info">18.06.2017 Подольск</span>
+      </div>
+      <div class="text">Доброе время суток. С помощью "Подольский оконный завод" поменяла оконный и дверные блоки (договор Е0662 от 20.05.17). Я хочу выразить благодарность сотрудникам компании: менеджеру Харламову Александру, замерщику Солянникову и монтажникам двум Николаям за их высокий профессионализм и человечность. </div>
+    </div>
+    <div class="reviews__element">
+      <div class="top">
+        <span class="name">Татьяна </span>
+        <span class="info">18.06.2017 Подольск</span>
+      </div>
+      <div class="text">Доброе время суток. С помощью "Подольский оконный завод" поменяла оконный и дверные блоки (договор Е0662 от 20.05.17). Я хочу выразить благодарность сотрудникам компании: менеджеру Харламову Александру, замерщику Солянникову и монтажникам двум Николаям за их высокий профессионализм и человечность. </div>
+    </div>
+    <div class="reviews__element">
+      <div class="top">
+        <span class="name">Татьяна </span>
+        <span class="info">18.06.2017 Подольск</span>
+      </div>
+      <div class="text">Доброе время суток. С помощью "Подольский оконный завод" поменяла оконный и дверные блоки (договор Е0662 от 20.05.17). Я хочу выразить благодарность сотрудникам компании: менеджеру Харламову Александру, замерщику Солянникову и монтажникам двум Николаям за их высокий профессионализм и человечность. </div>
+    </div>
+    <div class="reviews__element">
+      <div class="top">
+        <span class="name">Татьяна </span>
+        <span class="info">18.06.2017 Подольск</span>
+      </div>
+      <div class="text">Доброе время суток. С помощью "Подольский оконный завод" поменяла оконный и дверные блоки (договор Е0662 от 20.05.17). Я хочу выразить благодарность сотрудникам компании: менеджеру Харламову Александру, замерщику Солянникову и монтажникам двум Николаям за их высокий профессионализм и человечность. </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="section section--width_slider">
+        <div class="container">
+          <div class="reviews">
+  <div class="title_wrapper"><span class="title">видео-отзывы наших клиентов в инстаграм</span></div>
+  <div class="reviews__wrapper">
+    <div class="reviews__element video-review">
+      <a href="./img/video-review-1.png" data-fancybox="reviews">
+        <img src="./img/video-review-1.png" alt="">
+      </a>
+    </div>
+    <div class="reviews__element video-review">
+      <a href="./img/video-review-2.png" data-fancybox="reviews">
+        <img src="./img/video-review-2.png" alt="">
+      </a>
+    </div>
+    <div class="reviews__element video-review">
+      <a href="./img/video-review-1.png" data-fancybox="reviews">
+        <img src="./img/video-review-1.png" alt="">
+      </a>
+    </div>
+    <div class="reviews__element video-review">
+      <a href="./img/video-review-2.png" data-fancybox="reviews">
+        <img src="./img/video-review-2.png" alt="">
+      </a>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="section section--no_margin">
+        <div class="consultation_form">
+  <div class="container">
+    <div class="title_wrapper"><span class="title">оставьте заявку на <br>бесплатную <br>консультацию</span></div>
+    <form action="#" class="consultation_form__form">
+      <input type="text" placeholder="Ваше имя">
+      <input type="text" placeholder="Телефон">
+      <p class="consultation_form__text">Нажимая “Отправить” вы соглашаетесь с политикой конфиденциальности</p>
+      <button type="submit"  class="btn btn--revers">отправить</button>
+    </form>
+  </div>
+</div>
+      </div>
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__main">
+      <a href="#" class="footer__logo">
+        <img src="./img/logo-blue.png" alt="">
+      </a>
+      <div class="footer__menu">
+        <a href="#">Пластиковые окна</a>
+        <a href="#">балконы</a>
+        <a href="#">О компании</a>
+        <a href="#">алюминиевые окна</a>
+        <a href="#">услуги</a>
+        <a href="#">доставка и оплата</a>
+      </div>
+      <div class="footer__contacts">
+        <div class="social">
+          <a href="#"><img src="./img/icons/facebook.png" alt=""></a>
+          <a href="#"><img src="./img/icons/whatsap.png" alt=""></a>
+          <a href="#"><img src="./img/icons/instagram.png" alt=""></a>
+        </div>
+        <a href="#" class="geo"><img src="./img/icons/geo.svg" alt=""> Москва</a>
+        <a href="tel:+74954771082" class="phone">+7 495 477-10-82</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>
+        2015 — 2021 © ООО «ТД «ПОЗ», ИНН 5036102492, КПП 503601001, ОГРН 1095074010283.
+      </p>
+      <p>
+        Москва, Кутузовский проспект, д. 36 стр. 3, этаж 3, помещение 2, офис 452, территория 1 МПЗ им. В. А. Казакова.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<div class="sitemap">
+  <div class="sitemap__wrapper">
+    <a href="/" class="sitemap__link line_animate">Главная</a>
+  </div>
+  <div class="sitemap__opener">
+    <label for="check"><span></span><span></span><span></span>
+    </label>
+  </div>
+</div>
+
+<style>
+  .sitemap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: #fff;
+    width: 500px;
+    z-index: 999999;
+    transition: .5s;
+    transform: translateX(-500px);
+  }
+  .sitemap.open{
+    transform: translateX(0);
+    box-shadow: 0 0 30px 3px rgba(0,0,0,.5);
+  }
+
+  .sitemap__wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    max-height: 100vh;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #000 #eee;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+  .sitemap__wrapper::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+      background: #eee;
+  }
+
+  .sitemap__wrapper::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      background-color: #000;
+  }
+
+  .sitemap__link{
+    font-size: 22px;
+    font-weight: bold;
+    color: #1C3F97;
+    margin: 15px 0;
+  }
+  .sitemap__opener{width: 50px;height: 50px;display: block;position: absolute;left: 100%;top: 30%;border-radius: 0 30px 30px 0;padding: 10px;background: #fff;cursor: pointer;box-sizing: border-box;border-top: 1px solid black;border-right: 1px solid black;border-bottom: 1px solid black;opacity: .3;transition: .5s;display: flex;
+    align-items: center;
+  }
+  .sitemap__opener:hover{
+    opacity: 1;
+  }
+
+  .sitemap__opener label{
+    display:flex;
+    flex-direction:column;
+    width:30px;
+    cursor:pointer;
+  }
+
+.sitemap__opener label span{
+  background: #000;
+  border-radius:10px;
+  height:2px;
+  margin: 2px 0;
+  transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+}
+
+
+.sitemap__opener span:nth-of-type(1){
+  width:50%;
+  
+}
+
+.sitemap__opener span:nth-of-type(2){
+  width:100%;
+}
+
+
+.sitemap__opener span:nth-of-type(3){
+  width:75%;
+ 
+}
+
+.sitemap__opener.active  span:nth-of-type(1){
+  transform-origin:bottom;
+  transform:rotatez(45deg) translate(1px,-1px)
+}
+
+
+.sitemap__opener.active  span:nth-of-type(2){
+  
+  transform-origin:top;
+  transform:rotatez(-45deg)
+}
+
+
+.sitemap__opener.active  span:nth-of-type(3){
+  
+  transform-origin:bottom;
+  width:50%;
+  transform: translate(12px,-1px) rotatez(45deg);
+}
+
+@media screen and (max-width:1280px){
+  .sitemap__wrapper{
+    padding: 40px 20px 100px;
+  }
+}
+@media screen and (max-width:780px){
+  .sitemap{
+    width: 300px;
+    transform: translateX(-300px);
+  }
+  .sitemap__link{
+    font-size: 18px;
+  }
+}
+</style>
+<div class="popup callback_popup">
+  <div class="popup__wrapper">
+  </div>
+  <div class="popup__close"></div>
+</div>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script> -->
+<script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="./js/slick.min.js"></script>
+<!-- <script type="text/javascript" src="./js/progressbar.min.js"></script>
+<script type="text/javascript" src="./js/lozad.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<script src="./js/scripts.js"></script>
+
+
+  </body>
+</html>
+
+
