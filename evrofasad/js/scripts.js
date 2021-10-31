@@ -86,7 +86,11 @@ window.onload = function(){
 
 
   $(window).resize(function() {
-
+    if(checkInner(980)){
+      $('.product_banner__content .img_box img').insertAfter($('.product_banner__content .description .product_banner__title'));
+    }else{
+      $('.product_banner__content .img_box').append($('.product_banner__content .description > img'));
+    }
   });
 
   /* SLIDERS */
@@ -215,6 +219,36 @@ window.onload = function(){
       },
     ]
   })
+  $('.use_section__wrapper').slick({
+    slidesToShow: 3,
+    prevArrow: 
+    `<div class="prev">
+      <svg width="21" height="38" viewBox="0 0 21 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1867 18.9992L1.04612 35.1399C0.519719 35.6663 0.519889 36.5199 1.04649 37.0465C1.5731 37.5731 2.42673 37.5733 2.95313 37.0469L20.0465 19.9535C20.1003 19.8997 20.1487 19.8424 20.1915 19.7824C20.5677 19.2559 20.5193 18.5193 20.0464 18.0464L2.9535 0.953505C2.4269 0.426897 1.57327 0.426731 1.04687 0.953129C0.520472 1.47953 0.52064 2.33316 1.04725 2.85976L17.1867 18.9992Z" fill="#1C3F97"/>
+      </svg>
+    </div>`,
+    nextArrow: 
+    `<div class="next">
+      <svg width="21" height="38" viewBox="0 0 21 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1867 18.9992L1.04612 35.1399C0.519719 35.6663 0.519889 36.5199 1.04649 37.0465C1.5731 37.5731 2.42673 37.5733 2.95313 37.0469L20.0465 19.9535C20.1003 19.8997 20.1487 19.8424 20.1915 19.7824C20.5677 19.2559 20.5193 18.5193 20.0464 18.0464L2.9535 0.953505C2.4269 0.426897 1.57327 0.426731 1.04687 0.953129C0.520472 1.47953 0.52064 2.33316 1.04725 2.85976L17.1867 18.9992Z" fill="#1C3F97"/>
+      </svg>
+    </div>`,
+    responsive: [
+      {
+        breakpoint: 980,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 780,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+    ]
+  })
+
   if(checkInner(980)){
     advantagesSlider()
   }
@@ -236,7 +270,7 @@ window.onload = function(){
   if(location.host.includes('localhost')){
     $('.sitemap__link').map(function(index,element){
       let link = $(element).attr('href')
-      let re = /\/milady/gi;
+      let re = /\/evrofasad/gi;
       $(element).attr('href',link.replace(re,''))
     })
   }
