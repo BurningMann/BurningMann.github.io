@@ -402,6 +402,12 @@ img[data-lazysrc].load {
     text-transform: uppercase;
 }
 
+@media screen and (max-width: 780px) {
+    .title--page {
+        font-size: 35px;
+    }
+}
+
 .title--sub {
     font-size: 36px;
     line-height: 44px;
@@ -792,6 +798,10 @@ img[data-lazysrc].load {
 
     .header__main_wrapper .main_menu .btn {
         margin-top: 30px;
+    }
+
+    .header__main_wrapper > .btn {
+        display: none;
     }
 
     .header__main_wrapper::before {
