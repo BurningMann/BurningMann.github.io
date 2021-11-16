@@ -77,7 +77,7 @@ window.onload = function(){
   $('.burger_menu').click(function(){
     $('.header').addClass('menu_open')
   })
-  $('.close_burger_menu').click(function(){
+  $('.main_menu').on('click', '.close_burger_menu', function(){
     $('.header').removeClass('menu_open')
   })
   $('.main_menu__link.parrent .main_link').click(function(EO){
@@ -94,20 +94,71 @@ window.onload = function(){
     }
   });
 
+
+
+
+
+
+
+
+
+
+
+  $('.card_slider_section .card_slider').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    prevArrow: `<div class="prev"></div>`,
+    nextArrow: `<div class="next"></div>`,
+    responsive: [
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+    ]
+  })
+
+  $('.contacts__slider .main_slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    asNavFor: '.contacts__slider .additional_slider'
+  })
+
+  $('.contacts__slider .additional_slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    vertical: true,
+    verticalSwiping: true,
+    asNavFor: '.contacts__slider .main_slider',
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 500,
+        settings: {
+          vertical: false,
+          verticalSwiping: false,
+        }
+      },
+    ]
+  })
+
   /* DEV SCRIPTS */
 
   $(".sitemap__opener").click(function(){
     $('.sitemap').toggleClass('open')
     $(this).toggleClass('active')
   })
-
- /*  if(location.host.includes('localhost')){
+  if(location.host.includes('localhost')){
     $('.sitemap__link').map(function(index,element){
       let link = $(element).attr('href')
-      let re = /\/milady/gi;
+      let re = /\/apartamento/gi;
       $(element).attr('href',link.replace(re,''))
     })
   }
+ /*  
 
   if(!checkInner(1024)){
     $("[data-back]").map(function(index,element){
