@@ -1,21 +1,21 @@
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-  document.querySelector('html').classList.add('mobile') 
+  document.querySelector('html').classList.add('mobile')
 }
 
-if(navigator.platform.match('Mac') !== null) {
+if (navigator.platform.match('Mac') !== null) {
   document.body.setAttribute('class', 'OSX');
 }
 
-function checkInner(width){
-  if(window.innerWidth <= width){
+function checkInner(width) {
+  if (window.innerWidth <= width) {
     return true
-  }else{
+  } else {
     return false
   }
 }
 
 /* PRELOADER */
-$(document).ready(function(){
+$(document).ready(function () {
   /* $(window).resize(function(){
     let viewheight = $(window).height();
     $('.login').css('height',viewheight+'px')
@@ -52,7 +52,7 @@ $(document).ready(function(){
   } */
 })
 
-window.onload = function(){
+window.onload = function () {
 
   /* setTimeout(() => {
     bar.animate(1);
@@ -60,57 +60,117 @@ window.onload = function(){
       $('.preloader').addClass('preloader--load')
     }, 750);
   }, 1000); */
-  
-  function mobileMenuAtive(){
-    $('.main_menu').append($('.header__main_wrapper .btn'))
-    $('.main_menu').append(`<div class="close_burger_menu">
-              <span></span>
-              <span></span>
-            </div>`)
-  }if(checkInner(1200)) mobileMenuAtive()
+  /* Класс для Анимации банера на главной странице */
+  $('.main_page_banner').addClass('animated')
 
-  function mobileMenuDeative(){
+  function mobileMenuAtive() {
+    $('.main_menu').append($('.header__main_wrapper .btn'))
+    $('.main_menu').append(`
+    <div class="menu_phones">
+      <a href="tel:+375(17)236-50-50" class="phone">+375(17) 236-50-50</a>
+      <div class="social">
+        <a href="#" class="phone"><img src="../img/icons/viber.svg"></a>
+        <a href="#" class="phone"><img src="../img/icons/telegram.svg"></a>
+      </div>
+    </div>
+    `)
+    $('.main_menu').append(`
+      <div class="close_burger_menu">
+        <span></span>
+        <span></span>
+      </div>
+    `)
+  } if (checkInner(1200)) mobileMenuAtive()
+
+  function mobileMenuDeative() {
     $('.header__main_wrapper').append($('.main_menu .btn'))
     $('.close_burger_menu').remove()
+    $('.menu_phones').remove()
   }
-  
-  $('.burger_menu').click(function(){
+
+  $('.burger_menu').click(function () {
     $('.header__main').addClass('menu_open')
   })
-  $('.main_menu').on('click', '.close_burger_menu', function(){
+  $('.main_menu').on('click', '.close_burger_menu', function () {
     $('.header__main').removeClass('menu_open')
   })
-  $('.main_menu__link.parrent .main_link').click(function(EO){
+  $('.main_menu__link.parrent .main_link').click(function (EO) {
     EO.preventDefault()
     $(this).siblings('.sub_menu').slideToggle()
     $(this).toggleClass('active')
   })
 
-  $(window).resize(function() {
-    if(checkInner(1200) && !$('.close_burger_menu').length){
+  $(window).resize(function () {
+    if (checkInner(1200) && !$('.close_burger_menu').length) {
       mobileMenuAtive()
-    } else if(!checkInner(1200)){
+    } else if (!checkInner(1200)) {
       mobileMenuDeative()
     }
   });
 
+
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+
+  /* Класс фикс хедера */
+  ScrollTrigger.create({
+    trigger: ".header__main",
+    start: `top top`,
+    end: `top top`,
+    onEnter: () => {
+      $(".header__main").addClass('fixed')
+    },
+    onEnterBack: () => {
+      $(".header__main").removeClass('fixed')
+    }
+  })
+
+  /* Класс кнопки вверх */
+  ScrollTrigger.create({
+    trigger: "body",
+    start: `${window.innerHeight}px top`,
+    end: `${window.innerHeight}px top`,
+    onEnter: () => {
+      $(".to_top").addClass('visible')
+    },
+    onEnterBack: () => {
+      $(".to_top").removeClass('visible')
+    }
+  })
+
+  /* Анимация блока брендов */
+  $('.brands_section__row').map(function(index,element){
+    ScrollTrigger.create({
+      trigger: element,
+      start: `50% bottom`,
+      onEnter: () => {
+        $(element).addClass('visible')
+      },
+    })
+  })
+  /* Кнопка вверх */
+  $('.to_top').click(function () {
+    $('html').animate({
+      scrollTop: 0
+    }, 500);
+  })
+
   /* POPUPS */
-  $('[data-popup]').click(function(){
+  $('[data-popup]').click(function () {
     let popup = $(this).data('popup')
-    $('.'+popup+'_popup').fadeIn()
+    $('.' + popup + '_popup').fadeIn()
     $('body,html').addClass('no-scroll')
   })
-  
-  $('.popup__close, .popup_btn.close_popup').click(function(){
+
+  $('.popup__close, .popup_btn.close_popup').click(function () {
     let popup = $(this).closest('.popup')
     $(popup).fadeOut()
     $('body,html').removeClass('no-scroll')
   })
 
-  $('.popup__wrapper').click(function(EO){
+  $('.popup__wrapper').click(function (EO) {
     console.log($(EO.target))
     EO.stopPropagation()
-    if($(EO.target).hasClass('popup__wrapper')){
+    if ($(EO.target).hasClass('popup__wrapper')) {
       $('.popup').fadeOut()
       $('body,html').removeClass('no-scroll')
     }
@@ -159,39 +219,39 @@ window.onload = function(){
 
   /* DEV SCRIPTS */
 
-  $(".sitemap__opener").click(function(){
+  $(".sitemap__opener").click(function () {
     $('.sitemap').toggleClass('open')
     $(this).toggleClass('active')
   })
-  if(location.host.includes('localhost')){
-    $('.sitemap__link').map(function(index,element){
+  if (location.host.includes('localhost')) {
+    $('.sitemap__link').map(function (index, element) {
       let link = $(element).attr('href')
       let re = /\/apartamento/gi;
-      $(element).attr('href',link.replace(re,''))
+      $(element).attr('href', link.replace(re, ''))
     })
   }
- /*  
+  /*  
+ 
+   if(!checkInner(1024)){
+     $("[data-back]").map(function(index,element){
+       let path = $(element).data('back')
+       $(element).attr('src', path)
+       $(element).addClass('load')
+       let video = $(element).closest('video')[0]
+       video.load();
+     })
+   }
+ 
+   var observer = lozad('[data-lazysrc]', {
+     threshold: 0.1,
+     enableAutoReload: true,
+     load: function(el) {
+       el.src = el.getAttribute("data-lazysrc");
+       el.onload = function() {
+         $(el).addClass("load")
+       }
+     }
+   })
+   observer.observe() */
 
-  if(!checkInner(1024)){
-    $("[data-back]").map(function(index,element){
-      let path = $(element).data('back')
-      $(element).attr('src', path)
-      $(element).addClass('load')
-      let video = $(element).closest('video')[0]
-      video.load();
-    })
-  }
-
-  var observer = lozad('[data-lazysrc]', {
-    threshold: 0.1,
-    enableAutoReload: true,
-    load: function(el) {
-      el.src = el.getAttribute("data-lazysrc");
-      el.onload = function() {
-        $(el).addClass("load")
-      }
-    }
-  })
-  observer.observe() */
-    
 }
