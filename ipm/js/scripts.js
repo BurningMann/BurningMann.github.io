@@ -131,3 +131,14 @@ $(".reviews__slider").slick({
 $(".reviews__slider_button").click(function(){
   $(".reviews__slider").slick('slickNext')
 })
+
+$(".slider_box-slider").slick({
+  infinite: true,
+  fade: true,
+  cssEase: 'linear',
+  arrows:false,
+})
+
+$(".slider-control .animate_arrow").click(function(){
+  $(".slider_box-slider").slick('slickNext')
+})
