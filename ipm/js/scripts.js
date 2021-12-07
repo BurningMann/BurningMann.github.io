@@ -142,3 +142,37 @@ $(".slider_box-slider").slick({
 $(".slider-control .animate_arrow").click(function(){
   $(".slider_box-slider").slick('slickNext')
 })
+
+
+$('.year_content_slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  asNavFor: '.years_slider',
+  fade: true,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 980,
+      settings: {
+        adaptiveHeight: true
+      }
+    }
+  ]
+})
+
+$('.years_slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  asNavFor: '.year_content_slider',
+  focusOnSelect: true,
+  vertical: true,
+  verticalSwiping: true,
+  prevArrow: `<div class="prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.37 16.6" class="arrow">
+  <line class="cls-1" x1="29.14" y1="8.52" x2="2.68" y2="8.52"></line>
+  <polyline class="cls-1" points="21.1 3.12 29.47 8.64 20.68 14"></polyline>
+</svg></div>`,
+  nextArrow: `<div class="next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.37 16.6" class="arrow">
+  <line class="cls-1" x1="29.14" y1="8.52" x2="2.68" y2="8.52"></line>
+  <polyline class="cls-1" points="21.1 3.12 29.47 8.64 20.68 14"></polyline>
+</svg></div>`
+});

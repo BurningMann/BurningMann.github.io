@@ -3306,6 +3306,301 @@ textarea {
     }
 }
 
+.about_page__top {
+    display: -ms-flexbox;
+    display: flex;
+    border-top: 2px solid #f3f3f3;
+    border-bottom: 2px solid #f3f3f3;
+}
+
+@media screen and (max-width: 980px) {
+    .about_page__top {
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+}
+
+.about_page__top .content {
+    background: #f5fafe;
+    padding: 30px 50px;
+    width: 50%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    line-height: 120%;
+}
+
+@media screen and (max-width: 980px) {
+    .about_page__top .content {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.about_page__top .content p {
+    margin: 20px 0;
+}
+
+.about_page__top .img_box {
+    width: 50%;
+    padding: 20px 50px;
+}
+
+@media screen and (max-width: 980px) {
+    .about_page__top .img_box {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.about_page__top .img_box img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.about_page__advantages {
+    padding: 50px;
+}
+
+@media screen and (max-width: 980px) {
+    .about_page__advantages {
+        padding: 20px;
+    }
+}
+
+.about_page__advantages::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: url(../img/IPM.svg) center/cover no-repeat;
+    width: 70%;
+    padding-top: 25%;
+    opacity: .5;
+}
+
+.about_page__advantages .title {
+    font-size: 28px;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    margin-bottom: 60px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 980px) {
+    .about_page__advantages .title {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+}
+
+.about_page__advantages-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.about_page__advantages-item {
+    width: 50%;
+    margin: 0 0 50px 0;
+    padding: 20px;
+    border-left: 2px solid #f3f3f3;
+}
+
+@media screen and (max-width: 980px) {
+    .about_page__advantages-item {
+        width: 100%;
+        padding: 0 0 20px 0;
+        margin: 0 0 20px 0;
+        border: none;
+    }
+}
+
+.about_page__advantages-item .title {
+    color: #0ba4f6;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+@media screen and (max-width: 980px) {
+    .about_page__advantages-item .title {
+        font-size: 20px;
+        word-break: break-all;
+    }
+}
+
+.about_page__advantages-item .text {
+    font-size: 16px;
+    line-height: 120%;
+}
+
+@media screen and (max-width: 980px) {
+    .about_page__advantages-item .text br {
+        display: none;
+    }
+}
+
+.about_page__history {
+    padding-bottom: 40px;
+}
+
+.about_page__history .title {
+    font-size: 28px;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    margin-bottom: 60px;
+    font-weight: 500;
+    padding: 0 0 0 50px;
+}
+
+@media screen and (max-width: 980px) {
+    .about_page__history .title {
+        padding: 0 0 0 20px;
+        margin-bottom: 20px;
+        font-size: 22px;
+    }
+}
+
+.about_page__history-slider {
+    display: -ms-flexbox;
+    display: flex;
+    border-top: 2px solid #f3f3f3;
+    border-bottom: 2px solid #f3f3f3;
+    width: 100%;
+}
+
+@media screen and (max-width: 980px) {
+    .about_page__history-slider {
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+}
+
+.about_page__history-slider .years_slider {
+    background: #f5fafe;
+    padding: 50px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 250px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    border-right: 2px solid #f3f3f3;
+}
+
+@media screen and (max-width: 980px) {
+    .about_page__history-slider .years_slider {
+        width: 100%;
+        padding: 20px;
+        border: none;
+    }
+}
+
+.about_page__history-slider .years_slider .slick-arrow {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    background: none;
+}
+
+@media screen and (max-width: 980px) {
+    .about_page__history-slider .years_slider .slick-arrow {
+        position: absolute;
+        top: calc(50% - 25px);
+    }
+}
+
+.about_page__history-slider .years_slider .slick-arrow.prev {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+@media screen and (max-width: 980px) {
+    .about_page__history-slider .years_slider .slick-arrow.prev {
+        left: 20px;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+
+.about_page__history-slider .years_slider .slick-arrow.next {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+@media screen and (max-width: 980px) {
+    .about_page__history-slider .years_slider .slick-arrow.next {
+        right: 20px;
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+}
+
+.about_page__history-slider .years_slider .slick-arrow::before {
+    display: none;
+}
+
+.about_page__history-slider .years_slider .slick-arrow .cls-1 {
+    fill: none;
+    stroke: #0ba4f6;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+}
+
+.about_page__history-slider .years_slider .slick-list {
+    margin: 50px 0;
+}
+
+.about_page__history-slider .years_slider .year {
+    color: #0ba4f6;
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+}
+
+.about_page__history-slider .year_content_slider {
+    padding: 50px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    width: calc(100% - 250px);
+    font-size: 18px;
+    line-height: 120%;
+}
+
+@media screen and (max-width: 980px) {
+    .about_page__history-slider .year_content_slider {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.about_page__history-slider .year_content_slider .slick-track {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 980px) {
+    .about_page__history-slider .year_content_slider .slick-track {
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+}
+
 @media screen and (max-width: 1900px) {
     .main_page_slider__dots_box .dot {
         margin-bottom: 16px;
