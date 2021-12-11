@@ -650,24 +650,24 @@ textarea {
     transition-delay: .5s;
 }
 
-.tab_section .accordion_box {
+.accordion_box {
     width: 100%;
     padding: 0 20px;
 }
 
-.tab_section .accordion_box__element {
+.accordion_box__element {
     border: 2px solid #f3f3f3;
     margin-bottom: 20px;
     font-size: 16px;
 }
 
-.tab_section .accordion_box__element .opener {
+.accordion_box__element .opener {
     padding: 15px 50px 15px;
     cursor: pointer;
     position: relative;
 }
 
-.tab_section .accordion_box__element .opener::after {
+.accordion_box__element .opener::after {
     content: "+";
     display: block;
     position: absolute;
@@ -684,15 +684,15 @@ textarea {
     line-height: 0;
 }
 
-.tab_section .accordion_box__element .opener.active {
+.accordion_box__element .opener.active {
     border-bottom: 2px solid #f3f3f3;
 }
 
-.tab_section .accordion_box__element .opener.active::after {
+.accordion_box__element .opener.active::after {
     content: "-";
 }
 
-.tab_section .accordion_box__element .content {
+.accordion_box__element .content {
     display: none;
     padding: 20px 50px 40px;
     line-height: 20px;
@@ -1415,6 +1415,16 @@ textarea {
     font-size: 17px;
 }
 
+.about__description {
+    margin-top: 20px;
+    line-height: 140%;
+    padding: 0 20px 0;
+}
+
+.about__description p {
+    margin: 20px 0;
+}
+
 .about__grade {
     width: 350px;
     border-left: 2px solid #f3f3f3;
@@ -1494,6 +1504,19 @@ textarea {
 
 .about__grade .grade_box .btn_order:hover::before {
     top: 0;
+}
+
+.about.with_card {
+    border-top: 2px solid #f3f3f3;
+    border-bottom: 2px solid #f3f3f3;
+}
+
+.about.with_card .btn {
+    display: none;
+}
+
+.about.with_card .about__content, .about.with_card .service_info__sidebar .content {
+    border: none;
 }
 
 .reviews {
@@ -3075,8 +3098,9 @@ textarea {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 20px 0 20px 60px;
+    padding: 20px 0 20px 0px;
     border-bottom: 2px solid #f3f3f3;
+    text-align: center;
 }
 
 .service_info__sidebar .content .name {
@@ -3095,6 +3119,8 @@ textarea {
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 10px;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .service_info__sidebar .content .phone:before {
@@ -3235,6 +3261,109 @@ textarea {
     height: 140px;
 }
 
+.service_detail__categories {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.service_detail__categories-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    border-left: 1px solid #f3f3f3;
+    border-top: 1px solid #f3f3f3;
+}
+
+.service_detail__categories-wrapper .item {
+    width: 50%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 1px solid #f3f3f3;
+    border-right: 1px solid #f3f3f3;
+    transition: .3s;
+}
+
+.service_detail__categories-wrapper .item .icon {
+    padding: 30px 50px;
+    border-right: 1px solid #f3f3f3;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.service_detail__categories-wrapper .item .icon img {
+    width: 60px;
+}
+
+.service_detail__categories-wrapper .item .text {
+    padding: 0 30px;
+}
+
+.service_detail__categories-wrapper .item:hover {
+    background: #0ba4f6;
+    color: #fff;
+}
+
+.guarantee_box {
+    background: #f5fafe;
+    padding: 20px 50px;
+    line-height: 140%;
+    border-top: 2px solid #f3f3f3;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.guarantee_box__title {
+    color: #0ba4f6;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.guarantee_box p {
+    margin: 15px 0;
+}
+
+.guarantee_title_box {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 0 0 50px;
+}
+
+.guarantee_title_box .btn_box {
+    width: 100%;
+    max-width: 350px;
+    border-left: 2px solid #f3f3f3;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    padding: 30px 50px;
+}
+
+.guarantee_title_box .btn {
+    background: #0ba4f6;
+    border-radius: 0;
+    margin: 0 auto;
+    color: #fff;
+    font-weight: normal;
+}
+
+.questions_title_box {
+    margin-bottom: 30px;
+    padding: 20px 0 20px 50px;
+    border-bottom: 2px solid #f3f3f3;
+}
+
+.questions_title_box__title {
+    color: #0ba4f6;
+    font-weight: 500;
+    font-size: 40px;
+}
+
 @media screen and (max-width: 1400px) {
     .service_detail .about__links {
         width: 100%;
@@ -3251,6 +3380,14 @@ textarea {
         position: relative;
         top: auto !important;
         border-bottom: none !important;
+    }
+
+    .guarantee_title_box .btn_box {
+        display: none;
+    }
+
+    .guarantee_title_box {
+        padding: 30px 50px;
     }
 }
 
@@ -3272,6 +3409,34 @@ textarea {
 
     .service_info__main_content .documents_box__item {
         max-width: initial;
+    }
+
+    .service_detail__categories {
+        padding: 0 20px;
+    }
+
+    .service_detail__categories-wrapper .item .icon {
+        padding: 20px;
+    }
+
+    .about__description {
+        padding: 0;
+    }
+
+    .guarantee_title_box {
+        padding: 15px 20px;
+    }
+
+    .guarantee_box {
+        padding: 0 20px;
+    }
+
+    .questions_title_box {
+        padding: 0 20px 10px;
+    }
+
+    .questions_title_box__title, .guarantee_box__title {
+        font-size: 36px;
     }
 }
 
@@ -3327,6 +3492,28 @@ textarea {
 
     .service_detail .about__element {
         padding: 0;
+    }
+
+    .service_detail__categories {
+        margin-bottom: 20px;
+    }
+
+    .service_detail__categories-wrapper .item {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .service_detail__categories-wrapper .item .icon img {
+        width: 40px;
+    }
+
+    .service_detail__categories-wrapper .item .text {
+        padding: 0 10px;
+    }
+
+    .questions_title_box__title, .guarantee_box__title {
+        font-size: 26px;
     }
 }
 
@@ -3768,6 +3955,20 @@ textarea {
         margin-top: 20px;
         border-left: none;
         padding-bottom: 20px;
+    }
+
+    .about .service_info__sidebar {
+        border: 2px solid #f3f3f3;
+        padding-bottom: 20px;
+    }
+
+    .about .service_info__sidebar .content {
+        border-bottom: 2px solid #f3f3f3 !important;
+    }
+
+    .about .service_info__sidebar .btn {
+        display: -ms-flexbox;
+        display: flex;
     }
 
     .reviews {
@@ -4275,5 +4476,9 @@ textarea {
 
     .reviews__review_container .top {
         padding: 15px 20px;
+    }
+
+    .accordion_box__element .opener, .accordion_box__element .content {
+        padding: 10px 50px 10px 20px;
     }
 }
