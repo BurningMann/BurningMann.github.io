@@ -45,14 +45,14 @@ window.onload = function(){
 
   $('.values').slick({
     dots: true,
-    prevArrow: '<div class="prev"><img src="../img/icons/icon-slider-arrow.svg"></div>',
-    nextArrow: '<div class="next"><img src="../img/icons/icon-slider-arrow.svg"></div>',
+    prevArrow: '<div class="prev"><img src="./img/icons/icon-slider-arrow.svg"></div>',
+    nextArrow: '<div class="next"><img src="./img/icons/icon-slider-arrow.svg"></div>',
   })
 
   $('.locations').slick({
     slidesToShow: 4,
-    prevArrow: '<div class="prev"><img src="../img/icons/icon-slider-arrow.svg"></div>',
-    nextArrow: '<div class="next"><img src="../img/icons/icon-slider-arrow.svg"></div>',
+    prevArrow: '<div class="prev"><img src="./img/icons/icon-slider-arrow.svg"></div>',
+    nextArrow: '<div class="next"><img src="./img/icons/icon-slider-arrow.svg"></div>',
     responsive: [
       {
         breakpoint: 1200,
