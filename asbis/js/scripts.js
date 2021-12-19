@@ -56,7 +56,17 @@ window.onload = function(){
   })
 
 
-
+  $(".dropdown__arrow").click(function(){
+    $(this).toggleClass("dropdown__arrow--active")
+    $(this).siblings(".dropdown__drop").slideToggle()
+  })
+  
+  $("body").click(function(EO){
+    if(!$(EO.target).closest(".dropdown").length){
+        $(".dropdown__arrow").removeClass("dropdown__arrow--active")
+        $(".dropdown__drop").css("display","none")
+    }
+  })
 
 
 
