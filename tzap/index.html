@@ -58,8 +58,6 @@
         <img src="./img/logo.png">
       </a>
 
-      
-
       <div class="center">
         <div class="btn catalog-btn">
           <img src="./img/icons/icon-burger.svg" alt="">
@@ -84,9 +82,9 @@
           <div class="label">2</div>
           <img src="./img/icons/icon-cart.svg" alt="">
         </a>
-        <a href="#" class="uth-bar__item uth-bar__login">
+        <div class="uth-bar__item uth-bar__login" data-popup="login">
           <img src="./img/icons/icon-personal.svg" alt="">
-        </a>
+        </div>
       </div>
 
       <div class="burger">
@@ -1282,10 +1280,137 @@
   }
 }
 </style>
-<div class="popup callback_popup">
+<div class="popup login_popup">
   <div class="popup__wrapper">
+    <div class="popup__content login-content">
+      <div class="popup__close"></div>
+      <div class="section__title">Авторизация</div>
+
+      <form action="#" class="login-form">
+        <div class="input-box">
+          <input type="text" placeholder="Номер телефона">
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Пароль">
+          <span class="forgot-pass">Забыли пароль?</span>
+        </div>
+        <button class="btn" type="submit">Войти</button>
+      </form>
+
+      <div class="form-switch">
+        <span class="to-register-form">Зарегистрироваться</span>
+      </div>
+    </div>
+
+    <div class="popup__content registration-content hidden">
+      <div class="popup__close"></div>
+      <div class="section__title">Авторизация</div>
+
+      <div class="tab_section">
+        <div class="tab_section__tab_container">
+          <div class="tab_section__tab active" data-tab="individual">Физическое лицо</div>
+          <div class="tab_section__tab" data-tab="entity">Юридическое лицо</div>
+        </div>
+        <div class="tab_section__content">
+          <div class="tab_section__content_tab individual_tab active">
+            <form action="#" class="registration-form">
+              <div class="columns-wrapper">
+                <div class="inputs-column">
+                  <div class="input-box">
+                    <input type="text" placeholder="Фамилия*" required>
+                  </div>
+                  <div class="input-box">
+                    <input type="text" placeholder="Имя*" required>
+                  </div>
+                  <div class="input-box">
+                    <input type="text" placeholder="Отчество">
+                  </div>
+                  <div class="input-box">
+                    <input type="text" placeholder="Телефон*" required>
+                  </div>
+                  <div class="input-box">
+                    <input type="email" placeholder="E-mail*" required>
+                  </div>
+                  <div class="input-box">
+                    <input type="text" placeholder="Название компании*" required>
+                  </div>
+                </div>
+                <div class="inputs-column">
+                  <div class="input-box">
+                    <input type="text" placeholder="Юридический адрес*" required>
+                  </div>
+                  <div class="input-box">
+                    <input type="text" placeholder="ИНН*" required>
+                  </div>
+                  <div class="input-box">
+                    <input type="text" placeholder="КПП*" required>
+                  </div>
+                  <div class="input-box">
+                    <input type="text" placeholder="Пароль*" required>
+                  </div>
+                  <div class="input-box">
+                    <input type="text" placeholder="Подтверждение пароля*" required>
+                  </div>
+                </div>
+              </div>
+              <button class="btn" type="submit">Войти</button>
+            </form>
+          </div>
+          <div class="tab_section__content_tab entity_tab">
+            <form action="#" class="registration-form">
+              <div class="columns-wrapper">
+                <div class="inputs-column">
+                  <div class="input-box">
+                    <input type="text" placeholder="Фамилия*" required>
+                  </div>
+                  <div class="input-box">
+                    <input type="text" placeholder="Имя*" required>
+                  </div>
+                  <div class="input-box">
+                    <input type="text" placeholder="Отчество">
+                  </div>
+                  <div class="input-box">
+                    <input type="text" placeholder="Телефон*" required>
+                  </div>
+                  <div class="input-box">
+                    <input type="email" placeholder="E-mail*" required>
+                  </div>
+                  <div class="input-box">
+                    <input type="text" placeholder="Название компании*" required>
+                  </div>
+                </div>
+                <div class="inputs-column">
+                  <div class="input-box">
+                    <input type="text" placeholder="Юридический адрес*" required>
+                  </div>
+                  <div class="input-box">
+                    <input type="text" placeholder="ИНН*" required>
+                  </div>
+                  <div class="input-box">
+                    <input type="text" placeholder="КПП*" required>
+                  </div>
+                  <div class="input-box">
+                    <input type="text" placeholder="Пароль*" required>
+                  </div>
+                  <div class="input-box">
+                    <input type="text" placeholder="Подтверждение пароля*" required>
+                  </div>
+                </div>
+              </div>
+              <button class="btn" type="submit">Войти</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="form-switch">
+        <span class="to-login-form">Авторизоваться</span>
+      </div>
+    </div>
   </div>
-  <div class="popup__close"></div>
+  
 </div>
 <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="./js/slick.min.js"></script>

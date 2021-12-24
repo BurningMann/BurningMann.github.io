@@ -211,7 +211,7 @@ html {
     min-height: max-content;
 }
 
-html.no-skroll {
+html.no-scroll {
     overflow: hidden;
 }
 
@@ -234,7 +234,7 @@ body {
     color: #3A3A3A;
 }
 
-body.no-skroll {
+body.no-scroll {
     overflow: hidden;
 }
 
@@ -572,6 +572,67 @@ input::-ms-input-placeholder {
 
 input::placeholder {
     color: #EDEDED;
+}
+
+form .input-box {
+    position: relative;
+    margin: 10px 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+form .input-box:last-of-type {
+    margin-bottom: 0;
+}
+
+form .input-box .forgot-pass {
+    position: absolute;
+    color: #09773B;
+    right: 20px;
+    font-weight: 300;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+form input {
+    background: #F9F9F9;
+    border: none;
+    border-radius: 3px;
+    color: #3A3A3A;
+    padding: 0 20px;
+    font-weight: 300;
+    height: 41px;
+    width: 100%;
+}
+
+form input::-webkit-input-placeholder {
+    color: rgba(58, 58, 58, 0.6);
+}
+
+form input::-moz-placeholder {
+    color: rgba(58, 58, 58, 0.6);
+}
+
+form input:-ms-input-placeholder {
+    color: rgba(58, 58, 58, 0.6);
+}
+
+form input::-ms-input-placeholder {
+    color: rgba(58, 58, 58, 0.6);
+}
+
+form input::placeholder {
+    color: rgba(58, 58, 58, 0.6);
+}
+
+form button {
+    width: 100%;
+    border: none;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .section {
@@ -1082,53 +1143,128 @@ input::placeholder {
     bottom: 0;
     right: 0;
     z-index: 9999;
-    background: #E5E5E5;
-    padding: 80px 60px;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #000 #eee;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-}
-
-.popup::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-    background: #eee;
-}
-
-.popup::-webkit-scrollbar-thumb {
-    border-radius: 3px;
-    background-color: #000;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 80px 60px 20px;
+  /* &.login_popup {
+    .popup__wrapper {
+      align-items: center;
+    }
+  } */
 }
 
 .popup__wrapper {
     width: 100%;
     height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: auto;
 }
 
 .popup__close {
-    width: 64px;
-    height: 64px;
+    width: 20px;
+    height: 20px;
     position: absolute;
-    top: 40px;
-    right: 40px;
+    top: 10px;
+    right: 10px;
     z-index: 50;
     border-radius: 50%;
-    background: url(../img/icons/popup-cross.svg) center no-repeat, #fff;
+    background: url(../img/icons/icon-popup-cross.svg) center no-repeat;
     cursor: pointer;
+}
+
+.popup__content {
+    background: #fff;
+    padding: 30px 50px;
+    width: 100%;
+    position: relative;
+}
+
+.popup__content.hidden {
+    display: none;
+}
+
+.popup__content.login-content {
+    max-width: 390px;
+}
+
+.popup__content.registration-content {
+    max-width: 600px;
+}
+
+.popup__content.registration-content .registration-form .columns-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 0 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .popup__content.registration-content .registration-form .columns-wrapper {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+.popup__content.registration-content .registration-form .columns-wrapper .inputs-column {
+    width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    .popup__content.registration-content .registration-form .columns-wrapper .inputs-column {
+        width: 100%;
+    }
+}
+
+.popup__content.registration-content .tab_section__content_tab {
+    padding: 20px 0 0 0;
+}
+
+.popup__content.registration-content .tab_section__tab_container {
+    padding: 10px 0;
+}
+
+.popup__content.registration-content .tab_section__tab {
+    color: #EDEDED;
+    font-weight: normal;
+    width: 50%;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.popup__content.registration-content .tab_section__tab.active {
+    color: #09773B;
+}
+
+.popup__content.registration-content .tab_section__tab.active:before {
+    background: #09773B;
+}
+
+.popup .section__title {
+    margin-bottom: 20px;
+}
+
+.form-switch {
+    text-align: center;
+    font-weight: 300;
+    color: #09773B;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 500px) {
     .popup {
-        padding: 80px 20px;
+        padding: 60px 20px 10px;
     }
 
-    .popup__close {
-        width: 46px;
-        height: 46px;
-        background-size: 12px 12px;
-        top: 30px;
-        right: 20px;
+    .popup__content {
+        padding: 20px 20px;
+    }
+
+    .popup__content .tab_section__tab {
+        font-size: 14px;
     }
 }
 

@@ -101,6 +101,29 @@ window.onload = function(){
     }
   })
 
+  /* POPUPS */
+  $('[data-popup]').click(function(){
+    let popup = $(this).data('popup')
+    $('.'+popup+'_popup').fadeIn()
+    $('body,html').addClass('no-scroll')
+  })
+  $('.popup__close, .popup_btn.close_popup').click(function(){
+    let popup = $(this).closest('.popup')
+    $(popup).fadeOut()
+    if(!$('.burger').hasClass('burger--active')){
+      $('body,html').removeClass('no-scroll')
+    }
+  })
+
+  $('.to-register-form').click(function(){
+    $('.login-content').addClass('hidden')
+    $('.registration-content').removeClass('hidden')
+  })
+  $('.to-login-form').click(function(){
+    $('.login-content').removeClass('hidden')
+    $('.registration-content').addClass('hidden')
+  })
+
   $('.catalog--hits').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
