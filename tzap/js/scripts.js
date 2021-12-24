@@ -93,6 +93,14 @@ window.onload = function(){
     $(this).toggleClass('active')
   })
 
+
+  $('.footer__column-title').click(function(){
+    if(checkInner(500)) {
+      $(this).toggleClass('active')
+      $(this).siblings('.footer__column-list').slideToggle().css('display', 'flex')
+    }
+  })
+
   $('.catalog--hits').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
