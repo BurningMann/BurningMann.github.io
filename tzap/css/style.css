@@ -271,6 +271,20 @@ a:not(.no-hover):hover {
     line-height: 60px;
 }
 
+@media screen and (max-width: 780px) {
+    .h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
 .h2 {
     font-size: 28px;
     line-height: 41px;
@@ -324,18 +338,6 @@ img.fit, video.fit {
     padding: 14px 30px;
     min-width: 100%;
     border-bottom: 1px solid #EDEDED;
-  /*     @media screen  and(max-width:780px){
-      overflow-x: scroll;
-      overflow-y: hidden;
-      &::-webkit-scrollbar {
-        height: 1px !important;
-        background: #DFDFDF !important;
-      }
-      &::-webkit-scrollbar-thumb {
-        border-radius: 3px;
-        background-color: #000;
-      }
-    } */
 }
 
 .tab_section__tab {
@@ -356,9 +358,6 @@ img.fit, video.fit {
     display: flex;
     -ms-flex-align: center;
     align-items: center;
-  /*     @media screen  and(max-width:780px){
-      margin-right: 30px;
-    } */
 }
 
 .tab_section__tab.active {
@@ -596,7 +595,15 @@ form .input-box .forgot-pass {
     text-decoration: underline;
 }
 
-form input {
+form button {
+    width: 100%;
+    border: none;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.input {
     background: #F9F9F9;
     border: none;
     border-radius: 3px;
@@ -607,32 +614,45 @@ form input {
     width: 100%;
 }
 
-form input::-webkit-input-placeholder {
+.input::-webkit-input-placeholder {
     color: rgba(58, 58, 58, 0.6);
 }
 
-form input::-moz-placeholder {
+.input::-moz-placeholder {
     color: rgba(58, 58, 58, 0.6);
 }
 
-form input:-ms-input-placeholder {
+.input:-ms-input-placeholder {
     color: rgba(58, 58, 58, 0.6);
 }
 
-form input::-ms-input-placeholder {
+.input::-ms-input-placeholder {
     color: rgba(58, 58, 58, 0.6);
 }
 
-form input::placeholder {
+.input::placeholder {
     color: rgba(58, 58, 58, 0.6);
 }
 
-form button {
-    width: 100%;
-    border: none;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin-top: 10px;
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(../img/icons/icon-select-arrow.svg) no-repeat 95% 50% #F9F9F9 !important;
+    outline: 0;
+    background: #F9F9F9;
+}
+
+option {
+    font-size: 16px;
+    line-height: 26px;
+  /* color: #B4B4B4; */
+}
+
+@media all and (max-width: 500px) {
+    option {
+        font-size: 14px;
+    }
 }
 
 .section {
@@ -712,6 +732,86 @@ form button {
     align-items: center;
     -ms-flex-pack: center;
     justify-content: center;
+}
+
+.breadcrumbs {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 10px 0;
+    margin-bottom: 5px;
+}
+
+.breadcrumbs__crumb {
+    color: #009846;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 10px;
+    transition: .3s;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 500px) {
+    .breadcrumbs__crumb {
+        font-size: 14px;
+        margin-right: 5px;
+    }
+}
+
+.breadcrumbs__crumb::after {
+    content: "";
+    display: block;
+    margin-left: 10px;
+    width: 6px;
+    height: 9px;
+    background: url(../img/icons/icon-bredcrumb-arrow.svg) center no-repeat;
+}
+
+@media screen and (max-width: 500px) {
+    .breadcrumbs__crumb::after {
+        margin-left: 5px;
+    }
+}
+
+.breadcrumbs__crumb:hover {
+    color: #09773B;
+    text-decoration: underline;
+}
+
+.breadcrumbs__crumb.last {
+    color: #3A3A3A;
+}
+
+.breadcrumbs__crumb.last::after {
+    display: none;
+}
+
+.page {
+    padding-top: 26px;
+}
+
+.page__title {
+    color: #09773B;
+    margin-bottom: 30px;
+}
+
+.page__title::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background: #FFED00;
+    width: 50px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 780px) {
+    .page__title::after {
+        height: 2px;
+        margin-top: 20px;
+    }
 }
 
 /* END common styles */
@@ -1693,6 +1793,42 @@ form button {
 
 .page-description p {
     margin-bottom: 10px;
+}
+
+.catalog-sort-section {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.catalog-sort-section .catalog-sort {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+    .catalog-sort-section .catalog-sort {
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+.catalog-sort-section .catalog-sort select {
+    width: 285px;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    .catalog-sort-section .catalog-sort select {
+        margin: 10px 0 0;
+        width: 100%;
+    }
 }
 
 .catalog {
