@@ -122,6 +122,11 @@ window.onload = function(){
     $(this).siblings('.catalog-filter').slideToggle()
   })
 
+  $('.vacancy__item-header').click(function(){
+    $(this).toggleClass('active')
+    $(this).siblings('.vacancy__item-body').slideToggle()
+  })
+
 
   /* POPUPS */
   $('[data-popup]').click(function(){
@@ -146,7 +151,16 @@ window.onload = function(){
     $('.registration-content').addClass('hidden')
   })
 
+  /* File load script */
 
+  $('.file-label .file').change(function(EO){
+    var files = EO.target.files || EO.dataTransfer.files;
+    if (!files.length){
+      return;
+    }
+
+    $(EO.target).siblings('.file-name').text(EO.target.files[0].name)
+  })
 
 
 
