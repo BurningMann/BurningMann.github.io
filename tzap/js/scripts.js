@@ -126,6 +126,16 @@ window.onload = function(){
     $(this).toggleClass('active')
     $(this).siblings('.vacancy__item-body').slideToggle()
   })
+  
+  $('.main-page-map.with-map .main-page-map__sidebar-box').click(function(){
+    $('.main-page-map.with-map .main-page-map__sidebar-box.active').removeClass('active')
+    $(this).addClass('active')
+
+    let adress = $(this).data('adress') 
+    $('.main-page-map__map-adress.active').removeClass('active')
+
+    $(`.${adress}`).addClass('active')
+  })
 
 
   /* POPUPS */
