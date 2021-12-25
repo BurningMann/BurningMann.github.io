@@ -223,6 +223,87 @@ window.onload = function(){
     ]
   })
 
+  
+  $('.product-slider .slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: `
+    <div class="prev">
+      <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.7503 8.25L11.8115 10.1887L18.109 16.5L11.8115 22.8112L13.7503 24.75L22.0003 16.5L13.7503 8.25Z" fill="#BEBEBE"/>
+      </svg>
+    </div>
+    `,
+    nextArrow:`
+    <div class="next">
+      <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.7503 8.25L11.8115 10.1887L18.109 16.5L11.8115 22.8112L13.7503 24.75L22.0003 16.5L13.7503 8.25Z" fill="#BEBEBE"/>
+      </svg>
+    </div>
+    `,
+    responsive: [
+      {
+        breakpoint: 500,
+        settings: {
+          arrows: false,
+          dots: true
+        }
+      }
+    ]
+  })
+
+  $('.viewed-products').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: `
+    <div class="prev">
+      <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.7503 8.25L11.8115 10.1887L18.109 16.5L11.8115 22.8112L13.7503 24.75L22.0003 16.5L13.7503 8.25Z" fill="#BEBEBE"/>
+      </svg>
+    </div>
+    `,
+    nextArrow:`
+    <div class="next">
+      <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.7503 8.25L11.8115 10.1887L18.109 16.5L11.8115 22.8112L13.7503 24.75L22.0003 16.5L13.7503 8.25Z" fill="#BEBEBE"/>
+      </svg>
+    </div>
+    `,
+    responsive: [
+      {
+        breakpoint: 1250,
+        settings: {
+          arrows: false,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 780,
+        settings: {
+          slidesToShow: 3,
+          arrows: false,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          dots: true
+        }
+      }
+    ]
+  })
+
 
   $(window).resize(function() {
 
