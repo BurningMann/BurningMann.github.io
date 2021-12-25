@@ -1037,6 +1037,7 @@ option {
     position: absolute;
     left: 10px;
     height: 24px;
+    margin: 0;
 }
 
 .header__main .uth-bar {
