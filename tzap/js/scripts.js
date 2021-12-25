@@ -101,6 +101,28 @@ window.onload = function(){
     }
   })
 
+  $('.catalog-menu .main-category').click(function(){
+    $(this).toggleClass('active')
+    $(this).siblings('.catalog-sub-menu').slideToggle()
+  })
+
+  $('.catalog-sub-menu .category-name').click(function(){
+    $(this).toggleClass('active')
+    $(this).siblings('.category-sub-menu-level-2').slideToggle()
+  })
+
+  $('.catalog-filter__item-head').click(function(){
+    $(this).toggleClass('active')
+    $(this).siblings('.catalog-filter__item-body').slideToggle()
+  })
+
+
+  $('.filter-mobile-opener').click(function(){
+    $(this).toggleClass('active')
+    $(this).siblings('.catalog-filter').slideToggle()
+  })
+
+
   /* POPUPS */
   $('[data-popup]').click(function(){
     let popup = $(this).data('popup')
@@ -123,6 +145,11 @@ window.onload = function(){
     $('.login-content').removeClass('hidden')
     $('.registration-content').addClass('hidden')
   })
+
+
+
+
+
 
   $('.catalog--hits').slick({
     slidesToShow: 4,
