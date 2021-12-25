@@ -1235,6 +1235,7 @@ option {
     display: flex;
     -ms-flex-align: center;
     align-items: center;
+    color: #fff;
 }
 
 .header__mobile-main-menu .mobile-menu-item .main-item.active::after {
