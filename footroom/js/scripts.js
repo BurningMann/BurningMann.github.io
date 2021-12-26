@@ -19,6 +19,17 @@ window.onload = function(){
     $(this).siblings('.catalog-filter').slideToggle()
   })
 
+  $('.tab_section__tab').click(function(){
+    if(!$(this).hasClass('disabled') && !$(this).hasClass('active')){
+      let tabClass  = $(this).data('tab')
+      let tabContainer = $(this).closest('.tab_section')
+      $(tabContainer).find('.tab_section__tab.active').removeClass('active')
+      $(this).addClass('active')
+      $(tabContainer).find('.tab_section__content_tab.active').removeClass('active')
+      $(tabContainer).find(`.${tabClass}_tab`).addClass('active')
+    }
+  })
+
   $('.catalog--popular').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -53,6 +64,35 @@ window.onload = function(){
       },
     ]
   })
+
+  if ($('.navslider .navslider__item').length <= 4) {
+
+    $('.navslider').addClass('static')  
+  }
+
+  $('.product-slider .slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    asNavFor: '.product-slider .navslider',
+    responsive: [
+      {
+        breakpoint: 780,
+        settings: {
+          dots: true
+        }
+      }
+    ]
+  })
+  $('.product-slider .navslider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    focusOnSelect: true,
+    asNavFor: '.product-slider .slider'
+  })
+
+  
 
 
   $(window).resize(function() {
