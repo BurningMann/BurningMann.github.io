@@ -666,12 +666,15 @@ form button {
     color: rgba(58, 58, 58, 0.6);
 }
 
-.file-label {
+.file-box {
     border-radius: 3px;
     background: #F9F9F9;
     width: 100%;
     padding: 13px 16px;
     border: 1px dashed #EDEDED;
+}
+
+.file-box .file-label {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -681,15 +684,25 @@ form button {
     cursor: pointer;
 }
 
-.file-label .file-name {
+.file-box .file-label .file-name {
     font-weight: 300;
     opacity: 0.5;
     margin-top: 5px;
     text-align: center;
 }
 
-.file-label input {
+.file-box .file-label input {
     display: none;
+}
+
+.file-box .dell-file {
+    font-size: 12px;
+    text-decoration: underline;
+    margin-top: 10px;
+    z-index: 20;
+    display: none;
+    text-align: center;
+    cursor: pointer;
 }
 
 select {
@@ -796,6 +809,15 @@ option {
     align-items: center;
     -ms-flex-pack: center;
     justify-content: center;
+}
+
+.counter__count input {
+    border: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #09773B;
 }
 
 .breadcrumbs {
@@ -923,6 +945,16 @@ option {
     }
 }
 
+.header__top .region__drop {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+}
+
+.header__top .region__drop .drop-box__drop-item {
+    margin-bottom: 5px;
+}
+
 .header__top .additional-menu {
     display: -ms-flexbox;
     display: flex;
@@ -961,6 +993,7 @@ option {
     display: flex;
     -ms-flex-align: center;
     align-items: center;
+    padding-bottom: 10px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1038,6 +1071,7 @@ option {
     left: 10px;
     height: 24px;
     margin: 0;
+    width: 30px;
 }
 
 .header__main .uth-bar {
@@ -1268,7 +1302,6 @@ option {
     -ms-flex-pack: center;
     justify-content: center;
     gap: 0 20px;
-      /* flex-direction: column; */
     margin-top: 30px;
 }
 
@@ -1276,6 +1309,21 @@ option {
     color: #fff;
     margin: 5px 0;
     border-bottom: 1px dashed #FFED00;
+}
+
+.header__mobile-main-menu .contacts {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+    gap: 10px 0;
+    margin-top: 10px;
+}
+
+.header__mobile-main-menu .contacts a {
+    color: #fff;
 }
 
 .header__mobile-main-menu .menu-close {
@@ -1317,11 +1365,6 @@ option {
     z-index: 9999;
     background: rgba(0, 0, 0, 0.6);
     padding: 80px 60px 20px;
-  /* &.login_popup {
-    .popup__wrapper {
-      align-items: center;
-    }
-  } */
 }
 
 .popup__wrapper {
@@ -1346,6 +1389,13 @@ option {
     border-radius: 50%;
     background: url(../img/icons/icon-popup-cross.svg) center no-repeat;
     cursor: pointer;
+    transition: .2s;
+}
+
+.popup__close:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    background: url(../img/icons/icon-popup-cross-hover.svg) center no-repeat;
 }
 
 .popup__content {
@@ -1796,7 +1846,7 @@ option {
 }
 
 .main-page-map__map {
-    height: 600px;
+    height: 605px;
     width: calc(100% - 295px);
     overflow: hidden;
 }
@@ -2080,6 +2130,7 @@ option {
     justify-content: flex-start;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    margin: -5px;
 }
 
 .resume-form .input-box {
@@ -2107,6 +2158,7 @@ option {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+    margin-left: 5px;
 }
 
 .question-form {
@@ -2324,6 +2376,11 @@ option {
     margin: 5px;
     border: 1px solid #EDEDED;
     width: calc(100% / 4 - 20px);
+    transition: .3s;
+}
+
+.catalog__product:hover {
+    border-color: #09773B;
 }
 
 .catalog__product-tags {
@@ -2652,7 +2709,7 @@ option {
     display: block;
 }
 
-.catalog-menu__item .category-sub-menu-level-2 a:hover {
+.catalog-menu__item .category-sub-menu-level-2 a.active, .catalog-menu__item .category-sub-menu-level-2 a:hover {
     color: #009846 !important;
 }
 
@@ -2757,10 +2814,21 @@ option {
     max-width: 120px;
     height: 43px;
     border-radius: 3px;
+    transition: .3s;
+}
+
+.catalog-filter .filter-buttons-box__btn:hover {
+    background: #009846;
+    color: #fff;
 }
 
 .catalog-filter .filter-buttons-box .apply {
     background: #FFED00;
+}
+
+.catalog-filter .filter-buttons-box .apply:hover {
+    background: #009846;
+    color: #fff;
 }
 
 .filter-mobile-opener {

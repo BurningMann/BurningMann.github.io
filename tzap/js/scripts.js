@@ -56,30 +56,31 @@ window.onload = function(){
   var counterInterval = null
 
   $('.counter .plus').mousedown(function () { 
-    let counter = $(this).siblings('.counter__count')[0]
-    let count = +$(counter).text()
+    let counter = $(this).siblings('.counter__count').find('input')[0]
+    let count = +$(counter).val()
     
-    counter.innerText = count + 1
+    $(counter).val(count + 1)
+
     counterInterval = setInterval(() => {
-      count = +counter.innerText
-      counter.innerText = count + 1
-    }, 200);
+      count = +$(counter).val()
+      $(counter).val(count + 1)
+    }, 100);
   });
 
   $('.counter .minus').mousedown(function () { 
-    let counter = $(this).siblings('.counter__count')[0]
-    let count = +$(counter).text()
+    let counter = $(this).siblings('.counter__count').find('input')[0]
+    let count = +$(counter).val()
 
     if(count > 1) {
-      counter.innerText = count - 1
+      $(counter).val(count - 1)
     }
 
     counterInterval = setInterval(() => {
-      count = +counter.innerText
+      count = +$(counter).val()
       if(count > 1) {
-        counter.innerText = count - 1
+        $(counter).val(count - 1)
       }
-    }, 200);
+    }, 100);
   });
 
   $(document).mouseup(function () { 
@@ -100,6 +101,19 @@ window.onload = function(){
       $(this).siblings('.footer__column-list').slideToggle().css('display', 'flex')
     }
   })
+
+  if($('.catalog-menu .main-category.active').length) {
+    $('.catalog-menu .main-category.active').map(function(index,element) {
+      $(element).siblings('.catalog-sub-menu').slideDown(0)
+    })
+  }
+  
+  if($('.catalog-menu .category-name.active').length) {
+    $('.catalog-menu .category-name.active').map(function(index,element) {
+      $(element).siblings('.category-sub-menu-level-2').slideDown(0)
+    })
+  }
+  
 
   $('.catalog-menu .main-category').click(function(){
     $(this).toggleClass('active')
@@ -170,9 +184,15 @@ window.onload = function(){
     }
 
     $(EO.target).siblings('.file-name').text(EO.target.files[0].name)
+
+    $(EO.target).closest('.file-label').siblings('.dell-file').fadeIn("fast")
   })
 
-
+  $('.dell-file').click(function(){
+    $(this).siblings('.file-label').find('.file').val('')
+    $(this).siblings('.file-label').find('.file-name').text('Прикрепить файл (до 5 файлов размером до 2MB)')
+    $(this).fadeOut('fast')
+  })
 
 
   $('.catalog--hits').slick({
