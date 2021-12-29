@@ -2190,6 +2190,7 @@ option {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+    margin-left: 5px;
 }
 
 .error-page {

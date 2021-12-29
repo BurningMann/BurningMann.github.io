@@ -102,6 +102,8 @@ window.onload = function(){
     }
   })
 
+
+  /* Раскрытие ативных пунктов меню*/
   if($('.catalog-menu .main-category.active').length) {
     $('.catalog-menu .main-category.active').map(function(index,element) {
       $(element).siblings('.catalog-sub-menu').slideDown(0)
@@ -114,7 +116,6 @@ window.onload = function(){
     })
   }
   
-
   $('.catalog-menu .main-category').click(function(){
     $(this).toggleClass('active')
     $(this).siblings('.catalog-sub-menu').slideToggle()
