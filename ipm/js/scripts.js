@@ -176,3 +176,28 @@ $('.years_slider').slick({
   <polyline class="cls-1" points="21.1 3.12 29.47 8.64 20.68 14"></polyline>
 </svg></div>`
 });
+
+
+$('.review-detail .slider-box__slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  asNavFor: '.review-detail .detail-text',
+  prevArrow: `<div class="prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.37 16.6" class="arrow">
+  <line class="cls-1" x1="29.14" y1="8.52" x2="2.68" y2="8.52"></line>
+  <polyline class="cls-1" points="21.1 3.12 29.47 8.64 20.68 14"></polyline>
+</svg></div>`,
+  nextArrow: `<div class="next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.37 16.6" class="arrow">
+  <line class="cls-1" x1="29.14" y1="8.52" x2="2.68" y2="8.52"></line>
+  <polyline class="cls-1" points="21.1 3.12 29.47 8.64 20.68 14"></polyline>
+</svg></div>`
+});
+
+
+$('.review-detail .detail-text').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  asNavFor: '.review-detail .slider-box__slider',
+  swipe: false,
+  arrows: false,
+  fade: true
+});
