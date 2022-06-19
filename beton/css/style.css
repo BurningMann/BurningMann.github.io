@@ -539,7 +539,7 @@ img[data-lazysrc].load {
     display: block;
     width: 5rem;
     height: 5rem;
-    background: url(/img/icons/acordion-arrow.svg) center/contain no-repeat;
+    background: url(/beton/img/icons/acordion-arrow.svg) center/contain no-repeat;
     position: absolute;
     right: 0;
     top: 2.3rem;
@@ -695,7 +695,7 @@ input.black::placeholder, textarea.black::placeholder {
     margin-left: 1.5rem;
     width: 2rem;
     height: 2rem;
-    background: url(/img/icons/bredacrumbs-separator.svg) center no-repeat;
+    background: url(/beton/img/icons/bredacrumbs-separator.svg) center no-repeat;
 }
 
 @media screen and (max-width: 500px) {
@@ -804,7 +804,7 @@ input.black::placeholder, textarea.black::placeholder {
     margin-left: 1.4rem;
     width: 1rem;
     height: 1rem;
-    background: url(/img/icons/menu-arrow.svg) center no-repeat;
+    background: url(/beton/img/icons/menu-arrow.svg) center no-repeat;
     transition: .3s;
     position: absolute;
     right: 2rem;
@@ -956,7 +956,7 @@ input.black::placeholder, textarea.black::placeholder {
     margin-left: 1.4rem;
     width: 1rem;
     height: 1rem;
-    background: url(/img/icons/menu-arrow.svg) center no-repeat;
+    background: url(/beton/img/icons/menu-arrow.svg) center no-repeat;
     transition: .3s;
 }
 
@@ -992,7 +992,7 @@ input.black::placeholder, textarea.black::placeholder {
         transform: rotate(180deg);
         right: auto;
         left: 2rem;
-        background: url(/img/icons/menu-arrow-active.svg) center no-repeat;
+        background: url(/beton/img/icons/menu-arrow-active.svg) center no-repeat;
     }
 }
 
@@ -1307,7 +1307,7 @@ input.black::placeholder, textarea.black::placeholder {
     top: 4rem;
     right: 4rem;
     z-index: 50;
-    background: url(/img/icons/popup-cross.svg) center no-repeat;
+    background: url(/beton/img/icons/popup-cross.svg) center no-repeat;
     cursor: pointer;
 }
 
@@ -3936,7 +3936,10 @@ input.black::placeholder, textarea.black::placeholder {
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: "area-1 area-1 area-2 area-3" "area-1 area-1 area-4 area-5" "area-6 area-7 area-10 area-10" "area-8 area-9 area-10 area-10";
+    grid-template-areas: "area-1 area-1 area-2 area-3"
+ "area-1 area-1 area-4 area-5"
+ "area-6 area-7 area-10 area-10"
+ "area-8 area-9 area-10 area-10";
 }
 
 .examples__wrapper .area-1 {
