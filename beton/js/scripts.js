@@ -97,6 +97,17 @@ window.onload = function(){
     $(this).closest('.custom-select').find('.custom-select__input').val(name)
   })
 
+
+  $('.catalog__catagories-item').click(function(EO) {
+    const anchor = $(this).data('anchor')
+    const section = $(`#${anchor}`);
+    $('html,body').animate({scrollTop: section.offset().top},'slow');
+  })
+
+  $(".custom-js-scroll").mCustomScrollbar({
+    axis:"x",
+    autoDraggerLength: false
+  });
   /* SLIDERS */
 
   $('.main-section__slider').slick({
