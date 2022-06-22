@@ -80,7 +80,8 @@ window.onload = function(){
     if (checkInnerWidth(1078)) {
       EO.preventDefault()
       $(this).toggleClass('active')
-      $(this).find('.dropdown-menu').slideToggle()
+      $('.header__menu .mobile-content').toggleClass('hidden')
+      $('.header__menu-item').toggleClass('hidden')
     }
   })
 
