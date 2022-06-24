@@ -109,6 +109,55 @@ window.onload = function(){
     axis:"x",
     autoDraggerLength: false
   });
+
+  gsap.registerPlugin(ScrollTrigger)
+
+  const animateElements = $('.animate-svg .fade-animation')
+  const animateTable= $('.animate-svg .animate-svg__table')[0]
+  const colors= $('.main-colors__palette')[0]
+  
+  gsap.to(animateTable,{
+    scrollTrigger: {
+      trigger: animateTable,
+      start: "50% bottom",
+      end: "50% bottom",
+      markers: true,
+    },
+    opacity: 1,
+  })
+
+  gsap.to(colors,{
+    scrollTrigger: {
+      trigger: colors,
+      start: "100% bottom",
+      end: "100% bottom",
+      markers: true,
+    },
+    opacity: 1,
+  })
+  Array.from(animateElements).forEach(element => {
+    gsap.to(element,{
+      scrollTrigger: {
+        trigger: element,
+        start: "200% bottom",
+        end: "200% bottom",
+        markers: true,
+      },
+      opacity: 1,
+    })
+  });
+
+/*   ScrollTrigger.create({
+    trigger: ".",
+    start: `${window.innerHeight}px top`,
+    end: `${window.innerHeight}px top`,
+    onEnter: ()=>{
+      $(".main_page_slider").css({"z-index": -2, "opacity": 0})
+    },
+    onEnterBack: ()=>{
+      $(".main_page_slider").css({"z-index": 5, "opacity": 1})
+    }
+  }) */
   /* SLIDERS */
 
   $('.main-section__slider').slick({
