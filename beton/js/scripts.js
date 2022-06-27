@@ -99,65 +99,56 @@ window.onload = function(){
   })
 
 
-  $('.catalog__catagories-item').click(function(EO) {
+  $('[data-anchor]').click(function(EO) {
     const anchor = $(this).data('anchor')
     const section = $(`#${anchor}`);
-    $('html,body').animate({scrollTop: section.offset().top},'slow');
+    $('html,body').animate({scrollTop: section.offset().top * (!checkInnerWidth(1600) ? 1 : 0.75)},'slow');
   })
 
-  $(".custom-js-scroll").mCustomScrollbar({
-    axis:"x",
-    autoDraggerLength: false
-  });
+  if (checkInnerWidth(1024)) {
+    $(".custom-js-scroll").mCustomScrollbar({
+      axis:"x",
+      autoDraggerLength: false
+    });
+  }
 
-  gsap.registerPlugin(ScrollTrigger)
+  if (!checkInnerWidth(1600)) {
+    gsap.registerPlugin(ScrollTrigger)
 
-  const animateElements = $('.animate-svg .fade-animation')
-  const animateTable= $('.animate-svg .animate-svg__table')[0]
-  const colors= $('.main-colors__palette')[0]
-  
-  gsap.to(animateTable,{
-    scrollTrigger: {
-      trigger: animateTable,
-      start: "50% bottom",
-      end: "50% bottom",
-      markers: true,
-    },
-    opacity: 1,
-  })
+    const animateElements = $('.animate-svg .fade-animation')
+    const animateTable= $('.animate-svg .animate-svg__table')[0]
+    const colors= $('.main-colors__palette')[0]
 
-  gsap.to(colors,{
-    scrollTrigger: {
-      trigger: colors,
-      start: "100% bottom",
-      end: "100% bottom",
-      markers: true,
-    },
-    opacity: 1,
-  })
-  Array.from(animateElements).forEach(element => {
-    gsap.to(element,{
+    gsap.to(animateTable,{
       scrollTrigger: {
-        trigger: element,
-        start: "200% bottom",
-        end: "200% bottom",
-        markers: true,
+        trigger: animateTable,
+        start: "50% bottom",
+        end: "50% bottom",
       },
       opacity: 1,
     })
-  });
+  
+    gsap.to(colors,{
+      scrollTrigger: {
+        trigger: colors,
+        start: "100% bottom",
+        end: "100% bottom",
+      },
+      opacity: 1,
+    })
+  
+    Array.from(animateElements).forEach(element => {
+      gsap.to(element,{
+        scrollTrigger: {
+          trigger: element,
+          start: "200% bottom",
+          end: "200% bottom",
+        },
+        opacity: 1,
+      })
+    });
+  }
 
-/*   ScrollTrigger.create({
-    trigger: ".",
-    start: `${window.innerHeight}px top`,
-    end: `${window.innerHeight}px top`,
-    onEnter: ()=>{
-      $(".main_page_slider").css({"z-index": -2, "opacity": 0})
-    },
-    onEnterBack: ()=>{
-      $(".main_page_slider").css({"z-index": 5, "opacity": 1})
-    }
-  }) */
   /* SLIDERS */
 
   $('.main-section__slider').slick({

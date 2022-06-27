@@ -220,10 +220,18 @@ html {
     html {
         zoom: .75;
     }
+
+    html.is-safari {
+        zoom: .70;
+    }
 }
 
 @media screen and (max-width: 1024px) {
     html {
+        zoom: 1;
+    }
+
+    html.is-safari {
         zoom: 1;
     }
 }
@@ -354,7 +362,6 @@ p.center {
     display: flex;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #000;
 }
 
 .slick-dots li {
@@ -499,11 +506,19 @@ img[data-lazysrc].load {
     -ms-flex-negative: 0;
     flex-shrink: 0;
     background: transparent;
+    color: #000;
+    flex-shrink: 0;
 }
 
 @media screen and (max-width: 1024px) {
     .button {
         font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .button {
+        padding: 1.5rem 4rem;
     }
 }
 
@@ -771,21 +786,42 @@ input.black::placeholder, textarea.black::placeholder {
     }
 }
 
-.custom-scroll {
+.custom-scroll:not(.custom-js-scroll) {
     scrollbar-width: thin;
     scrollbar-color: #F05212 #F8F8F8;
     -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow: auto;
 }
 
-.custom-scroll::-webkit-scrollbar {
+.custom-scroll:not(.custom-js-scroll)::-webkit-scrollbar {
     width: 6px;
     height: 6px;
     background: #F8F8F8;
 }
 
-.custom-scroll::-webkit-scrollbar-thumb {
+.custom-scroll:not(.custom-js-scroll)::-webkit-scrollbar-thumb {
     border-radius: 3px;
     background-color: #F05212;
+}
+
+@media screen and (min-width: 1024px) {
+    .custom-scroll.custom-js-scroll {
+        scrollbar-width: thin;
+        scrollbar-color: #F05212 #F8F8F8;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        overflow: auto;
+    }
+
+    .custom-scroll.custom-js-scroll::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+        background: #F8F8F8;
+    }
+
+    .custom-scroll.custom-js-scroll::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+        background-color: #F05212;
+    }
 }
 
 .custom-js-scroll .mCSB_draggerContainer {
@@ -1940,9 +1976,9 @@ input.black::placeholder, textarea.black::placeholder {
     height: 60rem;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1200px) {
     .main-categories__wrapper-col:nth-child(1) .main-categories__item:nth-child(odd) {
-        height: 45rem;
+        height: 50rem;
     }
 }
 
@@ -1950,9 +1986,9 @@ input.black::placeholder, textarea.black::placeholder {
     height: 45rem;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1200px) {
     .main-categories__wrapper-col:nth-child(1) .main-categories__item:nth-child(even) {
-        height: 30rem;
+        height: 35rem;
     }
 }
 
@@ -1960,9 +1996,9 @@ input.black::placeholder, textarea.black::placeholder {
     height: 60rem;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1200px) {
     .main-categories__wrapper-col:nth-child(2) .main-categories__item:nth-child(even) {
-        height: 45rem;
+        height: 50rem;
     }
 }
 
@@ -1970,9 +2006,9 @@ input.black::placeholder, textarea.black::placeholder {
     height: 45rem;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1200px) {
     .main-categories__wrapper-col:nth-child(2) .main-categories__item:nth-child(odd) {
-        height: 30rem;
+        height: 35rem;
     }
 }
 
@@ -2015,7 +2051,7 @@ input.black::placeholder, textarea.black::placeholder {
 @media screen and (max-width: 1024px) {
     .main-categories__item {
         width: calc(50% - 2rem);
-        height: 25rem;
+        aspect-ratio: 12 / 7;
     }
 
     .main-categories__item.lamps .main-categories__item-image {
@@ -2029,7 +2065,6 @@ input.black::placeholder, textarea.black::placeholder {
     .main-categories__item {
         width: 100%;
         height: auto;
-        aspect-ratio: 12 / 7;
         margin-bottom: 1rem;
     }
 }
@@ -2113,7 +2148,7 @@ input.black::placeholder, textarea.black::placeholder {
     text-align: right;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1024px) {
     .main-categories__item.sills .main-categories__item-title {
         bottom: auto;
         top: 2rem;
@@ -2126,6 +2161,12 @@ input.black::placeholder, textarea.black::placeholder {
     bottom: -5rem;
     left: auto;
     right: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .main-categories__item.decor .main-categories__item-image {
+        bottom: 0;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -2190,6 +2231,12 @@ input.black::placeholder, textarea.black::placeholder {
 .main-colors__image-section .animate-svg .fade-animation {
     transition: .2s;
     opacity: 0;
+}
+
+@media screen and (max-width: 1600px) {
+    .main-colors__image-section .animate-svg .fade-animation {
+        opacity: 1;
+    }
 }
 
 .main-colors__description {
@@ -2259,6 +2306,12 @@ input.black::placeholder, textarea.black::placeholder {
 
 .main-colors__palette .main-colors__mobile-box-title {
     display: none;
+}
+
+@media screen and (max-width: 1600px) {
+    .main-colors__palette {
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -3149,6 +3202,8 @@ input.black::placeholder, textarea.black::placeholder {
     .product-description {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
         margin-bottom: 5rem;
     }
 }
@@ -3871,6 +3926,17 @@ input.black::placeholder, textarea.black::placeholder {
     padding-bottom: 15rem;
 }
 
+.contact-page__header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
 .section-w-cart {
     display: -ms-flexbox;
     display: flex;
@@ -4320,12 +4386,24 @@ input.black::placeholder, textarea.black::placeholder {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 4rem 4rem;
+    gap: 4rem;
     grid-auto-flow: row;
     grid-template-areas: "area-1 area-1 area-2 area-3"
  "area-1 area-1 area-4 area-5"
  "area-6 area-7 area-10 area-10"
  "area-8 area-9 area-10 area-10";
+}
+
+@media screen and (max-width: 1024px) {
+    .examples__wrapper {
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .examples__wrapper {
+        gap: 1rem;
+    }
 }
 
 .examples__wrapper .area-1 {
