@@ -214,47 +214,28 @@ input[type=number] {
 html {
     width: 100%;
     font-size: 62.5%;
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
 }
 
-@media screen and (max-width: 1600px) {
+/* @-moz-document url-prefix() {
+  @media screen and (max-width: 1600px){
     html {
-        zoom: .75;
-    }
-
-    html.is-safari {
-        zoom: .70;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    html {
-        zoom: 1;
-    }
-
-    html.is-safari {
-        zoom: 1;
-    }
-}
-
-@-moz-document url-prefix() {
-    @media screen and (max-width: 1600px) {
-        html {
-            transform: scale(0.75);
-            transform-origin: left top;
-            width: calc(100% / 0.75);
-            height: calc(100% / 0.75);
-        }
-    }
-
-    @media screen and (max-width: 1024px) {
-        html {
-            transform: scale(1);
-            width: calc(100% / 1);
-            height: calc(100% / 1);
-        }
+      transform: scale(0.75);
+      transform-origin: left top;
+      width: calc(100% / 0.75);
+      height: calc(100% / 0.75);
     } 
-}
+  }
 
+  @media screen and (max-width:1024px){
+    html {
+      transform: scale(1);
+      width: calc(100% / 1);
+      height: calc(100% / 1);
+    }
+  }
+} */
 body, html {
     height: -webkit-max-content;
     height: -moz-max-content;
@@ -345,6 +326,10 @@ p.center {
     .mobile_visible {
         display: block;
     }
+}
+
+.slick-vertical .slick-slide {
+    border: none;
 }
 
 .slick-arrow {
@@ -4392,10 +4377,7 @@ input.black::placeholder, textarea.black::placeholder {
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 4rem;
     grid-auto-flow: row;
-    grid-template-areas: "area-1 area-1 area-2 area-3"
- "area-1 area-1 area-4 area-5"
- "area-6 area-7 area-10 area-10"
- "area-8 area-9 area-10 area-10";
+    grid-template-areas: "area-1 area-1 area-2 area-3" "area-1 area-1 area-4 area-5" "area-6 area-7 area-10 area-10" "area-8 area-9 area-10 area-10";
 }
 
 @media screen and (max-width: 1024px) {

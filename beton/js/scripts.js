@@ -40,9 +40,31 @@ function checkInnerWidth(width){
 
 
 window.onload = function(){
-  $(window).resize(function() {
+  function setTransformScale(scaleFactor) {
+    if(!scaleFactor) scaleFactor = 1;
 
+    let height = $(window).height()*(1/scaleFactor);
+    let width = $(window).width()*(1/scaleFactor);
+
+    $("html").css({
+        width: width+"px",
+        height: height+"px",
+        transform: `scale(${scaleFactor})`
+    });
+  };
+
+  $(window).resize(function() {
+    if (!checkInnerWidth(1600)) {
+      setTransformScale()
+    } 
+    
+    if (checkInnerWidth(1024)) {
+      setTransformScale()
+    } else if (checkInnerWidth(1600)) {
+      setTransformScale(0.75)
+    }
   });
+  
 
   /* ACCORDION*/
   $('.accordion__wrapper-item-header').click(function() {
