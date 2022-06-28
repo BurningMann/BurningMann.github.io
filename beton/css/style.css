@@ -44,8 +44,8 @@ template {
 
 html {
     font-family: sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-focus-ring-color: rgba(255, 255, 255, 0);
     cursor: default;
@@ -2492,13 +2492,11 @@ input.black::placeholder, textarea.black::placeholder {
     display: -ms-flexbox;
     display: flex;
     height: 100%;
-    /* width: 100%; */
-    /* overflow: auto; */
 }
 
 .catalog__catagories-item {
     height: 100%;
-    width: 21.5rem;
+    width: calc(100% / 8);
     height: 100%;
     -ms-flex-negative: 0;
     flex-shrink: 0;
@@ -2512,6 +2510,12 @@ input.black::placeholder, textarea.black::placeholder {
     position: relative;
     padding: 4rem 1rem 0;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+    .catalog__catagories-item {
+        width: 21.5rem;
+    }
 }
 
 @media screen and (max-width: 780px) {
