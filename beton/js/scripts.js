@@ -37,8 +37,6 @@ function checkInnerWidth(width){
   }
 }
 
-
-
 window.onload = function(){
   function setTransformScale() {
     let scaleFactor = 1;
@@ -132,7 +130,7 @@ window.onload = function(){
     });
   }
 
-  if (!checkInnerWidth(1600)) {
+  if (!checkInnerWidth(1024)) {
     gsap.registerPlugin(ScrollTrigger)
 
     const animateElements = $('.animate-svg .fade-animation')

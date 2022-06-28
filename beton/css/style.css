@@ -2216,12 +2216,9 @@ input.black::placeholder, textarea.black::placeholder {
 .main-colors__image-section .animate-svg .fade-animation {
     transition: .2s;
     opacity: 0;
-}
-
-@media screen and (max-width: 1600px) {
-    .main-colors__image-section .animate-svg .fade-animation {
-        opacity: 1;
-    }
+      /*         @media screen and (max-width: 1600px){
+          opacity: 1;
+        } */
 }
 
 .main-colors__description {
@@ -2287,16 +2284,13 @@ input.black::placeholder, textarea.black::placeholder {
     margin: 4rem 0 7rem;
     transition: .2s;
     opacity: 0;
+  /*     @media screen and (max-width: 1600px){
+      opacity: 1;
+    } */
 }
 
 .main-colors__palette .main-colors__mobile-box-title {
     display: none;
-}
-
-@media screen and (max-width: 1600px) {
-    .main-colors__palette {
-        opacity: 1;
-    }
 }
 
 @media screen and (max-width: 500px) {
