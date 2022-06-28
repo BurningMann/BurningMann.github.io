@@ -40,8 +40,14 @@ function checkInnerWidth(width){
 
 
 window.onload = function(){
-  function setTransformScale(scaleFactor) {
-    if(!scaleFactor) scaleFactor = 1;
+  function setTransformScale() {
+    let scaleFactor = 1;
+
+    if (checkInnerWidth(1024)) {
+      scaleFactor = 1
+    } else if (checkInnerWidth(1600)) {
+      scaleFactor = 0.75
+    }
 
     let height = $(window).height()*(1/scaleFactor);
     let width = $(window).width()*(1/scaleFactor);
@@ -51,18 +57,10 @@ window.onload = function(){
         height: height+"px",
         transform: `scale(${scaleFactor})`
     });
-  };
+  };setTransformScale()
 
   $(window).resize(function() {
-    if (!checkInnerWidth(1600)) {
-      setTransformScale()
-    } 
-    
-    if (checkInnerWidth(1024)) {
-      setTransformScale()
-    } else if (checkInnerWidth(1600)) {
-      setTransformScale(0.75)
-    }
+    setTransformScale()
   });
   
 

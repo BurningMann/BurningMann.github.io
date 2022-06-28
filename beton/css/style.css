@@ -3417,12 +3417,19 @@ input.black::placeholder, textarea.black::placeholder {
     position: absolute;
     right: 0;
     bottom: 0;
+    max-width: initial;
 }
 
 @media screen and (max-width: 1400px) {
     .care-page__description .button {
         position: relative;
         margin-top: 4rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .care-page__description .button {
+        max-width: 100%;
     }
 }
 
@@ -3597,6 +3604,10 @@ input.black::placeholder, textarea.black::placeholder {
     }
 }
 
+.feature-page__wrapper .feature-page__row:first-child {
+    margin-top: 0;
+}
+
 .feature-page__row {
     display: -ms-flexbox;
     display: flex;
@@ -3629,6 +3640,12 @@ input.black::placeholder, textarea.black::placeholder {
 
 .feature-page__row.without-central-section .feature-page__row-color-image {
     margin-left: 15rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .feature-page__row.without-central-section .feature-page__row-color-image {
+        margin-left: 5rem;
+    }
 }
 
 .feature-page__row.without-central-section .feature-page__row-description {
@@ -3668,7 +3685,7 @@ input.black::placeholder, textarea.black::placeholder {
     }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1024px) {
     .feature-page__row-color-image .big {
         max-width: 30rem;
     }
@@ -3682,12 +3699,6 @@ input.black::placeholder, textarea.black::placeholder {
 
 .feature-page__row-color-image .smal-image-box {
     position: relative;
-}
-
-@media screen and (max-width: 1400px) {
-    .feature-page__row-color-image .smal-image-box {
-        width: 10rem;
-    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -3924,6 +3935,17 @@ input.black::placeholder, textarea.black::placeholder {
     flex-wrap: wrap;
     -ms-flex-align: start;
     align-items: flex-start;
+    margin-bottom: 8rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .contact-page__header {
+        margin-bottom: 4rem;
+    }
+}
+
+.contact-page__header .title {
+    margin-bottom: 2rem;
 }
 
 .section-w-cart {
