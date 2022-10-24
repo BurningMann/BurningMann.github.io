@@ -67,6 +67,11 @@ window.onload = function() {
     })
   }
 
+  $('.collapse-item__header').click(function() {
+    $(this).toggleClass('is-open')
+    $(this).siblings('.collapse-item__body').slideToggle('fast')
+  })
+
 
 
   /* Lazy load */
