@@ -37,28 +37,59 @@ function checkInnerWidth(width) {
 
 window.onload = function () {
   let stepsCounter = 1;
+  const synth = window.speechSynthesis;
   const button = document.querySelector('.action-button');
   const title = document.querySelector('.step-title');
 
-  const vid = document.querySelector('.da-video');
-  vid.volume = 0.2;
+  const variables = {
+    да: {
+      url: './video/piz.mp4',
+      type: 'video',
+    },
+    нет: {
+      url: './video/pid.mp4',
+      type: 'video',
+    },
+    хуй: {
+      url: './img/present.png',
+      type: 'image',
+    },
+  };
 
-  const vin = document.querySelector('.net-video');
-  vin.volume = 0.2;
+  function createVideo(url) {
+    const video = document.createElement('video');
+    video.src = url;
+    video.controls = false;
+    video.muted = false;
+    video.volume = 0.5;
+    const box = document.querySelector('.video-container');
+    box.appendChild(video);
+    $('.video-container').addClass('is-visible');
+    video.play();
+    video.addEventListener('ended', function (e) {
+      $('.video-container').removeClass('is-visible');
+      video.remove();
+    });
+  }
+
+  function createImage(url) {
+    const image = document.createElement('img');
+    image.src = url;
+    const box = document.querySelector('.video-container');
+    box.appendChild(image);
+    $('.video-container').addClass('is-visible');
+    setTimeout(() => {
+      $('.video-container').removeClass('is-visible');
+      image.remove();
+    }, 2000);
+  }
 
   function answer(text) {
-    if (text === 'да') {
-      $('.video-container').addClass('is-visible');
-      setTimeout(() => {
-        $(vid).addClass('is-active');
-        vid.play();
-      }, 400);
-    } else if (text === 'нет') {
-      $('.video-container').addClass('is-visible');
-      setTimeout(() => {
-        $(vin).addClass('is-active');
-        vin.play();
-      }, 400);
+    const realText = text.toLowerCase();
+    if (variables[realText]) {
+      variables[realText].type === 'video'
+        ? createVideo(variables[realText].url)
+        : createImage(variables[realText].url);
     }
   }
 
@@ -81,7 +112,7 @@ window.onload = function () {
         $('.button__text-inner-text').text('Продолжить');
         $('.button__text-inner-text').fadeIn();
         $('.button__text-inner-icon').fadeOut('fast');
-        stepsCounter++;
+        answer(result[0].transcript);
       } else if (stepsCounter === 4) {
         answer(result[0].transcript);
       }
@@ -98,8 +129,6 @@ window.onload = function () {
     recognizer.start();
   }
 
-  var synth = window.speechSynthesis;
-
   function talk() {
     const name = $('.name-input').val();
     var utterance = new SpeechSynthesisUtterance(`Вас зовут ${name} ?`);
@@ -110,16 +139,6 @@ window.onload = function () {
     synth.cancel();
     console.log(synth);
   }
-
-  $('.speech').click(function () {
-    speech();
-  });
-  $('.talk').click(function () {
-    talk();
-  });
-  $('.stop').click(function () {
-    stop();
-  });
 
   button.addEventListener('click', function (e) {
     if (stepsCounter === 1) {
@@ -139,20 +158,6 @@ window.onload = function () {
     } else if (stepsCounter === 4) {
       speech();
     }
-  });
-
-  vid.addEventListener('ended', function (e) {
-    $('.video-container').removeClass('is-visible');
-    setTimeout(() => {
-      $(vid).removeClass('is-active');
-    }, 500);
-  });
-
-  vin.addEventListener('ended', function (e) {
-    $('.video-container').removeClass('is-visible');
-    setTimeout(() => {
-      $(vin).removeClass('is-active');
-    }, 500);
   });
 
   /* -------------------------------------------------------------------- */

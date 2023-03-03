@@ -301,11 +301,12 @@ strong {
     padding: 2rem;
     z-index: 500;
     will-change: transform;
-    -webkit-transform: translateY(-5rem);
-    transform: translateY(-5rem);
+    -webkit-transform: translateY(5rem);
+    transform: translateY(5rem);
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
+    background: #5a5456;
 }
 
 .video-container.is-visible {
@@ -317,11 +318,6 @@ strong {
 
 .video-container video {
     max-width: 100%;
-    display: none;
-}
-
-.video-container video.is-active {
-    display: block;
 }
 
 .content {
