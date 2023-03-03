@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    id="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover"
+  />
+  <title>Document</title>
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+  <body>
+    <header class="header"></header>
+
+    <main>
+      <div class="content">
+        <div class="step-title">Какое Ваше имя ?</div>
+        <input type="text" class="name-input" readonly disabled placeholder="Ваше имя" />
+        <button class="button action-button">
+          <div class="button__deco button__deco--2"></div>
+          <div class="button__deco button__deco--1"></div>
+          <span class="button__text">
+            <span class="button__text-inner">
+              <div class="button__text-inner-text"></div>
+              <div class="button__text-inner-icon">
+                <svg
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 269.719 269.719"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  enable-background="new 0 0 269.719 269.719"
+                >
+                  <g>
+                    <g>
+                      <path
+                        d="m221.865,139.21c0-5.22-3.48-8.701-8.701-8.701s-8.701,3.48-8.701,8.701c0,33.062-31.322,60.904-69.605,60.904s-69.605-27.842-69.605-60.904c0-5.22-3.48-8.701-8.701-8.701s-8.701,3.48-8.701,8.701c0,40.84 33.863,73.607 78.305,77.522v35.586h-26.102c-5.22,0-8.701,3.48-8.701,8.701s3.48,8.701 8.701,8.701h69.605c5.22,0 8.701-3.48 8.701-8.701s-3.48-8.701-8.701-8.701h-26.099v-35.62c44.442-4.09 78.305-38.284 78.305-77.488z"
+                      />
+                      <path
+                        d="m134.859,174.012c24.362,0 43.503-20.882 43.503-43.503v-87.006c-2.84217e-14-24.362-19.141-43.503-43.503-43.503s-43.503,19.141-43.503,43.503v87.006c0,24.362 19.142,43.503 43.503,43.503zm-26.101-130.509c0-13.921 12.181-26.102 26.102-26.102 13.921,0 26.102,10.441 26.102,26.102v87.006c0,13.921-12.181,26.102-26.102,26.102-13.921,0-26.102-12.181-26.102-26.102v-87.006z"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </span>
+          </span>
+        </button>
+      </div>
+
+      <div class="video-container">
+        <video src="./video/piz.mp4" class="da-video"></video>
+        <video src="./video/pid.mp4" class="net-video"></video>
+      </div>
+    </main>
+    <svg class="cursor" width="25" height="25" viewBox="0 0 25 25">
+      <circle class="cursor__inner" cx="12.5" cy="12.5" r="6.25" />
+    </svg>
+    <footer class="footer"></footer>
+
+<script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+<script src="./js/customButton.js"></script>
+<script src="./js/scripts.js"></script>
+
+
+  </body>
+</html>
