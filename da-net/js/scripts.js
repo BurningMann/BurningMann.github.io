@@ -50,9 +50,21 @@ window.onload = function () {
       url: './video/pid.mp4',
       type: 'video',
     },
-    хуй: {
+    'х**': {
       url: './img/present.png',
       type: 'image',
+    },
+    капибара: {
+      url: './video/capybara.mp4',
+      type: 'video',
+    },
+    васзовутпавел: {
+      url: './video/pavel.mp4',
+      type: 'video',
+    },
+    павел: {
+      url: './video/pavel.mp4',
+      type: 'video',
     },
   };
 
@@ -81,11 +93,11 @@ window.onload = function () {
     setTimeout(() => {
       $('.video-container').removeClass('is-visible');
       image.remove();
-    }, 2000);
+    }, 3000);
   }
 
   function answer(text) {
-    const realText = text.toLowerCase();
+    const realText = text.replace(/\s/g, '').toLowerCase();
     if (variables[realText]) {
       variables[realText].type === 'video'
         ? createVideo(variables[realText].url)
@@ -93,25 +105,19 @@ window.onload = function () {
     }
   }
 
-  // Создаем распознаватель
-  var recognizer = new webkitSpeechRecognition();
-
-  // Ставим опцию, чтобы распознавание началось ещё до того, как пользователь закончит говорить
+  const recognizer = new webkitSpeechRecognition();
   recognizer.interimResults = true;
-
-  // Какой язык будем распознавать?
   recognizer.lang = 'ru-Ru';
 
-  // Используем колбек для обработки результатов
   recognizer.onresult = function (event) {
     var result = event.results[event.resultIndex];
     if (result.isFinal) {
       console.log('результат: ', result[0].transcript);
       if (stepsCounter === 1) {
         $('.name-input').val(result[0].transcript);
-        $('.button__text-inner-text').text('Продолжить');
+        /*  $('.button__text-inner-text').text('Продолжить');
         $('.button__text-inner-text').fadeIn();
-        $('.button__text-inner-icon').fadeOut('fast');
+        $('.button__text-inner-icon').fadeOut('fast'); */
         answer(result[0].transcript);
       } else if (stepsCounter === 4) {
         answer(result[0].transcript);
@@ -125,7 +131,6 @@ window.onload = function () {
   };
 
   function speech() {
-    // Начинаем слушать микрофон и распознавать голос
     recognizer.start();
   }
 
@@ -137,7 +142,6 @@ window.onload = function () {
 
   function stop() {
     synth.cancel();
-    console.log(synth);
   }
 
   button.addEventListener('click', function (e) {
