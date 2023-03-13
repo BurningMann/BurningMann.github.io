@@ -44,7 +44,7 @@ function checkInnerWidth(width) {
 
 // 3D Scroll
 
-let zSpacing = -1000,
+let zSpacing = -1200,
   lastPos = zSpacing / 39,
   $frames = document.getElementsByClassName("frame"),
   frames = Array.from($frames),
