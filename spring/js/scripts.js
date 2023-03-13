@@ -64,9 +64,7 @@ window.onscroll = function () {
       opacity = zVals[i] < Math.abs(zSpacing) / 1.8 ? 1 : 0;
     frame.setAttribute(
       "style",
-      `z-index: ${Math.round(
-        zVals[i]
-      )}; transform: ${transform}; opacity: ${opacity}; visibility: ${
+      `transform: ${transform}; opacity: ${opacity}; visibility: ${
         opacity <= 0 ? "hidden" : "visible"
       }`
     );
