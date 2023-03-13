@@ -145,10 +145,14 @@ svg {
   max-height: 100%;
 }
 
-a {
+/* a {
   text-decoration: underline;
   position: relative;
   z-index: 50;
+} */
+
+.underline {
+  text-decoration: underline;
 }
 
 strong {
@@ -171,6 +175,7 @@ strong {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   height: 100%;
+  display: block;
 }
 
 .frame {
