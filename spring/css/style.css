@@ -93,117 +93,13 @@ svg:not(:root) {
     overflow: hidden;
 }
 
-button,
-input {
-    line-height: normal;
-}
-
-button,
-select {
-    text-transform: none;
-}
-
-button {
-    overflow: visible;
-}
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-    -webkit-appearance: button;
-    cursor: pointer;
-}
-
-button[disabled],
-html input[disabled] {
-    cursor: default;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-    box-sizing: border-box;
-}
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-    height: auto;
-}
-
-input[type="search"] {
-    -webkit-appearance: textfield;
-    box-sizing: content-box;
-}
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
-
-textarea {
-    overflow: auto;
-    vertical-align: top;
-}
-
-button,
-input,
-select[multiple],
-textarea {
-    background-image: none;
-}
-
-input,
-select,
-textarea {
-    border-radius: 0;
-    box-shadow: none;
-}
-
-input,
-textarea {
-    resize: none;
-    -webkit-user-select: text;
-    -ms-user-select: text;
-    user-select: text;
-}
-
-[placeholder]:focus::-webkit-input-placeholder {
-    color: transparent;
-}
-
-[placeholder]:focus:-ms-input-placeholder {
-    color: transparent;
-}
-
-[placeholder]:focus::-ms-input-placeholder {
-    color: transparent;
-}
-
-[placeholder]:focus::placeholder {
-    color: transparent;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-input[type="number"] {
-    -moz-appearance: textfield;
-}
 
 :root {
     --index: calc(1vw + 1vh);
     --gutter: 30px;
     --side-small: 26;
     --side-big: 36;
-    --depth: 6300px;
+    --depth: 5850px;
     --transition: 0.75s cubic-bezier(0.075, 0.5, 0, 1);
 }
 
@@ -218,19 +114,15 @@ body.noskroll,
     overflow: hidden;
 }
 
-/* html {
-  width: 100%;
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-} */
+html {
+ /*  scroll-behavior: smooth; */
+}
 body {
     scrollbar-width: none;
-  /* Firefox */
 }
 
 body::-webkit-scrollbar {
     display: none;
-  /* Safari and Chrome */
 }
 
 body {
@@ -251,19 +143,6 @@ svg {
 
 a {
     text-decoration: underline;
-  /* position: relative;
-
-  &::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 0.5px;
-    background: #fff;
-    position: absolute;
-    top: calc(100% + 1px);
-    left: 0;
-    z-index: 50;
-  } */
 }
 
 strong {
