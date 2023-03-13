@@ -1,9 +1,16 @@
 /* Проверка на моб девайс */
 function iOS() {
   return (
-    ['iPad Simulator', 'iPhone Simulator', 'iPod Simulator', 'iPad', 'iPhone', 'iPod'].includes(navigator.platform) ||
+    [
+      "iPad Simulator",
+      "iPhone Simulator",
+      "iPod Simulator",
+      "iPad",
+      "iPhone",
+      "iPod",
+    ].includes(navigator.platform) ||
     // iPad on iOS 13 detection
-    (navigator.userAgent.includes('Mac') && 'ontouchend' in document)
+    (navigator.userAgent.includes("Mac") && "ontouchend" in document)
   );
 }
 const isMobile =
@@ -11,19 +18,19 @@ const isMobile =
     navigator.userAgent
   ) || iOS();
 if (isMobile) {
-  document.querySelector('html').classList.add('is-mobile');
+  document.querySelector("html").classList.add("is-mobile");
 }
 
 /* Проверка на safari */
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 if (isSafari) {
-  document.querySelector('html').classList.add('is-safari');
+  document.querySelector("html").classList.add("is-safari");
 }
 
 /* Проверка на ios */
-const isIos = navigator.platform.match('Mac') !== null;
+const isIos = navigator.platform.match("Mac") !== null;
 if (isIos) {
-  document.querySelector('html').classList.add('is-OSX');
+  document.querySelector("html").classList.add("is-OSX");
 }
 
 /* Проверка ширины экрана */
@@ -38,8 +45,8 @@ function checkInnerWidth(width) {
 // 3D Scroll
 
 let zSpacing = -1000,
-  lastPos = zSpacing / 5,
-  $frames = document.getElementsByClassName('frame'),
+  lastPos = zSpacing / 39,
+  $frames = document.getElementsByClassName("frame"),
   frames = Array.from($frames),
   zVals = [];
 
@@ -56,21 +63,14 @@ window.onscroll = function () {
       transform = `translateZ(${zVals[i]}px)`,
       opacity = zVals[i] < Math.abs(zSpacing) / 1.8 ? 1 : 0;
     frame.setAttribute(
-      'style',
-      `transform: ${transform}; opacity: ${opacity}; visibility: ${opacity <= 0 ? 'hidden' : 'visible'}`
+      "style",
+      `z-index: ${Math.round(
+        zVals[i]
+      )}; transform: ${transform}; opacity: ${opacity}; visibility: ${
+        opacity <= 0 ? "hidden" : "visible"
+      }`
     );
   });
 };
 
 window.scrollTo(0, 1);
-
-const links = document.querySelectorAll('a');
-
-console.log(links);
-
-links.forEach((el) => {
-  el.addEventListener('click', (a) => {
-    console.log(a.href);
-  });
-});
-addEventListener;

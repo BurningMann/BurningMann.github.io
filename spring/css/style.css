@@ -99,7 +99,7 @@ svg:not(:root) {
     --gutter: 30px;
     --side-small: 26;
     --side-big: 36;
-    --depth: 7500px;
+    --depth: 11200px;
     --transition: 0.75s cubic-bezier(0.075, 0.5, 0, 1);
 }
 
@@ -109,20 +109,25 @@ html {
     height: max-content;
 }
 
-body.noskroll,
-  html.noskroll {
-    overflow: hidden;
+html {
+  /* scroll-behavior: smooth; */
 }
 
-html {
- /*  scroll-behavior: smooth; */
-}
 body {
-    scrollbar-width: none;
+    scrollbar-width: thin;
+    scrollbar-color: #fff #000;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    /* scroll-behavior: smooth; */
 }
 
 body::-webkit-scrollbar {
-    display: none;
+  width: 6px;
+  height: 6px;
+  background: #000;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #fff;
 }
 
 body {
