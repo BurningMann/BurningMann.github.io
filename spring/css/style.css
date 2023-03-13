@@ -98,7 +98,7 @@ svg:not(:root) {
   --gutter: 30px;
   --side-small: 26;
   --side-big: 36;
-  --depth: 13200px;
+  --depth: 14200px;
   --transition: 0.75s cubic-bezier(0.075, 0.5, 0, 1);
 }
 
@@ -108,15 +108,10 @@ html {
   height: max-content;
 }
 
-html {
-  /* scroll-behavior: smooth; */
-}
-
 body {
   scrollbar-width: thin;
   scrollbar-color: #fff #000;
   -ms-overflow-style: -ms-autohiding-scrollbar;
-  /* scroll-behavior: smooth; */
 }
 
 body::-webkit-scrollbar {
@@ -144,12 +139,6 @@ svg {
   max-width: 100%;
   max-height: 100%;
 }
-
-/* a {
-  text-decoration: underline;
-  position: relative;
-  z-index: 50;
-} */
 
 .underline {
   text-decoration: underline;
@@ -192,6 +181,7 @@ strong {
   will-change: transform;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
 }
 
 .frame.no-visible {
@@ -275,21 +265,8 @@ video.frame-media_left {
   margin: 0 auto;
 }
 
-.soundbutton {
-  position: fixed;
-  bottom: 5vh;
-  right: 5vw;
-  cursor: pointer;
-  width: 24px;
-  transition: 0.25s ease;
-}
-
-.soundbutton.paused {
-  opacity: 0.25;
-}
-
 .tg-button {
-  background: #2AABEE;
+  background: #2aabee;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -300,6 +277,6 @@ video.frame-media_left {
   margin: 20px auto 0;
 }
 
-.tg-button svg{
+.tg-button svg {
   width: 20px;
 }

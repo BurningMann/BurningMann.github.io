@@ -46,11 +46,13 @@ function checkInnerWidth(width) {
 
 let zSpacing = -1200,
   lastPos = zSpacing / 39,
+  lastPos2 = zSpacing / 39,
   $frames = document.getElementsByClassName("frame"),
   frames = Array.from($frames),
-  zVals = [];
+  zVals = [],
+  gallery = document.querySelector(".gallery");
 
-window.onscroll = function () {
+function start() {
   let top = document.documentElement.scrollTop,
     delta = lastPos - top;
 
@@ -69,6 +71,11 @@ window.onscroll = function () {
       }`
     );
   });
+}
+start();
+
+window.onscroll = function () {
+  start();
 };
 
-window.scrollTo(0, 1);
+/* window.scrollTo(0, 1); */
