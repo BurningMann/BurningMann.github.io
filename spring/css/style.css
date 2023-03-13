@@ -99,7 +99,7 @@ svg:not(:root) {
     --gutter: 30px;
     --side-small: 26;
     --side-big: 36;
-    --depth: 5850px;
+    --depth: 7500px;
     --transition: 0.75s cubic-bezier(0.075, 0.5, 0, 1);
 }
 
