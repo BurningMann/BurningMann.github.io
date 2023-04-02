@@ -58,6 +58,10 @@ window.onload = function () {
     centeredSlides: false,
     autoplay: true,
     speed: 700,
+    navigation: {
+      nextEl: '.gallery-slider-navigation .swiper-navigation-next',
+      prevEl: '.gallery-slider-navigation .swiper-navigation-prev',
+    },
   });
 
   const reviewSlider = new Swiper('.reviews-slider .swiper', {
@@ -84,8 +88,8 @@ window.onload = function () {
   gsap.to('.main-logo__text', {
     scrollTrigger: {
       trigger: '.main-logo',
-      start: 'top top',
-      end: 'bottom+=200 top ',
+      start: 'top-=66 top',
+      end: 'bottom+=200 top',
       pin: true,
       scrub: 1,
     },

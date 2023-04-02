@@ -47,7 +47,7 @@
   </div>
 </header>
 
-    <main>
+    <main class="page">
       <div class="container">
         <div class="main-logo">
           <div class="main-logo__text">
@@ -72,15 +72,36 @@
         <a href="#" class="main-banner__btn btn">Book now</a>
 
         <section class="slider-section section">
-          <div class="page-title">
-            <div class="page-title__row">Play</div>
-            <div class="page-title__row">
-              <span><img src="./img/icons/title-icon-1.svg" alt="" /></span>top GAMES
+          <div class="slider-section-box">
+            <div class="page-title">
+              <div class="page-title__row">Play</div>
+              <div class="page-title__row">
+                <span><img src="./img/icons/title-icon-1.svg" alt="" /></span>top GAMES
+              </div>
+              <div class="page-title__row">
+                WITH <span><img src="./img/icons/logo-icon.svg" alt="" /></span> GAMEBIT
+              </div>
             </div>
-            <div class="page-title__row">
-              WITH <span><img src="./img/icons/logo-icon.svg" alt="" /></span> GAMEBIT
+            <div class="gallery-slider-navigation is-desc">
+              <div class="btn swiper-navigation-prev">
+                <svg width="42" height="24" viewBox="0 0 42 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0.939339 13.0607C0.353554 12.4749 0.353554 11.5251 0.939339 10.9393L10.4853 1.3934C11.0711 0.807611 12.0208 0.807611 12.6066 1.3934C13.1924 1.97919 13.1924 2.92893 12.6066 3.51472L4.12132 12L12.6066 20.4853C13.1924 21.0711 13.1924 22.0208 12.6066 22.6066C12.0208 23.1924 11.0711 23.1924 10.4853 22.6066L0.939339 13.0607ZM42 13.5H2V10.5H42V13.5Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div class="btn swiper-navigation-next">
+                <svg width="42" height="24" viewBox="0 0 42 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M41.0607 13.0607C41.6464 12.4749 41.6464 11.5251 41.0607 10.9393L31.5147 1.3934C30.9289 0.807611 29.9792 0.807611 29.3934 1.3934C28.8076 1.97919 28.8076 2.92893 29.3934 3.51472L37.8787 12L29.3934 20.4853C28.8076 21.0711 28.8076 22.0208 29.3934 22.6066C29.9792 23.1924 30.9289 23.1924 31.5147 22.6066L41.0607 13.0607ZM0 13.5H40V10.5H0V13.5Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
+
           <div id="gallery" class="preview-slider">
             <div class="swiper">
               <div class="swiper-wrapper">
@@ -115,6 +136,24 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="gallery-slider-navigation is-mobile">
+            <div class="btn swiper-navigation-prev">
+              <svg width="42" height="24" viewBox="0 0 42 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.939339 13.0607C0.353554 12.4749 0.353554 11.5251 0.939339 10.9393L10.4853 1.3934C11.0711 0.807611 12.0208 0.807611 12.6066 1.3934C13.1924 1.97919 13.1924 2.92893 12.6066 3.51472L4.12132 12L12.6066 20.4853C13.1924 21.0711 13.1924 22.0208 12.6066 22.6066C12.0208 23.1924 11.0711 23.1924 10.4853 22.6066L0.939339 13.0607ZM42 13.5H2V10.5H42V13.5Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="btn swiper-navigation-next">
+              <svg width="42" height="24" viewBox="0 0 42 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M41.0607 13.0607C41.6464 12.4749 41.6464 11.5251 41.0607 10.9393L31.5147 1.3934C30.9289 0.807611 29.9792 0.807611 29.3934 1.3934C28.8076 1.97919 28.8076 2.92893 29.3934 3.51472L37.8787 12L29.3934 20.4853C28.8076 21.0711 28.8076 22.0208 29.3934 22.6066C29.9792 23.1924 30.9289 23.1924 31.5147 22.6066L41.0607 13.0607ZM0 13.5H40V10.5H0V13.5Z"
+                  fill="white"
+                />
+              </svg>
             </div>
           </div>
         </section>
@@ -274,7 +313,7 @@
           <div class="section-title-box">
             <h2 class="section-title">Prices</h2>
 
-            <a href="#" class="book-btn">
+            <a href="#" class="book-btn mt-48">
               Book now
               <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -286,10 +325,10 @@
           </div>
           <div class="prices">
             <div class="tabs">
-              <!--   <div class="tabs__header">
+              <div class="tabs__header">
                 <div class="tabs__button is-active" data-tab="first">Mon-Fri</div>
                 <div class="tabs__button" data-tab="seccond">Sa-Sun</div>
-              </div> -->
+              </div>
               <div class="tabs__content">
                 <div class="tabs__content-box tab-first is-active">
                   <div class="pricess-list">
@@ -319,7 +358,34 @@
                     </div>
                   </div>
                 </div>
-                <div class="tabs__content-box tab-seccond">2</div>
+                <div class="tabs__content-box tab-seccond">
+                  <div class="pricess-list">
+                    <div class="pricess-list__item">
+                      <div class="pricess-list__item-persons">1-2 person</div>
+                      <div class="pricess-list__item-price-box">
+                        <div class="pricess-list__item-price">10 €/person</div>
+                        <div class="pricess-list__item-time">(1 hour)</div>
+                      </div>
+                    </div>
+                    <div class="pricess-list__item">
+                      <div class="pricess-list__item-persons">3-4 person</div>
+                      <div class="pricess-list__item-price-box">
+                        <div class="pricess-list__item-price">8 €/person</div>
+                        <div class="pricess-list__item-time">(1 hour)</div>
+                      </div>
+                    </div>
+                    <div class="pricess-list__item">
+                      <div class="pricess-list__item-persons">5+</div>
+                      <div class="pricess-list__item-price-box">
+                        <div class="pricess-list__item-price">6 €/person</div>
+                        <div class="pricess-list__item-time">(1 hour)</div>
+                      </div>
+                    </div>
+                    <div class="pricess-list__notification">
+                      * On your birthday all company receives the 4th hour free of charge
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -556,7 +622,7 @@
           <div class="section-title-box">
             <h2 class="section-title">Additional services</h2>
 
-            <a href="#" class="book-btn">
+            <a href="#" class="book-btn mt-48">
               Book now
               <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -808,7 +874,7 @@
             <h2 class="section-title">Reviews</h2>
 
             <div class="reviews-slider-navigation">
-              <div class="btn swiper-navigation-prev">
+              <div class="btn is-arrow swiper-navigation-prev">
                 <svg width="42" height="24" viewBox="0 0 42 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M0.939339 13.0607C0.353554 12.4749 0.353554 11.5251 0.939339 10.9393L10.4853 1.3934C11.0711 0.807611 12.0208 0.807611 12.6066 1.3934C13.1924 1.97919 13.1924 2.92893 12.6066 3.51472L4.12132 12L12.6066 20.4853C13.1924 21.0711 13.1924 22.0208 12.6066 22.6066C12.0208 23.1924 11.0711 23.1924 10.4853 22.6066L0.939339 13.0607ZM42 13.5H2V10.5H42V13.5Z"
@@ -816,7 +882,7 @@
                   />
                 </svg>
               </div>
-              <div class="btn swiper-navigation-next">
+              <div class="btn is-arrow swiper-navigation-next">
                 <svg width="42" height="24" viewBox="0 0 42 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M41.0607 13.0607C41.6464 12.4749 41.6464 11.5251 41.0607 10.9393L31.5147 1.3934C30.9289 0.807611 29.9792 0.807611 29.3934 1.3934C28.8076 1.97919 28.8076 2.92893 29.3934 3.51472L37.8787 12L29.3934 20.4853C28.8076 21.0711 28.8076 22.0208 29.3934 22.6066C29.9792 23.1924 30.9289 23.1924 31.5147 22.6066L41.0607 13.0607ZM0 13.5H40V10.5H0V13.5Z"
