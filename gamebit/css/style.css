@@ -1153,6 +1153,7 @@ strong {
 @media screen and (max-width: 780px) {
     .games-section {
         height: 50vh;
+        min-height: 500px;
         padding-top: 40px;
     }
 }
@@ -1288,6 +1289,13 @@ strong {
     padding: 16px 64px;
     color: #000000;
     border: 1px solid rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+}
+
+@media screen and (max-width: 780px) {
+    .games-marquee__item {
+        font-size: 18px;
+    }
 }
 
 .games-marquee__item-preview {
@@ -1478,6 +1486,15 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 32px;
+    max-width: 695px;
+    margin: 0 0 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .order-form {
+        max-width: 100%;
+        margin: 0;
+    }
 }
 
 .order-form__group {
