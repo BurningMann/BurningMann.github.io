@@ -96,18 +96,16 @@ window.onload = function () {
     left: `-${logoImgWidth.getBoundingClientRect().width - logoWidth.getBoundingClientRect().width}px`,
   });
 
-  if (!checkInnerWidth(780)) {
-    const gameSections = document.querySelectorAll('.games-section');
+  const gameSections = document.querySelectorAll('.games-section');
 
-    gameSections.forEach((el) => {
-      ScrollTrigger.create({
-        trigger: el,
-        pin: true,
-        start: 'top top',
-        end: 'bottom top ',
-      });
+  gameSections.forEach((el) => {
+    ScrollTrigger.create({
+      trigger: el,
+      pin: true,
+      start: 'top top',
+      end: 'bottom top ',
     });
-  }
+  });
 
   /* -------------------------------------------------------------------- */
 };

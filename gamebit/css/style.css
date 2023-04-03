@@ -418,7 +418,7 @@ strong {
 }
 
 .header {
-    padding: 17.5px;
+    padding: 17.5px 0;
     position: fixed;
     height: 130px;
     background: linear-gradient(180deg, #000000 -55.43%, rgba(0, 0, 0, 0) 93.41%);
@@ -433,6 +433,7 @@ strong {
     justify-content: space-between;
     -ms-flex-align: center;
     align-items: center;
+    gap: 20px;
 }
 
 .header__nav {
@@ -462,6 +463,8 @@ strong {
     font-size: 16px;
     line-height: 15px;
     text-transform: uppercase;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
 }
 
 .lang-switcher__main {
@@ -489,6 +492,10 @@ strong {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 16px;
+}
+
+.lang-switcher .header__nav-item {
+    display: inline;
 }
 
 .main-logo {
@@ -1152,8 +1159,8 @@ strong {
 
 @media screen and (max-width: 780px) {
     .games-section {
-        height: 50vh;
-        min-height: 500px;
+      /*     height: 50vh;
+    min-height: 500px; */
         padding-top: 40px;
     }
 }
@@ -1279,9 +1286,18 @@ strong {
     animation-iteration-count: infinite;
 }
 
-.games-marquee:hover .games-marquee__box {
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
+@media screen and (max-width: 780px) {
+    .games-marquee__box {
+        -webkit-animation-duration: 40s;
+        animation-duration: 40s;
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .games-marquee:hover .games-marquee__box {
+        -webkit-animation-play-state: paused;
+        animation-play-state: paused;
+    }
 }
 
 .games-marquee__item {
@@ -1294,7 +1310,12 @@ strong {
 
 @media screen and (max-width: 780px) {
     .games-marquee__item {
+        min-width: 320px;
+        text-align: center;
+        -ms-flex-pack: center;
+        justify-content: center;
         font-size: 18px;
+        background: none !important;
     }
 }
 
@@ -1311,16 +1332,27 @@ strong {
     transition: 0.3s;
 }
 
-.games-marquee__item:hover {
-    background: #000000;
-    color: #ffffff;
+@media screen and (max-width: 780px) {
+    .games-marquee__item-preview {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
 }
 
-.games-marquee__item:hover .games-marquee__item-preview {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
+@media screen and (min-width: 780px) {
+    .games-marquee__item:hover {
+        background: #000000;
+        color: #ffffff;
+    }
+
+    .games-marquee__item:hover .games-marquee__item-preview {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
 }
 
 .services {
@@ -1389,6 +1421,12 @@ strong {
     }
 }
 
+@media screen and (max-width: 420px) {
+    .reviews-slider .swiper-slide {
+        width: 320px;
+    }
+}
+
 .review-card {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 24px;
@@ -1413,6 +1451,7 @@ strong {
     font-weight: 500;
     font-size: 28px;
     line-height: 120%;
+    word-break: break-all;
 }
 
 .review-card__text {
@@ -1506,5 +1545,49 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 @media screen and (max-width: 780px) {
     .order-form__group {
         grid-template-columns: 1fr;
+    }
+}
+
+.order-form__footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 780px) {
+    .order-form__footer {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-top: 0;
+    }
+}
+
+.order-form__message {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+}
+
+.order-form__message a {
+    display: inline-block;
+    text-decoration: underline;
+}
+
+.order-form__btn {
+    background: none;
+    color: #fff;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: 780px) {
+    .order-form__btn {
+        width: 100%;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 }
