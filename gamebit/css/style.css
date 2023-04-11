@@ -823,24 +823,20 @@ strong {
 
 @media screen and (max-width: 780px) {
     .page-title__row {
-        text-align: center;
-        display: block;
+        /*       text-align: center;
+      display: block; */
         font-size: calc(var(--index) * 4);
     }
 }
 
 @media screen and (max-width: 500px) {
     .page-title__row {
-        text-align: center;
-        display: block;
         font-size: calc(var(--index) * 3.6);
     }
 }
 
 @media screen and (max-width: 400px) {
     .page-title__row {
-        text-align: center;
-        display: block;
         font-size: calc(var(--index) * 3.2);
     }
 }
@@ -1012,8 +1008,8 @@ strong {
     align-items: center;
     gap: 24px;
     float: left;
-    -webkit-animation-duration: 30s;
-    animation-duration: 30s;
+    -webkit-animation-duration: 20s;
+    animation-duration: 20s;
     -webkit-animation-name: marquee;
     animation-name: marquee;
     -webkit-animation-timing-function: linear;
@@ -1054,8 +1050,8 @@ strong {
     }
 
     100% {
-        -webkit-transform: translateX(-200%);
-        transform: translateX(-200%);
+        -webkit-transform: translateX(calc(-100% - 24px));
+        transform: translateX(calc(-100% - 24px));
     }
 }
 
@@ -1066,8 +1062,8 @@ strong {
     }
 
     100% {
-        -webkit-transform: translateX(-200%);
-        transform: translateX(-200%);
+        -webkit-transform: translateX(calc(-100% - 24px));
+        transform: translateX(calc(-100% - 24px));
     }
 }
 
@@ -1277,7 +1273,7 @@ strong {
 .games-marquee {
     display: -ms-flexbox;
     display: flex;
-    gap: 20px;
+    gap: 24px;
     position: absolute;
     bottom: 20px;
     left: 0;
@@ -1286,7 +1282,7 @@ strong {
 .games-marquee__box {
     display: -ms-flexbox;
     display: flex;
-    gap: 20px;
+    gap: 24px;
     -webkit-animation-duration: 30s;
     animation-duration: 30s;
     -webkit-animation-name: marquee;
