@@ -8,7 +8,12 @@
     id="viewport"
     content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover"
   />
-  <title>Document</title>
+  <title>Gamebit room</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png" />
+  <link rel="manifest" href="./img/favicons/site.webmanifest" />
+  <link rel="mask-icon" href="./img/favicons/safari-pinned-tab.svg" color="#5bbad5" />
   <meta name="msapplication-TileColor" content="#da532c" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
@@ -48,8 +53,8 @@
 </header>
 
     <main class="page">
-      <div class="container">
-        <div class="main-logo">
+      <div class="main-logo">
+        <div class="container">
           <div class="main-logo__text">
             <img src="./img/logo-text.svg" />
           </div>
@@ -57,11 +62,13 @@
             <img src="./img/logo-image.svg" alt="" />
           </div>
         </div>
+      </div>
 
-        <div class="main-banner">
-          <div class="main-banner__image">
-            <img src="./img/main-banner.png" alt="" />
-          </div>
+      <div class="main-banner">
+        <div class="main-banner__image">
+          <img src="./img/main-banner.png" alt="" class="fit-cover" />
+        </div>
+        <div class="container">
           <div class="main-banner__content">
             <div class="main-banner__content-text">
               Wanna have a good time with friends playing <span>Playstation</span> , celebrate a birthday, organize a
@@ -69,18 +76,24 @@
             </div>
           </div>
         </div>
-        <a href="#contacts" class="main-banner__btn btn">Book now</a>
+      </div>
 
+      <div class="container">
+        <a href="#contacts" class="main-banner__btn btn">Book now</a>
+      </div>
+
+      <div class="container">
         <section class="slider-section section">
           <div class="slider-section-box">
             <div class="page-title">
-              <div class="page-title__row">Play</div>
+              <img src="./img/main-text.svg" alt="" />
+              <!-- <div class="page-title__row">Play</div>
               <div class="page-title__row">
                 <span><img src="./img/icons/title-icon-1.svg" alt="" /></span>top GAMES
               </div>
               <div class="page-title__row">
                 WITH <span><img src="./img/icons/logo-icon.svg" alt="" /></span> GAMEBIT
-              </div>
+              </div> -->
             </div>
             <div class="gallery-slider-navigation is-desc">
               <div class="btn is-arrow swiper-navigation-prev">

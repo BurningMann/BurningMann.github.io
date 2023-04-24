@@ -96,7 +96,7 @@ window.onload = function () {
     left: `-${logoImgWidth.getBoundingClientRect().width - logoWidth.getBoundingClientRect().width}px`,
   });
 
-  if (!checkInnerWidth(780)) {
+  if (!checkInnerWidth(1024)) {
     const gameSections = document.querySelectorAll('.games-section');
 
     gameSections.forEach((el) => {
