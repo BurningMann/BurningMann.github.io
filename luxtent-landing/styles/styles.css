@@ -804,11 +804,21 @@ h4,
 }
 
 .start-banner {
-  background: url(../img/main-fon-1800.jpg) center/cover no-repeat;
+  background: url(../img/main-fon-1800.jpg) center top/cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
+}
+
+.start-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(13, 19, 24, 0.3);
 }
 
 .start-banner__title {
@@ -836,6 +846,7 @@ h4,
   cursor: pointer;
   animation: startBannerArrow 1s ease-in-out infinite;
   transition: 0.3s;
+  z-index: 5;
 }
 
 .start-banner__to-content:hover {
