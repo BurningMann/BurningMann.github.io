@@ -66,6 +66,14 @@ window.onload = function () {
       url: './video/pavel.mp4',
       type: 'video',
     },
+    факт: {
+      url: './video/fakt.mp4',
+      type: 'video',
+    },
+    этофакты: {
+      url: './video/fakt.mp4',
+      type: 'video',
+    },
   };
 
   function createVideo(url) {
