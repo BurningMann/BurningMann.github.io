@@ -27,3 +27,5 @@
  * Club GSAP members, the agreement issued with that membership.
  * @author: Jack Doyle, jack@greensock.com
 */
+
+/*! maska v2.1.11 | (c) Alexander Shabunevich | Released under the MIT license */

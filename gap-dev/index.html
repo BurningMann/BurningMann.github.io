@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Project name</title>
+  <title>GAP-DEV</title>
   <meta name="theme-color" content="#fff" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta
@@ -44,14 +44,14 @@
     <header class="header">
   <div class="container">
     <div class="header__wrapper netbook-hidden">
-      <a href="#start" class="header__link is-active">Начало</a>
-      <a href="#about" class="header__link">О нас</a>
-      <a href="#services" class="header__link">Услуги</a>
-      <a href="#technology" class="header__link">Технологии</a>
-      <a href="#why" class="header__link">Почему мы?</a>
-      <a href="#team" class="header__link">Команда</a>
-      <a href="#reviews" class="header__link">Отзывы</a>
-      <a href="#contacts" class="header__link">Контакты</a>
+      <a href="#start" class="header__link js-navigate-link">Начало</a>
+      <a href="#about" class="header__link js-navigate-link">О нас</a>
+      <a href="#services" class="header__link js-navigate-link">Услуги</a>
+      <a href="#technology" class="header__link js-navigate-link">Технологии</a>
+      <a href="#why" class="header__link js-navigate-link">Почему мы?</a>
+      <a href="#team" class="header__link js-navigate-link">Команда</a>
+      <!-- <a href="#reviews" class="header__link js-navigate-link">Отзывы</a> -->
+      <a href="#contacts" class="header__link js-navigate-link">Контакты</a>
     </div>
     <div class="header__mobile-wrapper netbook-visible">
       <div class="header__mobile-wrapper-top">
@@ -60,19 +60,19 @@
         <img src="./img/mobile-header-right.svg" />
       </div>
       <div class="header__mobile-wrapper-nav">
-        <a href="#start" class="header__link">Начало</a>
-        <a href="#about" class="header__link">О нас</a>
-        <a href="#services" class="header__link">Услуги</a>
-        <a href="#technology" class="header__link">Технологии</a>
-        <a href="#why" class="header__link">Почему мы?</a>
-        <a href="#team" class="header__link">Команда</a>
-        <a href="#reviews" class="header__link">Отзывы</a>
-        <a href="#contacts" class="header__link">Контакты</a>
+        <a href="#start" class="header__link js-navigate-link">Начало</a>
+        <a href="#about" class="header__link js-navigate-link">О нас</a>
+        <a href="#services" class="header__link js-navigate-link">Услуги</a>
+        <a href="#technology" class="header__link js-navigate-link">Технологии</a>
+        <a href="#why" class="header__link js-navigate-link">Почему мы?</a>
+        <a href="#team" class="header__link js-navigate-link">Команда</a>
+        <!-- <a href="#reviews" class="header__link js-navigate-link">Отзывы</a> -->
+        <a href="#contacts" class="header__link js-navigate-link">Контакты</a>
         <div class="header__mobile-wrapper-box">
           <a href="mailto:gapdev@gapdev.ru" class="is-underline-in">gapdev@gapdev.ru</a>
           <a href="+7(925)470-23-62" class="header__link">+7(925)470-23-62</a>
-          <a href="https://t.me/" class="is-underline-in">telegram</a>
-          <a href="https://wa.me/" class="is-underline-in">whatsapp</a>
+          <a href="https://t.me/gapdev_ru" class="is-underline-in">telegram</a>
+          <!-- <a href="https://wa.me/" class="is-underline-in">whatsapp</a> -->
         </div>
       </div>
     </div>
@@ -97,11 +97,11 @@
           <div class="start-section__top-links">
             <a href="mailto:gapdev@gapdev.ru" class="is-underline-in">gapdev@gapdev.ru</a>
             <div class="start-section__top-links-separator"></div>
-            <a href="https://t.me/" class="is-underline-in">telegram</a>
-            <a href="https://wa.me/" class="is-underline-in">whatsapp</a>
+            <a href="https://t.me/gapdev_ru" class="is-underline-in">telegram</a>
+            <!-- <a href="https://wa.me/" class="is-underline-in">whatsapp</a> -->
           </div>
           <div>
-            <button type="button" class="button is-primary">Стать клиентом</button>
+            <button type="button" class="button is-primary" data-popup="order">Стать клиентом</button>
           </div>
         </div>
       </div>
@@ -418,7 +418,7 @@
     <div class="container">
       <div class="section-title h2">Услуги</div>
       <div class="service-row__container">
-        <div class="service-row">
+        <div class="service-row" id="website-development-service">
           <div class="service-row__box">
             <div class="service-row__line">
               <div class="service-row__line-box">
@@ -469,11 +469,18 @@
                     <div class="service-row__grid-item-text">индивидуально</div>
                   </div>
                 </div>
+                <button
+                  type="button"
+                  class="button is-ghost-white service-row__content-right-button"
+                  data-popup="order"
+                >
+                  Заказать
+                </button>
               </div>
             </div>
           </div>
         </div>
-        <div class="service-row">
+        <div class="service-row" id="mobile-development-service">
           <div class="service-row__box">
             <div class="service-row__line">
               <div class="service-row__line-box">
@@ -507,11 +514,18 @@
                     <div class="service-row__grid-item-text">от 60 рабочих дней</div>
                   </div>
                 </div>
+                <button
+                  type="button"
+                  class="button is-ghost-white service-row__content-right-button"
+                  data-popup="order"
+                >
+                  Заказать
+                </button>
               </div>
             </div>
           </div>
         </div>
-        <div class="service-row">
+        <div class="service-row" id="it-consulting-service">
           <div class="service-row__box">
             <div class="service-row__line">
               <div class="service-row__line-box">
@@ -545,6 +559,13 @@
                     <div class="service-row__grid-item-text">от 3 месяцев</div>
                   </div>
                 </div>
+                <button
+                  type="button"
+                  class="button is-ghost-white service-row__content-right-button"
+                  data-popup="order"
+                >
+                  Заказать
+                </button>
               </div>
             </div>
           </div>
@@ -979,11 +1000,11 @@
     <div class="team-section__wrapper-top">
       <div class="section-title h2">Команда</div>
       <div class="team-section__wrapper-top-text">
-        Более 10-ти лет наши специалисты сокращаю пропасть между клиентами и разработкой.
+        Более 10-ти лет наши специалисты сокращают пропасть между клиентами и разработкой.
       </div>
     </div>
 
-    <div>
+    <!-- <div>
       <div>
         <a href="https://www.youtube.com/watch?v=sFnvkyjIBdg" data-fancybox="video" class="team-section__video">
           <img src="./img/video-poster.jpg" class="fit-cover" />
@@ -1007,7 +1028,7 @@
           </div>
         </a>
       </div>
-    </div>
+    </div> -->
   </div>
   <div class="team-section__footer container">
     <div class="team-section__footer-text sub20">
@@ -1038,235 +1059,7 @@
   </div>
 </section>
 
-      <section class="navigate-section reviews-section" id="reviews">
-  <div class="reviews-section__wrapper">
-    <div class="section-title h2 is-center">Отзывы</div>
-    <div class="container">
-      <div class="reviews-section__slider">
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="review-card">
-                <div>
-                  <div class="review-card__top">
-                    <div class="review-card__avatar">
-                      <img src="./img/reviews-face.png" class="fit-cover" />
-                    </div>
-                    <div class="review-card__data-container">
-                      <div class="review-card__name">Андрей Заборов</div>
-                      <div class="review-card__position">miniCEO очередной хуйни</div>
-                    </div>
-                  </div>
-                  <div class="review-card__content sub20">
-                    <p>
-                      У нас остались исключительно положительные впечатления от работы. Все красиво и понятно, работать
-                      легко и интересно с сайтом. Специалисты агентства быстро реагировали на вопросы и пожелания.
-                    </p>
-                    <br />
-                    <p>
-                      Также помогли с наполнением, внесли необходимые корректировки, поняв "с полуслова" что нужно
-                      изменить.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="review-card__logo">
-                  <img src="./img/company-logo.png" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="review-card">
-                <div>
-                  <div class="review-card__top">
-                    <div class="review-card__avatar">
-                      <img src="./img/reviews-face.png" class="fit-cover" />
-                    </div>
-                    <div class="review-card__data-container">
-                      <div class="review-card__name">Андрей Заборов</div>
-                      <div class="review-card__position">miniCEO очередной хуйни</div>
-                    </div>
-                  </div>
-                  <div class="review-card__content sub20">
-                    <p>
-                      У нас остались исключительно положительные впечатления от работы. Все красиво и понятно, работать
-                      легко и интересно с сайтом. Специалисты агентства быстро реагировали на вопросы и пожелания.
-                    </p>
-                    <br />
-                    <p>
-                      Также помогли с наполнением, внесли необходимые корректировки, поняв "с полуслова" что нужно
-                      изменить.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="review-card__logo">
-                  <img src="./img/company-logo.png" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="review-card">
-                <div>
-                  <div class="review-card__top">
-                    <div class="review-card__avatar">
-                      <img src="./img/reviews-face.png" class="fit-cover" />
-                    </div>
-                    <div class="review-card__data-container">
-                      <div class="review-card__name">Андрей Заборов</div>
-                      <div class="review-card__position">miniCEO очередной хуйни</div>
-                    </div>
-                  </div>
-                  <div class="review-card__content sub20">
-                    <p>
-                      У нас остались исключительно положительные впечатления от работы. Все красиво и понятно, работать
-                      легко и интересно с сайтом. Специалисты агентства быстро реагировали на вопросы и пожелания.
-                    </p>
-                    <br />
-                    <p>
-                      Также помогли с наполнением, внесли необходимые корректировки, поняв "с полуслова" что нужно
-                      изменить.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="review-card__logo">
-                  <img src="./img/company-logo.png" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="review-card">
-                <div>
-                  <div class="review-card__top">
-                    <div class="review-card__avatar">
-                      <img src="./img/reviews-face.png" class="fit-cover" />
-                    </div>
-                    <div class="review-card__data-container">
-                      <div class="review-card__name">Андрей Заборов</div>
-                      <div class="review-card__position">miniCEO очередной хуйни</div>
-                    </div>
-                  </div>
-                  <div class="review-card__content sub20">
-                    <p>
-                      У нас остались исключительно положительные впечатления от работы. Все красиво и понятно, работать
-                      легко и интересно с сайтом. Специалисты агентства быстро реагировали на вопросы и пожелания.
-                    </p>
-                    <br />
-                    <p>
-                      Также помогли с наполнением, внесли необходимые корректировки, поняв "с полуслова" что нужно
-                      изменить.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="review-card__logo">
-                  <img src="./img/company-logo.png" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="review-card">
-                <div>
-                  <div class="review-card__top">
-                    <div class="review-card__avatar">
-                      <img src="./img/reviews-face.png" class="fit-cover" />
-                    </div>
-                    <div class="review-card__data-container">
-                      <div class="review-card__name">Андрей Заборов</div>
-                      <div class="review-card__position">miniCEO очередной хуйни</div>
-                    </div>
-                  </div>
-                  <div class="review-card__content sub20">
-                    <p>
-                      У нас остались исключительно положительные впечатления от работы. Все красиво и понятно, работать
-                      легко и интересно с сайтом. Специалисты агентства быстро реагировали на вопросы и пожелания.
-                    </p>
-                    <br />
-                    <p>
-                      Также помогли с наполнением, внесли необходимые корректировки, поняв "с полуслова" что нужно
-                      изменить.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="review-card__logo">
-                  <img src="./img/company-logo.png" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="review-card">
-                <div>
-                  <div class="review-card__top">
-                    <div class="review-card__avatar">
-                      <img src="./img/reviews-face.png" class="fit-cover" />
-                    </div>
-                    <div class="review-card__data-container">
-                      <div class="review-card__name">Андрей Заборов</div>
-                      <div class="review-card__position">miniCEO очередной хуйни</div>
-                    </div>
-                  </div>
-                  <div class="review-card__content sub20">
-                    <p>
-                      У нас остались исключительно положительные впечатления от работы. Все красиво и понятно, работать
-                      легко и интересно с сайтом. Специалисты агентства быстро реагировали на вопросы и пожелания.
-                    </p>
-                    <br />
-                    <p>
-                      Также помогли с наполнением, внесли необходимые корректировки, поняв "с полуслова" что нужно
-                      изменить.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="review-card__logo">
-                  <img src="./img/company-logo.png" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-button is-prev">
-          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M31.9997 58.6668C46.7273 58.6668 58.6663 46.7278 58.6663 32.0002C58.6663 17.2726 46.7273 5.3335 31.9997 5.3335C17.2721 5.3335 5.33301 17.2726 5.33301 32.0002C5.33301 46.7278 17.2721 58.6668 31.9997 58.6668Z"
-              stroke="white"
-              stroke-miterlimit="10"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M35.3603 41.4131L25.9736 31.9998L35.3603 22.5864"
-              stroke="white"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
-        <div class="swiper-button is-next">
-          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M31.9997 58.6668C46.7273 58.6668 58.6663 46.7278 58.6663 32.0002C58.6663 17.2726 46.7273 5.3335 31.9997 5.3335C17.2721 5.3335 5.33301 17.2726 5.33301 32.0002C5.33301 46.7278 17.2721 58.6668 31.9997 58.6668Z"
-              stroke="white"
-              stroke-miterlimit="10"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M28.6406 41.4131L38.0273 31.9998L28.6406 22.5864"
-              stroke="white"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
+      
     </main>
 
     <footer class="navigate-section footer" id="contacts">
@@ -1282,7 +1075,7 @@
             <div class="form-input__placeholder">Имя</div>
           </label>
           <label class="form-input is-required">
-            <input type="text" class="input" placeholder=" " />
+            <input type="text" class="input" placeholder=" " data-maska />
             <div class="form-input__placeholder">Телефон</div>
           </label>
           <label class="form-input">
@@ -1324,20 +1117,79 @@
         <div class="footer__contacts-box">
           <a href="mailto:gapdev@gapdev.ru" class="is-underline-in">gapdev@gapdev.ru</a>
           <a href="tel:+79254702362" class="is-underline-in">+7(925)470-23-62</a>
-          <a href="https://t.me/" class="is-underline-in">Telegram</a>
-          <a href="https://wa.me/" class="is-underline-in">Whatsapp</a>
+          <a href="https://t.me/gapdev_ru" class="is-underline-in">Telegram</a>
+          <!-- <a href="https://wa.me/" class="is-underline-in">Whatsapp</a> -->
         </div>
         <div class="footer__contacts-box">
-          <a href="#" class="is-underline-in">Разработка сайтов</a>
-          <a href="#" class="is-underline-in">Разработка мобильных приложений</a>
-          <a href="#" class="is-underline-in">IT-consulting</a>
+          <a href="#website-development-service" class="is-underline-in js-navigate-link" data-header-offset="true">Разработка сайтов</a>
+          <a href="#mobile-development-service" class="is-underline-in js-navigate-link" data-header-offset="true">Разработка мобильных приложений</a>
+          <a href="#it-consulting-service" class="is-underline-in js-navigate-link" data-header-offset="true">IT-consulting</a>
         </div class="footer__contacts-box">
         <div class="footer__contacts-box">© GAPDEV 2024</div>
       </div>
     </div>
   </div>
 </footer>
- <script type="text/javascript" src="./js/fancybox-5.0.min.js"></script>
+ <div class="popup order_popup">
+  <div class="popup__wrapper">
+    <div class="popup__inner">
+      <div class="popup__close js-close-popup">
+        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="42" height="42" rx="6" fill="white"/>
+          <path d="M16 16L26 26" stroke="black"/>
+          <path d="M26 16L16 26" stroke="black"/>
+        </svg>          
+      </div>
+      <div class="popup__content">
+        <div class="popup__form-container">
+          <form action="#" class="callback-form">
+            <label class="form-input is-required">
+              <input type="text" class="input" placeholder=" " />
+              <div class="form-input__placeholder">Имя</div>
+            </label>
+            <label class="form-input is-required">
+              <input type="text" class="input" placeholder=" " />
+              <div class="form-input__placeholder">Телефон</div>
+            </label>
+            <label class="form-input">
+              <input type="text" class="input" placeholder=" " />
+              <div class="form-input__placeholder">Почта</div>
+            </label>
+            <label class="form-input is-textarea">
+              <textarea class="input textarea" placeholder=" "></textarea>
+              <div class="form-input__placeholder">Описание запроса</div>
+            </label>
+            <label class="form-input">
+              <div class="file-input">
+                <input type="file" placeholder="Приложить файл" />
+                <div class="file-input__button button is-ghost">
+                  <span class="file-input__plus">+</span> <span class="file-input__name">Приложить файл</span>
+                </div>
+              </div>
+            </label>
+            <label class="checkbox-input">
+              <input type="checkbox" name="privacy" />
+              <div class="checkbox-input__check">
+                <div class="checkbox-input__check-icon">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 5H9" stroke="#060910" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5 9L5 1" stroke="#060910" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+              <div class="checkbox-input__placeholder">
+                Согласие на обработку личных данных в соответствии с
+                <a href="#" target="_blank">политика конфиденциальности</a>
+              </div>
+            </label>
+            <button type="submit" class="button is-black">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <script type="text/javascript" src="./js/fancybox-5.0.min.js"></script>
 <script src="./js/vendor.js"></script>
 <script src="./js/scripts.js"></script>
 
