@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="ru" class="custom-scrollbar">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Komplekt-it</title>
+  <meta name="theme-color" content="#fff" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+  />
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png" />
+  <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png" />
+  <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png" />
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png" />
+  <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./styles/fancybox-5.0.min.css" />
+  <link rel="stylesheet" href="./styles/swiper.min.css" />
+
+  <link rel="stylesheet" href="./styles/styles.css" />
+</head>
+
+  <body>
+    <header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <div class="header__logo">Комплект IT</div>
+      <nav class="header__nav netbook-hidden">
+        <a href="#" class="header__link text-link">О компании</a>
+        <a href="#" class="header__link text-link">Участие в тендерах</a>
+        <a href="#" class="header__link text-link">Услуги</a>
+        <a href="#" class="header__link text-link">Цены</a>
+        <a href="#" class="header__link text-link">Портфолио</a>
+        <a href="#" class="header__link text-link">FAQ</a>
+      </nav>
+      <div class="header__right">
+        <div class="header__search-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M20.9984 21.0004L16.6484 16.6504"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="header__burger netbook-visible">
+          <div class="header__burger-line"></div>
+          <div class="header__burger-line"></div>
+          <div class="header__burger-line"></div>
+        </div>
+        <button class="button is-primary use-arrow netbook-hidden">
+          Заказать звонок
+          <div class="button__arrow">
+            <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M26.041 10.7734L11.002 25.1335"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15.4824 10.7012L26.0401 10.7722L26.1161 20.8547"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-header-sidebar netbook-visible">
+  <nav class="header__nav">
+    <a href="#" class="header__link text-link">О компании</a>
+    <a href="#" class="header__link text-link">Участие в тендерах</a>
+    <a href="#" class="header__link text-link">Услуги</a>
+    <a href="#" class="header__link text-link">Цены</a>
+    <a href="#" class="header__link text-link">Портфолио</a>
+    <a href="#" class="header__link text-link">FAQ</a>
+  </nav>
+  <button class="button is-primary use-arrow">
+    Заказать звонок
+    <div class="button__arrow">
+      <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M26.041 10.7734L11.002 25.1335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path
+          d="M15.4824 10.7012L26.0401 10.7722L26.1161 20.8547"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+  </button>
+</div>
+
+<div class="header-menu-background"></div>
+
+    <main class="base-page">
+      <section class="page-section start-window">
+        <div class="container">
+          <h1 class="start-window__title">Комплект IT</h1>
+          <div class="start-window__wrapper">
+            <div class="start-window__decor"></div>
+            <div class="start-window__decor"></div>
+            <div class="start-window__decor"></div>
+            <div class="start-window__subtext">
+              Ведущая компания, предоставляющая высококачественные <br />
+              услуги в области web и мобильной разработки
+            </div>
+            <div class="start-window__image">
+              <img src="./img/start-image.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page-section about-section">
+  <div class="container">
+    <div class="about-section__wrapper">
+      <div class="about-section__col">
+        <div class="h2">О компании</div>
+        <div class="about-section__image">
+          <img src="./img/about-1-min.jpg" alt="" class="fit-cover" />
+        </div>
+      </div>
+      <div class="about-section__col">
+        <div class="about-section__content-box">
+          <div class="about-section__content-title sub40">Наша цель</div>
+          <div class="about-section__content-text">
+            cоздать прочные партнерские <br />
+            связи и обеспечить <br />
+            взаимовыгодное сотрудничество <br />
+            с нашими клиентами
+          </div>
+        </div>
+        <a href="#" class="about-section__link use-arrow sub40">
+          <div class="button__arrow">
+            <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M26.041 10.7734L11.002 25.1335"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15.4824 10.7012L26.0401 10.7722L26.1161 20.8547"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <img src="./img/about-3-min.png" alt="" class="about-section__link-img" />
+          <div class="about-section__link-text">
+            <div class="about-section__link-text-left"></div>
+            <div class="about-section__link-text-top"></div>
+            Участие в тендерах
+          </div>
+        </a>
+      </div>
+      <div class="about-section__col">
+        <div class="about-section__image">
+          <img src="./img/about-2-min.jpg" alt="" class="fit-cover" />
+        </div>
+      </div>
+    </div>
+    <div class="about-section__team">
+      <div class="about-section__team-content">
+        <div class="sub40">
+          «Комплект IT» — опытная команда, <br />
+          сфокусированная на разработке веб-сайтов <br />
+          и мобильных приложений любой сложности
+        </div>
+        <div>
+          У нас вы можете заказать сайт для бизнеса, интернет-магазин, корпоративный сайт, <br />
+          сайт-визитку или портал. Мы умеем делать работающие сайты, web-сервисы <br />
+          и CRM-системы по прозрачной цене. Вам понравится и захочется еще!
+        </div>
+      </div>
+      <div class="about-section__team-footer">
+        <img src="./img/about-4.png" alt="" class="about-section__team-footer-img" />
+        <div class="about-section__team-footer-content">
+          <div class="about-section__team-numbers">
+            <div class="about-section__team-numbers-col">
+              <div class="about-section__team-number">100%</div>
+              <div class="about-section__team-numbers-text">успеха</div>
+            </div>
+            <div class="about-section__team-numbers-col">
+              <div class="about-section__team-number">10</div>
+              <div class="about-section__team-numbers-text">лет опыта</div>
+            </div>
+            <div class="about-section__team-numbers-col">
+              <div class="about-section__team-number">500+</div>
+              <div class="about-section__team-numbers-text">проектов</div>
+            </div>
+          </div>
+          <a href="#" class="button is-white use-arrow">
+            Подробнее о компании
+            <div class="button__arrow">
+              <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M26.041 10.7734L11.002 25.1335"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15.4824 10.7012L26.0401 10.7722L26.1161 20.8547"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="page-section service-section">
+  <div class="container">
+    <div class="section-title">
+      <div class="h2">Услуги</div>
+      <a href="#" class="button is-ghost use-arrow">
+        Все услуги
+        <div class="button__arrow">
+          <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26.041 10.7734L11.002 25.1335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M15.4824 10.7012L26.0401 10.7722L26.1161 20.8547"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </a>
+    </div>
+    <div class="page-section__wrapper w-sidebar">
+      <div class="page-section__sidebar netbook-hidden">
+        <div class="service-section__image"><img src="./img/service-1.png" alt="" class="fit-cover" /></div>
+      </div>
+      <div>
+        <div class="accordion">
+          <div class="accordion-item">
+            <div class="accordion-item__header">
+              <div class="accordion-item__header-text is-title sub40"><sup>01</sup>Разработка сайтов под ключ</div>
+              <div class="accordion-item__button"></div>
+            </div>
+            <div class="accordion-item__content">
+              <div class="accordion-item__content-inner">
+                <div class="accordion-item__content-info">
+                  <p>
+                    Предоставляем услуги по разработке сайтов под ключ. Работаем с доменами разного профиля, гарантируем
+                    результаты работ. Создаем различные проекты от простых сайтов-визиток, лендингов до
+                    многофункциональных e-com магазинов и корпоративных площадок. Работы выполняются полностью под ключ.
+                  </p>
+                  <br />
+                  <button class="button is-primary use-arrow" data-popup="order">
+                    Заказать услугу
+                    <div class="button__arrow">
+                      <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M26.041 10.7734L11.002 25.1335"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M15.4824 10.7012L26.0401 10.7722L26.1161 20.8547"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div class="accordion-item__content-image">
+                  <img src="./img/service-2.jpg" alt="" class="fit-cover" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item__header">
+              <div class="accordion-item__header-text is-title sub40"><sup>02</sup>Разработка мобильных приложений</div>
+              <div class="accordion-item__button"></div>
+            </div>
+            <div class="accordion-item__content">
+              <div class="accordion-item__content-inner">
+                <div class="accordion-item__content-info">
+                  <p>
+                    Мы предлагаем полный цикл услуг по созданию мобильных приложений. Мы разрабатываем мобильные
+                    приложения для крупного бизнеса, а также для компаний среднего, малого бизнеса и стартапов.
+                    Разрабатываем мобильные приложения для Android, iOS, кросс платформенные приложения.
+                  </p>
+                  <br />
+                  <button class="button is-primary use-arrow" data-popup="order">
+                    Заказать услугу
+                    <div class="button__arrow">
+                      <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M26.041 10.7734L11.002 25.1335"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M15.4824 10.7012L26.0401 10.7722L26.1161 20.8547"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div class="accordion-item__content-image">
+                  <img src="./img/service-2.jpg" alt="" class="fit-cover" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item__header">
+              <div class="accordion-item__header-text is-title sub40"><sup>03</sup>Внедрение и поддержка Битрикс24</div>
+              <div class="accordion-item__button"></div>
+            </div>
+            <div class="accordion-item__content">
+              <div class="accordion-item__content-inner">
+                <div class="accordion-item__content-info">
+                  <p>
+                    Мы предлагаем комплексный подход к настройке и внедрению Битрикс24 в вашей компании, настроим СРМ
+                    систему под ключ или доработаем и внедрим весь требуемый функционал, проведем необходимое обучение
+                    ваших сотрудников, продемонстрировав на практике явные и скрытые возможности сервиса.
+                  </p>
+                  <br />
+                  <button class="button is-primary use-arrow" data-popup="order">
+                    Заказать услугу
+                    <div class="button__arrow">
+                      <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M26.041 10.7734L11.002 25.1335"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M15.4824 10.7012L26.0401 10.7722L26.1161 20.8547"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div class="accordion-item__content-image">
+                  <img src="./img/service-2.jpg" alt="" class="fit-cover" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item__header">
+              <div class="accordion-item__header-text is-title sub40"><sup>04</sup>Аутстаффинг IT-специалистов</div>
+              <div class="accordion-item__button"></div>
+            </div>
+            <div class="accordion-item__content">
+              <div class="accordion-item__content-inner">
+                <div class="accordion-item__content-info">
+                  <p>
+                    Мы предоставляем отлично подготовленный технический персонал для временной или постоянной работы над
+                    проектами наших клиентов на основании договора. Юридически специалисты являются нашими сотрудниками,
+                    фактически – вашими работниками на нужный срок для реализации требуемых задач.
+                  </p>
+                  <br />
+                  <button class="button is-primary use-arrow" data-popup="order">
+                    Заказать услугу
+                    <div class="button__arrow">
+                      <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M26.041 10.7734L11.002 25.1335"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M15.4824 10.7012L26.0401 10.7722L26.1161 20.8547"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div class="accordion-item__content-image">
+                  <img src="./img/service-2.jpg" alt="" class="fit-cover" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="page-section projects-section">
+  <div class="container">
+    <div class="section-title">
+      <div class="h2">Проекты</div>
+      <a href="#" class="button is-ghost use-arrow">
+        Портфолио проектов
+        <div class="button__arrow">
+          <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26.041 10.7734L11.002 25.1335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M15.4824 10.7012L26.0401 10.7722L26.1161 20.8547"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </a>
+    </div>
+    <div class="projects-section__wrapper">
+      <a href="#" class="project-card use-arrow">
+        <div class="button__arrow">
+          <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26.041 10.7734L11.002 25.1335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M15.4824 10.7012L26.0401 10.7722L26.1161 20.8547"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="project-card__img"><img src="./img/project-1-min.jpg" alt="" class="fit-cover" /></div>
+        <div class="project-card__type"><p>Web-разработка</p></div>
+        <div class="project-card__title sub40">Прототипы и сайт для интернет-магазина</div>
+      </a>
+      <a href="#" class="project-card use-arrow">
+        <div class="button__arrow">
+          <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26.041 10.7734L11.002 25.1335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M15.4824 10.7012L26.0401 10.7722L26.1161 20.8547"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="project-card__img"><img src="./img/project-2-min.jpg" alt="" class="fit-cover" /></div>
+        <div class="project-card__type"><p>Web-разработка</p></div>
+        <div class="project-card__title sub40">Корпоративный сайт для финансовой компании</div>
+      </a>
+      <a href="#" class="project-card use-arrow">
+        <div class="button__arrow">
+          <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26.041 10.7734L11.002 25.1335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M15.4824 10.7012L26.0401 10.7722L26.1161 20.8547"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="project-card__img"><img src="./img/project-3-min.jpg" alt="" class="fit-cover" /></div>
+        <div class="project-card__type"><p>Мобильная разработка</p></div>
+        <div class="project-card__title sub40">Мобильное приложение</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+      <section class="page-section clients-section">
+  <div class="container">
+    <div class="section-title">
+      <div class="h2">Клиенты</div>
+      <div class="page-section__swiper-button-box netbook-hidden">
+        <div class="section-swiper-button is-prev">
+          <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15.1255 25.4409L35.9138 24.9607"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M22.5391 17.9219L15.1239 25.4376L22.1996 32.6207"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="section-swiper-button is-next">
+          <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M35.9135 25.4409L15.1252 24.9607"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M28.5 17.9219L35.9152 25.4376L28.8395 32.6207"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="clients-section__slider">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="clients-section__card">
+              <img src="./img/client-1.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="clients-section__card">
+              <img src="./img/client-2.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="clients-section__card">
+              <img src="./img/client-3.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="clients-section__card">
+              <img src="./img/client-4.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="clients-section__card">
+              <img src="./img/client-5.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="clients-section__card">
+              <img src="./img/client-1.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="clients-section__card">
+              <img src="./img/client-2.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="clients-section__card">
+              <img src="./img/client-3.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="clients-section__card">
+              <img src="./img/client-4.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="clients-section__card">
+              <img src="./img/client-5.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-swiper__pagination netbook-visible"></div>
+    </div>
+  </div>
+</section>
+
+      <section class="page-section">
+  <div class="container">
+    <div class="page-section__wrapper w-sidebar">
+      <div>
+        <div class="h2">FAQ</div>
+      </div>
+      <div>
+        <div class="accordion">
+          <div class="accordion-item">
+            <div class="accordion-item__header">
+              <div class="accordion-item__header-text is-title sub40"><sup>01</sup> Какой ваш опыт в разработке?</div>
+              <div class="accordion-item__button"></div>
+            </div>
+            <div class="accordion-item__content">
+              <div class="accordion-item__content-inner">
+                <div class="accordion-item__content-info">
+                  <p>
+                    «Комплект IT» имеет богатый опыт и экспертизу в области веб и мобильной разработки, 10 лет успешной
+                    работы. За это время мы выполнили множество проектов различной сложности и масштаба, работая с
+                    клиентами из разных отраслей.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item__header">
+              <div class="accordion-item__header-text is-title sub40">
+                <sup>02</sup>Какие технологии вы используете?
+              </div>
+              <div class="accordion-item__button"></div>
+            </div>
+            <div class="accordion-item__content">
+              <div class="accordion-item__content-inner">
+                <div class="accordion-item__content-info">
+                  <p>
+                    «Комплект IT» имеет богатый опыт и экспертизу в области веб и мобильной разработки, 10 лет успешной
+                    работы. За это время мы выполнили множество проектов различной сложности и масштаба, работая с
+                    клиентами из разных отраслей.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item__header">
+              <div class="accordion-item__header-text is-title sub40">
+                <sup>03</sup>Каков процесс сотрудничества с вами?
+              </div>
+              <div class="accordion-item__button"></div>
+            </div>
+            <div class="accordion-item__content">
+              <div class="accordion-item__content-inner">
+                <div class="accordion-item__content-info">
+                  <p>
+                    «Комплект IT» имеет богатый опыт и экспертизу в области веб и мобильной разработки, 10 лет успешной
+                    работы. За это время мы выполнили множество проектов различной сложности и масштаба, работая с
+                    клиентами из разных отраслей.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item__header">
+              <div class="accordion-item__header-text is-title sub40">
+                <sup>04</sup>Каков процесс участия в тендерах?
+              </div>
+              <div class="accordion-item__button"></div>
+            </div>
+            <div class="accordion-item__content">
+              <div class="accordion-item__content-inner">
+                <div class="accordion-item__content-info">
+                  <p>
+                    «Комплект IT» имеет богатый опыт и экспертизу в области веб и мобильной разработки, 10 лет успешной
+                    работы. За это время мы выполнили множество проектов различной сложности и масштаба, работая с
+                    клиентами из разных отраслей.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item__header">
+              <div class="accordion-item__header-text is-title sub40">
+                <sup>05</sup>Каковы сроки выполнения проектов?
+              </div>
+              <div class="accordion-item__button"></div>
+            </div>
+            <div class="accordion-item__content">
+              <div class="accordion-item__content-inner">
+                <div class="accordion-item__content-info">
+                  <p>
+                    «Комплект IT» имеет богатый опыт и экспертизу в области веб и мобильной разработки, 10 лет успешной
+                    работы. За это время мы выполнили множество проектов различной сложности и масштаба, работая с
+                    клиентами из разных отраслей.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item__header">
+              <div class="accordion-item__header-text is-title sub40"><sup>06</sup> Какой ваш опыт в разработке?</div>
+              <div class="accordion-item__button"></div>
+            </div>
+            <div class="accordion-item__content">
+              <div class="accordion-item__content-inner">
+                <div class="accordion-item__content-info">
+                  <p>
+                    «Комплект IT» имеет богатый опыт и экспертизу в области веб и мобильной разработки, 10 лет успешной
+                    работы. За это время мы выполнили множество проектов различной сложности и масштаба, работая с
+                    клиентами из разных отраслей.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item__header">
+              <div class="accordion-item__header-text is-title sub40">
+                <sup>07</sup>Какие технологии вы используете?
+              </div>
+              <div class="accordion-item__button"></div>
+            </div>
+            <div class="accordion-item__content">
+              <div class="accordion-item__content-inner">
+                <div class="accordion-item__content-info">
+                  <p>
+                    «Комплект IT» имеет богатый опыт и экспертизу в области веб и мобильной разработки, 10 лет успешной
+                    работы. За это время мы выполнили множество проектов различной сложности и масштаба, работая с
+                    клиентами из разных отраслей.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item__header">
+              <div class="accordion-item__header-text is-title sub40">
+                <sup>08</sup>Каков процесс сотрудничества с вами?
+              </div>
+              <div class="accordion-item__button"></div>
+            </div>
+            <div class="accordion-item__content">
+              <div class="accordion-item__content-inner">
+                <div class="accordion-item__content-info">
+                  <p>
+                    «Комплект IT» имеет богатый опыт и экспертизу в области веб и мобильной разработки, 10 лет успешной
+                    работы. За это время мы выполнили множество проектов различной сложности и масштаба, работая с
+                    клиентами из разных отраслей.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item__header">
+              <div class="accordion-item__header-text is-title sub40">
+                <sup>09</sup>Каков процесс участия в тендерах?
+              </div>
+              <div class="accordion-item__button"></div>
+            </div>
+            <div class="accordion-item__content">
+              <div class="accordion-item__content-inner">
+                <div class="accordion-item__content-info">
+                  <p>
+                    «Комплект IT» имеет богатый опыт и экспертизу в области веб и мобильной разработки, 10 лет успешной
+                    работы. За это время мы выполнили множество проектов различной сложности и масштаба, работая с
+                    клиентами из разных отраслей.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item__header">
+              <div class="accordion-item__header-text is-title sub40">
+                <sup>10</sup>Каковы сроки выполнения проектов?
+              </div>
+              <div class="accordion-item__button"></div>
+            </div>
+            <div class="accordion-item__content">
+              <div class="accordion-item__content-inner">
+                <div class="accordion-item__content-info">
+                  <p>
+                    «Комплект IT» имеет богатый опыт и экспертизу в области веб и мобильной разработки, 10 лет успешной
+                    работы. За это время мы выполнили множество проектов различной сложности и масштаба, работая с
+                    клиентами из разных отраслей.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="page-section request-section">
+  <div class="container">
+    <div class="page-section__wrapper w-sidebar">
+      <div class="page-section__sidebar">
+        <div class="section-title">
+          <div class="h2">
+            Оставьте <br />
+            заявку
+          </div>
+        </div>
+        <div class="request-section__img netbook-hidden">
+          <img src="./img/request-section-img.jpg" alt="" class="fit-cover" />
+        </div>
+      </div>
+      <div>
+        <form action="#" class="callback-form">
+          <label class="form-input is-required">
+            <input type="text" class="input" placeholder=" " />
+            <div class="form-input__placeholder">Имя</div>
+          </label>
+          <label class="form-input is-required phone-input">
+            <input type="text" class="input" placeholder=" " data-maska />
+            <div class="form-input__placeholder">Телефон</div>
+            <div class="phone-input__mask-switch">
+              <div class="phone-input__mask-switch-current"></div>
+              <div class="phone-input__mask-switch-dropdown"></div>
+            </div>
+          </label>
+          <label class="form-input">
+            <input type="text" class="input" placeholder=" " />
+            <div class="form-input__placeholder">Почта</div>
+          </label>
+          <label class="form-input is-textarea">
+            <textarea class="input textarea" placeholder=" "></textarea>
+            <div class="form-input__placeholder">Ваше сообщение</div>
+          </label>
+          <!-- <label class="form-input">
+            <div class="file-input">
+              <input type="file" placeholder="Приложить файл" />
+              <div class="file-input__button button is-ghost">
+                <span class="file-input__plus">+</span> <span class="file-input__name">Приложить файл</span>
+              </div>
+            </div>
+          </label> -->
+          <label class="checkbox-input">
+            <input type="checkbox" name="privacy" />
+            <div class="checkbox-input__check">
+              <div class="checkbox-input__check-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="14" height="14" viewBox="0 0 24 24">
+                  <path
+                    d="M 19.980469 5.9902344 A 1.0001 1.0001 0 0 0 19.292969 6.2929688 L 9 16.585938 L 5.7070312 13.292969 A 1.0001 1.0001 0 1 0 4.2929688 14.707031 L 8.2929688 18.707031 A 1.0001 1.0001 0 0 0 9.7070312 18.707031 L 20.707031 7.7070312 A 1.0001 1.0001 0 0 0 19.980469 5.9902344 z"
+                    stroke="#9b8af5"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="checkbox-input__placeholder">
+              Согласен (-на) на <a href="#" target="_blank">обработку персональных данных</a>
+            </div>
+          </label>
+          <button class="button is-primary use-arrow">
+            Отправить
+            <div class="button__arrow">
+              <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M26.041 10.7734L11.002 25.1335"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15.4824 10.7012L26.0401 10.7722L26.1161 20.8547"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <div class="footer__row">
+        <div class="footer__logo">Комплект IT</div>
+        <div class="footer__col">
+          <a href="#" class="text-link">О компании</a>
+          <a href="#" class="text-link">Участие в тендерах</a>
+          <a href="#" class="text-link">Услуги</a>
+          <a href="#" class="text-link">Цены</a>
+        </div>
+        <div class="footer__col">
+          <a href="#" class="text-link">Портфолио</a>
+          <a href="#" class="text-link">FAQ</a>
+          <a href="#" class="text-link">Контакты</a>
+        </div>
+        <div class="footer__col">
+          <a href="#" class="text-link">Телефон</a>
+          <a href="#" class="text-link">Адрес</a>
+        </div>
+        <div class="footer__col">
+          <a href="#" class="text-link">Одноклассники</a>
+          <a href="#" class="text-link">ВКонтакте</a>
+          <a href="#" class="text-link">Facebook</a>
+          <a href="#" class="text-link">Instagram</a>
+        </div>
+      </div>
+      <div class="footer__row footer__bottom">
+        <div class="footer__col">
+          © 2024 ООО «Комплект IT» <br />
+          Все права защищены
+        </div>
+        <div></div>
+        <div></div>
+        <div class="footer__col"><a href="#" class="text-link">Карта сайта</a></div>
+        <div class="footer__col"><a href="#" class="text-link">Политика конфиденциальности</a></div>
+      </div>
+      <!--       <div class="footer__contacts-col tablet-visible">
+        <img src="./img/footer-logo.svg" alt="gap-dev" class="footer__logo" />
+      </div> -->
+
+      <!-- <div class="footer__contacts-col">
+        <img src="./img/footer-logo.svg" alt="gap-dev" class="footer__logo tablet-hidden"/>
+        <div class="footer__contacts-box">
+          <a href="mailto:gapdev@gapdev.ru" class="is-underline-in">gapdev@gapdev.ru</a>
+          <a href="tel:+79254702362" class="is-underline-in">+7(925)470-23-62</a>
+          <a href="https://t.me/gapdev_ru" class="is-underline-in">Telegram</a>
+        </div>
+        <div class="footer__contacts-box">
+          <a href="#website-development-service" class="is-underline-in js-navigate-link" data-header-offset="true">Разработка сайтов</a>
+          <a href="#mobile-development-service" class="is-underline-in js-navigate-link" data-header-offset="true">Разработка мобильных приложений</a>
+          <a href="#it-consulting-service" class="is-underline-in js-navigate-link" data-header-offset="true">IT-consulting</a>
+        </div class="footer__contacts-box">
+        <div class="footer__contacts-box">© GAPDEV 2024</div>
+      </div> -->
+    </div>
+  </div>
+</footer>
+
+    
+    <script type="text/javascript" src="./js/fancybox-5.0.min.js"></script>
+<script src="./js/vendor.js"></script>
+<script src="./js/scripts.js"></script>
+
+  </body>
+</html>

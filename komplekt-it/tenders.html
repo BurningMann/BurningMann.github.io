@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ru" class="custom-scrollbar">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Komplekt-it</title>
+  <meta name="theme-color" content="#fff" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+  />
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png" />
+  <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png" />
+  <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png" />
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png" />
+  <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./styles/fancybox-5.0.min.css" />
+  <link rel="stylesheet" href="./styles/swiper.min.css" />
+
+  <link rel="stylesheet" href="./styles/styles.css" />
+</head>
+
+  <body>
+    <header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <div class="header__logo">Комплект IT</div>
+      <nav class="header__nav netbook-hidden">
+        <a href="#" class="header__link text-link">О компании</a>
+        <a href="#" class="header__link text-link">Участие в тендерах</a>
+        <a href="#" class="header__link text-link">Услуги</a>
+        <a href="#" class="header__link text-link">Цены</a>
+        <a href="#" class="header__link text-link">Портфолио</a>
+        <a href="#" class="header__link text-link">FAQ</a>
+      </nav>
+      <div class="header__right">
+        <div class="header__search-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M20.9984 21.0004L16.6484 16.6504"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="header__burger netbook-visible">
+          <div class="header__burger-line"></div>
+          <div class="header__burger-line"></div>
+          <div class="header__burger-line"></div>
+        </div>
+        <button class="button is-primary use-arrow netbook-hidden">
+          Заказать звонок
+          <div class="button__arrow">
+            <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M26.041 10.7734L11.002 25.1335"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15.4824 10.7012L26.0401 10.7722L26.1161 20.8547"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-header-sidebar netbook-visible">
+  <nav class="header__nav">
+    <a href="#" class="header__link text-link">О компании</a>
+    <a href="#" class="header__link text-link">Участие в тендерах</a>
+    <a href="#" class="header__link text-link">Услуги</a>
+    <a href="#" class="header__link text-link">Цены</a>
+    <a href="#" class="header__link text-link">Портфолио</a>
+    <a href="#" class="header__link text-link">FAQ</a>
+  </nav>
+  <button class="button is-primary use-arrow">
+    Заказать звонок
+    <div class="button__arrow">
+      <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M26.041 10.7734L11.002 25.1335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path
+          d="M15.4824 10.7012L26.0401 10.7722L26.1161 20.8547"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+  </button>
+</div>
+
+<div class="header-menu-background"></div>
+
+    <main class="page">
+      <section
+        class="company-start-window page-section"
+        style="background: url(./img/company-start-section-min.jpg) center/ cover no-repeat"
+      >
+        <div class="company-start-window__content container">
+          <h1 class="h2">
+            Участие <br />
+            в тендерах
+          </h1>
+        </div>
+      </section>
+
+      <section class="page-section services-range-section">
+  <div class="container">
+    <div class="services-range-section__title-box">
+      <div class="h2">Спектр услуг</div>
+      <div class="services-range-section__subtext">
+        <p>
+          Наша команда специалистов придерживается принципа индивидуального подхода к каждому проекту, учитывая
+          особенности бизнеса и потребности заказчика. Мы используем передовые методы и инструменты для дизайна и
+          разработки, что позволяет нам создавать современные и инновационные решения.
+        </p>
+      </div>
+    </div>
+    <div class="services-range-section__wrapper">
+      <div class="services-range-section__box">
+        <div class="services-range-section__image-1">
+          <img src="./img/services-range-section-1.jpg" alt="" class="fit-cover" />
+        </div>
+        <div class="services-range-section__area-1">
+          <div class="services-range-section__area-1-content">
+            <div class="sub28">
+              Доверьте нам разработку вашего веб-проекта и мы сделаем все возможное, чтобы он стал успешным инструментом
+              для развития вашего бизнеса.
+            </div>
+          </div>
+          <div class="services-range-section__area-2-content"></div>
+        </div>
+      </div>
+      <div class="services-range-section__box">
+        <div class="services-range-section__area-3-content">
+          <div class="sub28">
+            Наш приоритет – это ваш успех в онлайн-пространстве, поэтому мы стремимся к тому, чтобы каждый IT-продукт,
+            созданный нами, был эффективным и конкурентоспособным.
+          </div>
+        </div>
+        <div class="services-range-section__image-2">
+          <img src="./img/services-range-section-2.jpg" alt="" class="fit-cover" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="page-section tenders-section">
+  <div class="container">
+    <div class="tenders-section__title-box">
+      <div class="h2">
+        Факторы тендерного <br />
+        отбора
+      </div>
+    </div>
+
+    <div class="tenders-section__table">
+      <div class="tenders-section__box">
+        <div class="tenders-section__box-title sub40">Скорость и качество реакции</div>
+        <div class="tenders-section__box-content">
+          Оставляете заявку любым удобным для вас способом, обсуждаем все тонкости будущего проекта.Оставляете заявку
+          любым удобным для вас способом, обсуждаем все тонкости будущего проекта. Оставляете заявку любым удобным для
+          вас способом, обсуждаем все тонкости будущего проекта. Оставляете заявку любым удобным для вас способом,
+          обсуждаем все тонкости будущего проекта.Оставляете заявку любым удобным для вас способом, обсуждаем все
+          тонкости будущего проекта. Оставляете заявку любым удобным для вас способом, обсуждаем все тонкости будущего
+          проекта. Оставляете заявку любым удобным для вас способом, обсуждаем все тонкости будущего проекта.
+        </div>
+      </div>
+      <div class="tenders-section__box">
+        <div class="tenders-section__box-title sub40">Скорость и качество реакции</div>
+        <div class="tenders-section__box-content">
+          Оставляете заявку любым удобным для вас способом, обсуждаем все тонкости будущего проекта.Оставляете заявку
+          любым удобным для вас способом, обсуждаем все тонкости будущего проекта. Оставляете заявку любым удобным для
+          вас способом, обсуждаем все тонкости будущего проекта. Оставляете заявку любым удобным для вас способом,
+          обсуждаем все тонкости будущего проекта.Оставляете заявку любым удобным для вас способом, обсуждаем все
+          тонкости будущего проекта. Оставляете заявку любым удобным для вас способом, обсуждаем все тонкости будущего
+          проекта. Оставляете заявку любым удобным для вас способом, обсуждаем все тонкости будущего проекта.
+        </div>
+      </div>
+      <div class="tenders-section__box">
+        <div class="tenders-section__box-title sub40">Скорость и качество реакции</div>
+        <div class="tenders-section__box-content">
+          Оставляете заявку любым удобным для вас способом, обсуждаем все тонкости будущего проекта.Оставляете заявку
+          любым удобным для вас способом, обсуждаем все тонкости будущего проекта. Оставляете заявку любым удобным для
+          вас способом, обсуждаем все тонкости будущего проекта. Оставляете заявку любым удобным для вас способом,
+          обсуждаем все тонкости будущего проекта.Оставляете заявку любым удобным для вас способом, обсуждаем все
+          тонкости будущего проекта. Оставляете заявку любым удобным для вас способом, обсуждаем все тонкости будущего
+          проекта. Оставляете заявку любым удобным для вас способом, обсуждаем все тонкости будущего проекта.
+        </div>
+      </div>
+      <div class="tenders-section__box">
+        <div class="tenders-section__box-title sub40">Скорость и качество реакции</div>
+        <div class="tenders-section__box-content">
+          Оставляете заявку любым удобным для вас способом, обсуждаем все тонкости будущего проекта.Оставляете заявку
+          любым удобным для вас способом, обсуждаем все тонкости будущего проекта. Оставляете заявку любым удобным для
+          вас способом, обсуждаем все тонкости будущего проекта. Оставляете заявку любым удобным для вас способом,
+          обсуждаем все тонкости будущего проекта.Оставляете заявку любым удобным для вас способом, обсуждаем все
+          тонкости будущего проекта. Оставляете заявку любым удобным для вас способом, обсуждаем все тонкости будущего
+          проекта. Оставляете заявку любым удобным для вас способом, обсуждаем все тонкости будущего проекта.
+        </div>
+      </div>
+      <div class="tenders-section__box">
+        <div class="tenders-section__box-title sub40">Скорость и качество реакции</div>
+        <div class="tenders-section__box-content">
+          Оставляете заявку любым удобным для вас способом, обсуждаем все тонкости будущего проекта.Оставляете заявку
+          любым удобным для вас способом, обсуждаем все тонкости будущего проекта. Оставляете заявку любым удобным для
+          вас способом, обсуждаем все тонкости будущего проекта. Оставляете заявку любым удобным для вас способом,
+          обсуждаем все тонкости будущего проекта.Оставляете заявку любым удобным для вас способом, обсуждаем все
+          тонкости будущего проекта. Оставляете заявку любым удобным для вас способом, обсуждаем все тонкости будущего
+          проекта. Оставляете заявку любым удобным для вас способом, обсуждаем все тонкости будущего проекта.
+        </div>
+      </div>
+      <div class="tenders-section__box">
+        <div class="tenders-section__box-title sub40">Скорость и качество реакции</div>
+        <div class="tenders-section__box-content">
+          Оставляете заявку любым удобным для вас способом, обсуждаем все тонкости будущего проекта.Оставляете заявку
+          любым удобным для вас способом, обсуждаем все тонкости будущего проекта. Оставляете заявку любым удобным для
+          вас способом, обсуждаем все тонкости будущего проекта. Оставляете заявку любым удобным для вас способом,
+          обсуждаем все тонкости будущего проекта.Оставляете заявку любым удобным для вас способом, обсуждаем все
+          тонкости будущего проекта. Оставляете заявку любым удобным для вас способом, обсуждаем все тонкости будущего
+          проекта. Оставляете заявку любым удобным для вас способом, обсуждаем все тонкости будущего проекта.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="page-section request-section">
+  <div class="container">
+    <div class="page-section__wrapper w-sidebar">
+      <div class="page-section__sidebar">
+        <div class="section-title">
+          <div class="h2">
+            Оставьте <br />
+            заявку
+          </div>
+        </div>
+        <div class="request-section__img netbook-hidden">
+          <img src="./img/request-section-img.jpg" alt="" class="fit-cover" />
+        </div>
+      </div>
+      <div>
+        <form action="#" class="callback-form">
+          <label class="form-input is-required">
+            <input type="text" class="input" placeholder=" " />
+            <div class="form-input__placeholder">Имя</div>
+          </label>
+          <label class="form-input is-required phone-input">
+            <input type="text" class="input" placeholder=" " data-maska />
+            <div class="form-input__placeholder">Телефон</div>
+            <div class="phone-input__mask-switch">
+              <div class="phone-input__mask-switch-current"></div>
+              <div class="phone-input__mask-switch-dropdown"></div>
+            </div>
+          </label>
+          <label class="form-input">
+            <input type="text" class="input" placeholder=" " />
+            <div class="form-input__placeholder">Почта</div>
+          </label>
+          <label class="form-input is-textarea">
+            <textarea class="input textarea" placeholder=" "></textarea>
+            <div class="form-input__placeholder">Ваше сообщение</div>
+          </label>
+          <!-- <label class="form-input">
+            <div class="file-input">
+              <input type="file" placeholder="Приложить файл" />
+              <div class="file-input__button button is-ghost">
+                <span class="file-input__plus">+</span> <span class="file-input__name">Приложить файл</span>
+              </div>
+            </div>
+          </label> -->
+          <label class="checkbox-input">
+            <input type="checkbox" name="privacy" />
+            <div class="checkbox-input__check">
+              <div class="checkbox-input__check-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="14" height="14" viewBox="0 0 24 24">
+                  <path
+                    d="M 19.980469 5.9902344 A 1.0001 1.0001 0 0 0 19.292969 6.2929688 L 9 16.585938 L 5.7070312 13.292969 A 1.0001 1.0001 0 1 0 4.2929688 14.707031 L 8.2929688 18.707031 A 1.0001 1.0001 0 0 0 9.7070312 18.707031 L 20.707031 7.7070312 A 1.0001 1.0001 0 0 0 19.980469 5.9902344 z"
+                    stroke="#9b8af5"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="checkbox-input__placeholder">
+              Согласен (-на) на <a href="#" target="_blank">обработку персональных данных</a>
+            </div>
+          </label>
+          <button class="button is-primary use-arrow">
+            Отправить
+            <div class="button__arrow">
+              <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M26.041 10.7734L11.002 25.1335"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15.4824 10.7012L26.0401 10.7722L26.1161 20.8547"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <div class="footer__row">
+        <div class="footer__logo">Комплект IT</div>
+        <div class="footer__col">
+          <a href="#" class="text-link">О компании</a>
+          <a href="#" class="text-link">Участие в тендерах</a>
+          <a href="#" class="text-link">Услуги</a>
+          <a href="#" class="text-link">Цены</a>
+        </div>
+        <div class="footer__col">
+          <a href="#" class="text-link">Портфолио</a>
+          <a href="#" class="text-link">FAQ</a>
+          <a href="#" class="text-link">Контакты</a>
+        </div>
+        <div class="footer__col">
+          <a href="#" class="text-link">Телефон</a>
+          <a href="#" class="text-link">Адрес</a>
+        </div>
+        <div class="footer__col">
+          <a href="#" class="text-link">Одноклассники</a>
+          <a href="#" class="text-link">ВКонтакте</a>
+          <a href="#" class="text-link">Facebook</a>
+          <a href="#" class="text-link">Instagram</a>
+        </div>
+      </div>
+      <div class="footer__row footer__bottom">
+        <div class="footer__col">
+          © 2024 ООО «Комплект IT» <br />
+          Все права защищены
+        </div>
+        <div></div>
+        <div></div>
+        <div class="footer__col"><a href="#" class="text-link">Карта сайта</a></div>
+        <div class="footer__col"><a href="#" class="text-link">Политика конфиденциальности</a></div>
+      </div>
+      <!--       <div class="footer__contacts-col tablet-visible">
+        <img src="./img/footer-logo.svg" alt="gap-dev" class="footer__logo" />
+      </div> -->
+
+      <!-- <div class="footer__contacts-col">
+        <img src="./img/footer-logo.svg" alt="gap-dev" class="footer__logo tablet-hidden"/>
+        <div class="footer__contacts-box">
+          <a href="mailto:gapdev@gapdev.ru" class="is-underline-in">gapdev@gapdev.ru</a>
+          <a href="tel:+79254702362" class="is-underline-in">+7(925)470-23-62</a>
+          <a href="https://t.me/gapdev_ru" class="is-underline-in">Telegram</a>
+        </div>
+        <div class="footer__contacts-box">
+          <a href="#website-development-service" class="is-underline-in js-navigate-link" data-header-offset="true">Разработка сайтов</a>
+          <a href="#mobile-development-service" class="is-underline-in js-navigate-link" data-header-offset="true">Разработка мобильных приложений</a>
+          <a href="#it-consulting-service" class="is-underline-in js-navigate-link" data-header-offset="true">IT-consulting</a>
+        </div class="footer__contacts-box">
+        <div class="footer__contacts-box">© GAPDEV 2024</div>
+      </div> -->
+    </div>
+  </div>
+</footer>
+
+    
+    <script type="text/javascript" src="./js/fancybox-5.0.min.js"></script>
+<script src="./js/vendor.js"></script>
+<script src="./js/scripts.js"></script>
+
+  </body>
+</html>
