@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Linni Max</title>
+  <title>Linnimax</title>
   <meta name="theme-color" content="#fff" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta
@@ -291,60 +291,175 @@
  -->
 
     <main class="page">
-      <style>
-        .page {
-          padding-top: 20vh;
-        }
-
-        .site-links {
-          display: flex;
-          flex-direction: column;
-          padding: 4rem 0 6rem;
-        }
-
-        .site-links__item {
-          font-weight: 500;
-          font-size: 2rem;
-          margin-bottom: 2rem;
-          text-transform: uppercase;
-          width: max-content;
-        }
-      </style>
-      <div class="container">
-        <div class="site-links">
-          <a href="./home.html" target="_blank" class="site-links__item">Главная</a>
-          <a href="./objects.html" target="_blank" class="site-links__item">Объекты</a>
-          <!-- <a href="./objects-detailed.html" target="_blank" class="site-links__item">Объекты-детальная</a> -->
-          <a href="./catalog.html" target="_blank" class="site-links__item">Каталог</a>
-          <a href="./documents.html" target="_blank" class="site-links__item">Загрузки и документы</a>
-          <a href="./news.html" target="_blank" class="site-links__item">Новости</a>
-          <!--           <a href="./news-detailed.html" target="_blank" class="site-links__item">Новость</a>
-          <a href="./carrer.html" target="_blank" class="site-links__item">Карьера</a>
-          <a href="./about.html" target="_blank" class="site-links__item">О компании</a>
-          <a href="./buy.html" target="_blank" class="site-links__item">Где купить</a>
-          <a href="./contacts.html" target="_blank" class="site-links__item">Контакты</a>
-          <a href="./services.html" target="_blank" class="site-links__item">Сервисы</a>
-          <a href="./services-detail.html" target="_blank" class="site-links__item">Сервисы-детальная</a> -->
-          <a href="./search-result-production.html" target="_blank" class="site-links__item"
-            >Результаты поиска продукция</a
-          >
-          <a href="./search-result-projects.html" target="_blank" class="site-links__item">Результаты поиска объекты</a>
-          <a href="./search-result-docs.html" target="_blank" class="site-links__item">Результаты поиска документы</a>
-          <a href="./search-result-news.html" target="_blank" class="site-links__item">Результаты поиска новости</a>
-          <<!-- a href="./wood-protection.html" target="_blank" class="site-links__item">Защита дерева</a>
-          <a href="./facades.html" target="_blank" class="site-links__item">Фасады</a>
-          <a href="./question.html" target="_blank" class="site-links__item">Задать вопрос</a>
-          <a href="./404.html" target="_blank" class="site-links__item">404</a>
-          <a href="./masters.html" target="_blank" class="site-links__item">Мастерам</a>
-          <a href="./architects-designers.html" target="_blank" class="site-links__item">Архитекторам/Дизайнерам</a>
-          <a href="./developers.html" target="_blank" class="site-links__item">Застройщикам</a>
-          <a href="./private-client.html" target="_blank" class="site-links__item">Частному клиенту</a>
-          <a href="./product.html" target="_blank" class="site-links__item">Карточка товара</a>
-          <a href="./systems-solutions.html" target="_blank" class="site-links__item">Системы и решения</a>
-          <a href="./insulation-systems.html" target="_blank" class="site-links__item">Системы утепления</a> -->
+      <div class="page-heading-block is-transparent">
+        <div class="page-heading-block__content container">
+          <div class="page-heading-block__crumbs-container">
+            <div class="breadcrumbs">
+              <div class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></div>
+              <div class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Поиск</a></div>
+            </div>
+          </div>
+          <h1 class="page-heading-block__title is-title">Результаты поиска</h1>
+        </div>
+      </div>
+      <div class="search-page container">
+        <form action="#" class="search-page__field">
+          <div class="form-input">
+            <input type="text" class="input" placeholder="" />
+            <div class="form-input__placeholder">Введенный поисковый запрос</div>
+          </div>
+          <button type="submit" class="search-page__field-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="8.5" stroke="#1C1D1B" />
+              <path d="M18 18L21 21" stroke="#1C1D1B" stroke-linecap="round" />
+            </svg>
+          </button>
+        </form>
+        <div class="search-page__tabs">
+          <div class="tabs__header">
+            <a href="#" class="tabs__button is-title">Продукция <sup>37</sup></a>
+            <a href="#" class="tabs__button is-title">Объекты <sup>14</sup></a>
+            <a href="#" class="tabs__button is-title">Документы <sup>48</sup></a>
+            <a href="#" class="tabs__button is-title is-active">новости <sup>21</sup></a>
+          </div>
+        </div>
+        <div class="news-grid is-default">
+          <div class="news-grid__item">
+            <a href="#" class="news-card">
+              <img src="./img/news-1.jpg" alt="" class="fit-cover" />
+              <div class="news-card__content">
+                <div class="news-card__date">15 февраля 2024</div>
+                <div class="news-card__title">
+                  Каждый год институт цвета Pantone называет главный цвет актуального года, и в 2024 году таким оттенком
+                  стал Peach Fuzz.
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="news-grid__item">
+            <a href="#" class="news-card">
+              <img src="./img/news-2.jpg" alt="" class="fit-cover" />
+              <div class="news-card__content">
+                <div class="news-card__date">15 февраля 2024</div>
+                <div class="news-card__title">
+                  Каждый год институт цвета Pantone называет главный цвет актуального года, и в 2024 году таким оттенком
+                  стал Peach Fuzz.
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="news-grid__item">
+            <a href="#" class="news-card">
+              <img src="./img/news-3.jpg" alt="" class="fit-cover" />
+              <div class="news-card__content">
+                <div class="news-card__date">15 февраля 2024</div>
+                <div class="news-card__title">
+                  Каждый год институт цвета Pantone называет главный цвет актуального года, и в 2024 году таким оттенком
+                  стал Peach Fuzz.
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="news-grid__item">
+            <a href="#" class="news-card">
+              <img src="./img/news-4.jpg" alt="" class="fit-cover" />
+              <div class="news-card__content">
+                <div class="news-card__date">15 февраля 2024</div>
+                <div class="news-card__title">
+                  Каждый год институт цвета Pantone называет главный цвет актуального года, и в 2024 году таким оттенком
+                  стал Peach Fuzz.
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="news-grid__item">
+            <a href="#" class="news-card">
+              <img src="./img/news-6.jpg" alt="" class="fit-cover" />
+              <div class="news-card__content">
+                <div class="news-card__date">15 февраля 2024</div>
+                <div class="news-card__title">
+                  Каждый год институт цвета Pantone называет главный цвет актуального года, и в 2024 году таким оттенком
+                  стал Peach Fuzz.
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="news-grid__item">
+            <a href="#" class="news-card">
+              <img src="./img/news-7.jpg" alt="" class="fit-cover" />
+              <div class="news-card__content">
+                <div class="news-card__date">15 февраля 2024</div>
+                <div class="news-card__title">
+                  Каждый год институт цвета Pantone называет главный цвет актуального года, и в 2024 году таким оттенком
+                  стал Peach Fuzz.
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="news-grid__item">
+            <a href="#" class="news-card">
+              <img src="./img/news-8.jpg" alt="" class="fit-cover" />
+              <div class="news-card__content">
+                <div class="news-card__date">15 февраля 2024</div>
+                <div class="news-card__title">
+                  Каждый год институт цвета Pantone называет главный цвет актуального года, и в 2024 году таким оттенком
+                  стал Peach Fuzz.
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="news-grid__item">
+            <a href="#" class="news-card">
+              <img src="./img/news-9.jpg" alt="" class="fit-cover" />
+              <div class="news-card__content">
+                <div class="news-card__date">15 февраля 2024</div>
+                <div class="news-card__title">
+                  Каждый год институт цвета Pantone называет главный цвет актуального года, и в 2024 году таким оттенком
+                  стал Peach Fuzz.
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="news-grid__item">
+            <a href="#" class="news-card">
+              <img src="./img/news-10.jpg" alt="" class="fit-cover" />
+              <div class="news-card__content">
+                <div class="news-card__date">15 февраля 2024</div>
+                <div class="news-card__title">
+                  Каждый год институт цвета Pantone называет главный цвет актуального года, и в 2024 году таким оттенком
+                  стал Peach Fuzz.
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="news-grid__item">
+            <a href="#" class="news-card">
+              <img src="./img/news-11.jpg" alt="" class="fit-cover" />
+              <div class="news-card__content">
+                <div class="news-card__date">15 февраля 2024</div>
+                <div class="news-card__title">
+                  Каждый год институт цвета Pantone называет главный цвет актуального года, и в 2024 году таким оттенком
+                  стал Peach Fuzz.
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="catalog-pagination">
+          <a href="#" class="catalog-pagination__item is-nav">Назад</a>
+          <a href="#" class="catalog-pagination__item is-current">1</a>
+          <a href="#" class="catalog-pagination__item">2</a>
+          <a href="#" class="catalog-pagination__item">3</a>
+          <a href="#" class="catalog-pagination__item">4</a>
+          <a href="#" class="catalog-pagination__item">5</a>
+          <a href="#" class="catalog-pagination__item">6</a>
+          <a href="#" class="catalog-pagination__item">...</a>
+          <a href="#" class="catalog-pagination__item">12</a>
+          <a href="#" class="catalog-pagination__item is-nav is-active">Дальше</a>
         </div>
       </div>
     </main>
+
     <footer class="footer container">
   <div class="footer__wrapper">
     <div class="footer__box">
