@@ -42,253 +42,259 @@
 </head>
 
   <body>
-    <!-- <header class="header container">
-  <div class="header__wrapper">
-    <nav class="header__nav netbook-hidden">
-      <div class="is-parrent">
-        <a href="#" class="header__nav-link">
-          Товары
-          <svg width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow-icon">
-            <path d="M1 1.8208L4.375 5.1958" stroke="white" stroke-width="2" stroke-linecap="round" />
-            <path d="M7.6861 1.8042L4.31109 5.1792" stroke="white" stroke-width="2" stroke-linecap="round" />
+    <header class="header container">
+  <div>
+    <div class="header__top netbook-hidden">
+      <div class="header__top-left">
+        <a href="/" class="header__logo"><img src="./img/header-logo.png" alt="" /></a>
+        <div class="header__top-box">
+          <a href="#" class="header__text-item">Мастерам</a>
+          <a href="#" class="header__text-item">Архитекторам / Дизайнерам</a>
+        </div>
+        <div class="header__top-box">
+          <a href="#" class="header__text-item">Застройщикам</a>
+          <a href="#" class="header__text-item">Частному покупателю</a>
+        </div>
+      </div>
+      <div class="header__top-right">
+        <div class="header__top-box">
+          <a href="tel:8 (800) 600-58-34" class="header__text-item">8 (800) 600-58-34</a>
+          <span class="header__text-item">Москва, ул. Авангардная, д. 3, пом.2, оф. 304</span>
+        </div>
+        <div class="header__search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="8.5" stroke="white" />
+            <path d="M18 18L21 21" stroke="white" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="button is-white">Задать вопрос</div>
+      </div>
+    </div>
+    <div class="mobile-header netbook-visible">
+      <div class="mobile-header__left">
+        <div class="header-burger">
+          <div class="header-burger__line"></div>
+          <div class="header-burger__line"></div>
+          <div class="header-burger__line"></div>
+          <div class="header-burger__line"></div>
+        </div>
+        <a href="/" class="mobile-header__logo"><img src="./img/header-logo.png" alt="" /></a>
+      </div>
+      <div class="mobile-header__right">
+        <a href="tel:">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M21 17.697C21 18.021 20.9279 18.354 20.7747 18.678C20.6214 19.002 20.4231 19.308 20.1617 19.596C19.7201 20.082 19.2334 20.433 18.6835 20.658C18.1427 20.883 17.5568 21 16.9259 21C16.0065 21 15.024 20.784 13.9875 20.343C12.9509 19.902 11.9144 19.308 10.8868 18.561C9.85028 17.805 8.8678 16.968 7.9304 16.041C7.002 15.105 6.16375 14.124 5.41562 13.098C4.67651 12.072 4.08162 11.046 3.64897 10.029C3.21632 9.003 3 8.022 3 7.086C3 6.474 3.10816 5.889 3.32449 5.349C3.54081 4.8 3.88333 4.296 4.36104 3.846C4.93791 3.279 5.56885 3 6.23585 3C6.48823 3 6.74061 3.054 6.96595 3.162C7.2003 3.27 7.40761 3.432 7.56986 3.666L9.66099 6.609C9.82324 6.834 9.94041 7.041 10.0215 7.239C10.1027 7.428 10.1477 7.617 10.1477 7.788C10.1477 8.004 10.0846 8.22 9.95844 8.427C9.84126 8.634 9.67001 8.85 9.45368 9.066L8.76865 9.777C8.6695 9.876 8.62444 9.993 8.62444 10.137C8.62444 10.209 8.63345 10.272 8.65148 10.344C8.67852 10.416 8.70556 10.47 8.72359 10.524C8.88583 10.821 9.16525 11.208 9.56184 11.676C9.96745 12.144 10.4001 12.621 10.8688 13.098C11.3555 13.575 11.8242 14.016 12.302 14.421C12.7707 14.817 13.1582 15.087 13.4647 15.249C13.5098 15.267 13.5638 15.294 13.6269 15.321C13.699 15.348 13.7712 15.357 13.8523 15.357C14.0055 15.357 14.1227 15.303 14.2218 15.204L14.9069 14.529C15.1322 14.304 15.3485 14.133 15.5558 14.025C15.7631 13.899 15.9705 13.836 16.1958 13.836C16.3671 13.836 16.5473 13.872 16.7456 13.953C16.9439 14.034 17.1512 14.151 17.3766 14.304L20.36 16.419C20.5944 16.581 20.7566 16.77 20.8558 16.995C20.9459 17.22 21 17.445 21 17.697Z"
+              stroke="#292D32"
+              stroke-miterlimit="10"
+            />
           </svg>
         </a>
-        <div class="sub-menu container">
-          <div class="sub-menu__nav-col">
-            <div class="sub-menu__item">
-              <a href="#" class="sub-menu__item-link" data-id="1">Обои</a>
-            </div>
-            <div class="sub-menu__item">
-              <a href="#" class="sub-menu__item-link" data-id="2">Ткани</a>
-            </div>
-            <div class="sub-menu__item">
-              <a href="#" class="sub-menu__item-link" data-id="3">Краски</a>
-            </div>
-            <div class="sub-menu__item">
-              <a href="#" class="sub-menu__item-link" data-id="4">Ковры</a>
-            </div>
-            <div class="sub-menu__item">
-              <a href="#" class="sub-menu__item-link" data-id="5">Шторы</a>
-            </div>
-            <div class="sub-menu__item">
-              <a href="#" class="sub-menu__item-link" data-id="6">Декоративная штукатурка</a>
-            </div>
-            <div class="sub-menu__item">
-              <a href="#" class="sub-menu__item-link" data-id="7">Карнизы</a>
-            </div>
-            <div class="sub-menu__item">
-              <a href="#" class="sub-menu__item-link" data-id="8">Лепнина</a>
-            </div>
-            <div class="sub-menu__item is-parrent">
-              <a href="#" class="sub-menu__item-link">
-                Домашний текстиль
-
-                <svg
-                  width="9"
-                  height="7"
-                  viewBox="0 0 9 7"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="arrow-icon"
-                >
-                  <path d="M1 1.8208L4.375 5.1958" stroke="#000" stroke-width="2" stroke-linecap="round" />
-                  <path d="M7.6861 1.8042L4.31109 5.1792" stroke="#000" stroke-width="2" stroke-linecap="round" />
-                </svg>
-              </a>
-
-              <div class="sub-menu__nav-col">
-                <div class="sub-menu__item">
-                  <a href="#" class="sub-menu__item-link">Постельное Бельё</a>
+        <a href="#">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="8.5" stroke="#1C1D1B" />
+            <path d="M18 18L21 21" stroke="#1C1D1B" stroke-linecap="round" />
+          </svg>
+        </a>
+        <div class="mobile-header__button">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.66634 12.6666H5.33301C2.66634 12.6666 1.33301 11.9999 1.33301 8.66659V5.33325C1.33301 2.66659 2.66634 1.33325 5.33301 1.33325H10.6663C13.333 1.33325 14.6663 2.66659 14.6663 5.33325V8.66659C14.6663 11.3333 13.333 12.6666 10.6663 12.6666H10.333C10.1263 12.6666 9.92634 12.7666 9.79967 12.9333L8.79967 14.2666C8.35967 14.8533 7.63967 14.8533 7.19967 14.2666L6.19967 12.9333C6.09301 12.7866 5.84634 12.6666 5.66634 12.6666Z"
+              stroke="#292D32"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path d="M4.66699 5.33325H11.3337" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4.66699 8.66675H8.66699" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="header__nav">
+      <a href="/" class="header__nav-logo netbook-hidden"><img src="./img/header-logo-min.png" alt="" /></a>
+      <div class="header__nav-item is-catalog">
+        <a href="#" class="header__nav-item-link">
+          <span class="header__nav-item-catalog-icon">
+            <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 1H16" stroke="white" stroke-width="2" />
+              <path d="M0 6H16" stroke="white" stroke-width="2" />
+              <path d="M0 11H16" stroke="white" stroke-width="2" />
+            </svg>
+          </span>
+          Продукция
+        </a>
+        <div class="header-catalog">
+          <div class="header-catalog__col">
+            <div class="header-catalog__col-item">
+              <a href="#" class="header-catalog__col-item-link">фасады</a>
+              <div class="header-catalog__submenu">
+                <div class="header-catalog__submenu-list">
+                  <a href="#">Краски для наружных работ</a>
+                  <a href="#">Эмали</a>
+                  <a href="#">Краски для внутренних работ</a>
+                  <a href="#">Лаки</a>
+                  <a href="#">Грунтовки</a>
+                  <a href="#">Лессировки</a>
+                  <a href="#">Штукатурки и покрытия</a>
+                  <a href="#">Масла</a>
+                  <a href="#">Клеяще-армирующие смеси</a>
+                  <a href="#">Разбавители</a>
+                  <a href="#">Шпатлевки</a>
+                  <a href="#">Пасты для колеровки</a>
+                  <a href="#">Декоративные материалы</a>
                 </div>
-                <div class="sub-menu__item">
-                  <a href="#" class="sub-menu__item-link">Пледы и покрывала</a>
-                </div>
-                <div class="sub-menu__item">
-                  <a href="#" class="sub-menu__item-link">Декоративные подушки</a>
-                </div>
-                <div class="sub-menu__item">
-                  <a href="#" class="sub-menu__item-link">Скатерти салфетки</a>
+                <div>
+                  <a href="#" class="more-link">
+                    <span class="is-title">скачать прайс-лист</span>
+                    <div class="more-link__arrow">
+                      <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 0L6 8" stroke="black" />
+                        <path d="M1 4L6 8L11 4" stroke="black" />
+                        <path d="M1 10H11" stroke="black" />
+                      </svg>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="sub-menu__image-container">
-            <div class="sub-menu__image-container-item is-1 is-visible">
-              <img src="./img/product-1.jpg " alt="" class="fit-cover" />
+            <div class="header-catalog__col-item">
+              <a href="#" class="header-catalog__col-item-link">ИНТЕРЬЕРЫ</a>
+              <div class="header-catalog__submenu">
+                <div class="header-catalog__submenu-list">
+                  <a href="#">Пункт меню</a>
+                  <a href="#">Пункт меню</a>
+                  <a href="#">Пункт меню</a>
+                  <a href="#">Пункт меню</a>
+                  <a href="#">Пункт меню</a>
+                  <a href="#">Пункт меню</a>
+                </div>
+                <div>
+                  <a href="#" class="more-link">
+                    <span class="is-title">скачать прайс-лист</span>
+                    <div class="more-link__arrow">
+                      <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 0L6 8" stroke="black" />
+                        <path d="M1 4L6 8L11 4" stroke="black" />
+                        <path d="M1 10H11" stroke="black" />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
-
-            <div class="sub-menu__image-container-item is-2">
-              <img src="./img/product-2.jpg " alt="" class="fit-cover" />
+            <div class="header-catalog__col-item">
+              <a href="#" class="header-catalog__col-item-link">ДЕКОРАТИВНЫЕ ТЕХНИКИ</a>
             </div>
-
-            <div class="sub-menu__image-container-item is-3">
-              <img src="./img/product-3.jpg " alt="" class="fit-cover" />
+            <div class="header-catalog__col-item">
+              <a href="#" class="header-catalog__col-item-link">СИСТЕМЫ УТЕПЛЕНИЯ</a>
             </div>
-
-            <div class="sub-menu__image-container-item is-4">
-              <img src="./img/product-4.jpg " alt="" class="fit-cover" />
+            <div class="header-catalog__col-item">
+              <a href="#" class="header-catalog__col-item-link">ЗАЩИТА ДЕРЕВА</a>
             </div>
-
-            <div class="sub-menu__image-container-item is-5">
-              <img src="./img/product-5.jpg " alt="" class="fit-cover" />
-            </div>
-
-            <div class="sub-menu__image-container-item is-6">
-              <img src="./img/product-1.jpg " alt="" class="fit-cover" />
-            </div>
-
-            <div class="sub-menu__image-container-item is-7">
-              <img src="./img/product-2.jpg " alt="" class="fit-cover" />
-            </div>
-
-            <div class="sub-menu__image-container-item is-8">
-              <img src="./img/product-3.jpg " alt="" class="fit-cover" />
-            </div>
-
-            <div class="sub-menu__image-container-item is-9">
-              <img src="./img/product-4.jpg " alt="" class="fit-cover" />
-            </div>
-
-            <div class="sub-menu__image-container-item is-10">
-              <img src="./img/product-5.jpg " alt="" class="fit-cover" />
-            </div>
-
-            <div class="sub-menu__image-container-item is-11">
-              <img src="./img/product-1.jpg " alt="" class="fit-cover" />
-            </div>
-
-            <div class="sub-menu__image-container-item is-12">
-              <img src="./img/product-2.jpg " alt="" class="fit-cover" />
-            </div>
-
-            <div class="sub-menu__image-container-item is-13">
-              <img src="./img/product-3.jpg " alt="" class="fit-cover" />
+            <div class="header-catalog__col-item">
+              <a href="#" class="header-catalog__col-item-link">ЗАЩИТА МЕТАЛЛА</a>
             </div>
           </div>
         </div>
       </div>
-
-      <a href="#" class="header__nav-link">Бренды</a>
-      <a href="#" class="header__nav-link">Проекты</a>
-    </nav>
-
-    <div class="header__logo">
-      <img src="./img/logo-white.svg" alt="" class="is-white" />
-      <img src="./img/logo-black.svg" alt="" class="is-black" />
-    </div>
-
-    <nav class="header__nav">
-      <a href="#" class="header__nav-link netbook-hidden">Ателье</a>
-      <a href="#" class="header__nav-link netbook-hidden">О нас</a>
-      <a href="#" class="header__nav-link netbook-hidden">Контакты</a>
-      <a href="tel:" class="header__nav-link">
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          class="phone-icon"
-        >
-          <path
-            d="M16.0798 12.8277L11.9208 13.6336C9.11161 12.2236 7.37631 10.6039 6.36641 8.07916L7.14398 3.9082L5.67415 0H1.88611C0.747402 0 -0.149294 0.941 0.0207727 2.06693C0.445343 4.8778 1.69719 9.97423 5.35651 13.6336C9.19937 17.4764 14.7341 19.144 17.7802 19.8068C18.9566 20.0628 20 19.1451 20 17.9413V14.3215L16.0798 12.8277Z"
-            fill="white"
-          />
-        </svg>
-      </a>
-      <div class="menu-burger netbook-visible">
-        <div class="menu-burger__line"></div>
-        <div class="menu-burger__line"></div>
-        <div class="menu-burger__line"></div>
+      <div class="header__nav-item is-parrent">
+        <a href="#" class="header__nav-item-link">
+          Системы и решения
+          <span class="header__nav-item-arrow">
+            <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L5 5L9 1" stroke="white" stroke-width="2" />
+            </svg>
+          </span>
+        </a>
+        <div class="header__nav-item-drop">
+          <div class="header__nav-item-drop-inner">
+            <a href="#">Пункт меню</a>
+            <a href="#">Пункт меню</a>
+            <a href="#">Пункт меню</a>
+            <a href="#">Пункт меню</a>
+          </div>
+        </div>
       </div>
-    </nav>
+      <div class="header__nav-item">
+        <a href="#" class="header__nav-item-link"> Объекты </a>
+      </div>
+      <div class="header__nav-item">
+        <a href="#" class="header__nav-item-link"> Загрузки и документы </a>
+      </div>
+      <div class="header__nav-item is-parrent">
+        <a href="#" class="header__nav-item-link">
+          Сервисы
+          <span class="header__nav-item-arrow">
+            <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L5 5L9 1" stroke="white" stroke-width="2" />
+            </svg>
+          </span>
+        </a>
+        <div class="header__nav-item-drop">
+          <div class="header__nav-item-drop-inner">
+            <a href="#">Пункт меню</a>
+            <a href="#">Пункт меню</a>
+            <a href="#">Пункт меню</a>
+            <a href="#">Пункт меню</a>
+          </div>
+        </div>
+      </div>
+      <div class="header__nav-item is-parrent">
+        <a href="#" class="header__nav-item-link">
+          О компании LINNIMAX
+          <span class="header__nav-item-arrow">
+            <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L5 5L9 1" stroke="white" stroke-width="2" />
+            </svg>
+          </span>
+        </a>
+        <div class="header__nav-item-drop">
+          <div class="header__nav-item-drop-inner">
+            <a href="#">Пункт меню</a>
+            <a href="#">Пункт меню</a>
+            <a href="#">Пункт меню</a>
+            <a href="#">Пункт меню</a>
+          </div>
+        </div>
+      </div>
+      <div class="header__nav-item">
+        <a href="#" class="header__nav-item-link"> Где купить </a>
+      </div>
+      <div class="header__nav-right netbook-hidden">
+        <div class="header__search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="8.5" stroke="#1c1d1b" />
+            <path d="M18 18L21 21" stroke="#1c1d1b" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="button is-black">Задать вопрос</div>
+      </div>
+
+      <div class="header__top-box netbook-visible">
+        <a href="#" class="header__text-item">Мастерам</a>
+        <a href="#" class="header__text-item">Архитекторам / Дизайнерам</a>
+        <a href="#" class="header__text-item">Застройщикам</a>
+        <a href="#" class="header__text-item">Частному покупателю</a>
+      </div>
+      <div class="header__top-box netbook-visible">
+        <a href="tel:8 (800) 600-58-34" class="header__text-item">8 (800) 600-58-34</a>
+        <span class="header__text-item">Москва, ул. Авангардная, д. 3, пом.2, оф. 304</span>
+      </div>
+
+      <a href="#" class="mobile-more more-link netbook-visible">
+        <span class="is-title">скачать прайс-лист</span>
+        <div class="more-link__arrow">
+          <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 0L6 8" stroke="black" />
+            <path d="M1 4L6 8L11 4" stroke="black" />
+            <path d="M1 10H11" stroke="black" />
+          </svg>
+        </div>
+      </a>
+    </div>
   </div>
 </header>
-
-<div class="mobile-menu">
-  <div class="mobile-menu__nav">
-    <div class="mobile-menu__item">
-      <div class="header__nav-link">
-        Товары
-        <svg width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow-icon">
-          <path d="M1 1.8208L4.375 5.1958" stroke="#fff" stroke-width="2" stroke-linecap="round" />
-          <path d="M7.6861 1.8042L4.31109 5.1792" stroke="#fff" stroke-width="2" stroke-linecap="round" />
-        </svg>
-      </div>
-
-      <div class="mobile-menu__sub">
-        <div class="sub-menu__item">
-          <a href="#" class="sub-menu__item-link">Обои</a>
-        </div>
-        <div class="sub-menu__item">
-          <a href="#" class="sub-menu__item-link">Ткани</a>
-        </div>
-        <div class="sub-menu__item">
-          <a href="#" class="sub-menu__item-link">Краски</a>
-        </div>
-        <div class="sub-menu__item">
-          <a href="#" class="sub-menu__item-link">Ковры</a>
-        </div>
-        <div class="sub-menu__item">
-          <a href="#" class="sub-menu__item-link">Шторы</a>
-        </div>
-        <div class="sub-menu__item">
-          <a href="#" class="sub-menu__item-link">Декоративная штукатурка</a>
-        </div>
-        <div class="sub-menu__item">
-          <a href="#" class="sub-menu__item-link">Карнизы</a>
-        </div>
-        <div class="sub-menu__item">
-          <a href="#" class="sub-menu__item-link">Лепнина</a>
-        </div>
-
-        <div class="mobile-menu__item">
-          <div class="header__nav-link">
-            Домашний текстиль
-            <svg
-              width="9"
-              height="7"
-              viewBox="0 0 9 7"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="arrow-icon"
-            >
-              <path d="M1 1.8208L4.375 5.1958" stroke="#fff" stroke-width="2" stroke-linecap="round" />
-              <path d="M7.6861 1.8042L4.31109 5.1792" stroke="#fff" stroke-width="2" stroke-linecap="round" />
-            </svg>
-          </div>
-
-          <div class="mobile-menu__sub">
-            <div class="sub-menu__item">
-              <a href="#" class="sub-menu__item-link">Постельное Бельё</a>
-            </div>
-            <div class="sub-menu__item">
-              <a href="#" class="sub-menu__item-link">Пледы и покрывала</a>
-            </div>
-            <div class="sub-menu__item">
-              <a href="#" class="sub-menu__item-link">Декоративные подушки</a>
-            </div>
-            <div class="sub-menu__item">
-              <a href="#" class="sub-menu__item-link">Скатерти салфетки</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <a href="#" class="header__nav-link">Бренды</a>
-    <a href="#" class="header__nav-link">Проекты</a>
-    <a href="#" class="header__nav-link">Ателье</a>
-    <a href="#" class="header__nav-link">О нас</a>
-    <a href="#" class="header__nav-link">Контакты</a>
-  </div>
-  <div class="mobile-menu__contacts">
-    <div class="mobile-menu__contacts-title">Телефон:</div>
-    <a href="tel:+375 (29) 602-11-70">+375 (29) 602-11-70</a>
-    <a href="tel:+375 (29) 682-11-70">+375 (29) 682-11-70</a>
-  </div>
-</div>
- -->
 
     <main class="page">
       <div class="page-heading-block is-transparent">
@@ -468,7 +474,7 @@
           <a href="#" class="footer__col-link text-link">Материалы для металла</a>
         </div>
       </div>
-      <div class="footer__box-row">
+      <div class="footer__box-row netbook-hidden">
         <div></div>
         <div>
           <a href="https://gapdev.ru/" class="development-logo" target="_blank">
@@ -512,7 +518,7 @@
           </a>
         </div>
         <div></div>
-        <div>
+        <div class="footer__dev-links">
           <a href="#" class="text-link">Политика конфиденциальности</a>
           <br />
           <a href="#" class="text-link">Карта сайта</a>
@@ -589,6 +595,55 @@
       <div class="footer__box-row">
         <div class="footer__contacts">
           <button type="button" class="button is-white">Задать вопрос</button>
+        </div>
+      </div>
+      <div class="footer__box-row netbook-visible">
+        <div class="footer__dev-links">
+          <a href="#" class="text-link">Политика конфиденциальности</a>
+          <br />
+          <a href="#" class="text-link">Карта сайта</a>
+        </div>
+
+        <div>
+          <a href="https://gapdev.ru/" class="development-logo" target="_blank">
+            <div class="development-logo__title">Разработка сайта</div>
+            <div class="development-logo__logo">
+              <svg width="85" height="15" viewBox="0 0 85 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M41.9264 14.0808H38.0508V0.516083H41.9264V1.6318H39.1581V12.9651H41.9264V14.0808Z"
+                  fill="#FECD20"
+                />
+                <path
+                  d="M46.86 14.0808H42.9844V12.9651H45.7527V1.63177H42.9844V0.516052H46.86V14.0808Z"
+                  fill="#FECD20"
+                />
+                <path
+                  d="M56.461 12.3192H51.2656V2.27777H56.461C59.0845 2.27777 61.219 4.4311 61.219 7.07782V7.51914C61.219 10.1659 59.0845 12.3192 56.461 12.3192ZM52.3716 11.2035H56.461C58.4744 11.2035 60.113 9.55098 60.113 7.51914V7.07782C60.113 5.0466 58.475 3.39348 56.461 3.39348H52.3716V11.2035Z"
+                  fill="white"
+                />
+                <path
+                  d="M71.7022 3.39348V2.27777H62.2773V12.3192H71.7022V11.2035H63.3861V7.85634H71.7022V6.74062H63.3861V3.39348H71.7022Z"
+                  fill="white"
+                />
+                <path
+                  d="M83.7703 2.27777L78.8796 12.1878L73.9888 2.27777H72.7578L77.7134 12.3192H78.8147H78.9444H80.0457L85.0013 2.27777H83.7703Z"
+                  fill="white"
+                />
+                <path
+                  d="M6.63556 7.29851V8.41422H8.73805C8.34053 10.0147 6.90344 11.2035 5.1954 11.2035H4.75794C2.74454 11.2035 1.10593 9.55101 1.10593 7.51917V7.07785C1.10593 5.04663 2.74393 3.39351 4.75794 3.39351H5.1954C6.36276 3.39351 7.43244 3.9365 8.12917 4.88361L9.01699 4.21852C8.12303 3.00363 6.69393 2.2778 5.1954 2.2778H4.75794C2.13444 2.2778 0 4.43113 0 7.07785V7.51917C0 10.1659 2.13444 12.3192 4.75794 12.3192H5.1954C6.66136 12.3192 7.97373 11.6467 8.84741 10.5917V12.3192H9.95334V7.29851H6.63556Z"
+                  fill="white"
+                />
+                <path
+                  d="M31.6755 2.27777H24.3125V12.3192H25.4086V7.85634H31.6755C33.0554 7.85634 34.1778 6.71397 34.1778 5.30941V4.8247C34.1778 3.42014 33.0554 2.27777 31.6755 2.27777ZM33.0816 5.30941C33.0816 6.09847 32.4507 6.74062 31.6755 6.74062H25.4086V3.39348H31.6755C32.4507 3.39348 33.0816 4.03564 33.0816 4.8247V5.30941Z"
+                  fill="white"
+                />
+                <path
+                  d="M21.7551 12.3192H22.9884L18.0234 2.27777H16.2385L11.2734 12.3192H12.5067L13.8859 9.52991H20.376L21.7551 12.3192ZM14.4376 8.41419L17.1309 2.96703L19.8243 8.41419H14.4376Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+          </a>
         </div>
       </div>
     </div>

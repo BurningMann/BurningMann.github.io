@@ -75,3 +75,30 @@ formButtons.forEach((el) => {
     subjectInput.value = subject;
   });
 });
+
+/* file input */
+(() => {
+  const inputs = document.querySelectorAll('.file-input');
+  inputs.forEach((el) => {
+    const input = el.querySelector('input');
+    const name = el.querySelector('.file-input__name');
+    el.addEventListener('click', (e) => {
+      const placeholder = input.placeholder;
+      if (el.classList.contains('is-active')) {
+        e.preventDefault();
+        input.value = '';
+        el.title = '';
+        name.innerHTML = placeholder;
+        el.classList.remove('is-active');
+      }
+    });
+    input.addEventListener('change', () => {
+      const file = input.files[0];
+      if (file) {
+        name.innerHTML = file.name;
+        el.title = file.name;
+        el.classList.add('is-active');
+      }
+    });
+  });
+})();
