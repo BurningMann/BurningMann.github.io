@@ -1,6 +1,8 @@
 /* FORM ERRORS */
 const validateForms = document.querySelectorAll('.js-validate-form');
 validateForms.forEach((el) => {
+  const passwordRegex = /^(?=.*?[A-Za-z])(?=.*?[0-9]).{6,}$/;
+
   el.addEventListener('submit', async (event) => {
     event.preventDefault();
     let errors = 0;
@@ -22,6 +24,23 @@ validateForms.forEach((el) => {
         ) {
           errors++;
           field.classList.add('is-error');
+        } else if (
+          field.classList.contains('is-required') &&
+          field.classList.contains('is-password') &&
+          !passwordRegex.test(input.value)
+        ) {
+          errors++;
+          field.classList.add('is-error');
+        } else if (field.classList.contains('is-required') && field.classList.contains('is-password-repeat')) {
+          const password = el.querySelector('.is-password .input');
+          if (!password) {
+            return;
+          }
+
+          if (input.value !== password.value) {
+            errors++;
+            field.classList.add('is-error');
+          }
         } else if (field.classList.contains('is-required') && !input.value) {
           errors++;
           field.classList.add('is-error');
@@ -38,7 +57,7 @@ validateForms.forEach((el) => {
       body: new FormData(el),
     });
 
-    window.activateSuccessPopup('Форма отправлена', 2000);
+    window.activateSuccessPopup('Форма отправлена', '', 2000);
     clearForm(el);
   });
 });
