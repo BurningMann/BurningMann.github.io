@@ -297,21 +297,50 @@
             </div>
             <div class="header-main__nav-button-name">Избранное</div>
           </a>
-          <a href="#" class="header-main__nav-button">
-            <div class="header-main__nav-button-icon">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M7.99997 0C5.93828 0 4.26663 1.67005 4.26663 3.73125C4.26663 5.79244 5.93828 7.46249 7.99997 7.46249C10.0617 7.46249 11.7333 5.79244 11.7333 3.73125C11.7333 1.67005 10.0617 0 7.99997 0Z"
-                  fill="#114335"
-                />
-                <path
-                  d="M5.86663 9.59375C3.80489 9.59375 2.1333 11.2646 2.1333 13.3265V15.9903H13.8666V13.3265C13.8666 11.2646 12.195 9.59375 10.1333 9.59375H5.86663Z"
-                  fill="#114335"
-                />
-              </svg>
+          <div class="header-main__nav-button-profile">
+            <a href="#" class="header-main__nav-button">
+              <div class="header-main__nav-button-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.99997 0C5.93828 0 4.26663 1.67005 4.26663 3.73125C4.26663 5.79244 5.93828 7.46249 7.99997 7.46249C10.0617 7.46249 11.7333 5.79244 11.7333 3.73125C11.7333 1.67005 10.0617 0 7.99997 0Z"
+                    fill="#114335"
+                  />
+                  <path
+                    d="M5.86663 9.59375C3.80489 9.59375 2.1333 11.2646 2.1333 13.3265V15.9903H13.8666V13.3265C13.8666 11.2646 12.195 9.59375 10.1333 9.59375H5.86663Z"
+                    fill="#114335"
+                  />
+                </svg>
+              </div>
+              <div class="header-main__nav-button-name">Профиль</div>
+            </a>
+
+            <div class="profile-dropdown">
+              <div class="profile-dropdown__box">
+                <div class="profile-dropdown__name">Павел Батурля</div>
+                <div class="profile-dropdown__organization">
+                  <span>Ваша организация:</span> <br />
+                  ООО “БПЛэлектро”
+                </div>
+              </div>
+
+              <div class="profile-dropdown__box">
+                <div class="profile-dropdown__contacts">
+                  <div class="profile-dropdown__contact">
+                    <div class="profile-dropdown__contact-label">Телефон:</div>
+                    <a href="tel:+375 (29) 880-84-79" class="orange-link">+375 (29) 880-84-79</a>
+                  </div>
+                  <div class="profile-dropdown__contact">
+                    <div class="profile-dropdown__contact-label">Email:</div>
+                    <a href="tel:+375 (29) 880-84-79" class="orange-link">+375 (29) 880-84-79</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="profile-dropdown__box">
+                <a href="#" class="profile-dropdown__exit text-link">Выход</a>
+              </div>
             </div>
-            <div class="header-main__nav-button-name">Профиль</div>
-          </a>
+          </div>
         </div>
         <div class="header-cart">
           <a href="#" class="header-cart__btn">
@@ -634,7 +663,7 @@
           </defs>
         </svg>
       </div>
-      <div class="catalog-card__top-btn is-favorite is-active">
+      <div class="catalog-card__top-btn is-favorite">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
@@ -851,7 +880,7 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
-    <div class="catalog-card__availability is-out">
+    <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
@@ -862,6 +891,31 @@
       </svg>
 
       <div class="catalog-card__availability-text">Нет в наличии</div>
+    </div> -->
+  </div>
+
+  <div class="catalog-card__availability-content-wrapper">
+    <div class="catalog-card__availability-content">
+      <div class="catalog-card__availability-content-title">
+        Доступное количество:
+        <div class="mobile-visible">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27 9L9 27M27 27L9 9.00002" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида</div>
+        <div>102</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида Огородники</div>
+        <div>10</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Склад поставщика (4-10 дней)</div>
+        <div>600</div>
+      </div>
     </div>
   </div>
 </div>
@@ -885,7 +939,7 @@
           </defs>
         </svg>
       </div>
-      <div class="catalog-card__top-btn is-favorite is-active">
+      <div class="catalog-card__top-btn is-favorite">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
@@ -1102,7 +1156,7 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
-    <div class="catalog-card__availability is-out">
+    <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
@@ -1113,6 +1167,31 @@
       </svg>
 
       <div class="catalog-card__availability-text">Нет в наличии</div>
+    </div> -->
+  </div>
+
+  <div class="catalog-card__availability-content-wrapper">
+    <div class="catalog-card__availability-content">
+      <div class="catalog-card__availability-content-title">
+        Доступное количество:
+        <div class="mobile-visible">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27 9L9 27M27 27L9 9.00002" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида</div>
+        <div>102</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида Огородники</div>
+        <div>10</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Склад поставщика (4-10 дней)</div>
+        <div>600</div>
+      </div>
     </div>
   </div>
 </div>
@@ -1136,7 +1215,7 @@
           </defs>
         </svg>
       </div>
-      <div class="catalog-card__top-btn is-favorite is-active">
+      <div class="catalog-card__top-btn is-favorite">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
@@ -1353,7 +1432,7 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
-    <div class="catalog-card__availability is-out">
+    <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
@@ -1364,6 +1443,31 @@
       </svg>
 
       <div class="catalog-card__availability-text">Нет в наличии</div>
+    </div> -->
+  </div>
+
+  <div class="catalog-card__availability-content-wrapper">
+    <div class="catalog-card__availability-content">
+      <div class="catalog-card__availability-content-title">
+        Доступное количество:
+        <div class="mobile-visible">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27 9L9 27M27 27L9 9.00002" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида</div>
+        <div>102</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида Огородники</div>
+        <div>10</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Склад поставщика (4-10 дней)</div>
+        <div>600</div>
+      </div>
     </div>
   </div>
 </div>
@@ -1387,7 +1491,7 @@
           </defs>
         </svg>
       </div>
-      <div class="catalog-card__top-btn is-favorite is-active">
+      <div class="catalog-card__top-btn is-favorite">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
@@ -1604,7 +1708,7 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
-    <div class="catalog-card__availability is-out">
+    <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
@@ -1615,6 +1719,31 @@
       </svg>
 
       <div class="catalog-card__availability-text">Нет в наличии</div>
+    </div> -->
+  </div>
+
+  <div class="catalog-card__availability-content-wrapper">
+    <div class="catalog-card__availability-content">
+      <div class="catalog-card__availability-content-title">
+        Доступное количество:
+        <div class="mobile-visible">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27 9L9 27M27 27L9 9.00002" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида</div>
+        <div>102</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида Огородники</div>
+        <div>10</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Склад поставщика (4-10 дней)</div>
+        <div>600</div>
+      </div>
     </div>
   </div>
 </div>
@@ -1638,7 +1767,7 @@
           </defs>
         </svg>
       </div>
-      <div class="catalog-card__top-btn is-favorite is-active">
+      <div class="catalog-card__top-btn is-favorite">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
@@ -1855,7 +1984,7 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
-    <div class="catalog-card__availability is-out">
+    <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
@@ -1866,6 +1995,31 @@
       </svg>
 
       <div class="catalog-card__availability-text">Нет в наличии</div>
+    </div> -->
+  </div>
+
+  <div class="catalog-card__availability-content-wrapper">
+    <div class="catalog-card__availability-content">
+      <div class="catalog-card__availability-content-title">
+        Доступное количество:
+        <div class="mobile-visible">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27 9L9 27M27 27L9 9.00002" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида</div>
+        <div>102</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида Огородники</div>
+        <div>10</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Склад поставщика (4-10 дней)</div>
+        <div>600</div>
+      </div>
     </div>
   </div>
 </div>
@@ -1889,7 +2043,7 @@
           </defs>
         </svg>
       </div>
-      <div class="catalog-card__top-btn is-favorite is-active">
+      <div class="catalog-card__top-btn is-favorite">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
@@ -2106,7 +2260,7 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
-    <div class="catalog-card__availability is-out">
+    <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
@@ -2117,6 +2271,31 @@
       </svg>
 
       <div class="catalog-card__availability-text">Нет в наличии</div>
+    </div> -->
+  </div>
+
+  <div class="catalog-card__availability-content-wrapper">
+    <div class="catalog-card__availability-content">
+      <div class="catalog-card__availability-content-title">
+        Доступное количество:
+        <div class="mobile-visible">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27 9L9 27M27 27L9 9.00002" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида</div>
+        <div>102</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида Огородники</div>
+        <div>10</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Склад поставщика (4-10 дней)</div>
+        <div>600</div>
+      </div>
     </div>
   </div>
 </div>
@@ -2140,7 +2319,7 @@
           </defs>
         </svg>
       </div>
-      <div class="catalog-card__top-btn is-favorite is-active">
+      <div class="catalog-card__top-btn is-favorite">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
@@ -2357,7 +2536,7 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
-    <div class="catalog-card__availability is-out">
+    <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
@@ -2368,6 +2547,31 @@
       </svg>
 
       <div class="catalog-card__availability-text">Нет в наличии</div>
+    </div> -->
+  </div>
+
+  <div class="catalog-card__availability-content-wrapper">
+    <div class="catalog-card__availability-content">
+      <div class="catalog-card__availability-content-title">
+        Доступное количество:
+        <div class="mobile-visible">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27 9L9 27M27 27L9 9.00002" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида</div>
+        <div>102</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида Огородники</div>
+        <div>10</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Склад поставщика (4-10 дней)</div>
+        <div>600</div>
+      </div>
     </div>
   </div>
 </div>
@@ -2392,7 +2596,7 @@
           </defs>
         </svg>
       </div>
-      <div class="catalog-card__top-btn is-favorite is-active">
+      <div class="catalog-card__top-btn is-favorite">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
@@ -2609,7 +2813,7 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
-    <div class="catalog-card__availability is-out">
+    <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
@@ -2620,6 +2824,31 @@
       </svg>
 
       <div class="catalog-card__availability-text">Нет в наличии</div>
+    </div> -->
+  </div>
+
+  <div class="catalog-card__availability-content-wrapper">
+    <div class="catalog-card__availability-content">
+      <div class="catalog-card__availability-content-title">
+        Доступное количество:
+        <div class="mobile-visible">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27 9L9 27M27 27L9 9.00002" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида</div>
+        <div>102</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида Огородники</div>
+        <div>10</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Склад поставщика (4-10 дней)</div>
+        <div>600</div>
+      </div>
     </div>
   </div>
 </div>
@@ -2648,7 +2877,7 @@
           </defs>
         </svg>
       </div>
-      <div class="catalog-card__top-btn is-favorite is-active">
+      <div class="catalog-card__top-btn is-favorite">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
@@ -2865,7 +3094,7 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
-    <div class="catalog-card__availability is-out">
+    <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
@@ -2876,6 +3105,31 @@
       </svg>
 
       <div class="catalog-card__availability-text">Нет в наличии</div>
+    </div> -->
+  </div>
+
+  <div class="catalog-card__availability-content-wrapper">
+    <div class="catalog-card__availability-content">
+      <div class="catalog-card__availability-content-title">
+        Доступное количество:
+        <div class="mobile-visible">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27 9L9 27M27 27L9 9.00002" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида</div>
+        <div>102</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида Огородники</div>
+        <div>10</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Склад поставщика (4-10 дней)</div>
+        <div>600</div>
+      </div>
     </div>
   </div>
 </div>
@@ -2899,7 +3153,7 @@
           </defs>
         </svg>
       </div>
-      <div class="catalog-card__top-btn is-favorite is-active">
+      <div class="catalog-card__top-btn is-favorite">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
@@ -3116,7 +3370,7 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
-    <div class="catalog-card__availability is-out">
+    <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
@@ -3127,6 +3381,31 @@
       </svg>
 
       <div class="catalog-card__availability-text">Нет в наличии</div>
+    </div> -->
+  </div>
+
+  <div class="catalog-card__availability-content-wrapper">
+    <div class="catalog-card__availability-content">
+      <div class="catalog-card__availability-content-title">
+        Доступное количество:
+        <div class="mobile-visible">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27 9L9 27M27 27L9 9.00002" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида</div>
+        <div>102</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида Огородники</div>
+        <div>10</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Склад поставщика (4-10 дней)</div>
+        <div>600</div>
+      </div>
     </div>
   </div>
 </div>
@@ -3150,7 +3429,7 @@
           </defs>
         </svg>
       </div>
-      <div class="catalog-card__top-btn is-favorite is-active">
+      <div class="catalog-card__top-btn is-favorite">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
@@ -3367,7 +3646,7 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
-    <div class="catalog-card__availability is-out">
+    <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
@@ -3378,6 +3657,31 @@
       </svg>
 
       <div class="catalog-card__availability-text">Нет в наличии</div>
+    </div> -->
+  </div>
+
+  <div class="catalog-card__availability-content-wrapper">
+    <div class="catalog-card__availability-content">
+      <div class="catalog-card__availability-content-title">
+        Доступное количество:
+        <div class="mobile-visible">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27 9L9 27M27 27L9 9.00002" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида</div>
+        <div>102</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида Огородники</div>
+        <div>10</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Склад поставщика (4-10 дней)</div>
+        <div>600</div>
+      </div>
     </div>
   </div>
 </div>
@@ -3401,7 +3705,7 @@
           </defs>
         </svg>
       </div>
-      <div class="catalog-card__top-btn is-favorite is-active">
+      <div class="catalog-card__top-btn is-favorite">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
@@ -3618,7 +3922,7 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
-    <div class="catalog-card__availability is-out">
+    <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
@@ -3629,6 +3933,31 @@
       </svg>
 
       <div class="catalog-card__availability-text">Нет в наличии</div>
+    </div> -->
+  </div>
+
+  <div class="catalog-card__availability-content-wrapper">
+    <div class="catalog-card__availability-content">
+      <div class="catalog-card__availability-content-title">
+        Доступное количество:
+        <div class="mobile-visible">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27 9L9 27M27 27L9 9.00002" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида</div>
+        <div>102</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида Огородники</div>
+        <div>10</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Склад поставщика (4-10 дней)</div>
+        <div>600</div>
+      </div>
     </div>
   </div>
 </div>
@@ -3652,7 +3981,7 @@
           </defs>
         </svg>
       </div>
-      <div class="catalog-card__top-btn is-favorite is-active">
+      <div class="catalog-card__top-btn is-favorite">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
@@ -3869,7 +4198,7 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
-    <div class="catalog-card__availability is-out">
+    <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
@@ -3880,6 +4209,31 @@
       </svg>
 
       <div class="catalog-card__availability-text">Нет в наличии</div>
+    </div> -->
+  </div>
+
+  <div class="catalog-card__availability-content-wrapper">
+    <div class="catalog-card__availability-content">
+      <div class="catalog-card__availability-content-title">
+        Доступное количество:
+        <div class="mobile-visible">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27 9L9 27M27 27L9 9.00002" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида</div>
+        <div>102</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида Огородники</div>
+        <div>10</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Склад поставщика (4-10 дней)</div>
+        <div>600</div>
+      </div>
     </div>
   </div>
 </div>
@@ -3903,7 +4257,7 @@
           </defs>
         </svg>
       </div>
-      <div class="catalog-card__top-btn is-favorite is-active">
+      <div class="catalog-card__top-btn is-favorite">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
@@ -4120,7 +4474,7 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
-    <div class="catalog-card__availability is-out">
+    <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
@@ -4131,6 +4485,31 @@
       </svg>
 
       <div class="catalog-card__availability-text">Нет в наличии</div>
+    </div> -->
+  </div>
+
+  <div class="catalog-card__availability-content-wrapper">
+    <div class="catalog-card__availability-content">
+      <div class="catalog-card__availability-content-title">
+        Доступное количество:
+        <div class="mobile-visible">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27 9L9 27M27 27L9 9.00002" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида</div>
+        <div>102</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида Огородники</div>
+        <div>10</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Склад поставщика (4-10 дней)</div>
+        <div>600</div>
+      </div>
     </div>
   </div>
 </div>
@@ -4154,7 +4533,7 @@
           </defs>
         </svg>
       </div>
-      <div class="catalog-card__top-btn is-favorite is-active">
+      <div class="catalog-card__top-btn is-favorite">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
@@ -4371,7 +4750,7 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
-    <div class="catalog-card__availability is-out">
+    <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
@@ -4382,6 +4761,31 @@
       </svg>
 
       <div class="catalog-card__availability-text">Нет в наличии</div>
+    </div> -->
+  </div>
+
+  <div class="catalog-card__availability-content-wrapper">
+    <div class="catalog-card__availability-content">
+      <div class="catalog-card__availability-content-title">
+        Доступное количество:
+        <div class="mobile-visible">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27 9L9 27M27 27L9 9.00002" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида</div>
+        <div>102</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида Огородники</div>
+        <div>10</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Склад поставщика (4-10 дней)</div>
+        <div>600</div>
+      </div>
     </div>
   </div>
 </div>
@@ -4405,7 +4809,7 @@
           </defs>
         </svg>
       </div>
-      <div class="catalog-card__top-btn is-favorite is-active">
+      <div class="catalog-card__top-btn is-favorite">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
@@ -4622,7 +5026,7 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
-    <div class="catalog-card__availability is-out">
+    <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
@@ -4633,6 +5037,31 @@
       </svg>
 
       <div class="catalog-card__availability-text">Нет в наличии</div>
+    </div> -->
+  </div>
+
+  <div class="catalog-card__availability-content-wrapper">
+    <div class="catalog-card__availability-content">
+      <div class="catalog-card__availability-content-title">
+        Доступное количество:
+        <div class="mobile-visible">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27 9L9 27M27 27L9 9.00002" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида</div>
+        <div>102</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Лида Огородники</div>
+        <div>10</div>
+      </div>
+      <div class="catalog-card__availability-content-row">
+        <div>Склад поставщика (4-10 дней)</div>
+        <div>600</div>
+      </div>
     </div>
   </div>
 </div>
