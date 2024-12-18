@@ -753,27 +753,14 @@
                 </div>
               </div>
               <div class="product-page-info__price">
-                <div class="product-page-info__price-label">Розничная цена</div>
+                <div class="product-page-info__price-label">
+                  Оптовая цена без НДС &#8203; &#8203;
+                  <span class="header-search-item__tag-counter is-green">713</span> &#8203;
+                  <span class="header-search-item__tag-counter is-orange">1</span>
+                </div>
                 <div class="product-page-info__price-main">
-                  <span class="h6 is-green-text">24.47 руб</span>
+                  <span class="h6 is-green-text">от 24.47 руб</span>
                   <span class="product-page-info__price-main-unit">шт.</span>
-                </div>
-                <div class="product-page-info__price-bonus">
-                  <span class="is-orange-text">+24.47 руб</span>
-                  <span>на бонусную карту</span>
-                </div>
-                <div class="product-page-info__price-info">
-                  <div class="product-page-info__price-info-icon">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7.99999 5.33398V8.66732M7.99999 10.6673V10.674M14.6667 8.00065C14.6667 11.6825 11.6819 14.6673 7.99999 14.6673C4.3181 14.6673 1.33333 11.6825 1.33333 8.00065C1.33333 4.31875 4.3181 1.33398 7.99999 1.33398C11.6819 1.33398 14.6667 4.31875 14.6667 8.00065Z"
-                        stroke="#9F9F9F"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                  </div>
-                  <div class="product-page-info__price-info-text">Цена действительна только для интернет-магазина</div>
                 </div>
               </div>
               <div class="product-page-info__available">
@@ -803,7 +790,8 @@
                   </div>
                 </div>
                 <div class="product-page-info__footer">
-                  <div class="product-page-info__counter">
+                  <div></div>
+                  <!--                   <div class="product-page-info__counter">
                     <div class="catalog-card__counter">
                       <div class="catalog-card__counter-button is-minus">
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -852,7 +840,211 @@
                         />
                       </svg>
                     </div>
-                  </button>
+                  </button> -->
+                </div>
+              </div>
+
+              <div class="product-page-info__order">
+                <div class="product-page-info-order-item">
+                  <div class="product-page-info-order-item__left">
+                    <div class="product-page-info-order-item__price">108.08 руб <span>за шт.</span></div>
+                    <div class="product-page-info-order-item__count">Лида 3 шт</div>
+                  </div>
+                  <div class="product-page-info-order-item__right">
+                    <div>
+                      <div class="catalog-card__counter">
+                        <div class="catalog-card__counter-button is-minus">
+                          <svg
+                            width="12"
+                            height="12"
+                            viewBox="0 0 12 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M8.79995 6.40001H3.19995V5.60001H8.79995V6.40001Z"
+                              fill="#2E2E2E"
+                            ></path>
+                          </svg>
+                        </div>
+                        <div class="catalog-card__counter-input">
+                          <input type="number" value="1" />
+                        </div>
+                        <div class="catalog-card__counter-button is-plus">
+                          <svg
+                            width="12"
+                            height="12"
+                            viewBox="0 0 12 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M5.59995 5.6V3.2H6.39995V5.6H8.79995V6.4H6.39995V8.8H5.59995V6.4H3.19995V5.6H5.59995Z"
+                              fill="#2E2E2E"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-page-info-order-item__cart">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1.04317 0.380859L0.0214844 0.687364L3.33551 11.7341H15.999V4.80078C15.999 3.32802 14.8051 2.13411 13.3323 2.13411H1.56914L1.04317 0.380859Z"
+                          fill="#EA5C21"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M5.86576 12.8008C4.9821 12.8008 4.26576 13.5171 4.26576 14.4008C4.26576 15.2844 4.9821 16.0008 5.86576 16.0008C6.74941 16.0008 7.46576 15.2844 7.46576 14.4008C7.46576 13.5171 6.74941 12.8008 5.86576 12.8008ZM5.33242 14.4008C5.33242 14.1062 5.5712 13.8674 5.86576 13.8674C6.16031 13.8674 6.39909 14.1062 6.39909 14.4008C6.39909 14.6953 6.16031 14.9341 5.86576 14.9341C5.5712 14.9341 5.33242 14.6953 5.33242 14.4008Z"
+                          fill="#EA5C21"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M13.3324 12.8008C12.4488 12.8008 11.7324 13.5171 11.7324 14.4008C11.7324 15.2844 12.4488 16.0008 13.3324 16.0008C14.2161 16.0008 14.9324 15.2844 14.9324 14.4008C14.9324 13.5171 14.2161 12.8008 13.3324 12.8008ZM12.7991 14.4008C12.7991 14.1062 13.0379 13.8674 13.3324 13.8674C13.627 13.8674 13.8658 14.1062 13.8658 14.4008C13.8658 14.6953 13.627 14.9341 13.3324 14.9341C13.0379 14.9341 12.7991 14.6953 12.7991 14.4008Z"
+                          fill="#EA5C21"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-page-info-order-item">
+                  <div class="product-page-info-order-item__left">
+                    <div class="product-page-info-order-item__price">108.08 руб <span>за шт.</span></div>
+                    <div class="product-page-info-order-item__count">Огородники 14 шт</div>
+                  </div>
+                  <div class="product-page-info-order-item__right">
+                    <div>
+                      <div class="catalog-card__counter">
+                        <div class="catalog-card__counter-button is-minus">
+                          <svg
+                            width="12"
+                            height="12"
+                            viewBox="0 0 12 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M8.79995 6.40001H3.19995V5.60001H8.79995V6.40001Z"
+                              fill="#2E2E2E"
+                            ></path>
+                          </svg>
+                        </div>
+                        <div class="catalog-card__counter-input">
+                          <input type="number" value="1" />
+                        </div>
+                        <div class="catalog-card__counter-button is-plus">
+                          <svg
+                            width="12"
+                            height="12"
+                            viewBox="0 0 12 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M5.59995 5.6V3.2H6.39995V5.6H8.79995V6.4H6.39995V8.8H5.59995V6.4H3.19995V5.6H5.59995Z"
+                              fill="#2E2E2E"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-page-info-order-item__cart">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1.04317 0.380859L0.0214844 0.687364L3.33551 11.7341H15.999V4.80078C15.999 3.32802 14.8051 2.13411 13.3323 2.13411H1.56914L1.04317 0.380859Z"
+                          fill="#EA5C21"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M5.86576 12.8008C4.9821 12.8008 4.26576 13.5171 4.26576 14.4008C4.26576 15.2844 4.9821 16.0008 5.86576 16.0008C6.74941 16.0008 7.46576 15.2844 7.46576 14.4008C7.46576 13.5171 6.74941 12.8008 5.86576 12.8008ZM5.33242 14.4008C5.33242 14.1062 5.5712 13.8674 5.86576 13.8674C6.16031 13.8674 6.39909 14.1062 6.39909 14.4008C6.39909 14.6953 6.16031 14.9341 5.86576 14.9341C5.5712 14.9341 5.33242 14.6953 5.33242 14.4008Z"
+                          fill="#EA5C21"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M13.3324 12.8008C12.4488 12.8008 11.7324 13.5171 11.7324 14.4008C11.7324 15.2844 12.4488 16.0008 13.3324 16.0008C14.2161 16.0008 14.9324 15.2844 14.9324 14.4008C14.9324 13.5171 14.2161 12.8008 13.3324 12.8008ZM12.7991 14.4008C12.7991 14.1062 13.0379 13.8674 13.3324 13.8674C13.627 13.8674 13.8658 14.1062 13.8658 14.4008C13.8658 14.6953 13.627 14.9341 13.3324 14.9341C13.0379 14.9341 12.7991 14.6953 12.7991 14.4008Z"
+                          fill="#EA5C21"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-page-info-order-item">
+                  <div class="product-page-info-order-item__left">
+                    <div class="product-page-info-order-item__price">108.08 руб <span>за шт.</span></div>
+                    <div class="product-page-info-order-item__count">Под заказ 1000 шт</div>
+                  </div>
+                  <div class="product-page-info-order-item__right">
+                    <div>
+                      <div class="catalog-card__counter">
+                        <div class="catalog-card__counter-button is-minus">
+                          <svg
+                            width="12"
+                            height="12"
+                            viewBox="0 0 12 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M8.79995 6.40001H3.19995V5.60001H8.79995V6.40001Z"
+                              fill="#2E2E2E"
+                            ></path>
+                          </svg>
+                        </div>
+                        <div class="catalog-card__counter-input">
+                          <input type="number" value="1" />
+                        </div>
+                        <div class="catalog-card__counter-button is-plus">
+                          <svg
+                            width="12"
+                            height="12"
+                            viewBox="0 0 12 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M5.59995 5.6V3.2H6.39995V5.6H8.79995V6.4H6.39995V8.8H5.59995V6.4H3.19995V5.6H5.59995Z"
+                              fill="#2E2E2E"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-page-info-order-item__cart">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1.04317 0.380859L0.0214844 0.687364L3.33551 11.7341H15.999V4.80078C15.999 3.32802 14.8051 2.13411 13.3323 2.13411H1.56914L1.04317 0.380859Z"
+                          fill="#EA5C21"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M5.86576 12.8008C4.9821 12.8008 4.26576 13.5171 4.26576 14.4008C4.26576 15.2844 4.9821 16.0008 5.86576 16.0008C6.74941 16.0008 7.46576 15.2844 7.46576 14.4008C7.46576 13.5171 6.74941 12.8008 5.86576 12.8008ZM5.33242 14.4008C5.33242 14.1062 5.5712 13.8674 5.86576 13.8674C6.16031 13.8674 6.39909 14.1062 6.39909 14.4008C6.39909 14.6953 6.16031 14.9341 5.86576 14.9341C5.5712 14.9341 5.33242 14.6953 5.33242 14.4008Z"
+                          fill="#EA5C21"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M13.3324 12.8008C12.4488 12.8008 11.7324 13.5171 11.7324 14.4008C11.7324 15.2844 12.4488 16.0008 13.3324 16.0008C14.2161 16.0008 14.9324 15.2844 14.9324 14.4008C14.9324 13.5171 14.2161 12.8008 13.3324 12.8008ZM12.7991 14.4008C12.7991 14.1062 13.0379 13.8674 13.3324 13.8674C13.627 13.8674 13.8658 14.1062 13.8658 14.4008C13.8658 14.6953 13.627 14.9341 13.3324 14.9341C13.0379 14.9341 12.7991 14.6953 12.7991 14.4008Z"
+                          fill="#EA5C21"
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -906,16 +1098,20 @@
                       <tbody>
                         <tr class="assortment-item" data-product-id="1">
   <td>
-    <div class="assortment-item__left">
+    <a href="#" class="assortment-item__left">
       <div class="assortment-item__img-wr"><img src="./img/product-page-1.png" alt="" /></div>
-      <div class="assortment-item__name">ARMAT Автоматический выключатель M06N 1P C 10А IEK</div>
-    </div>
+      <div class="assortment-item__name">
+        ARMAT Автоматический выключатель M06N 1P C 10А IEK &#8203; &#8203;
+        <span class="header-search-item__tag-counter is-green">713</span> &#8203;
+        <span class="header-search-item__tag-counter is-orange">1</span>
+      </div>
+    </a>
   </td>
   <td>
-    <span class="assortment-item__articul">AR-M06N-1-C</span>
+    <a href="#" class="assortment-item__articul">AR-M06N-1-C</a>
   </td>
   <td>
-    <span class="assortment-item__price">117.08 руб.</span>
+    <a href="#" class="assortment-item__price">117.08 руб.</a>
   </td>
   <td>
     <div class="assortment-item__availability">
@@ -944,6 +1140,361 @@
   </td>
 </tr>
 
+<tr class="assortment-item-list parrent-product-1">
+  <td></td>
+  <td></td>
+  <td>
+    <span class="assortment-item__price">102.03 руб <span>шт.</span></span>
+  </td>
+  <td>
+    <div class="assortment-item__availability-row">
+      <div class="assortment-item__availability-row-label">Лида</div>
+      <div>1 шт</div>
+    </div>
+  </td>
+  <td>
+    <div class="assortment-item-list__right">
+      <div class="catalog-card__counter">
+        <div class="catalog-card__counter-button is-minus">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8.79995 6.40001H3.19995V5.60001H8.79995V6.40001Z"
+              fill="#2E2E2E"
+            ></path>
+          </svg>
+        </div>
+        <div class="catalog-card__counter-input">
+          <input type="number" value="1" />
+        </div>
+        <div class="catalog-card__counter-button is-plus">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M5.59995 5.6V3.2H6.39995V5.6H8.79995V6.4H6.39995V8.8H5.59995V6.4H3.19995V5.6H5.59995Z"
+              fill="#2E2E2E"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <button type="button" class="assortment-item__cart">
+        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M1.63252 0.380859L0.61084 0.687364L3.92486 11.7341H16.5883V4.80078C16.5883 3.32802 15.3944 2.13411 13.9217 2.13411H2.1585L1.63252 0.380859Z"
+            fill="#EA5C21"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M6.45511 12.8008C5.57146 12.8008 4.85511 13.5171 4.85511 14.4008C4.85511 15.2844 5.57146 16.0008 6.45511 16.0008C7.33877 16.0008 8.05511 15.2844 8.05511 14.4008C8.05511 13.5171 7.33877 12.8008 6.45511 12.8008ZM5.92178 14.4008C5.92178 14.1062 6.16056 13.8674 6.45511 13.8674C6.74966 13.8674 6.98844 14.1062 6.98844 14.4008C6.98844 14.6953 6.74966 14.9341 6.45511 14.9341C6.16056 14.9341 5.92178 14.6953 5.92178 14.4008Z"
+            fill="#EA5C21"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M13.9218 12.8008C13.0381 12.8008 12.3218 13.5171 12.3218 14.4008C12.3218 15.2844 13.0381 16.0008 13.9218 16.0008C14.8054 16.0008 15.5218 15.2844 15.5218 14.4008C15.5218 13.5171 14.8054 12.8008 13.9218 12.8008ZM13.3884 14.4008C13.3884 14.1062 13.6272 13.8674 13.9218 13.8674C14.2163 13.8674 14.4551 14.1062 14.4551 14.4008C14.4551 14.6953 14.2163 14.9341 13.9218 14.9341C13.6272 14.9341 13.3884 14.6953 13.3884 14.4008Z"
+            fill="#EA5C21"
+          />
+        </svg>
+      </button>
+    </div>
+  </td>
+</tr>
+<tr class="assortment-item-list parrent-product-1">
+  <td></td>
+  <td></td>
+  <td>
+    <span class="assortment-item__price">102.03 руб <span>шт.</span></span>
+  </td>
+  <td>
+    <div class="assortment-item__availability-row">
+      <div class="assortment-item__availability-row-label">Лида</div>
+      <div>1 шт</div>
+    </div>
+  </td>
+  <td>
+    <div class="assortment-item-list__right">
+      <div class="catalog-card__counter">
+        <div class="catalog-card__counter-button is-minus">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8.79995 6.40001H3.19995V5.60001H8.79995V6.40001Z"
+              fill="#2E2E2E"
+            ></path>
+          </svg>
+        </div>
+        <div class="catalog-card__counter-input">
+          <input type="number" value="1" />
+        </div>
+        <div class="catalog-card__counter-button is-plus">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M5.59995 5.6V3.2H6.39995V5.6H8.79995V6.4H6.39995V8.8H5.59995V6.4H3.19995V5.6H5.59995Z"
+              fill="#2E2E2E"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <button type="button" class="assortment-item__cart">
+        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M1.63252 0.380859L0.61084 0.687364L3.92486 11.7341H16.5883V4.80078C16.5883 3.32802 15.3944 2.13411 13.9217 2.13411H2.1585L1.63252 0.380859Z"
+            fill="#EA5C21"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M6.45511 12.8008C5.57146 12.8008 4.85511 13.5171 4.85511 14.4008C4.85511 15.2844 5.57146 16.0008 6.45511 16.0008C7.33877 16.0008 8.05511 15.2844 8.05511 14.4008C8.05511 13.5171 7.33877 12.8008 6.45511 12.8008ZM5.92178 14.4008C5.92178 14.1062 6.16056 13.8674 6.45511 13.8674C6.74966 13.8674 6.98844 14.1062 6.98844 14.4008C6.98844 14.6953 6.74966 14.9341 6.45511 14.9341C6.16056 14.9341 5.92178 14.6953 5.92178 14.4008Z"
+            fill="#EA5C21"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M13.9218 12.8008C13.0381 12.8008 12.3218 13.5171 12.3218 14.4008C12.3218 15.2844 13.0381 16.0008 13.9218 16.0008C14.8054 16.0008 15.5218 15.2844 15.5218 14.4008C15.5218 13.5171 14.8054 12.8008 13.9218 12.8008ZM13.3884 14.4008C13.3884 14.1062 13.6272 13.8674 13.9218 13.8674C14.2163 13.8674 14.4551 14.1062 14.4551 14.4008C14.4551 14.6953 14.2163 14.9341 13.9218 14.9341C13.6272 14.9341 13.3884 14.6953 13.3884 14.4008Z"
+            fill="#EA5C21"
+          />
+        </svg>
+      </button>
+    </div>
+  </td>
+</tr>
+<tr class="assortment-item-list parrent-product-1">
+  <td></td>
+  <td></td>
+  <td>
+    <span class="assortment-item__price">102.03 руб <span>шт.</span></span>
+  </td>
+  <td>
+    <div class="assortment-item__availability-row">
+      <div class="assortment-item__availability-row-label">Лида</div>
+      <div>1 шт</div>
+    </div>
+  </td>
+  <td>
+    <div class="assortment-item-list__right">
+      <div class="catalog-card__counter">
+        <div class="catalog-card__counter-button is-minus">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8.79995 6.40001H3.19995V5.60001H8.79995V6.40001Z"
+              fill="#2E2E2E"
+            ></path>
+          </svg>
+        </div>
+        <div class="catalog-card__counter-input">
+          <input type="number" value="1" />
+        </div>
+        <div class="catalog-card__counter-button is-plus">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M5.59995 5.6V3.2H6.39995V5.6H8.79995V6.4H6.39995V8.8H5.59995V6.4H3.19995V5.6H5.59995Z"
+              fill="#2E2E2E"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <button type="button" class="assortment-item__cart">
+        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M1.63252 0.380859L0.61084 0.687364L3.92486 11.7341H16.5883V4.80078C16.5883 3.32802 15.3944 2.13411 13.9217 2.13411H2.1585L1.63252 0.380859Z"
+            fill="#EA5C21"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M6.45511 12.8008C5.57146 12.8008 4.85511 13.5171 4.85511 14.4008C4.85511 15.2844 5.57146 16.0008 6.45511 16.0008C7.33877 16.0008 8.05511 15.2844 8.05511 14.4008C8.05511 13.5171 7.33877 12.8008 6.45511 12.8008ZM5.92178 14.4008C5.92178 14.1062 6.16056 13.8674 6.45511 13.8674C6.74966 13.8674 6.98844 14.1062 6.98844 14.4008C6.98844 14.6953 6.74966 14.9341 6.45511 14.9341C6.16056 14.9341 5.92178 14.6953 5.92178 14.4008Z"
+            fill="#EA5C21"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M13.9218 12.8008C13.0381 12.8008 12.3218 13.5171 12.3218 14.4008C12.3218 15.2844 13.0381 16.0008 13.9218 16.0008C14.8054 16.0008 15.5218 15.2844 15.5218 14.4008C15.5218 13.5171 14.8054 12.8008 13.9218 12.8008ZM13.3884 14.4008C13.3884 14.1062 13.6272 13.8674 13.9218 13.8674C14.2163 13.8674 14.4551 14.1062 14.4551 14.4008C14.4551 14.6953 14.2163 14.9341 13.9218 14.9341C13.6272 14.9341 13.3884 14.6953 13.3884 14.4008Z"
+            fill="#EA5C21"
+          />
+        </svg>
+      </button>
+    </div>
+  </td>
+</tr>
+
+                        <tr class="assortment-item" data-product-id="1">
+  <td>
+    <a href="#" class="assortment-item__left">
+      <div class="assortment-item__img-wr"><img src="./img/product-page-1.png" alt="" /></div>
+      <div class="assortment-item__name">
+        ARMAT Автоматический выключатель M06N 1P C 10А IEK &#8203; &#8203;
+        <span class="header-search-item__tag-counter is-green">713</span> &#8203;
+        <span class="header-search-item__tag-counter is-orange">1</span>
+      </div>
+    </a>
+  </td>
+  <td>
+    <a href="#" class="assortment-item__articul">AR-M06N-1-C</a>
+  </td>
+  <td>
+    <a href="#" class="assortment-item__price">117.08 руб.</a>
+  </td>
+  <td>
+    <div class="assortment-item__availability">
+      <div class="assortment-item__availability-row">
+        <div class="assortment-item__availability-row-label">Лида</div>
+        <div>1 шт</div>
+      </div>
+      <div class="assortment-item__availability-row">
+        <div class="assortment-item__availability-row-label">Лида Огородники</div>
+        <div>3 шт</div>
+      </div>
+      <div class="assortment-item__availability-row">
+        <div class="assortment-item__availability-row-label">Склад поставщика (4-10 дней)</div>
+        <div>1 шт</div>
+      </div>
+    </div>
+  </td>
+
+  <td>
+    <div class="assortment-item__more">
+      Все товары
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 4L5 7L8 4" stroke="#6A6A6A" />
+      </svg>
+    </div>
+  </td>
+</tr>
+
+<tr class="assortment-item-list parrent-product-1">
+  <td></td>
+  <td></td>
+  <td>
+    <span class="assortment-item__price">102.03 руб <span>шт.</span></span>
+  </td>
+  <td>
+    <div class="assortment-item__availability-row">
+      <div class="assortment-item__availability-row-label">Лида</div>
+      <div>1 шт</div>
+    </div>
+  </td>
+  <td>
+    <div class="assortment-item-list__right">
+      <div class="catalog-card__counter">
+        <div class="catalog-card__counter-button is-minus">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8.79995 6.40001H3.19995V5.60001H8.79995V6.40001Z"
+              fill="#2E2E2E"
+            ></path>
+          </svg>
+        </div>
+        <div class="catalog-card__counter-input">
+          <input type="number" value="1" />
+        </div>
+        <div class="catalog-card__counter-button is-plus">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M5.59995 5.6V3.2H6.39995V5.6H8.79995V6.4H6.39995V8.8H5.59995V6.4H3.19995V5.6H5.59995Z"
+              fill="#2E2E2E"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <button type="button" class="assortment-item__cart">
+        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M1.63252 0.380859L0.61084 0.687364L3.92486 11.7341H16.5883V4.80078C16.5883 3.32802 15.3944 2.13411 13.9217 2.13411H2.1585L1.63252 0.380859Z"
+            fill="#EA5C21"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M6.45511 12.8008C5.57146 12.8008 4.85511 13.5171 4.85511 14.4008C4.85511 15.2844 5.57146 16.0008 6.45511 16.0008C7.33877 16.0008 8.05511 15.2844 8.05511 14.4008C8.05511 13.5171 7.33877 12.8008 6.45511 12.8008ZM5.92178 14.4008C5.92178 14.1062 6.16056 13.8674 6.45511 13.8674C6.74966 13.8674 6.98844 14.1062 6.98844 14.4008C6.98844 14.6953 6.74966 14.9341 6.45511 14.9341C6.16056 14.9341 5.92178 14.6953 5.92178 14.4008Z"
+            fill="#EA5C21"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M13.9218 12.8008C13.0381 12.8008 12.3218 13.5171 12.3218 14.4008C12.3218 15.2844 13.0381 16.0008 13.9218 16.0008C14.8054 16.0008 15.5218 15.2844 15.5218 14.4008C15.5218 13.5171 14.8054 12.8008 13.9218 12.8008ZM13.3884 14.4008C13.3884 14.1062 13.6272 13.8674 13.9218 13.8674C14.2163 13.8674 14.4551 14.1062 14.4551 14.4008C14.4551 14.6953 14.2163 14.9341 13.9218 14.9341C13.6272 14.9341 13.3884 14.6953 13.3884 14.4008Z"
+            fill="#EA5C21"
+          />
+        </svg>
+      </button>
+    </div>
+  </td>
+</tr>
+<tr class="assortment-item-list parrent-product-1">
+  <td></td>
+  <td></td>
+  <td>
+    <span class="assortment-item__price">102.03 руб <span>шт.</span></span>
+  </td>
+  <td>
+    <div class="assortment-item__availability-row">
+      <div class="assortment-item__availability-row-label">Лида</div>
+      <div>1 шт</div>
+    </div>
+  </td>
+  <td>
+    <div class="assortment-item-list__right">
+      <div class="catalog-card__counter">
+        <div class="catalog-card__counter-button is-minus">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8.79995 6.40001H3.19995V5.60001H8.79995V6.40001Z"
+              fill="#2E2E2E"
+            ></path>
+          </svg>
+        </div>
+        <div class="catalog-card__counter-input">
+          <input type="number" value="1" />
+        </div>
+        <div class="catalog-card__counter-button is-plus">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M5.59995 5.6V3.2H6.39995V5.6H8.79995V6.4H6.39995V8.8H5.59995V6.4H3.19995V5.6H5.59995Z"
+              fill="#2E2E2E"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <button type="button" class="assortment-item__cart">
+        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M1.63252 0.380859L0.61084 0.687364L3.92486 11.7341H16.5883V4.80078C16.5883 3.32802 15.3944 2.13411 13.9217 2.13411H2.1585L1.63252 0.380859Z"
+            fill="#EA5C21"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M6.45511 12.8008C5.57146 12.8008 4.85511 13.5171 4.85511 14.4008C4.85511 15.2844 5.57146 16.0008 6.45511 16.0008C7.33877 16.0008 8.05511 15.2844 8.05511 14.4008C8.05511 13.5171 7.33877 12.8008 6.45511 12.8008ZM5.92178 14.4008C5.92178 14.1062 6.16056 13.8674 6.45511 13.8674C6.74966 13.8674 6.98844 14.1062 6.98844 14.4008C6.98844 14.6953 6.74966 14.9341 6.45511 14.9341C6.16056 14.9341 5.92178 14.6953 5.92178 14.4008Z"
+            fill="#EA5C21"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M13.9218 12.8008C13.0381 12.8008 12.3218 13.5171 12.3218 14.4008C12.3218 15.2844 13.0381 16.0008 13.9218 16.0008C14.8054 16.0008 15.5218 15.2844 15.5218 14.4008C15.5218 13.5171 14.8054 12.8008 13.9218 12.8008ZM13.3884 14.4008C13.3884 14.1062 13.6272 13.8674 13.9218 13.8674C14.2163 13.8674 14.4551 14.1062 14.4551 14.4008C14.4551 14.6953 14.2163 14.9341 13.9218 14.9341C13.6272 14.9341 13.3884 14.6953 13.3884 14.4008Z"
+            fill="#EA5C21"
+          />
+        </svg>
+      </button>
+    </div>
+  </td>
+</tr>
 <tr class="assortment-item-list parrent-product-1">
   <td></td>
   <td></td>
@@ -1306,9 +1857,9 @@
     </div>
   </div>
   <div class="catalog-card__center">
-    <div class="catalog-card__image-box">
+    <a href="#" class="catalog-card__image-box">
       <img src="./img/product-1.png" alt="" class="catalog-card__image" />
-    </div>
+    </a>
     <div class="catalog-card__tags">
       <div class="catalog-card__tag is-new">
         <svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1423,7 +1974,10 @@
         <span class="catalog-card__bonuses-value">+7.65</span>
       </div>
     </div>
-    <div class="catalog-card__title">ARMAT Автоматический выключатель M06N 1P C 10А IEK Автоматический выключатель</div>
+    <a href="#" class="catalog-card__title">
+      ARMAT Автоматический выключатель M06N 1P C 10А IEK Автоматический выключатель ARMAT Автоматический выключатель
+      M06N 1P C 10А IEK Автоматический выключатель
+    </a>
   </div>
 
   <div class="catalog-card__price-line-wr">
@@ -1431,6 +1985,28 @@
       <span class="catalog-card__price">129.05 руб</span>
       <span class="catalog-card__price-additional">за шт.</span>
       <span class="catalog-card__price-additional">без НДС</span>
+      <div class="catalog-card__top-btns">
+        <div class="catalog-card__top-btn is-comparison is-active">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2054_1953)">
+              <path d="M19 14.5L19 22M14 6L14 22M9 13L9 22" stroke="#9F9F9F" stroke-width="2" stroke-linecap="square" />
+            </g>
+            <defs>
+              <clipPath id="clip0_2054_1953">
+                <rect width="12" height="12" fill="white" transform="translate(20 8) rotate(90)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <div class="catalog-card__top-btn is-favorite">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
+              fill="#9F9F9F"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
     <div class="catalog-card__list-footer-info">
       <div class="catalog-card__availability">
@@ -1512,6 +2088,8 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
+
+    <!-- Если нет в наличии -->
     <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -1584,9 +2162,9 @@
     </div>
   </div>
   <div class="catalog-card__center">
-    <div class="catalog-card__image-box">
+    <a href="#" class="catalog-card__image-box">
       <img src="./img/product-1.png" alt="" class="catalog-card__image" />
-    </div>
+    </a>
     <div class="catalog-card__tags">
       <div class="catalog-card__tag is-new">
         <svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1701,7 +2279,10 @@
         <span class="catalog-card__bonuses-value">+7.65</span>
       </div>
     </div>
-    <div class="catalog-card__title">ARMAT Автоматический выключатель M06N 1P C 10А IEK Автоматический выключатель</div>
+    <a href="#" class="catalog-card__title">
+      ARMAT Автоматический выключатель M06N 1P C 10А IEK Автоматический выключатель ARMAT Автоматический выключатель
+      M06N 1P C 10А IEK Автоматический выключатель
+    </a>
   </div>
 
   <div class="catalog-card__price-line-wr">
@@ -1709,6 +2290,28 @@
       <span class="catalog-card__price">129.05 руб</span>
       <span class="catalog-card__price-additional">за шт.</span>
       <span class="catalog-card__price-additional">без НДС</span>
+      <div class="catalog-card__top-btns">
+        <div class="catalog-card__top-btn is-comparison is-active">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2054_1953)">
+              <path d="M19 14.5L19 22M14 6L14 22M9 13L9 22" stroke="#9F9F9F" stroke-width="2" stroke-linecap="square" />
+            </g>
+            <defs>
+              <clipPath id="clip0_2054_1953">
+                <rect width="12" height="12" fill="white" transform="translate(20 8) rotate(90)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <div class="catalog-card__top-btn is-favorite">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
+              fill="#9F9F9F"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
     <div class="catalog-card__list-footer-info">
       <div class="catalog-card__availability">
@@ -1790,6 +2393,8 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
+
+    <!-- Если нет в наличии -->
     <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -1862,9 +2467,9 @@
     </div>
   </div>
   <div class="catalog-card__center">
-    <div class="catalog-card__image-box">
+    <a href="#" class="catalog-card__image-box">
       <img src="./img/product-1.png" alt="" class="catalog-card__image" />
-    </div>
+    </a>
     <div class="catalog-card__tags">
       <div class="catalog-card__tag is-new">
         <svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1979,7 +2584,10 @@
         <span class="catalog-card__bonuses-value">+7.65</span>
       </div>
     </div>
-    <div class="catalog-card__title">ARMAT Автоматический выключатель M06N 1P C 10А IEK Автоматический выключатель</div>
+    <a href="#" class="catalog-card__title">
+      ARMAT Автоматический выключатель M06N 1P C 10А IEK Автоматический выключатель ARMAT Автоматический выключатель
+      M06N 1P C 10А IEK Автоматический выключатель
+    </a>
   </div>
 
   <div class="catalog-card__price-line-wr">
@@ -1987,6 +2595,28 @@
       <span class="catalog-card__price">129.05 руб</span>
       <span class="catalog-card__price-additional">за шт.</span>
       <span class="catalog-card__price-additional">без НДС</span>
+      <div class="catalog-card__top-btns">
+        <div class="catalog-card__top-btn is-comparison is-active">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2054_1953)">
+              <path d="M19 14.5L19 22M14 6L14 22M9 13L9 22" stroke="#9F9F9F" stroke-width="2" stroke-linecap="square" />
+            </g>
+            <defs>
+              <clipPath id="clip0_2054_1953">
+                <rect width="12" height="12" fill="white" transform="translate(20 8) rotate(90)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <div class="catalog-card__top-btn is-favorite">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
+              fill="#9F9F9F"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
     <div class="catalog-card__list-footer-info">
       <div class="catalog-card__availability">
@@ -2068,6 +2698,8 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
+
+    <!-- Если нет в наличии -->
     <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -2140,9 +2772,9 @@
     </div>
   </div>
   <div class="catalog-card__center">
-    <div class="catalog-card__image-box">
+    <a href="#" class="catalog-card__image-box">
       <img src="./img/product-1.png" alt="" class="catalog-card__image" />
-    </div>
+    </a>
     <div class="catalog-card__tags">
       <div class="catalog-card__tag is-new">
         <svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2257,7 +2889,10 @@
         <span class="catalog-card__bonuses-value">+7.65</span>
       </div>
     </div>
-    <div class="catalog-card__title">ARMAT Автоматический выключатель M06N 1P C 10А IEK Автоматический выключатель</div>
+    <a href="#" class="catalog-card__title">
+      ARMAT Автоматический выключатель M06N 1P C 10А IEK Автоматический выключатель ARMAT Автоматический выключатель
+      M06N 1P C 10А IEK Автоматический выключатель
+    </a>
   </div>
 
   <div class="catalog-card__price-line-wr">
@@ -2265,6 +2900,28 @@
       <span class="catalog-card__price">129.05 руб</span>
       <span class="catalog-card__price-additional">за шт.</span>
       <span class="catalog-card__price-additional">без НДС</span>
+      <div class="catalog-card__top-btns">
+        <div class="catalog-card__top-btn is-comparison is-active">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2054_1953)">
+              <path d="M19 14.5L19 22M14 6L14 22M9 13L9 22" stroke="#9F9F9F" stroke-width="2" stroke-linecap="square" />
+            </g>
+            <defs>
+              <clipPath id="clip0_2054_1953">
+                <rect width="12" height="12" fill="white" transform="translate(20 8) rotate(90)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <div class="catalog-card__top-btn is-favorite">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
+              fill="#9F9F9F"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
     <div class="catalog-card__list-footer-info">
       <div class="catalog-card__availability">
@@ -2346,6 +3003,8 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
+
+    <!-- Если нет в наличии -->
     <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -2418,9 +3077,9 @@
     </div>
   </div>
   <div class="catalog-card__center">
-    <div class="catalog-card__image-box">
+    <a href="#" class="catalog-card__image-box">
       <img src="./img/product-1.png" alt="" class="catalog-card__image" />
-    </div>
+    </a>
     <div class="catalog-card__tags">
       <div class="catalog-card__tag is-new">
         <svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2535,7 +3194,10 @@
         <span class="catalog-card__bonuses-value">+7.65</span>
       </div>
     </div>
-    <div class="catalog-card__title">ARMAT Автоматический выключатель M06N 1P C 10А IEK Автоматический выключатель</div>
+    <a href="#" class="catalog-card__title">
+      ARMAT Автоматический выключатель M06N 1P C 10А IEK Автоматический выключатель ARMAT Автоматический выключатель
+      M06N 1P C 10А IEK Автоматический выключатель
+    </a>
   </div>
 
   <div class="catalog-card__price-line-wr">
@@ -2543,6 +3205,28 @@
       <span class="catalog-card__price">129.05 руб</span>
       <span class="catalog-card__price-additional">за шт.</span>
       <span class="catalog-card__price-additional">без НДС</span>
+      <div class="catalog-card__top-btns">
+        <div class="catalog-card__top-btn is-comparison is-active">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2054_1953)">
+              <path d="M19 14.5L19 22M14 6L14 22M9 13L9 22" stroke="#9F9F9F" stroke-width="2" stroke-linecap="square" />
+            </g>
+            <defs>
+              <clipPath id="clip0_2054_1953">
+                <rect width="12" height="12" fill="white" transform="translate(20 8) rotate(90)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <div class="catalog-card__top-btn is-favorite">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
+              fill="#9F9F9F"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
     <div class="catalog-card__list-footer-info">
       <div class="catalog-card__availability">
@@ -2624,6 +3308,8 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
+
+    <!-- Если нет в наличии -->
     <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -2696,9 +3382,9 @@
     </div>
   </div>
   <div class="catalog-card__center">
-    <div class="catalog-card__image-box">
+    <a href="#" class="catalog-card__image-box">
       <img src="./img/product-1.png" alt="" class="catalog-card__image" />
-    </div>
+    </a>
     <div class="catalog-card__tags">
       <div class="catalog-card__tag is-new">
         <svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2813,7 +3499,10 @@
         <span class="catalog-card__bonuses-value">+7.65</span>
       </div>
     </div>
-    <div class="catalog-card__title">ARMAT Автоматический выключатель M06N 1P C 10А IEK Автоматический выключатель</div>
+    <a href="#" class="catalog-card__title">
+      ARMAT Автоматический выключатель M06N 1P C 10А IEK Автоматический выключатель ARMAT Автоматический выключатель
+      M06N 1P C 10А IEK Автоматический выключатель
+    </a>
   </div>
 
   <div class="catalog-card__price-line-wr">
@@ -2821,6 +3510,28 @@
       <span class="catalog-card__price">129.05 руб</span>
       <span class="catalog-card__price-additional">за шт.</span>
       <span class="catalog-card__price-additional">без НДС</span>
+      <div class="catalog-card__top-btns">
+        <div class="catalog-card__top-btn is-comparison is-active">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2054_1953)">
+              <path d="M19 14.5L19 22M14 6L14 22M9 13L9 22" stroke="#9F9F9F" stroke-width="2" stroke-linecap="square" />
+            </g>
+            <defs>
+              <clipPath id="clip0_2054_1953">
+                <rect width="12" height="12" fill="white" transform="translate(20 8) rotate(90)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <div class="catalog-card__top-btn is-favorite">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
+              fill="#9F9F9F"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
     <div class="catalog-card__list-footer-info">
       <div class="catalog-card__availability">
@@ -2902,6 +3613,8 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
+
+    <!-- Если нет в наличии -->
     <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -3006,9 +3719,9 @@
     </div>
   </div>
   <div class="catalog-card__center">
-    <div class="catalog-card__image-box">
+    <a href="#" class="catalog-card__image-box">
       <img src="./img/product-1.png" alt="" class="catalog-card__image" />
-    </div>
+    </a>
     <div class="catalog-card__tags">
       <div class="catalog-card__tag is-new">
         <svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -3123,7 +3836,10 @@
         <span class="catalog-card__bonuses-value">+7.65</span>
       </div>
     </div>
-    <div class="catalog-card__title">ARMAT Автоматический выключатель M06N 1P C 10А IEK Автоматический выключатель</div>
+    <a href="#" class="catalog-card__title">
+      ARMAT Автоматический выключатель M06N 1P C 10А IEK Автоматический выключатель ARMAT Автоматический выключатель
+      M06N 1P C 10А IEK Автоматический выключатель
+    </a>
   </div>
 
   <div class="catalog-card__price-line-wr">
@@ -3131,6 +3847,28 @@
       <span class="catalog-card__price">129.05 руб</span>
       <span class="catalog-card__price-additional">за шт.</span>
       <span class="catalog-card__price-additional">без НДС</span>
+      <div class="catalog-card__top-btns">
+        <div class="catalog-card__top-btn is-comparison is-active">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2054_1953)">
+              <path d="M19 14.5L19 22M14 6L14 22M9 13L9 22" stroke="#9F9F9F" stroke-width="2" stroke-linecap="square" />
+            </g>
+            <defs>
+              <clipPath id="clip0_2054_1953">
+                <rect width="12" height="12" fill="white" transform="translate(20 8) rotate(90)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <div class="catalog-card__top-btn is-favorite">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
+              fill="#9F9F9F"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
     <div class="catalog-card__list-footer-info">
       <div class="catalog-card__availability">
@@ -3212,6 +3950,8 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
+
+    <!-- Если нет в наличии -->
     <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -3284,9 +4024,9 @@
     </div>
   </div>
   <div class="catalog-card__center">
-    <div class="catalog-card__image-box">
+    <a href="#" class="catalog-card__image-box">
       <img src="./img/product-1.png" alt="" class="catalog-card__image" />
-    </div>
+    </a>
     <div class="catalog-card__tags">
       <div class="catalog-card__tag is-new">
         <svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -3401,7 +4141,10 @@
         <span class="catalog-card__bonuses-value">+7.65</span>
       </div>
     </div>
-    <div class="catalog-card__title">ARMAT Автоматический выключатель M06N 1P C 10А IEK Автоматический выключатель</div>
+    <a href="#" class="catalog-card__title">
+      ARMAT Автоматический выключатель M06N 1P C 10А IEK Автоматический выключатель ARMAT Автоматический выключатель
+      M06N 1P C 10А IEK Автоматический выключатель
+    </a>
   </div>
 
   <div class="catalog-card__price-line-wr">
@@ -3409,6 +4152,28 @@
       <span class="catalog-card__price">129.05 руб</span>
       <span class="catalog-card__price-additional">за шт.</span>
       <span class="catalog-card__price-additional">без НДС</span>
+      <div class="catalog-card__top-btns">
+        <div class="catalog-card__top-btn is-comparison is-active">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2054_1953)">
+              <path d="M19 14.5L19 22M14 6L14 22M9 13L9 22" stroke="#9F9F9F" stroke-width="2" stroke-linecap="square" />
+            </g>
+            <defs>
+              <clipPath id="clip0_2054_1953">
+                <rect width="12" height="12" fill="white" transform="translate(20 8) rotate(90)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <div class="catalog-card__top-btn is-favorite">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18.4 8.00001L9.59998 8V19.6C9.59998 19.7538 9.68811 19.8939 9.8267 19.9605C9.96529 20.0271 10.1298 20.0084 10.2499 19.9124L14 16.9123L17.7501 19.9124C17.8702 20.0084 18.0347 20.0271 18.1733 19.9605C18.3118 19.8939 18.4 19.7538 18.4 19.6V8.00001Z"
+              fill="#9F9F9F"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
     <div class="catalog-card__list-footer-info">
       <div class="catalog-card__availability">
@@ -3490,6 +4255,8 @@
       <div class="catalog-card__availability-text">На складах</div>
       <div class="catalog-card__availability-counter">(58)</div>
     </div>
+
+    <!-- Если нет в наличии -->
     <!-- <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -3777,6 +4544,77 @@
     </div>
   </div>
 </div> -->
+
+<div class="popup learn-about-enrollment_popup">
+  <div class="popup__wrapper">
+    <div class="popup__inner">
+      <div class="popup__close js-close-popup">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M27 9L9 27M27 27L9 9.00002" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </div>
+      <div class="popup__content">
+        <div class="popup__content-heading">
+          <div class="popup__title">Узнать о поступлении</div>
+          <div class="popup__subtitle is-text-center" id="learn-about-enrollment_popup-name-title">
+            ARMAT Автоматический выключатель M06N 1P C 10А IEK
+          </div>
+        </div>
+
+        <div class="popup__form-container">
+          <input
+            type="hidden"
+            name="product"
+            class="input is-large"
+            placeholder=" "
+            id="learn-about-enrollment_popup-name"
+          />
+          <form action="#" class="callback-form js-validate-form">
+            <label class="form-input is-required">
+              <input type="text" class="input is-large" placeholder=" " />
+              <div class="form-input__placeholder">Имя</div>
+            </label>
+            <label class="form-input is-required is-phone phone-input">
+              <input type="text" class="input is-large" placeholder=" " data-maska />
+              <div class="form-input__placeholder">Телефон</div>
+              <div class="phone-input__mask-switch">
+                <div class="phone-input__mask-switch-current"></div>
+                <div class="phone-input__mask-switch-dropdown"></div>
+              </div>
+            </label>
+            <label class="form-input is-required is-email">
+              <input type="text" class="input is-large" placeholder=" " />
+              <div class="form-input__placeholder">Email</div>
+            </label>
+
+            <div class="callback-form__footer">
+              <label class="form-input is-required is-checkbox checkbox-input is-alternate-collor">
+                <input type="checkbox" name="privacy" class="input" />
+                <div class="checkbox-input__check">
+                  <div class="checkbox-input__check-icon">
+                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7 1L3.22307 4.66247C3.02913 4.85054 2.72087 4.85054 2.52693 4.66247L1 3.18182"
+                        stroke="#114335"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="checkbox-input__placeholder is-black-text">
+                  Даю согласие на обработку моих персональных данных и ознакомлен с
+                  <a href="#" target="_blank" class="text-link">Политикой конфеденциальности</a> сайта
+                </div>
+              </label>
+              <button type="submit" class="button is-primary">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="popup success_popup">
   <div class="popup__wrapper">
