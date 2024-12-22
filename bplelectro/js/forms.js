@@ -121,3 +121,31 @@ formButtons.forEach((el) => {
     });
   });
 })();
+
+/* pass input */
+(() => {
+  const inputs = document.querySelectorAll('.form-input.is-password, .form-input.is-password-repeat');
+  inputs.forEach((el) => {
+    const input = el.querySelector('input');
+    const eye = el.querySelector('.form-input__eye');
+
+    if (!eye) {
+      return;
+    }
+
+    eye.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      if (input.type === 'password') {
+        input.type = 'text';
+        eye.classList.add('is-visible');
+
+        return;
+      }
+
+      input.type = 'password';
+      eye.classList.remove('is-visible');
+    });
+  });
+})();
