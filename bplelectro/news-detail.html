@@ -1869,6 +1869,219 @@
   </div>
 </div>
 
+<div class="popup autorization_popup is-registraion is-juridical">
+  <div class="popup__wrapper">
+    <div class="popup__inner">
+      <div class="popup__close js-close-popup">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M27 9L9 27M27 27L9 9.00002" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </div>
+      <div class="popup__content">
+        <div class="popup__content-heading">
+          <div class="popup__title">Регистрация в личном кабинете</div>
+          <div class="registraion-form-user-switch">
+            <div class="registraion-form-user-switch__button" data-target="fiz">
+              <div>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M16.8 5.59765C16.8 8.24712 14.6512 10.3945 12 10.3945C9.3488 10.3945 7.2 8.24712 7.2 5.59765C7.2 2.94818 9.3488 0.800781 12 0.800781C14.6512 0.800781 16.8 2.94818 16.8 5.59765Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="square"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M20 23.1862H4C4 22.0501 4 20.9693 4 19.9906C4 17.3396 6.14903 15.1914 8.8 15.1914H15.2C17.851 15.1914 20 17.3396 20 19.9906C20 20.9693 20 22.0501 20 23.1862Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="square"
+                  />
+                </svg>
+              </div>
+              <div>Как физ.лицо</div>
+            </div>
+            <div class="registraion-form-user-switch__button" data-target="juridical">
+              <div>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M3.25 20V20.75H4.75V20H3.25ZM11.25 20V20.75H12.75V20H11.25ZM4.75 20V19.1998H3.25V20H4.75ZM11.25 19.1995V20H12.75V19.1995H11.25ZM8 15.95C9.79506 15.95 11.25 17.4047 11.25 19.1995H12.75C12.75 16.576 10.6232 14.45 8 14.45V15.95ZM4.75 19.1998C4.75 17.4049 6.20503 15.95 8 15.95V14.45C5.37669 14.45 3.25 16.5764 3.25 19.1998H4.75ZM8 6.45C6.2603 6.45 4.85 7.8603 4.85 9.6H6.35C6.35 8.68873 7.08873 7.95 8 7.95V6.45ZM11.15 9.6C11.15 7.8603 9.7397 6.45 8 6.45V7.95C8.91127 7.95 9.65 8.68873 9.65 9.6H11.15ZM8 12.75C9.7397 12.75 11.15 11.3397 11.15 9.6H9.65C9.65 10.5113 8.91127 11.25 8 11.25V12.75ZM8 11.25C7.08873 11.25 6.35 10.5113 6.35 9.6H4.85C4.85 11.3397 6.2603 12.75 8 12.75V11.25ZM2.4 4.75H21.6V3.25H2.4V4.75ZM22.45 5.6V18.4H23.95V5.6H22.45ZM21.6 19.25H2.4V20.75H21.6V19.25ZM1.55 18.4V5.6H0.05V18.4H1.55ZM2.4 19.25C1.93056 19.25 1.55 18.8694 1.55 18.4H0.05C0.05 19.6979 1.10213 20.75 2.4 20.75V19.25ZM22.45 18.4C22.45 18.8694 22.0694 19.25 21.6 19.25V20.75C22.8979 20.75 23.95 19.6979 23.95 18.4H22.45ZM21.6 4.75C22.0694 4.75 22.45 5.13056 22.45 5.6H23.95C23.95 4.30213 22.8979 3.25 21.6 3.25V4.75ZM2.4 3.25C1.10213 3.25 0.05 4.30213 0.05 5.6H1.55C1.55 5.13056 1.93056 4.75 2.4 4.75V3.25ZM14.4 9.55H19.2V8.05H14.4V9.55ZM14.4 14.35H19.2V12.85H14.4V14.35ZM0 23.95H24V22.45H0V23.95ZM4.85 0V4H6.35V0H4.85ZM17.65 0V4H19.15V0H17.65Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <div>Как юр.лицо</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="popup__form-container">
+          <form action="#" class="callback-form js-validate-form is-fiz-registraion">
+            <label class="form-input is-required">
+              <input type="text" class="input is-large" placeholder=" " />
+              <div class="form-input__placeholder">Имя</div>
+            </label>
+            <label class="form-input">
+              <input type="text" class="input is-large" placeholder=" " />
+              <div class="form-input__placeholder">фамилия</div>
+            </label>
+            <label class="form-input is-required is-phone phone-input">
+              <input type="text" class="input is-large" placeholder=" " data-maska />
+              <div class="form-input__placeholder">Телефон</div>
+              <div class="phone-input__mask-switch">
+                <div class="phone-input__mask-switch-current"></div>
+                <div class="phone-input__mask-switch-dropdown"></div>
+              </div>
+            </label>
+            <label class="form-input is-required">
+              <input type="text" class="input is-large" placeholder=" " />
+              <div class="form-input__placeholder">Код</div>
+              <div class="form-input__button">Получить код</div>
+            </label>
+            <label class="form-input is-required is-checkbox checkbox-input is-alternate-collor">
+              <input type="checkbox" name="privacy" class="input" />
+              <div class="checkbox-input__check">
+                <div class="checkbox-input__check-icon">
+                  <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7 1L3.22307 4.66247C3.02913 4.85054 2.72087 4.85054 2.52693 4.66247L1 3.18182"
+                      stroke="#114335"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="checkbox-input__placeholder is-black-text">
+                Даю согласие на обработку моих персональных данных и ознакомлен с
+                <a href="#" target="_blank" class="text-link">Политикой конфеденциальности сайта</a>
+              </div>
+            </label>
+            <label class="form-input is-required is-checkbox checkbox-input is-alternate-collor">
+              <input type="checkbox" name="privacy" class="input" />
+              <div class="checkbox-input__check">
+                <div class="checkbox-input__check-icon">
+                  <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7 1L3.22307 4.66247C3.02913 4.85054 2.72087 4.85054 2.52693 4.66247L1 3.18182"
+                      stroke="#114335"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="checkbox-input__placeholder is-black-text">
+                Я даю свое согласие на участие в бонусной программе
+                <a href="#" target="_blank" class="text-link">Условия Бонусная программа</a>
+              </div>
+            </label>
+
+            <div class="callback-form__footer is-right">
+              <button type="submit" class="button is-primary">Зарегистрироваться</button>
+            </div>
+
+            <div class="callback-form__login-footer">
+              У вас уже есть аккаунт?
+              <div class="callback-form__footer-login-switch orange-link login-stich-button" data-target="autorization">
+                Войти
+              </div>
+            </div>
+          </form>
+          <form action="#" class="callback-form js-validate-form is-fiz-autorization">
+            <label class="form-input is-required is-phone phone-input">
+              <input type="text" class="input is-large" placeholder=" " data-maska />
+              <div class="form-input__placeholder">Телефон</div>
+              <div class="phone-input__mask-switch">
+                <div class="phone-input__mask-switch-current"></div>
+                <div class="phone-input__mask-switch-dropdown"></div>
+              </div>
+            </label>
+            <label class="form-input is-required">
+              <input type="text" class="input is-large" placeholder=" " />
+              <div class="form-input__placeholder">Код</div>
+              <div class="form-input__button">Получить код</div>
+            </label>
+
+            <div class="callback-form__footer is-right">
+              <button type="submit" class="button is-primary">Войти</button>
+            </div>
+
+            <div class="callback-form__login-footer">
+              У вас еще нет аккаунта?
+              <div class="callback-form__footer-login-switch orange-link login-stich-button" data-target="registration">
+                Зарегистрироваться
+              </div>
+            </div>
+          </form>
+
+          <form action="#" class="callback-form is-juridical-registraion">
+            <div class="juridical-registration-text">
+              <p>
+                Для регистрации свяжитесь со специалистом <br />
+                нашего клиентского сервиса по номеру
+              </p>
+              <a href="tel:+375291818580" class="orange-link">+375291818580</a>
+            </div>
+            <div class="callback-form__login-footer">
+              У вас уже есть аккаунт?
+              <div class="callback-form__footer-login-switch orange-link login-stich-button" data-target="autorization">
+                Войти
+              </div>
+            </div>
+          </form>
+
+          <form action="#" class="callback-form js-validate-form is-juridical-autorization">
+            <label class="form-input is-required is-email">
+              <input type="text" class="input is-large" placeholder=" " />
+              <div class="form-input__placeholder">Email</div>
+            </label>
+            <label class="form-input is-required is-password">
+              <input type="text" class="input is-large" placeholder=" " />
+              <div class="form-input__placeholder">Пароль</div>
+            </label>
+
+            <div class="callback-form__footer">
+              <div class="autorization_popup__password-btn login-stich-button" data-target="password">
+                Восстановить пароль
+              </div>
+              <button type="submit" class="button is-primary">Войти</button>
+            </div>
+
+            <div class="callback-form__login-footer">
+              У вас еще нет аккаунта?
+              <div class="callback-form__footer-login-switch orange-link login-stich-button" data-target="registration">
+                Зарегистрироваться
+              </div>
+            </div>
+          </form>
+
+          <form action="#" class="callback-form js-validate-form is-juridical-password">
+            <label class="form-input is-required is-email">
+              <input type="text" class="input is-large" placeholder=" " />
+              <div class="form-input__placeholder">Email</div>
+            </label>
+
+            <div class="callback-form__footer is-center">
+              <button type="submit" class="button is-primary">Восстановить</button>
+            </div>
+
+            <div class="callback-form__login-footer">
+              Я вспомнил пароль.
+              <div class="callback-form__footer-login-switch orange-link login-stich-button" data-target="autorization">
+                Войти
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="popup success_popup">
   <div class="popup__wrapper">
     <div class="popup__inner">
