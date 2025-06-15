@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>grandeur-company</title>
+  <meta name="theme-color" content="#fff" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+  />
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png" />
+  <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png" />
+  <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png" />
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png" />
+  <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./styles/styles.css" />
+</head>
+
+  <body>
+    <header class="header">
+  <a href="/" class="header__logo">
+    <img src="./img/logo.svg" alt="" />
+  </a>
+  <nav class="header__nav laptop-hidden">
+    <a href="#about" class="text-link js-navigate-link">About Us</a>
+    <a href="#mission" class="text-link js-navigate-link">Our Mission</a>
+    <a href="#strategic" class="text-link js-navigate-link">Strategic Priority</a>
+    <a href="#products" class="text-link js-navigate-link">Products</a>
+    <a href="#partners" class="text-link js-navigate-link">For partners</a>
+  </nav>
+  <div class="header__right">
+    <div class="lang-switcher laptop-hidden">
+      <a href="#" class="lang-switcher__button is-active">EN</a>
+      <a href="#" class="lang-switcher__button">SK</a>
+      <a href="#" class="lang-switcher__button">UKR</a>
+    </div>
+    <a href="#contacts" class="button is-black js-navigate-link laptop-hidden header__contact">CONTACT</a>
+    <div class="header__burger laptop-visible">
+      <svg
+        class="header__burger-default"
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M36 14V15H4V14H36Z" fill="#323944" />
+        <path d="M36 25V26H4V25H36Z" fill="#323944" />
+      </svg>
+      <svg
+        class="header__burger-active"
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M31.6274 30.6274L30.9203 31.3345L8.29289 8.70711L9 8L31.6274 30.6274Z" fill="#323944" />
+        <path d="M8.29446 30.6274L9.00157 31.3345L31.629 8.70711L30.9219 8L8.29446 30.6274Z" fill="#323944" />
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="header-burger-menu laptop-visible">
+  <div class="lang-switcher">
+    <a href="#" class="lang-switcher__button is-active">EN</a>
+    <a href="#" class="lang-switcher__button">SK</a>
+    <a href="#" class="lang-switcher__button">UKR</a>
+  </div>
+  <nav class="header__nav">
+    <a href="#about" class="text-link js-navigate-link">About Us</a>
+    <a href="#mission" class="text-link js-navigate-link">Our Mission</a>
+    <a href="#strategic" class="text-link js-navigate-link">Strategic Priority</a>
+    <a href="#products" class="text-link js-navigate-link">Products</a>
+    <a href="#partners" class="text-link js-navigate-link">For partners</a>
+  </nav>
+  <a href="#contacts" class="button is-black js-navigate-link header__contact">CONTACT</a>
+</div>
+
+    <main>
+      <section class="start-section">
+        <video
+          src="./videos/main-banner.mp4"
+          poster="./img/main-banner-poster.jpg"
+          class="fit-cover start-section__bg tablet-hidden"
+          autoplay
+          muted
+          playsline
+          loop
+        ></video>
+        <img src="./img/main-banner-poster.jpg" alt="" class="fit-cover start-section__bg tablet-visible" />
+        <div class="start-section__content">
+          <h1 class="start-section__content-title is-text-upper">Connecting Local Producers with Global Markets</h1>
+          <p class="start-section__content-subtitle">
+            Socially responsible grain and oilseed exports from Europe to the world
+          </p>
+          <div class="start-section__content-buttons">
+            <a href="#about" class="button is-primary w-icon js-navigate-link">
+              LEARN MORE
+              <span class="button__icon-wr">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.7425 15.6174L18.025 10.3349L19.2189 11.5288L11.8984 18.8492L4.57801 11.5288L5.77185 10.3349L11.0544 15.6174L11.0544 4.20834H12.7425L12.7425 15.6174Z"
+                    fill="#EBA400"
+                  />
+                </svg>
+              </span>
+            </a>
+            <a href="#partners" class="button is-white js-navigate-link">BECOME A PARTNER</a>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <section class="page-section about-section" id="about">
+          <div class="page-section__grid">
+            <div>
+              <div class="page-section-title is-black-text is-text-upper h2">About us</div>
+              <div class="about-section__content">
+                <p>
+                  We are a European company committed to socially responsible business practices, specializing in the
+                  supply of grains and oilseeds to global markets.
+                </p>
+                <br />
+                <p>
+                  Our operations play an important role in ensuring global food security and supporting economic
+                  well-being.
+                </p>
+                <br />
+                <p>
+                  Years of experience in trading, well-established partnerships, and the trust of our collaborators
+                  enable us to successfully connect local agricultural producers with the international marketplace.
+                </p>
+              </div>
+              <a href="#partners" class="button is-primary js-navigate-link">BECOME A PARTNER</a>
+            </div>
+            <div class="about-section__img-wr">
+              <img src="./img/about-img.jpg" alt="" class="fit-cover" />
+            </div>
+          </div>
+        </section>
+        <section class="page-section mission-section" id="mission">
+          <div class="page-section__grid">
+            <div>
+              <div class="page-section__sticky-section">
+                <div class="is-black-text is-text-upper h2">Our Mission</div>
+              </div>
+            </div>
+            <div class="mission-section__list">
+              <div class="mission-card">
+                <div class="mission-card__icon-wr">
+                  <svg width="80" height="81" viewBox="0 0 80 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M72.751 41.7119H70.751V36.168L43.4951 63.4941L42.8574 64.1348L27.9082 51.957L8.45898 71.4561L7.04297 70.0439L27.7695 49.2646L42.7178 61.4414L69.3408 34.75H63.8096V32.75H72.751V41.7119Z"
+                      fill="#EBA400"
+                    />
+                    <path
+                      d="M72.751 19.9619H70.751V14.418L43.4951 41.7441L42.8574 42.3848L27.9082 30.207L8.45898 49.7061L7.04297 48.2939L27.7695 27.5146L42.7178 39.6914L69.3408 13H63.8096V11H72.751V19.9619Z"
+                      fill="#EBA400"
+                    />
+                  </svg>
+                </div>
+                <div class="mission-card__content">
+                  <div class="mission-card__title is-black-text h3">Continuous Development</div>
+                  <div class="mission-card__text">
+                    <p>
+                      Grandeur Company believes that knowledge is power. Surrounded by specialists and enthusiasts in
+                      their fields, we never stop evolving and steadily moving forward in our areas of expertise
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="mission-card">
+                <div class="mission-card__icon-wr">
+                  <svg width="80" height="82" viewBox="0 0 80 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M39.5254 21.7139C39.7902 21.7142 40.0452 21.8196 40.2324 22.0068L43.4756 25.25L43.8213 25.6123C44.6054 26.4762 45.2362 27.4705 45.6836 28.5508C46.1948 29.7853 46.4575 31.1091 46.4561 32.4453L46.4434 32.9502C46.3874 34.0671 46.1463 35.1583 45.7412 36.1836C45.8794 36.1403 46.0198 36.0991 46.1602 36.0615L50.6758 34.8545L50.7754 34.833C51.2752 34.7528 51.7655 35.062 51.8994 35.5615L52.7061 38.5693L52.8262 39.0684C53.3646 41.5709 52.9568 44.1925 51.6709 46.4199C50.3848 48.6471 48.3182 50.3108 45.8818 51.0957L45.3896 51.2402L40.5244 52.543V58.3389C40.5242 58.8905 40.076 59.3382 39.5244 59.3389C38.9724 59.3387 38.5247 58.8909 38.5244 58.3389V52.5439L33.6582 51.2402C31.0089 50.5291 28.7494 48.7946 27.3779 46.4189C26.0065 44.043 25.6354 41.2193 26.3447 38.5693L27.1504 35.5615L27.1816 35.4639C27.3616 34.9905 27.8752 34.7209 28.375 34.8545L32.8896 36.0615L33.2754 36.1729C33.2868 36.1764 33.2991 36.18 33.3105 36.1836C32.8444 35.0041 32.5954 33.7379 32.5947 32.4453L32.6074 31.9404C32.7333 29.4263 33.7869 27.0405 35.5742 25.251L38.8184 22.0068L38.8916 21.9404C39.0694 21.795 39.2936 21.7139 39.5254 21.7139ZM28.2764 39.0869C27.7043 41.2246 28.0041 43.5024 29.1104 45.4189C30.2168 47.3354 32.0394 48.7349 34.1768 49.3086L38.5244 50.4727V45.373C38.3858 43.6644 37.7234 42.0389 36.6279 40.7197C35.5947 39.4758 34.2228 38.5605 32.6826 38.083L32.373 37.9941L28.8232 37.0439L28.2764 39.0869ZM46.6768 37.9932L46.6777 37.9941C45.0113 38.4404 43.5234 39.3929 42.4209 40.7197C41.3249 42.0389 40.6632 43.6641 40.5244 45.373V50.4727L44.8721 49.3086L45.2686 49.1914C47.234 48.5582 48.902 47.2167 49.9395 45.4199C51.0459 43.5033 51.3464 41.2247 50.7744 39.0869L50.2266 37.0439L46.6768 37.9932ZM36.9883 26.665C35.4567 28.199 34.596 30.2777 34.5947 32.4453C34.5961 34.6131 35.4574 36.6917 36.9893 38.2256C37.0103 38.2467 37.03 38.2695 37.0488 38.292C37.4487 38.6444 37.8234 39.0287 38.167 39.4424C38.7067 40.0924 39.1604 40.8033 39.5234 41.5557C39.8867 40.8026 40.3425 40.0918 40.8828 39.4414C41.2288 39.0251 41.6049 38.6374 42.0078 38.2832C42.0246 38.2636 42.043 38.2441 42.0615 38.2256C43.5932 36.6916 44.4549 34.6121 44.4561 32.4443L44.4463 32.042C44.4012 31.1063 44.1951 30.1838 43.8359 29.3164C43.4253 28.325 42.822 27.4231 42.0625 26.665L39.5244 24.1279L36.9883 26.665Z"
+                      fill="#EBA400"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M71 11.4824V51.9863L70.9912 52.5293C70.9064 55.2442 70.1931 57.9056 68.9033 60.3047L68.6377 60.7803C67.2766 63.1344 65.3863 65.1457 63.1123 66.6553L40 82L16.8877 66.6553C14.6131 65.1453 12.7225 63.1332 11.3613 60.7783L11.0957 60.3027C9.80594 57.903 9.09298 55.2409 9.00879 52.5254L9 51.9814V11.4824L40 0L71 11.4824ZM11 12.873V51.9814L11.0078 52.4629C11.0823 54.8693 11.714 57.2291 12.8574 59.3564C14.077 61.6254 15.8409 63.5604 17.9932 64.9893L40 79.5986L62.0068 64.9893L62.4053 64.7158C64.3765 63.318 65.9982 61.4849 67.1416 59.3584C68.361 57.0904 68.9991 54.5579 69 51.9863V12.873L40 2.13184L11 12.873Z"
+                      fill="#EBA400"
+                    />
+                  </svg>
+                </div>
+                <div class="mission-card__content">
+                  <div class="mission-card__title is-black-text h3">Responsibility</div>
+                  <div class="mission-card__text">
+                    <p>
+                      Our company values its clients and believes that their success is the success of Grandeur Company.
+                      That’s why, when it comes to solving even the most complex challenges, our clients can rely on us
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="mission-card">
+                <div class="mission-card__icon-wr">
+                  <svg width="80" height="81" viewBox="0 0 80 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M69.2314 47.1816L54.999 62.4688L47.7676 54.6807L49.2324 53.3193L55.001 59.5312L67.7686 45.8184L69.2314 47.1816Z"
+                      fill="#EBA400"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M78.5 40.9648V65.5244L58 79.7158L49.7432 74H6C3.85996 74 2.11211 72.3194 2.00488 70.2061L2 70V55.167C2 45.2259 10.0589 37.167 20 37.167H43.1973L58 27.2979L78.5 40.9648ZM39.5 42.0352V64.4756L58 77.2832L76.5 64.4756V42.0352L58 29.7012L39.5 42.0352ZM20 39.167C11.1634 39.167 4 46.3304 4 55.167V70L4.01074 70.2041C4.113 71.2128 4.96435 72 6 72H13.5V59H15.5V72H46.8545L37.5 65.5244V40.9648L40.1973 39.167H20Z"
+                      fill="#EBA400"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M31 1.5C39.8366 1.5 47 8.66344 47 17.5C47 26.3366 39.8366 33.5 31 33.5C22.1634 33.5 15 26.3366 15 17.5C15 8.66344 22.1634 1.5 31 1.5ZM31 3.5C23.268 3.5 17 9.76801 17 17.5C17 25.232 23.268 31.5 31 31.5C38.732 31.5 45 25.232 45 17.5C45 9.76801 38.732 3.5 31 3.5Z"
+                      fill="#EBA400"
+                    />
+                  </svg>
+                </div>
+                <div class="mission-card__content">
+                  <div class="mission-card__title is-black-text h3">Experience and Professionalism</div>
+                  <div class="mission-card__text">
+                    <p>
+                      With over 10 years in the agro-industry, Grandeur Company has gained tremendous experience and is
+                      ready to share it to help develop the agricultural sector
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page-section strategic-section" id="strategic">
+          <div class="page-section-title is-black-text is-text-upper h2">Strategic Priority</div>
+          <div class="strategic-section__grid">
+            <div class="strategic-card">
+              <div class="strategic-card__number">01</div>
+              <div class="strategic-card__title is-black-text h3">Expanding Product Range and Export Volumes</div>
+              <p class="strategic-card__text">
+                We aim to offer our clients a diverse portfolio of grain and oilseed products. By broadening our export
+                base and increasing shipment volumes, we are committed to meeting the evolving needs of our global
+                partners
+              </p>
+            </div>
+            <div class="strategic-card">
+              <div class="strategic-card__number">02</div>
+              <div class="strategic-card__title is-black-text h3">Expanding Geographic Reach</div>
+              <p class="strategic-card__text">
+                We are actively working to extend the geography of our supply and sales network. This enables us to
+                serve international markets more effectively and diversify our sales channels
+              </p>
+            </div>
+            <div class="strategic-card">
+              <div class="strategic-card__number">03</div>
+              <div class="strategic-card__title is-black-text h3">Enhancing Logistics Efficiency</div>
+              <p class="strategic-card__text">
+                Logistics is a key focus area for us. We are consistently improving our logistics processes to ensure
+                timely delivery of products anywhere in the world — reliably fulfilling our customers’ expectations.
+              </p>
+            </div>
+            <div class="strategic-card">
+              <div class="strategic-card__number">04</div>
+              <div class="strategic-card__title is-black-text h3">Strengthening Product Quality Expertise</div>
+              <p class="strategic-card__text">
+                We place strong emphasis on quality assurance. Our company is committed to maintaining high standards
+                and continually assessing the quality characteristics of our core products
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="page-section products-section" id="products">
+          <div class="page-section__grid">
+            <div>
+              <div class="page-section__sticky-section">
+                <div class="page-section-title is-black-text is-text-upper h2">Our Products</div>
+                <div>
+                  <p>
+                    We supply a wide range of agricultural commodities that meet the demands of global markets. All
+                    products undergo strict quality control and comply with modern agro-industry and feed production
+                    standards.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="products-section__grid">
+              <div class="product-card">
+                <div class="product-card__img-wr">
+                  <img src="./img/product-1.jpg" alt="" class="product-card__img fit-cover" />
+                  <img src="./img/product-1-hover.svg" alt="" class="product-card__img-hover fit-cover" />
+                </div>
+                <div class="product-card__content">
+                  <div class="product-card__title is-black-text h4">Wheat</div>
+                  <p class="product-card__text">
+                    A key cereal crop used worldwide for producing flour, bread, and pasta
+                  </p>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__img-wr">
+                  <img src="./img/product-2.jpg" alt="" class="product-card__img fit-cover" />
+                  <img src="./img/product-2-hover.svg" alt="" class="product-card__img-hover fit-cover" />
+                </div>
+                <div class="product-card__content">
+                  <div class="product-card__title is-black-text h4">Corn</div>
+                  <p class="product-card__text">
+                    Versatile grain used for food, animal feed, and industrial products like ethanol
+                  </p>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__img-wr">
+                  <img src="./img/product-3.jpg" alt="" class="product-card__img fit-cover" />
+                  <img src="./img/product-3-hover.svg" alt="" class="product-card__img-hover fit-cover" />
+                </div>
+                <div class="product-card__content">
+                  <div class="product-card__title is-black-text h4">Soybeans</div>
+                  <p class="product-card__text">
+                    Protein-rich legumes widely used in food, animal nutrition, and oil production
+                  </p>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__img-wr">
+                  <img src="./img/product-4.jpg" alt="" class="product-card__img fit-cover" />
+                  <img src="./img/product-4-hover.svg" alt="" class="product-card__img-hover fit-cover" />
+                </div>
+                <div class="product-card__content">
+                  <div class="product-card__title is-black-text h4">Soybean meal</div>
+                  <p class="product-card__text">
+                    High-protein byproduct of soybean oil extraction, mainly used in animal feed
+                  </p>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__img-wr">
+                  <img src="./img/product-5.jpg" alt="" class="product-card__img fit-cover" />
+                  <img src="./img/product-5-hover.svg" alt="" class="product-card__img-hover fit-cover" />
+                </div>
+                <div class="product-card__content">
+                  <div class="product-card__title is-black-text h4">Sunflower Meal</div>
+                  <p class="product-card__text">
+                    Nutrient-rich residue from sunflower oil production, ideal for livestock feed
+                  </p>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__img-wr">
+                  <img src="./img/product-6.jpg" alt="" class="product-card__img fit-cover" />
+                  <img src="./img/product-6-hover.svg" alt="" class="product-card__img-hover fit-cover" />
+                </div>
+                <div class="product-card__content">
+                  <div class="product-card__title is-black-text h4">Soy Oil</div>
+                  <p class="product-card__text">
+                    Vegetable oil extracted from soybeans, used in cooking and food manufacturing
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page-section contacts-section" id="partners">
+          <div class="page-section__grid">
+            <div>
+              <div class="page-section-title is-black-text is-text-upper h2">Become a Partner</div>
+              <div>
+                <p>We welcome cooperation with producers, traders, and logistics partners.</p>
+              </div>
+            </div>
+            <div class="contacts-section__form">
+              <form action="#" class="callback-form js-validate-form">
+                <label class="form-input is-required">
+                  <input type="text" class="input" name="name" placeholder=" " />
+                  <div class="form-input__placeholder">Name</div>
+                </label>
+                <label class="form-input is-required is-email">
+                  <input type="text" class="input" name="email" placeholder=" " />
+                  <div class="form-input__placeholder">Email</div>
+                </label>
+                <label class="form-input is-phone phone-input">
+                  <input type="text" class="input" name="phone" placeholder=" " />
+                  <div class="form-input__placeholder">Phone (optional)</div>
+                </label>
+
+                <label class="form-input is-textarea">
+                  <textarea name="message" class="input textarea" placeholder=" "></textarea>
+                  <div class="form-input__placeholder">Message</div>
+                </label>
+
+                <div class="callback-form__footer">
+                  <label class="form-input is-required is-checkbox checkbox-input">
+                    <input type="checkbox" name="privacy" class="input" />
+                    <div class="checkbox-input__check">
+                      <div class="checkbox-input__check-icon">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M18.6143 8.97266L10.9668 16.6201L5.96875 11.6201L7.0293 10.5596L10.9668 14.498L17.5537 7.91211L18.6143 8.97266Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="checkbox-input__placeholder">
+                      I have read and agree to the <a href="#" target="_blank" class="text-link">Privacy Policy</a>
+                    </div>
+                  </label>
+                  <button type="submit" class="button is-primary w-icon">
+                    SUBMIT
+                    <span class="button__icon-wr">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M15.683 13.6993V6.22869H17.3714V16.5813H7.01873V14.893H14.4893L6.42188 6.82555L7.61559 5.63184L15.683 13.6993Z"
+                          fill="#EBA400"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer" id="contacts">
+  <div class="footer__inner">
+    <div class="footer__row">
+      <div class="footer__col">
+        <div class="footer__col-title is-text-upper h4">Company information</div>
+        <div class="footer-informations-wr">
+          <div class="footer-information">
+            <div class="footer-information__label">VAT</div>
+            <div class="footer-information__value">SK2121473299</div>
+          </div>
+          <div class="footer-information">
+            <div class="footer-information__label">Company Reg. No.</div>
+            <div class="footer-information__value">53676351</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title is-text-upper h4">Contact</div>
+        <div class="footer-informations-wr">
+          <div class="footer-contact">
+            <div>
+              <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.667969" width="40" height="40" rx="6" fill="#EBA400" />
+                <path
+                  d="M27.7669 17.0413C26.8919 13.1913 23.5336 11.458 20.5836 11.458C20.5836 11.458 20.5836 11.458 20.5752 11.458C17.6336 11.458 14.2669 13.183 13.3919 17.033C12.4169 21.333 15.0502 24.9747 17.4336 27.2663C18.3169 28.1163 19.4502 28.5413 20.5836 28.5413C21.7169 28.5413 22.8502 28.1163 23.7252 27.2663C26.1086 24.9747 28.7419 21.3413 27.7669 17.0413ZM20.5836 21.2163C19.1336 21.2163 17.9586 20.0413 17.9586 18.5913C17.9586 17.1413 19.1336 15.9663 20.5836 15.9663C22.0336 15.9663 23.2086 17.1413 23.2086 18.5913C23.2086 20.0413 22.0336 21.2163 20.5836 21.2163Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div>
+              <div class="footer-information__label">Address</div>
+              <div class="footer-information__value">
+                Plynárenská 4659/1 <br />
+                Bratislava — mestská časť Ružinov 821 09
+              </div>
+            </div>
+          </div>
+          <a href="tel:+421 908 333 907" class="footer-contact">
+            <div>
+              <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.667969" width="40" height="40" rx="6" fill="#EBA400" />
+                <path
+                  d="M27.7669 17.0413C26.8919 13.1913 23.5336 11.458 20.5836 11.458C20.5836 11.458 20.5836 11.458 20.5752 11.458C17.6336 11.458 14.2669 13.183 13.3919 17.033C12.4169 21.333 15.0502 24.9747 17.4336 27.2663C18.3169 28.1163 19.4502 28.5413 20.5836 28.5413C21.7169 28.5413 22.8502 28.1163 23.7252 27.2663C26.1086 24.9747 28.7419 21.3413 27.7669 17.0413ZM20.5836 21.2163C19.1336 21.2163 17.9586 20.0413 17.9586 18.5913C17.9586 17.1413 19.1336 15.9663 20.5836 15.9663C22.0336 15.9663 23.2086 17.1413 23.2086 18.5913C23.2086 20.0413 22.0336 21.2163 20.5836 21.2163Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div>
+              <div class="footer-information__label">Phone number</div>
+              <div class="footer-information__value">+421 908 333 907</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title is-text-upper h4">Menu</div>
+        <nav class="footer__nav">
+          <a href="#about" class="text-link js-navigate-link">About Us</a>
+          <a href="#mission" class="text-link js-navigate-link">Our Mission</a>
+          <a href="#strategic" class="text-link js-navigate-link">Strategic Priority</a>
+          <a href="#products" class="text-link js-navigate-link">Products</a>
+          <a href="#partners" class="text-link js-navigate-link">For partners</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer__row">
+      <div class="footer__col">
+        <div class="footer__coopyright">©Grandeur Company s.r.o., 2025</div>
+      </div>
+      <div class="footer__col tablet-hidden"></div>
+      <div class="footer__col">
+        <div class="footer__policy-links">
+          <a href="#" class="text-link is-underline">Privacy Policy</a>
+          <a href="#" class="text-link is-underline">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-allert">
+  <div class="cookie-allert__close">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 17L7 16L11 12L7 8L8 7L12 11L16 7L17 8L13 12L17 16L16 17L12 13L8 17Z" fill="#7C8890" />
+    </svg>
+  </div>
+  <div class="cookie-allert__title h4 is-black-text">This website uses cookies</div>
+  <div class="cookie-allert__text">We use cookies to improve your experience and analyze traffic</div>
+  <div class="cookie-allert__footer">
+    <button type="button" class="button is-black">ACCEPT</button>
+    <a href="#" class="text-link is-underline" target="_blank">Cookie Policy</a>
+  </div>
+</div>
+ <script src="./js/scripts.js"></script>
+<script src="./js/forms.js"></script>
+
+  </body>
+</html>
