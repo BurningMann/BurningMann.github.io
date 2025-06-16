@@ -1,10 +1,12 @@
 /* FORM VALIDATE */
 const validateForms = document.querySelectorAll('.js-validate-form');
 validateForms.forEach((el) => {
-  const passwordRegex = /^(?=.*?[A-Za-z])(?=.*?[0-9]).{6,}$/;
+  const submitButton = el.querySelector('button[type=submit]');
+  const submitButtonText = submitButton.querySelector('.button__text');
+  const successButtonText = submitButton.dataset.successText;
+  const baseButtonText = submitButton.dataset.baseText;
 
-  el.addEventListener('submit', async (event) => {
-    event.preventDefault();
+  submitButton.addEventListener('click', async () => {
     let errors = 0;
     const fields = el.querySelectorAll('.form-input');
     fields.forEach((field) => {
@@ -24,40 +26,38 @@ validateForms.forEach((el) => {
         ) {
           errors++;
           field.classList.add('is-error');
-        } else if (
-          field.classList.contains('is-required') &&
-          field.classList.contains('is-password') &&
-          !passwordRegex.test(input.value)
-        ) {
-          errors++;
-          field.classList.add('is-error');
-        } else if (field.classList.contains('is-required') && field.classList.contains('is-password-repeat')) {
-          const password = el.querySelector('.is-password .input');
-          if (!password) {
-            return;
-          }
-
-          if (input.value !== password.value) {
-            errors++;
-            field.classList.add('is-error');
-          }
         } else if (field.classList.contains('is-required') && !input.value) {
           errors++;
           field.classList.add('is-error');
         }
       }
     });
+  });
+  el.addEventListener('submit', async (event) => {
+    event.preventDefault();
 
-    if (errors) {
-      return false;
+    const isValid = el.checkValidity();
+
+    if (!isValid) {
+      form.reportValidity();
+
+      retrun;
+    } else {
+      let response = await fetch('/handlers/form-callback.php', {
+        method: 'POST',
+        body: new FormData(el),
+      });
     }
 
-    /*     let response = await fetch('/handlers/orderservice.php', {
-      method: 'POST',
-      body: new FormData(el),
-    }); */
-
     clearForm(el);
+
+    el.classList.add('is-success');
+    submitButtonText.innerHTML = successButtonText;
+
+    setTimeout(() => {
+      el.classList.remove('is-success');
+      submitButtonText.innerHTML = baseButtonText;
+    }, 5000);
   });
 });
 
@@ -65,6 +65,7 @@ function clearForm(el) {
   const fields = el.querySelectorAll('.input');
   fields.forEach((field) => {
     field.value = '';
+    field.checked = false;
   });
 
   const fileInputs = el.querySelectorAll('.file-input');
