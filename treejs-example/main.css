@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    overflow: hidden;
+}
+
+.canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+.constructor {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    z-index: 20;
+    background: rgb(85, 73, 73);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.colors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.color {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.colors-title {
+    margin-bottom: 10px;
+}
+
+/*# sourceMappingURL=main.css.map*/
