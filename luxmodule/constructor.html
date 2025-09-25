@@ -1,0 +1,852 @@
+<!doctype html>
+<html lang="ru" class="hidden-scrollbar">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Luxmodule</title>
+  <meta name="theme-color" content="#fff" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+  />
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png" />
+  <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png" />
+  <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png" />
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png" />
+  <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png" />
+
+  <link rel="stylesheet" href="./styles/fancybox-5.0.min.css" />
+  <link rel="stylesheet" href="./styles/swiper.min.css" />
+
+  <link rel="stylesheet" href="./styles/styles.css" />
+
+  <!--   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+</head>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+      }
+    }
+  </script>
+  <body class="hidden-scrollbar">
+    <main class="constructor-page">
+      <div class="canvas-wr">
+        <canvas class="canvas"></canvas>
+      </div>
+
+      <div id="constructor" class="hidden-scrollbar">
+        <div class="constructor-section">
+          <div class="constructor-section__title">Type</div>
+          <div class="custom-select">
+            <div class="custom-select-opener">
+              <input
+                v-model="currentModel"
+                class="custom-select-opener__value"
+                type="text"
+                placeholder=" "
+                readonly
+              />
+            </div>
+            <div class="custom-select-dropdown">
+              <div
+                v-for="(model, index) in models"
+                :key="index"
+                class="custom-select-option"
+                :data-value="model"
+                :class="{'is-selected': currentModel === model}"
+              >
+                {{model}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="constructor-section">
+          <div class="constructor-section__title">Ground Material</div>
+          <div class="custom-select">
+            <div class="custom-select-opener">
+              <input
+                class="custom-select-opener__value"
+                type="text"
+                placeholder=" "
+                readonly
+                :value="groundTextures[currentGround].label"
+              />
+            </div>
+            <div class="custom-select-dropdown">
+              <div
+                v-for="(texture, index) in groundTextures"
+                :key="index"
+                class="custom-select-option"
+                :data-value="texture.label"
+                :class="{'is-selected': texture.label === groundTextures[currentGround].label}"
+                @click="changeFloor(index)"
+              >
+                {{texture.label}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="constructor-section">
+          <div class="constructor-section__title">Sydewalls</div>
+          <div class="checkboxes-wr">
+            <label class="form-input is-checkbox checkbox-input">
+              <input
+                v-model="isSideWallsVisible"
+                type="checkbox"
+                class="input"
+                @change="changeWallsStatus"
+              />
+              <div class="checkbox-input__check">
+                <div class="checkbox-input__check-icon"></div>
+              </div>
+              <div class="checkbox-input__placeholder">Add Sydewalls</div>
+            </label>
+            <label class="form-input is-checkbox checkbox-input">
+              <input
+                v-model="isWindowsVisible"
+                type="checkbox"
+                class="input"
+                @change="changeWindowsStatus"
+              />
+              <div class="checkbox-input__check">
+                <div class="checkbox-input__check-icon"></div>
+              </div>
+              <div class="checkbox-input__placeholder">Add Windows</div>
+            </label>
+          </div>
+        </div>
+        <div class="constructor-section">
+          <div class="constructor-section__title">Human</div>
+          <div class="checkboxes-wr">
+            <label class="form-input is-checkbox checkbox-input">
+              <input
+                v-model="isHumanVisible"
+                type="checkbox"
+                class="input"
+                @change="changeHumanStatus"
+              />
+              <div class="checkbox-input__check">
+                <div class="checkbox-input__check-icon"></div>
+              </div>
+              <div class="checkbox-input__placeholder">
+                Show reference human (180 cm)
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="constructor-section">
+          <div class="constructor-section__title">Color</div>
+          <div class="colors-block">
+            <div class="colors-block__title">Tent Color</div>
+            <div class="constructor-colors-wrapper">
+              <div
+                v-for="(color, index) in wningColors"
+                :key="index"
+                class="constructor-color"
+                :class="{'constructor-color--active': color === whingColor}"
+                @click="setWhingColor(color)"
+              >
+                <div
+                  class="constructor-color__color"
+                  :style="{'background-color': colorsObj[color]}"
+                ></div>
+                <div class="constructor-color__name">{{color}}</div>
+              </div>
+            </div>
+          </div>
+          <div class="colors-block">
+            <div class="colors-block__title">Frame Color</div>
+            <div class="constructor-colors-wrapper">
+              <div
+                v-for="(color, index) in skeletonColors"
+                :key="index"
+                class="constructor-color"
+                :class="{'constructor-color--active': color === skeletonColor}"
+                @click="setSkeletonColor(color)"
+              >
+                <div
+                  class="constructor-color__color"
+                  :style="{'background-color': colorsObj[color]}"
+                ></div>
+                <div class="constructor-color__name">{{color}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="constructor-section">
+          <div class="constructor-section__title">Branding</div>
+          <div class="box-w-label">
+            <div class="box-w-label__label">Branding</div>
+            <div class="custom-select">
+              <div class="custom-select-opener">
+                <input
+                  class="custom-select-opener__value"
+                  type="text"
+                  placeholder=" "
+                  readonly
+                  :value="brandingVariants[currentBranding].label"
+                />
+              </div>
+              <div class="custom-select-dropdown">
+                <div
+                  v-for="(item, index) in brandingVariants"
+                  :key="index"
+                  class="custom-select-option"
+                  :data-value="item.label"
+                  :class="{'is-selected': item.label === brandingVariants[currentBranding].label}"
+                  @click="changeBranding(index)"
+                >
+                  {{item.label}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div v-if="isCustomLogoBranding" class="box-w-label">
+            <div class="box-w-label__label">Logo Upload</div>
+            <label class="file-input">
+              <input type="file" @change="changeLogo" />
+              <div class="button is-primary">Choose File</div>
+            </label>
+          </div>
+          <div v-show="isCustomLogoBranding" class="box-w-label">
+            <div class="box-w-label__label">Logo Upload</div>
+            <div class="custom-select">
+              <div class="custom-select-opener">
+                <input
+                  class="custom-select-opener__value"
+                  type="text"
+                  placeholder=" "
+                  readonly
+                  :value="`${currentLogoSides} side`"
+                />
+              </div>
+              <div class="custom-select-dropdown">
+                <div
+                  v-for="item in logoAreas.length"
+                  :key="item"
+                  class="custom-select-option"
+                  :data-value="item"
+                  :class="{'is-selected': item === currentLogoSides}"
+                  @click="changeLogoSides(item)"
+                >
+                  {{item}} side
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="constructor-section">
+          <div class="constructor-section__title">Client Information</div>
+          <label class="form-input is-required">
+            <input
+              v-model="formData.name"
+              type="text"
+              class="input"
+              placeholder="Name"
+            />
+          </label>
+          <label class="form-input is-required">
+            <input
+              v-model="formData.company"
+              type="text"
+              class="input"
+              placeholder="Company"
+            />
+          </label>
+          <div class="custom-select">
+            <div class="custom-select-opener">
+              <input
+                v-model="formData.country"
+                class="custom-select-opener__value"
+                type="text"
+                placeholder="Country"
+                readonly
+              />
+            </div>
+            <div class="custom-select-dropdown">
+              <div
+                v-for="item in countries"
+                :key="item"
+                class="custom-select-option"
+                :data-value="item"
+                :class="{'is-selected': item === formData.country}"
+              >
+                {{item}}
+              </div>
+            </div>
+          </div>
+          <label class="form-input is-required">
+            <input
+              v-model="formData.email"
+              type="text"
+              class="input"
+              placeholder="E-mail"
+            />
+          </label>
+          <label class="form-input is-required">
+            <input
+              v-model="formData.phone"
+              type="text"
+              class="input"
+              placeholder="Phone Number"
+            />
+          </label>
+          <label class="form-input is-checkbox checkbox-input">
+            <input type="checkbox" class="input" />
+            <div class="checkbox-input__check">
+              <div class="checkbox-input__check-icon"></div>
+            </div>
+            <div class="checkbox-input__placeholder">
+              I agree to the processing of personal data
+            </div>
+          </label>
+          <button type="button" class="button is-primary">Submit</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/fancybox-5.0.min.js"></script>
+<script src="./js/swiper.min.js"></script>
+<script src="./js/forms.js"></script>
+<script src="./js/vendor.js"></script>
+<script src="./js/scripts.js"></script>
+
+  </body>
+</html>
+
+<script type="module">
+  import {
+    createApp,
+    ref,
+    reactive,
+    watch,
+    computed,
+  } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js';
+  import * as THREE from 'three';
+  import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+  import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+  const sizes = {
+    width: window.innerWidth,
+    height: window.innerHeight,
+  };
+
+  const scene = new THREE.Scene();
+  const canvas = document.querySelector('.canvas');
+  const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
+  scene.add(camera);
+  camera.position.set(0, 10, 15);
+  scene.background = new THREE.Color('rgba(30, 43, 55, 1)');
+
+  const controls = new OrbitControls(camera, canvas);
+  controls.enableDamping = true;
+  controls.minDistance = 3;
+  controls.maxDistance = 30;
+  controls.maxPolarAngle = Math.PI / 2.1;
+
+  const renderer = new THREE.WebGLRenderer({ canvas });
+  renderer.setSize(sizes.width, sizes.height);
+  renderer.render(scene, camera);
+  const BannerTextureLoader = new THREE.TextureLoader();
+  const loader = new GLTFLoader();
+
+  createApp({
+    setup() {
+      const currentModel = ref('eco100');
+      const currentGround = ref('grass');
+      const isSideWallsVisible = ref(false);
+      const isWindowsVisible = ref(false);
+      const isHumanVisible = ref(false);
+      const whingColor = ref('');
+      const skeletonColor = ref('');
+      const currentBranding = ref('noBranding');
+      const currentLogoSides = ref(4);
+
+      const formData = reactive({
+        name: '',
+        company: '',
+        country: '',
+        email: '',
+        phone: '',
+      });
+
+      const groundTextures = {
+        grass: {
+          label: 'Grass',
+          name: 'grass',
+          repeatX: 4,
+          repeatY: 4,
+        },
+        cement: {
+          label: 'Concrete',
+          name: 'cement',
+          repeatX: 1,
+          repeatY: 1,
+        },
+        wood: {
+          label: 'Wood',
+          name: 'wood-2',
+          repeatX: 8,
+          repeatY: 8,
+        },
+      };
+      const colorsObj = {
+        white: '#FEFEFE',
+        lightGrey: '#BBBCBC',
+        darkGrey: '#656564',
+        beige: '#ECCF9C',
+        tinted: '#35292A',
+        red: '#DD2A1B',
+        transparent: '#DBEAF9',
+        natural: '#D9B893',
+        brown: '#694435',
+      };
+      const wningColors = [
+        'white',
+        'lightGrey',
+        'darkGrey',
+        'beige',
+        'tinted',
+        'red',
+        'transparent',
+      ];
+      const skeletonColors = ['natural', 'brown', 'white', 'beige'];
+      const models = [
+        'eco100',
+        'Dome S (36m2)',
+        'Dome M (36m2)',
+        'Dome L (36m2)',
+        'Hexa S (95m2)',
+      ];
+      const brandingVariants = {
+        noBranding: {
+          label: 'No Branding',
+        },
+        customLogo: {
+          label: 'Custom logo',
+        },
+        fullWrapp: {
+          label: 'Full Wrap Preview',
+        },
+      };
+      const countries = [
+        'Albania',
+        'Belarus',
+        'Poland',
+        'Russia',
+        'USA',
+        'Albania',
+        'Belarus',
+        'Poland',
+        'Russia',
+        'USA',
+      ];
+
+      const isCustomLogoBranding = computed(() => {
+        return currentBranding.value === 'customLogo';
+      });
+
+      const getFloorTexture = (name, repeatX, repeatY) => {
+        const texture = new THREE.TextureLoader().load(
+          `./img/textures/${name}.jpg`,
+        );
+        texture.wrapS = THREE.RepeatWrapping;
+        texture.wrapT = THREE.RepeatWrapping;
+        texture.repeat.set(repeatX, repeatY);
+
+        return texture;
+      };
+
+      const floor = new THREE.Mesh(
+        new THREE.CircleGeometry(10, 128),
+        new THREE.MeshStandardMaterial({
+          map: getFloorTexture(currentGround.value, 4, 4),
+          color: 'white',
+          metalness: 0,
+          roughness: 1,
+        }),
+      );
+      floor.receiveShadow = true;
+      floor.rotation.x = -Math.PI * 0.5;
+      floor.position.y = 0.02;
+      scene.add(floor);
+
+      function changeFloor(value) {
+        const { name, repeatX, repeatY } = groundTextures[value];
+
+        if (groundTextures[currentGround.value].name === name) return;
+
+        currentGround.value = value;
+        floor.material.map = getFloorTexture(name, repeatX, repeatY);
+      }
+
+      function addAmbientLight() {
+        const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+        scene.add(ambientLight);
+      }
+
+      function addRectLight() {
+        const hemiLight = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
+        hemiLight.position.set(0, 20, 0);
+        scene.add(hemiLight);
+      }
+
+      function addHemiLight() {
+        const width = 20;
+        const height = 20;
+        const intensity = 1;
+        const rectLight = new THREE.RectAreaLight(
+          0xffffff,
+          intensity,
+          width,
+          height,
+        );
+        rectLight.position.set(0, 20, 0);
+        rectLight.lookAt(0, 0, 0);
+        scene.add(rectLight);
+      }
+
+      function addDirectionalLight() {
+        const dirLight = new THREE.DirectionalLight(0xffffff, 0.54);
+        dirLight.position.set(10, 10, 10);
+        dirLight.castShadow = true;
+        dirLight.shadow.mapSize = new THREE.Vector2(2048, 2048);
+        scene.add(dirLight);
+      }
+
+      addAmbientLight();
+      addRectLight();
+      addHemiLight();
+      addDirectionalLight();
+
+      const tick = () => {
+        controls.update();
+        renderer.render(scene, camera);
+        window.requestAnimationFrame(tick);
+      };
+      tick();
+
+      /** Базовые обработчики событий длы поддержки ресайза */
+      window.addEventListener('resize', () => {
+        // Обновляем размеры
+        sizes.width = window.innerWidth;
+        sizes.height = window.innerHeight;
+
+        // Обновляем соотношение сторон камеры
+        camera.aspect = sizes.width / sizes.height;
+        camera.updateProjectionMatrix();
+
+        // Обновляем renderer
+        renderer.setSize(sizes.width, sizes.height);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.render(scene, camera);
+      });
+
+      let model;
+      let humanModel;
+      let modelObjects = [];
+      let wals = [];
+      let windows = [];
+      let windowsFrames = [];
+      const logoAreas = ref([]);
+      let human = [];
+      let wning = [];
+      let skeleton = [];
+      let walsBack = [];
+
+      loader.load(
+        './img/models/eco100.glb',
+        async (gltf) => {
+          model = gltf.scene;
+          model.scale.setScalar(0.08);
+          scene.add(model);
+
+          await model.traverse(function (object) {
+            if (object.isMesh) {
+              modelObjects.push(object);
+              object.material.side = THREE.DoubleSide;
+            }
+          });
+
+          console.log(modelObjects);
+
+          wals = modelObjects.filter(
+            (el) => el.name.includes('sidewall-') && !el.name.includes('-back'),
+          );
+          walsBack = modelObjects.filter(
+            (el) => el.name.includes('sidewall-') && el.name.includes('-back'),
+          );
+          windows = modelObjects.filter((el) => el.name.includes('windows-'));
+          windowsFrames = modelObjects.filter((el) =>
+            el.name.includes('ОСТЕКЛЕНИЕ'),
+          );
+          logoAreas.value = modelObjects.filter((el) =>
+            el.name.includes('logo-area'),
+          );
+          human = modelObjects.filter((el) => el.name.includes('human'));
+          wning = modelObjects.filter((el) =>
+            el.material.name.includes('wning-material'),
+          );
+          skeleton = modelObjects.filter((el) =>
+            el.material.name.includes('skeleton-material'),
+          );
+
+          setObjectsStatus(human, isHumanVisible.value);
+          setObjectsStatus(wals, isSideWallsVisible.value);
+          setObjectsStatus(walsBack, false);
+          setObjectsStatus(windows, isWindowsVisible.value);
+          setObjectsStatus(windowsFrames, isWindowsVisible.value);
+          setObjectsStatus(logoAreas.value, false);
+
+          currentLogoSides.value = logoAreas.value.length;
+
+          /* startHandlers(); */
+
+          scene.add(model);
+        },
+        (progress) => {
+          console.log('progress');
+          console.log(progress);
+        },
+        (error) => {
+          console.log('error');
+          console.log(error);
+        },
+      );
+
+      const setObjectsStatus = (items, status) => {
+        items.forEach((item) => {
+          item.visible = status;
+        });
+      };
+
+      const setObjectsColor = (items, color) => {
+        const colorValue = colorsObj[color];
+
+        items.forEach((item) => {
+          item.material.color.set(new THREE.Color(colorValue));
+
+          if (color === 'transparent') {
+            item.material.opacity = 0.8;
+            item.material.transparent = true;
+          } else {
+            item.material.opacity = 1;
+            item.material.transparent = false;
+          }
+        });
+      };
+
+      const changeWallsStatus = (event) => {
+        setObjectsStatus(wals, isSideWallsVisible.value);
+        setObjectsStatus(walsBack, isSideWallsVisible.value);
+      };
+
+      const changeWindowsStatus = (event) => {
+        setObjectsStatus(windows, isWindowsVisible.value);
+        setObjectsStatus(windowsFrames, isWindowsVisible.value);
+      };
+
+      const changeHumanStatus = (event) => {
+        setObjectsStatus(human, isHumanVisible.value);
+      };
+
+      const setWhingColor = (color) => {
+        whingColor.value = color;
+
+        setObjectsColor(wning, color);
+        setObjectsColor(wals, color);
+      };
+
+      const setSkeletonColor = (color) => {
+        skeletonColor.value = color;
+        console.log(skeleton, color);
+        setObjectsColor(skeleton, color);
+      };
+
+      const setGround = (color) => {
+        skeletonColor.value = color;
+        setObjectsColor(skeleton, color);
+      };
+
+      const changeBranding = (value) => {
+        currentBranding.value = value;
+      };
+
+      const setFullWrappBranding = () => {
+        /*         wals;
+        walsBack;
+        logoAreas;
+        const areas =  */
+
+        const BannerLogoTexture = BannerTextureLoader.load(
+          './img/full-wrap-brending.jpg',
+        );
+        BannerLogoTexture.flipY = false;
+        BannerLogoTexture.transparent = true;
+        BannerLogoTexture.offset.set(1, 0);
+        logoAreas.value.forEach((area) => {
+          area.visible = true;
+          if (area.material.map) {
+            area.material.map = BannerLogoTexture;
+            area.needsUpdate = true;
+          } else {
+            area.material = new THREE.MeshStandardMaterial({
+              map: BannerLogoTexture,
+              side: THREE.frontSide,
+            });
+            area.material.needsUpdate = true;
+          }
+        });
+
+        const BannerWaalTexture = BannerTextureLoader.load(
+          './img/full-wrap-brending.jpg',
+        );
+        BannerWaalTexture.flipY = false;
+        BannerWaalTexture.transparent = true;
+        wals.forEach((area) => {
+          area.visible = true;
+          if (area.material.map) {
+            area.material.map = BannerWaalTexture;
+          } else {
+            area.material = new THREE.MeshStandardMaterial({
+              map: BannerWaalTexture,
+              side: THREE.DoubleSide,
+            });
+          }
+          area.material.needsUpdate = true;
+        });
+        isSideWallsVisible.value = true;
+
+        walsBack.forEach((area) => {
+          area.visible = true;
+        });
+      };
+
+      const clearAllBranding = () => {
+        logoAreas.value.forEach((area) => {
+          area.visible = false;
+        });
+
+        wals.forEach((area) => {
+          if (area.material.map) {
+            area.material.map = null;
+          } else {
+            area.material = new THREE.MeshStandardMaterial({
+              map: null,
+              side: THREE.DoubleSide,
+            });
+          }
+          area.material.needsUpdate = true;
+        });
+
+        walsBack.forEach((area) => {
+          area.visible = false;
+        });
+      };
+
+      watch(currentBranding, (newValue) => {
+        if (newValue === 'fullWrapp') {
+          setFullWrappBranding();
+        }
+
+        if (newValue === 'noBranding') {
+          clearAllBranding();
+        }
+      });
+
+      const changeLogo = (event) => {
+        function setImage(file) {
+          const BannerLogoTexture = BannerTextureLoader.load(file);
+          BannerLogoTexture.flipY = false;
+          BannerLogoTexture.transparent = true;
+          BannerLogoTexture.offset.set(1, 0);
+          logoAreas.value.forEach((area) => {
+            area.visible = true;
+            if (area.material.map) {
+              area.material.map = BannerLogoTexture;
+              area.needsUpdate = true;
+            } else {
+              area.material = new THREE.MeshStandardMaterial({
+                map: BannerLogoTexture,
+                side: THREE.frontSide,
+              });
+              area.material.needsUpdate = true;
+            }
+          });
+        }
+
+        const file = event.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            const dataURL = e.target.result;
+            setImage(dataURL);
+          };
+          reader.readAsDataURL(file);
+        }
+      };
+
+      const changeLogoSides = (value) => {
+        currentLogoSides.value = value;
+        let index = 0;
+
+        logoAreas.value.forEach((area) => {
+          index++;
+          if (index > value) {
+            area.visible = false;
+
+            return;
+          }
+
+          area.visible = true;
+        });
+      };
+
+      return {
+        countries,
+        formData,
+        currentLogoSides,
+        logoAreas,
+        isCustomLogoBranding,
+        brandingVariants,
+        currentBranding,
+        groundTextures,
+        models,
+        currentModel,
+        whingColor,
+        skeletonColor,
+        colorsObj,
+        wningColors,
+        skeletonColors,
+        currentGround,
+        isSideWallsVisible,
+        isWindowsVisible,
+        isHumanVisible,
+        changeWallsStatus,
+        changeWindowsStatus,
+        changeHumanStatus,
+        setWhingColor,
+        setSkeletonColor,
+        changeFloor,
+        changeBranding,
+        changeLogo,
+        changeLogoSides,
+      };
+    },
+  }).mount('#constructor');
+</script>
