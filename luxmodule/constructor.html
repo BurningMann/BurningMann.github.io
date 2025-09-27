@@ -260,15 +260,15 @@
               placeholder="Name"
             />
           </label>
-          <label class="form-input is-required">
+          <!--           <label class="form-input is-required">
             <input
               v-model="formData.company"
               type="text"
               class="input"
               placeholder="Company"
             />
-          </label>
-          <div class="custom-select">
+          </label> -->
+          <!-- <div class="custom-select">
             <div class="custom-select-opener">
               <input
                 v-model="formData.country"
@@ -289,7 +289,7 @@
                 {{item}}
               </div>
             </div>
-          </div>
+          </div> -->
           <label class="form-input is-required">
             <input
               v-model="formData.email"
@@ -346,24 +346,43 @@
     height: window.innerHeight,
   };
 
+  const textureLoader = new THREE.TextureLoader();
+  const loader = new GLTFLoader();
+
   const scene = new THREE.Scene();
   const canvas = document.querySelector('.canvas');
   const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
   scene.add(camera);
   camera.position.set(0, 10, 15);
-  scene.background = new THREE.Color('rgba(30, 43, 55, 1)');
+  scene.background = new THREE.Color('#000000');
 
   const controls = new OrbitControls(camera, canvas);
   controls.enableDamping = true;
   controls.minDistance = 3;
-  controls.maxDistance = 30;
+  controls.maxDistance = 20;
   controls.maxPolarAngle = Math.PI / 2.1;
 
   const renderer = new THREE.WebGLRenderer({ canvas });
   renderer.setSize(sizes.width, sizes.height);
   renderer.render(scene, camera);
-  const BannerTextureLoader = new THREE.TextureLoader();
-  const loader = new GLTFLoader();
+
+  const backgroundTexture = textureLoader.load(
+    './img/9007128e-8c3a-422e-b742-92118629acce.png',
+  );
+  backgroundTexture.colorSpace = THREE.SRGBColorSpace;
+  /*   scene.background = backgroundTexture; */
+
+  const sphereGeometry = new THREE.SphereGeometry(50, 32, 32);
+  const sphereMaterial = new THREE.MeshBasicMaterial({
+    map: backgroundTexture,
+    side: THREE.BackSide,
+    opacity: 1,
+    transparent: false,
+  });
+  sphereMaterial.color.set(new THREE.Color('#ffffff'));
+  const backgroundSphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+  backgroundSphere.position.y = 1;
+  scene.add(backgroundSphere);
 
   createApp({
     setup() {
@@ -389,20 +408,20 @@
         grass: {
           label: 'Grass',
           name: 'grass',
-          repeatX: 4,
-          repeatY: 4,
+          repeatX: 40,
+          repeatY: 40,
         },
         cement: {
           label: 'Concrete',
           name: 'cement',
-          repeatX: 1,
-          repeatY: 1,
+          repeatX: 100,
+          repeatY: 100,
         },
         wood: {
           label: 'Wood',
           name: 'wood-2',
-          repeatX: 8,
-          repeatY: 8,
+          repeatX: 80,
+          repeatY: 80,
         },
       };
       const colorsObj = {
@@ -465,6 +484,7 @@
         const texture = new THREE.TextureLoader().load(
           `./img/textures/${name}.jpg`,
         );
+        texture.colorSpace = THREE.SRGBColorSpace;
         texture.wrapS = THREE.RepeatWrapping;
         texture.wrapT = THREE.RepeatWrapping;
         texture.repeat.set(repeatX, repeatY);
@@ -473,9 +493,9 @@
       };
 
       const floor = new THREE.Mesh(
-        new THREE.CircleGeometry(10, 128),
+        new THREE.CircleGeometry(50, 128),
         new THREE.MeshStandardMaterial({
-          map: getFloorTexture(currentGround.value, 4, 4),
+          map: getFloorTexture(currentGround.value, 40, 40),
           color: 'white',
           metalness: 0,
           roughness: 1,
@@ -522,11 +542,17 @@
       }
 
       function addDirectionalLight() {
-        const dirLight = new THREE.DirectionalLight(0xffffff, 0.54);
-        dirLight.position.set(10, 10, 10);
+        const dirLight = new THREE.DirectionalLight(0xffffff, 0.58);
+        dirLight.position.set(20, 50, -30);
         dirLight.castShadow = true;
         dirLight.shadow.mapSize = new THREE.Vector2(2048, 2048);
         scene.add(dirLight);
+
+        /*         const directionalLightHelper = new THREE.DirectionalLightHelper(
+          dirLight,
+          5,
+        );
+        scene.add(directionalLightHelper); */
       }
 
       addAmbientLight();
@@ -580,6 +606,8 @@
             if (object.isMesh) {
               modelObjects.push(object);
               object.material.side = THREE.DoubleSide;
+              object.material.metalness = 0.2;
+              object.material.roughness = 0.4;
             }
           });
 
@@ -688,14 +716,10 @@
       };
 
       const setFullWrappBranding = () => {
-        /*         wals;
-        walsBack;
-        logoAreas;
-        const areas =  */
-
-        const BannerLogoTexture = BannerTextureLoader.load(
+        const BannerLogoTexture = textureLoader.load(
           './img/full-wrap-brending.jpg',
         );
+        BannerLogoTexture.colorSpace = THREE.SRGBColorSpace;
         BannerLogoTexture.flipY = false;
         BannerLogoTexture.transparent = true;
         BannerLogoTexture.offset.set(1, 0);
@@ -713,9 +737,10 @@
           }
         });
 
-        const BannerWaalTexture = BannerTextureLoader.load(
+        const BannerWaalTexture = textureLoader.load(
           './img/full-wrap-brending.jpg',
         );
+        BannerWaalTexture.colorSpace = THREE.SRGBColorSpace;
         BannerWaalTexture.flipY = false;
         BannerWaalTexture.transparent = true;
         wals.forEach((area) => {
@@ -771,7 +796,7 @@
 
       const changeLogo = (event) => {
         function setImage(file) {
-          const BannerLogoTexture = BannerTextureLoader.load(file);
+          const BannerLogoTexture = textureLoader.load(file);
           BannerLogoTexture.flipY = false;
           BannerLogoTexture.transparent = true;
           BannerLogoTexture.offset.set(1, 0);
