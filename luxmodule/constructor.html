@@ -107,6 +107,7 @@
   </script>
   <body class="hidden-scrollbar">
     <main class="constructor-page">
+      <div class="constructor-page__loader"></div>
       <div class="canvas-wr">
         <canvas class="canvas"></canvas>
       </div>
@@ -139,6 +140,7 @@
                     class="custom-select-option"
                     :data-value="model"
                     :class="{'is-selected': currentModel === model}"
+                    @click="changeModel(model)"
                   >
                     {{model}}
                   </div>
@@ -408,10 +410,13 @@
     reactive,
     watch,
     computed,
+    onMounted,
   } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js';
   import * as THREE from 'three';
   import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
   import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+  const BgLoader = document.querySelector('.constructor-page__loader');
 
   const sizes = {
     width: window.innerWidth,
@@ -425,13 +430,13 @@
   const canvas = document.querySelector('.canvas');
   const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
   scene.add(camera);
-  camera.position.set(0, 5, 15);
+  camera.position.set(0, 50, 250);
   scene.background = new THREE.Color('#000000');
 
   const controls = new OrbitControls(camera, canvas);
   controls.enableDamping = true;
-  controls.minDistance = 3;
-  controls.maxDistance = 20;
+  controls.minDistance = 50;
+  controls.maxDistance = 250;
   controls.maxPolarAngle = Math.PI / 2.1;
   controls.mouseButtons = {
     LEFT: THREE.MOUSE.ROTATE,
@@ -443,28 +448,10 @@
   renderer.setSize(sizes.width, sizes.height);
   renderer.render(scene, camera);
 
-  const backgroundTexture = textureLoader.load(
-    './img/9007128e-8c3a-422e-b742-92118629acce.png',
-  );
-  backgroundTexture.colorSpace = THREE.SRGBColorSpace;
-  /*   scene.background = backgroundTexture; */
-
-  const sphereGeometry = new THREE.SphereGeometry(30, 32, 32);
-  const sphereMaterial = new THREE.MeshBasicMaterial({
-    map: backgroundTexture,
-    side: THREE.BackSide,
-    opacity: 1,
-    transparent: false,
-  });
-  sphereMaterial.color.set(new THREE.Color('#ffffff'));
-  const backgroundSphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
-  backgroundSphere.position.y = 4;
-  scene.add(backgroundSphere);
-
   createApp({
     setup() {
-      const currentModel = ref('eco100');
-      const currentGround = ref('grass');
+      const currentModel = ref('eco36');
+      const currentGround = ref('sand');
       const isSideWallsVisible = ref(false);
       const isWindowsVisible = ref(false);
       const isHumanVisible = ref(false);
@@ -472,7 +459,8 @@
       const skeletonColor = ref('');
       const currentBranding = ref('noBranding');
       const currentLogoSides = ref(4);
-      const menuIsVisible = ref(false);
+      const menuIsVisible = ref(true);
+      const floorRadius = 300;
 
       const formData = reactive({
         name: '',
@@ -483,25 +471,32 @@
       });
 
       const groundTextures = {
+        sand: {
+          label: 'Sand',
+          name: 'sand',
+          repeatX: 40,
+          repeatY: 40,
+          backgroundUrl: './img/Sand-comp.jpeg',
+          floorUrl: './img/textures/sand-9.jpg',
+        },
         grass: {
           label: 'Grass',
           name: 'grass',
-          repeatX: 40,
-          repeatY: 40,
-        },
-        cement: {
-          label: 'Concrete',
-          name: 'cement',
           repeatX: 100,
           repeatY: 100,
+          backgroundUrl: './img/5-grass-soliltude-comp.jpg',
+          floorUrl: './img/textures/grass-5-texture-2.jpg',
         },
-        wood: {
-          label: 'Wood',
-          name: 'wood-2',
+        street: {
+          label: 'Street',
+          name: 'street',
           repeatX: 80,
           repeatY: 80,
+          backgroundUrl: './img/street-comp.jpeg',
+          floorUrl: './img/textures/street-texture-3.png',
         },
       };
+
       const colorsObj = {
         white: '#FEFEFE',
         lightGrey: '#BBBCBC',
@@ -524,12 +519,117 @@
       ];
       const skeletonColors = ['natural', 'brown', 'white', 'beige'];
       const models = [
+        'eco36',
+        'eco64',
         'eco100',
-        'Dome S (36m2)',
-        'Dome M (36m2)',
-        'Dome L (36m2)',
-        'Hexa S (95m2)',
+        'grand400',
+        'grand600',
+        'hexa95',
+        'hexa170',
+        'hexa285',
+        'octa480',
       ];
+      const modelsSettings = {
+        eco36: {
+          cameraPosition: {
+            x: 50,
+            y: 70,
+            z: 100,
+          },
+          bannerLogoTextureOffset: {
+            x: 1,
+            y: 0,
+          },
+        },
+        eco64: {
+          cameraPosition: {
+            x: 50,
+            y: 70,
+            z: 100,
+          },
+          bannerLogoTextureOffset: {
+            x: 1,
+            y: 0,
+          },
+        },
+        eco100: {
+          cameraPosition: {
+            x: 50,
+            y: 70,
+            z: 120,
+          },
+          bannerLogoTextureOffset: {
+            x: 0,
+            y: 0,
+          },
+        },
+        grand400: {
+          cameraPosition: {
+            x: 50,
+            y: 70,
+            z: 250,
+          },
+          bannerLogoTextureOffset: {
+            x: 0,
+            y: 0,
+          },
+        },
+        grand600: {
+          cameraPosition: {
+            x: 50,
+            y: 70,
+            z: 250,
+          },
+          bannerLogoTextureOffset: {
+            x: 0,
+            y: 0,
+          },
+        },
+        hexa95: {
+          cameraPosition: {
+            x: 50,
+            y: 70,
+            z: 120,
+          },
+          bannerLogoTextureOffset: {
+            x: 0,
+            y: 0,
+          },
+        },
+        hexa170: {
+          cameraPosition: {
+            x: 50,
+            y: 70,
+            z: 250,
+          },
+          bannerLogoTextureOffset: {
+            x: 0,
+            y: 0,
+          },
+        },
+        hexa285: {
+          cameraPosition: {
+            x: 50,
+            y: 70,
+            z: 250,
+          },
+          bannerLogoTextureOffset: {
+            x: 0,
+            y: 0,
+          },
+        },
+        octa480: {
+          cameraPosition: {
+            x: 50,
+            y: 70,
+            z: 250,
+          },
+          bannerLogoTextureOffset: {
+            x: 0,
+            y: 0,
+          },
+        },
+      };
       const brandingVariants = {
         noBranding: {
           label: 'No Branding',
@@ -558,10 +658,29 @@
         return currentBranding.value === 'customLogo';
       });
 
-      const getFloorTexture = (name, repeatX, repeatY) => {
-        const texture = new THREE.TextureLoader().load(
-          `./img/textures/${name}.jpg`,
-        );
+      const getBackgroundTexture = (backgroundUrl) => {
+        const texture = textureLoader.load(backgroundUrl);
+        texture.colorSpace = THREE.SRGBColorSpace;
+
+        return texture;
+      };
+
+      const sphereGeometry = new THREE.SphereGeometry(floorRadius, 32, 32);
+      const sphereMaterial = new THREE.MeshBasicMaterial({
+        map: getBackgroundTexture(
+          groundTextures[currentGround.value].backgroundUrl,
+        ),
+        side: THREE.BackSide,
+        opacity: 1,
+        transparent: false,
+      });
+      sphereMaterial.color.set(new THREE.Color('#ffffff'));
+      const backgroundSphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+      backgroundSphere.position.y = 30;
+      scene.add(backgroundSphere);
+
+      const getFloorTexture = (floorUrl, repeatX, repeatY) => {
+        const texture = new THREE.TextureLoader().load(floorUrl);
         texture.colorSpace = THREE.SRGBColorSpace;
         texture.wrapS = THREE.RepeatWrapping;
         texture.wrapT = THREE.RepeatWrapping;
@@ -571,9 +690,13 @@
       };
 
       const floor = new THREE.Mesh(
-        new THREE.CircleGeometry(30, 128),
+        new THREE.CircleGeometry(floorRadius, 128),
         new THREE.MeshStandardMaterial({
-          map: getFloorTexture(currentGround.value, 40, 40),
+          map: getFloorTexture(
+            groundTextures[currentGround.value].floorUrl,
+            70,
+            70,
+          ),
           color: 'white',
           metalness: 0,
           roughness: 1,
@@ -585,12 +708,14 @@
       scene.add(floor);
 
       function changeFloor(value) {
-        const { name, repeatX, repeatY } = groundTextures[value];
+        const { floorUrl, backgroundUrl, repeatX, repeatY } =
+          groundTextures[value];
 
         if (groundTextures[currentGround.value].name === name) return;
 
         currentGround.value = value;
-        floor.material.map = getFloorTexture(name, repeatX, repeatY);
+        floor.material.map = getFloorTexture(floorUrl, repeatX, repeatY);
+        backgroundSphere.material.map = getBackgroundTexture(backgroundUrl);
       }
 
       function addAmbientLight() {
@@ -600,7 +725,7 @@
 
       function addRectLight() {
         const hemiLight = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
-        hemiLight.position.set(0, 20, 0);
+        hemiLight.position.set(0, 150, 0);
         scene.add(hemiLight);
       }
 
@@ -614,23 +739,17 @@
           width,
           height,
         );
-        rectLight.position.set(0, 20, 0);
+        rectLight.position.set(0, 150, 0);
         rectLight.lookAt(0, 0, 0);
         scene.add(rectLight);
       }
 
       function addDirectionalLight() {
         const dirLight = new THREE.DirectionalLight(0xffffff, 0.58);
-        dirLight.position.set(20, 50, -30);
+        dirLight.position.set(100, 200, -30);
         dirLight.castShadow = true;
         dirLight.shadow.mapSize = new THREE.Vector2(2048, 2048);
         scene.add(dirLight);
-
-        /*         const directionalLightHelper = new THREE.DirectionalLightHelper(
-          dirLight,
-          5,
-        );
-        scene.add(directionalLightHelper); */
       }
 
       addAmbientLight();
@@ -662,7 +781,6 @@
       });
 
       let model;
-      let humanModel;
       let modelObjects = [];
       let wals = [];
       let windows = [];
@@ -673,67 +791,77 @@
       let skeleton = [];
       let walsBack = [];
 
-      loader.load(
-        './img/models/eco100.glb',
-        async (gltf) => {
-          model = gltf.scene;
-          model.scale.setScalar(0.08);
-          scene.add(model);
+      const loadModel = () => {
+        loader.load(
+          `./img/models/${currentModel.value}.glb`,
+          async (gltf) => {
+            model = gltf.scene;
+            model.scale.setScalar(1);
+            scene.add(model);
 
-          await model.traverse(function (object) {
-            if (object.isMesh) {
-              modelObjects.push(object);
-              object.material.side = THREE.DoubleSide;
-              object.material.metalness = 0.2;
-              object.material.roughness = 0.4;
-            }
-          });
+            await model.traverse(function (object) {
+              if (object.isMesh) {
+                modelObjects.push(object);
+                object.material.side = THREE.DoubleSide;
+                object.material.metalness = 0.2;
+                object.material.roughness = 0.4;
+              }
+            });
 
-          console.log(modelObjects);
+            wals = modelObjects.filter(
+              (el) =>
+                el.name.includes('sidewall-') && !el.name.includes('-back'),
+            );
+            walsBack = modelObjects.filter(
+              (el) =>
+                el.name.includes('sidewall-') && el.name.includes('-back'),
+            );
+            windows = modelObjects.filter((el) => el.name.includes('windows-'));
+            windowsFrames = modelObjects.filter(
+              (el) =>
+                el.name.includes('frame-') || el.name.includes('ОСТЕКЛЕНИЕ'),
+            );
+            logoAreas.value = modelObjects.filter((el) =>
+              el.name.includes('logo-area'),
+            );
+            human = modelObjects.filter((el) => el.name.includes('human'));
+            wning = modelObjects.filter((el) =>
+              el.material.name.includes('wning-material'),
+            );
+            skeleton = modelObjects.filter((el) =>
+              el.material.name.includes('skeleton-material'),
+            );
 
-          wals = modelObjects.filter(
-            (el) => el.name.includes('sidewall-') && !el.name.includes('-back'),
-          );
-          walsBack = modelObjects.filter(
-            (el) => el.name.includes('sidewall-') && el.name.includes('-back'),
-          );
-          windows = modelObjects.filter((el) => el.name.includes('windows-'));
-          windowsFrames = modelObjects.filter((el) =>
-            el.name.includes('ОСТЕКЛЕНИЕ'),
-          );
-          logoAreas.value = modelObjects.filter((el) =>
-            el.name.includes('logo-area'),
-          );
-          human = modelObjects.filter((el) => el.name.includes('human'));
-          wning = modelObjects.filter((el) =>
-            el.material.name.includes('wning-material'),
-          );
-          skeleton = modelObjects.filter((el) =>
-            el.material.name.includes('skeleton-material'),
-          );
+            setObjectsStatus(human, isHumanVisible.value);
+            setObjectsStatus(wals, isSideWallsVisible.value);
+            setObjectsStatus(walsBack, false);
+            setObjectsStatus(windows, isWindowsVisible.value);
+            setObjectsStatus(windowsFrames, isWindowsVisible.value);
+            setObjectsStatus(logoAreas.value, false);
+            setWhingColor(whingColor.value);
+            setSkeletonColor(skeletonColor.value);
 
-          setObjectsStatus(human, isHumanVisible.value);
-          setObjectsStatus(wals, isSideWallsVisible.value);
-          setObjectsStatus(walsBack, false);
-          setObjectsStatus(windows, isWindowsVisible.value);
-          setObjectsStatus(windowsFrames, isWindowsVisible.value);
-          setObjectsStatus(logoAreas.value, false);
+            currentLogoSides.value = logoAreas.value.length;
 
-          currentLogoSides.value = logoAreas.value.length;
+            scene.add(model);
 
-          /* startHandlers(); */
+            camera.position.set(
+              modelsSettings[currentModel.value].cameraPosition.x,
+              modelsSettings[currentModel.value].cameraPosition.y,
+              modelsSettings[currentModel.value].cameraPosition.z,
+            );
 
-          scene.add(model);
-        },
-        (progress) => {
-          console.log('progress');
-          console.log(progress);
-        },
-        (error) => {
-          console.log('error');
-          console.log(error);
-        },
-      );
+            setTimeout(() => {
+              BgLoader.classList.add('is-hidden');
+            }, 1000);
+          },
+          (progress) => {},
+          (error) => {
+            console.log('error');
+            console.log(error);
+          },
+        );
+      };
 
       const setObjectsStatus = (items, status) => {
         items.forEach((item) => {
@@ -780,7 +908,6 @@
 
       const setSkeletonColor = (color) => {
         skeletonColor.value = color;
-        console.log(skeleton, color);
         setObjectsColor(skeleton, color);
       };
 
@@ -800,7 +927,10 @@
         BannerLogoTexture.colorSpace = THREE.SRGBColorSpace;
         BannerLogoTexture.flipY = false;
         BannerLogoTexture.transparent = true;
-        BannerLogoTexture.offset.set(1, 0);
+        BannerLogoTexture.offset.set(
+          modelsSettings[currentModel.value].bannerLogoTextureOffset.x,
+          modelsSettings[currentModel.value].bannerLogoTextureOffset.y,
+        );
         logoAreas.value.forEach((area) => {
           area.visible = true;
           if (area.material.map) {
@@ -821,6 +951,7 @@
         BannerWaalTexture.colorSpace = THREE.SRGBColorSpace;
         BannerWaalTexture.flipY = false;
         BannerWaalTexture.transparent = true;
+        BannerWaalTexture.offset.set(0, 0);
         wals.forEach((area) => {
           area.visible = true;
           if (area.material.map) {
@@ -860,9 +991,11 @@
         walsBack.forEach((area) => {
           area.visible = false;
         });
+        setObjectsColor(wals, whingColor.value);
       };
 
       watch(currentBranding, (newValue) => {
+        console.log(newValue);
         if (newValue === 'fullWrapp') {
           setFullWrappBranding();
         }
@@ -878,6 +1011,11 @@
           BannerLogoTexture.flipY = false;
           BannerLogoTexture.transparent = true;
           BannerLogoTexture.offset.set(1, 0);
+          BannerLogoTexture.offset.set(
+            modelsSettings[currentModel.value].bannerLogoTextureOffset.x,
+            modelsSettings[currentModel.value].bannerLogoTextureOffset.y,
+          );
+          console.log(logoAreas);
           logoAreas.value.forEach((area) => {
             area.visible = true;
             if (area.material.map) {
@@ -924,6 +1062,35 @@
         menuIsVisible.value = !menuIsVisible.value;
       };
 
+      const clearAllModelData = () => {
+        modelObjects = [];
+        wals = [];
+        windows = [];
+        windowsFrames = [];
+        logoAreas.value = [];
+        human = [];
+        wning = [];
+        skeleton = [];
+        walsBack = [];
+
+        currentBranding.value = 'noBranding';
+
+        scene.remove(model);
+        model = null;
+      };
+
+      const changeModel = async (value) => {
+        BgLoader.classList.remove('is-hidden');
+        currentModel.value = value;
+        await clearAllModelData();
+
+        loadModel();
+      };
+
+      onMounted(() => {
+        loadModel();
+      });
+
       return {
         menuIsVisible,
         countries,
@@ -955,6 +1122,7 @@
         changeLogo,
         changeLogoSides,
         toogleMenu,
+        changeModel,
       };
     },
   }).mount('#constructor');
