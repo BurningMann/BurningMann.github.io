@@ -126,11 +126,11 @@
               <div class="custom-select">
                 <div class="custom-select-opener">
                   <input
-                    v-model="currentModel"
                     class="custom-select-opener__value"
                     type="text"
                     placeholder=" "
                     readonly
+                    :value="models[currentModel].label"
                   />
                 </div>
                 <div class="custom-select-dropdown">
@@ -138,11 +138,11 @@
                     v-for="(model, index) in models"
                     :key="index"
                     class="custom-select-option"
-                    :data-value="model"
-                    :class="{'is-selected': currentModel === model}"
-                    @click="changeModel(model)"
+                    :data-value="model.name"
+                    :class="{'is-selected': currentModel === model.name }"
+                    @click="changeModel(model.name)"
                   >
-                    {{model}}
+                    {{ model.label }}
                   </div>
                 </div>
               </div>
@@ -391,6 +391,30 @@
             </div>
           </div>
         </div>
+        <div
+          class="constructor__preview-wr"
+          :class="{'constructor__preview-wr--fw': !menuIsVisible, 'constructor__preview-wr--closed': !previewMenuIsVisible}"
+        >
+          <div class="constructor__opener" @click="tooglePreviewMenu">
+            {{ previewMenuIsVisible ? 'CLOSE' :'OPEN' }}
+          </div>
+          <div class="constructor__preview-wr-inner">
+            <div
+              v-for="(item, index) in models"
+              :key="index"
+              class="constructor__preview-item"
+              :class="{'constructor__preview-item--active': currentModel === item.name}"
+              @click="changeModel(item.name)"
+            >
+              <div class="constructor__preview-item-img">
+                <img :src="item.previewUrl" alt="" />
+              </div>
+              <div class="constructor__preview-item-label">
+                {{ item.label }}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </body>
@@ -452,7 +476,8 @@
       const skeletonColor = ref('');
       const currentBranding = ref('noBranding');
       const currentLogoSides = ref(4);
-      const menuIsVisible = ref(true);
+      const menuIsVisible = ref(window.innerWidth > 1024);
+      const previewMenuIsVisible = ref(window.innerWidth > 1024);
       const floorRadius = 300;
 
       const formData = reactive({
@@ -511,17 +536,48 @@
         'transparent',
       ];
       const skeletonColors = ['natural', 'brown', 'white', 'beige'];
-      const models = [
-        'eco36',
-        'eco64',
-        'eco100',
-        'grand400',
-        'grand600',
-        'hexa95',
-        'hexa170',
-        'hexa285',
-        'octa480',
-      ];
+      const models = {
+        eco36: {
+          label: 'Dome S',
+          name: 'eco36',
+          previewUrl: './img/models/Dome_S.png',
+        },
+        eco64: {
+          label: 'Dome M',
+          name: 'eco64',
+          previewUrl: './img/models/Dome_M.png',
+        },
+        eco100: {
+          label: 'Dome L',
+          name: 'eco100',
+          previewUrl: './img/models/Dome_L.png',
+        },
+        grand400: {
+          label: 'Grand S',
+          name: 'grand400',
+          previewUrl: './img/models/Grand_S.png',
+        },
+        hexa95: {
+          label: 'Hexa S',
+          name: 'hexa95',
+          previewUrl: './img/models/Hexa_S.png',
+        },
+        hexa170: {
+          label: 'Hexa M',
+          name: 'hexa170',
+          previewUrl: './img/models/Hexa_M.png',
+        },
+        hexa285: {
+          label: 'Hexa L',
+          name: 'hexa285',
+          previewUrl: './img/models/Hexa_L.png',
+        },
+        octa480: {
+          label: 'Octa L',
+          name: 'octa480',
+          previewUrl: './img/models/Octa_L.png',
+        },
+      };
       const modelsSettings = {
         eco36: {
           cameraPosition: {
@@ -1057,6 +1113,10 @@
         menuIsVisible.value = !menuIsVisible.value;
       };
 
+      const tooglePreviewMenu = () => {
+        previewMenuIsVisible.value = !previewMenuIsVisible.value;
+      };
+
       const clearAllModelData = () => {
         modelObjects = [];
         wals = [];
@@ -1075,6 +1135,10 @@
       };
 
       const changeModel = async (value) => {
+        if (currentModel.value === value) {
+          return;
+        }
+
         BgLoader.classList.remove('is-hidden');
         currentModel.value = value;
         await clearAllModelData();
@@ -1131,6 +1195,7 @@
 
       return {
         menuIsVisible,
+        previewMenuIsVisible,
         countries,
         formData,
         currentLogoSides,
@@ -1160,6 +1225,7 @@
         changeLogo,
         changeLogoSides,
         toogleMenu,
+        tooglePreviewMenu,
         changeModel,
       };
     },
