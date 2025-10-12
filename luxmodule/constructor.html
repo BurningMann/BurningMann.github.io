@@ -314,7 +314,7 @@
                       class="custom-select-option"
                       :data-value="item"
                       :class="{'is-selected': item === currentLogoSides}"
-                      @click="changeLogoSides(item)"
+                      @click="changeLogoSides(item, $event)"
                     >
                       {{item}} side
                     </div>
@@ -393,13 +393,6 @@
         </div>
       </div>
     </main>
-
-    <script src="./js/fancybox-5.0.min.js"></script>
-<script src="./js/swiper.min.js"></script>
-<script src="./js/forms.js"></script>
-<script src="./js/vendor.js"></script>
-<script src="./js/scripts.js"></script>
-
   </body>
 </html>
 
@@ -1042,7 +1035,7 @@
         }
       };
 
-      const changeLogoSides = (value) => {
+      const changeLogoSides = (value, event) => {
         currentLogoSides.value = value;
         let index = 0;
 
@@ -1056,6 +1049,8 @@
 
           area.visible = true;
         });
+
+        event.target.closest('.custom-select').classList.remove('is-open');
       };
 
       const toogleMenu = () => {
@@ -1089,6 +1084,49 @@
 
       onMounted(() => {
         loadModel();
+
+        const selects = document.querySelectorAll('.custom-select');
+        selects.forEach((element) => {
+          const dropdown = element.querySelector('.custom-select-dropdown');
+          const opener = element.querySelector('.custom-select-opener');
+          const options = element.querySelectorAll('.custom-select-option');
+
+          opener.addEventListener('click', () => {
+            if (element.classList.contains('is-open')) {
+              element.classList.remove('is-open');
+            } else {
+              const openSelects = document.querySelectorAll(
+                '.custom-select.is-open',
+              );
+              openSelects.forEach((select) => {
+                select.classList.remove('is-open');
+              });
+
+              element.classList.add('is-open');
+            }
+          });
+
+          options.forEach((el) => {
+            el.addEventListener('click', () => {
+              if (el.classList.contains('disabled')) {
+                return;
+              }
+
+              element.classList.remove('is-open');
+            });
+          });
+        });
+
+        document.addEventListener('mouseup', (e) => {
+          if (!e.target.closest('.custom-select')) {
+            const openSelects = document.querySelectorAll(
+              '.custom-select.is-open',
+            );
+            openSelects.forEach((select) => {
+              select.classList.remove('is-open');
+            });
+          }
+        });
       });
 
       return {
