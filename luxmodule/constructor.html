@@ -120,7 +120,7 @@
           <div class="constructor__opener" @click="toogleMenu">
             {{ menuIsVisible ? 'CLOSE' :'OPEN' }}
           </div>
-          <div class="constructor__inner hidden-scrollbar">
+          <div class="constructor__inner">
             <div class="constructor-section">
               <div class="constructor-section__title">Type</div>
               <div class="custom-select">
@@ -133,7 +133,7 @@
                     :value="models[currentModel].label"
                   />
                 </div>
-                <div class="custom-select-dropdown">
+                <div class="custom-select-dropdown is-no-scroll">
                   <div
                     v-for="(model, index) in models"
                     :key="index"
@@ -250,6 +250,24 @@
                     class="constructor-color"
                     :class="{'constructor-color--active': color === skeletonColor}"
                     @click="setSkeletonColor(color)"
+                  >
+                    <div
+                      class="constructor-color__color"
+                      :style="{'background-color': colorsObj[color]}"
+                    ></div>
+                    <div class="constructor-color__name">{{color}}</div>
+                  </div>
+                </div>
+              </div>
+              <div class="colors-block">
+                <div class="colors-block__title">Doors Color</div>
+                <div class="constructor-colors-wrapper">
+                  <div
+                    v-for="(color, index) in skeletonColors"
+                    :key="index"
+                    class="constructor-color"
+                    :class="{'constructor-color--active': color === doorsColor}"
+                    @click="setDoorsColor(color)"
                   >
                     <div
                       class="constructor-color__color"
@@ -472,8 +490,9 @@
       const isSideWallsVisible = ref(false);
       const isWindowsVisible = ref(false);
       const isHumanVisible = ref(false);
-      const whingColor = ref('');
-      const skeletonColor = ref('');
+      const whingColor = ref('transparent');
+      const skeletonColor = ref('natural');
+      const doorsColor = ref('');
       const currentBranding = ref('noBranding');
       const currentLogoSides = ref(4);
       const menuIsVisible = ref(window.innerWidth > 1024);
@@ -490,50 +509,60 @@
 
       const groundTextures = {
         sand: {
-          label: 'Sand',
+          label: 'Beach',
           name: 'sand',
-          repeatX: 40,
-          repeatY: 40,
+          repeatX: 4,
+          repeatY: 4,
           backgroundUrl: './img/Sand-comp.jpeg',
-          floorUrl: './img/textures/sand-9.jpg',
+          floorUrl: './img/textures/1742989161947.png',
+          backgroundPositionY: 30,
         },
         grass: {
-          label: 'Grass',
+          label: 'Park area',
           name: 'grass',
-          repeatX: 100,
-          repeatY: 100,
+          repeatX: 30,
+          repeatY: 30,
           backgroundUrl: './img/5-grass-soliltude-comp.jpg',
-          floorUrl: './img/textures/grass-5-texture-2.jpg',
+          floorUrl: './img/textures/photo_2025-10-13_11-47-33.jpg',
+          backgroundPositionY: 41,
         },
         street: {
-          label: 'Street',
+          label: 'City square',
           name: 'street',
           repeatX: 80,
           repeatY: 80,
           backgroundUrl: './img/street-comp.jpeg',
-          floorUrl: './img/textures/street-texture-3.png',
+          floorUrl: './img/textures/photo_2025-10-13_11-20-07.jpg',
+          backgroundPositionY: 30,
         },
       };
 
       const colorsObj = {
         white: '#FEFEFE',
-        lightGrey: '#BBBCBC',
+        lightGrey: '#C0C0C0',
+        vanilla: '#FDF1D4',
         darkGrey: '#656564',
-        beige: '#ECCF9C',
+        beige: '#C6AA7F',
         tinted: '#35292A',
-        red: '#DD2A1B',
+        red: '#FE0103',
         transparent: '#DBEAF9',
         natural: '#D9B893',
-        brown: '#694435',
+        brown: '#895129',
+        green: '#00D75E',
+        blue: '#018ED7',
+        black: '#000000',
       };
       const wningColors = [
-        'white',
-        'lightGrey',
-        'darkGrey',
-        'beige',
-        'tinted',
-        'red',
         'transparent',
+        'white',
+        'vanilla',
+        'green',
+        'blue',
+        'red',
+        'beige',
+        'brown',
+        'lightGrey',
+        'black',
       ];
       const skeletonColors = ['natural', 'brown', 'white', 'beige'];
       const models = {
@@ -551,11 +580,6 @@
           label: 'Dome L',
           name: 'eco100',
           previewUrl: './img/models/Dome_L.png',
-        },
-        grand400: {
-          label: 'Grand S',
-          name: 'grand400',
-          previewUrl: './img/models/Grand_S.png',
         },
         hexa95: {
           label: 'Hexa S',
@@ -576,6 +600,11 @@
           label: 'Octa L',
           name: 'octa480',
           previewUrl: './img/models/Octa_L.png',
+        },
+        grand400: {
+          label: 'Grand S',
+          name: 'grand400',
+          previewUrl: './img/models/Grand_S.png',
         },
       };
       const modelsSettings = {
@@ -616,7 +645,7 @@
           cameraPosition: {
             x: 50,
             y: 70,
-            z: 250,
+            z: 200,
           },
           bannerLogoTextureOffset: {
             x: 0,
@@ -627,7 +656,7 @@
           cameraPosition: {
             x: 50,
             y: 70,
-            z: 250,
+            z: 200,
           },
           bannerLogoTextureOffset: {
             x: 0,
@@ -649,7 +678,7 @@
           cameraPosition: {
             x: 50,
             y: 70,
-            z: 250,
+            z: 150,
           },
           bannerLogoTextureOffset: {
             x: 0,
@@ -660,7 +689,7 @@
           cameraPosition: {
             x: 50,
             y: 70,
-            z: 250,
+            z: 180,
           },
           bannerLogoTextureOffset: {
             x: 0,
@@ -671,7 +700,7 @@
           cameraPosition: {
             x: 50,
             y: 70,
-            z: 250,
+            z: 230,
           },
           bannerLogoTextureOffset: {
             x: 0,
@@ -743,8 +772,8 @@
         new THREE.MeshStandardMaterial({
           map: getFloorTexture(
             groundTextures[currentGround.value].floorUrl,
-            70,
-            70,
+            groundTextures[currentGround.value].repeatX,
+            groundTextures[currentGround.value].repeatY,
           ),
           color: 'white',
           metalness: 0,
@@ -759,12 +788,15 @@
       function changeFloor(value) {
         const { floorUrl, backgroundUrl, repeatX, repeatY } =
           groundTextures[value];
-
+        console.log(floorUrl, backgroundUrl, repeatX, repeatY);
         if (groundTextures[currentGround.value].name === name) return;
 
         currentGround.value = value;
         floor.material.map = getFloorTexture(floorUrl, repeatX, repeatY);
+
         backgroundSphere.material.map = getBackgroundTexture(backgroundUrl);
+        backgroundSphere.position.y =
+          groundTextures[currentGround.value].backgroundPositionY;
       }
 
       function addAmbientLight() {
@@ -894,6 +926,9 @@
 
             scene.add(model);
 
+            controls.maxDistance =
+              modelsSettings[currentModel.value].cameraPosition.z;
+
             camera.position.set(
               modelsSettings[currentModel.value].cameraPosition.x,
               modelsSettings[currentModel.value].cameraPosition.y,
@@ -953,11 +988,17 @@
 
         setObjectsColor(wning, color);
         setObjectsColor(wals, color);
+        setObjectsColor(walsBack, color);
       };
 
       const setSkeletonColor = (color) => {
         skeletonColor.value = color;
         setObjectsColor(skeleton, color);
+      };
+
+      const setDoorsColor = (color) => {
+        doorsColor.value = color;
+        setObjectsColor(windowsFrames, color);
       };
 
       const setGround = (color) => {
@@ -1018,6 +1059,8 @@
         walsBack.forEach((area) => {
           area.visible = true;
         });
+
+        setWhingColor('white');
       };
 
       const clearAllBranding = () => {
@@ -1208,6 +1251,7 @@
         currentModel,
         whingColor,
         skeletonColor,
+        doorsColor,
         colorsObj,
         wningColors,
         skeletonColors,
@@ -1220,6 +1264,7 @@
         changeHumanStatus,
         setWhingColor,
         setSkeletonColor,
+        setDoorsColor,
         changeFloor,
         changeBranding,
         changeLogo,
