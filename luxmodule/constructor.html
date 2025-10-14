@@ -281,7 +281,6 @@
             <div class="constructor-section">
               <div class="constructor-section__title">Branding</div>
               <div class="box-w-label">
-                <div class="box-w-label__label">Branding</div>
                 <div class="custom-select">
                   <div class="custom-select-opener">
                     <input
@@ -314,7 +313,7 @@
                 </label>
               </div>
               <div v-show="isCustomLogoBranding" class="box-w-label">
-                <div class="box-w-label__label">Logo Upload</div>
+                <div class="box-w-label__label">Logo sides</div>
                 <div class="custom-select">
                   <div class="custom-select-opener">
                     <input
@@ -514,7 +513,7 @@
           repeatX: 4,
           repeatY: 4,
           backgroundUrl: './img/Sand-comp.jpeg',
-          floorUrl: './img/textures/1742989161947.png',
+          floorUrl: './img/textures/sand_texture3.jpg',
           backgroundPositionY: 30,
         },
         grass: {
@@ -523,7 +522,7 @@
           repeatX: 30,
           repeatY: 30,
           backgroundUrl: './img/5-grass-soliltude-comp.jpg',
-          floorUrl: './img/textures/photo_2025-10-13_11-47-33.jpg',
+          floorUrl: './img/textures/parkarea_texture.jpg',
           backgroundPositionY: 41,
         },
         street: {
@@ -532,7 +531,7 @@
           repeatX: 80,
           repeatY: 80,
           backgroundUrl: './img/street-comp.jpeg',
-          floorUrl: './img/textures/photo_2025-10-13_11-20-07.jpg',
+          floorUrl: './img/textures/citysquare_texture.jpg',
           backgroundPositionY: 30,
         },
       };
@@ -735,6 +734,12 @@
       const isCustomLogoBranding = computed(() => {
         return currentBranding.value === 'customLogo';
       });
+      const isFullWrappBranding = computed(() => {
+        return currentBranding.value === 'fullWrapp';
+      });
+      const isTransparentWning = computed(() => {
+        return currentBranding.value === 'fullWrapp';
+      });
 
       const getBackgroundTexture = (backgroundUrl) => {
         const texture = textureLoader.load(backgroundUrl);
@@ -871,6 +876,7 @@
       let wning = [];
       let skeleton = [];
       let walsBack = [];
+      let logoAreasBack = [];
 
       const loadModel = () => {
         loader.load(
@@ -889,6 +895,7 @@
               }
             });
 
+            wning = modelObjects.filter((el) => el.name === 'tent');
             wals = modelObjects.filter(
               (el) =>
                 el.name.includes('sidewall-') && !el.name.includes('-back'),
@@ -902,13 +909,15 @@
               (el) =>
                 el.name.includes('frame-') || el.name.includes('ОСТЕКЛЕНИЕ'),
             );
-            logoAreas.value = modelObjects.filter((el) =>
-              el.name.includes('logo-area'),
+            logoAreas.value = modelObjects.filter(
+              (el) =>
+                el.name.includes('logo-area') && !el.name.includes('-back'),
+            );
+            logoAreasBack = modelObjects.filter(
+              (el) =>
+                el.name.includes('logo-area') && el.name.includes('-back'),
             );
             human = modelObjects.filter((el) => el.name.includes('human'));
-            wning = modelObjects.filter((el) =>
-              el.material.name.includes('wning-material'),
-            );
             skeleton = modelObjects.filter((el) =>
               el.material.name.includes('skeleton-material'),
             );
@@ -919,6 +928,7 @@
             setObjectsStatus(windows, isWindowsVisible.value);
             setObjectsStatus(windowsFrames, isWindowsVisible.value);
             setObjectsStatus(logoAreas.value, false);
+            setObjectsStatus(logoAreasBack, false);
             setWhingColor(whingColor.value);
             setSkeletonColor(skeletonColor.value);
 
@@ -953,10 +963,17 @@
         });
       };
 
-      const setObjectsColor = (items, color) => {
+      const setObjectsColor = (items, color, isNewMaterial = false) => {
         const colorValue = colorsObj[color];
 
         items.forEach((item) => {
+          if (isNewMaterial) {
+            const material = new THREE.MeshStandardMaterial({
+              side: THREE.DoubleSide,
+            });
+            item.material = material;
+          }
+
           item.material.color.set(new THREE.Color(colorValue));
 
           if (color === 'transparent') {
@@ -966,12 +983,13 @@
             item.material.opacity = 1;
             item.material.transparent = false;
           }
+
+          item.material.needsUpdate = true;
         });
       };
 
       const changeWallsStatus = (event) => {
         setObjectsStatus(wals, isSideWallsVisible.value);
-        setObjectsStatus(walsBack, isSideWallsVisible.value);
       };
 
       const changeWindowsStatus = (event) => {
@@ -987,8 +1005,18 @@
         whingColor.value = color;
 
         setObjectsColor(wning, color);
+
+        if (color !== 'transparent') {
+          setObjectsColor(logoAreasBack, color);
+          setObjectsColor(walsBack, color, true);
+        } else {
+          setObjectsColor(logoAreasBack, 'white', true);
+          setObjectsColor(walsBack, 'white', true);
+        }
+
+        if (isFullWrappBranding.value) return;
+
         setObjectsColor(wals, color);
-        setObjectsColor(walsBack, color);
       };
 
       const setSkeletonColor = (color) => {
@@ -1029,7 +1057,7 @@
           } else {
             area.material = new THREE.MeshStandardMaterial({
               map: BannerLogoTexture,
-              side: THREE.frontSide,
+              side: THREE.DoubleSide,
             });
             area.material.needsUpdate = true;
           }
@@ -1056,17 +1084,19 @@
         });
         isSideWallsVisible.value = true;
 
-        walsBack.forEach((area) => {
-          area.visible = true;
-        });
-
-        setWhingColor('white');
+        setObjectsStatus(logoAreasBack, true);
+        setObjectsStatus(walsBack, true);
+        setObjectsColor(wals, 'white');
+        setObjectsColor(
+          walsBack,
+          whingColor.value === 'transparent' ? 'white' : whingColor.value,
+          true,
+        );
       };
 
       const clearAllBranding = () => {
-        logoAreas.value.forEach((area) => {
-          area.visible = false;
-        });
+        setObjectsStatus(logoAreas.value, false);
+        setObjectsStatus(logoAreasBack, false);
 
         wals.forEach((area) => {
           if (area.material.map) {
@@ -1080,19 +1110,16 @@
           area.material.needsUpdate = true;
         });
 
-        walsBack.forEach((area) => {
-          area.visible = false;
-        });
+        setObjectsStatus(walsBack, false);
         setObjectsColor(wals, whingColor.value);
       };
 
       watch(currentBranding, (newValue) => {
-        console.log(newValue);
         if (newValue === 'fullWrapp') {
           setFullWrappBranding();
         }
 
-        if (newValue === 'noBranding') {
+        if (newValue === 'noBranding' || newValue === 'customLogo') {
           clearAllBranding();
         }
       });
