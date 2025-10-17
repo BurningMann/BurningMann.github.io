@@ -125,13 +125,10 @@
               <div class="constructor-section__title">Type</div>
               <div class="custom-select">
                 <div class="custom-select-opener">
-                  <input
+                  <div
                     class="custom-select-opener__value"
-                    type="text"
-                    placeholder=" "
-                    readonly
-                    :value="models[currentModel].label"
-                  />
+                    v-html="models[currentModel].label"
+                  ></div>
                 </div>
                 <div class="custom-select-dropdown is-no-scroll">
                   <div
@@ -142,7 +139,7 @@
                     :class="{'is-selected': currentModel === model.name }"
                     @click="changeModel(model.name)"
                   >
-                    {{ model.label }}
+                    <span v-html="model.label"></span>
                   </div>
                 </div>
               </div>
@@ -426,9 +423,10 @@
               <div class="constructor__preview-item-img">
                 <img :src="item.previewUrl" alt="" />
               </div>
-              <div class="constructor__preview-item-label">
-                {{ item.label }}
-              </div>
+              <div
+                class="constructor__preview-item-label"
+                v-html="item.label"
+              ></div>
             </div>
           </div>
         </div>
@@ -537,7 +535,7 @@
       };
 
       const colorsObj = {
-        white: '#FEFEFE',
+        white: '#FFFFFF',
         lightGrey: '#C0C0C0',
         vanilla: '#FDF1D4',
         darkGrey: '#656564',
@@ -547,61 +545,67 @@
         transparent: '#DBEAF9',
         natural: '#D9B893',
         brown: '#895129',
+        brownTransparent: '#895129',
         green: '#00D75E',
         blue: '#018ED7',
         black: '#000000',
+        darkGreen: '#50533C',
+        darkWhite: '#374345',
       };
+
+      /*       - прозрачно-коричневый (тонированный) */
       const wningColors = [
         'transparent',
         'white',
         'vanilla',
-        'green',
-        'blue',
+        'darkWhite',
+        'darkGreen',
         'red',
         'beige',
-        'brown',
+        'brownTransparent',
         'lightGrey',
         'black',
       ];
       const skeletonColors = ['natural', 'brown', 'white', 'beige'];
+
       const models = {
         eco36: {
-          label: 'Dome S',
+          label: 'Dome S (36 m<sup>2</sup>)',
           name: 'eco36',
           previewUrl: './img/models/Dome_S.png',
         },
         eco64: {
-          label: 'Dome M',
+          label: 'Dome M (64 m<sup>2</sup>)',
           name: 'eco64',
           previewUrl: './img/models/Dome_M.png',
         },
         eco100: {
-          label: 'Dome L',
+          label: 'Dome L (100 m<sup>2</sup>)',
           name: 'eco100',
           previewUrl: './img/models/Dome_L.png',
         },
         hexa95: {
-          label: 'Hexa S',
+          label: 'Hexa S (95 m<sup>2</sup>)',
           name: 'hexa95',
           previewUrl: './img/models/Hexa_S.png',
         },
         hexa170: {
-          label: 'Hexa M',
+          label: 'Hexa M (170 m<sup>2</sup>)',
           name: 'hexa170',
           previewUrl: './img/models/Hexa_M.png',
         },
         hexa285: {
-          label: 'Hexa L',
+          label: 'Hexa L (285 m<sup>2</sup>)',
           name: 'hexa285',
           previewUrl: './img/models/Hexa_L.png',
         },
         octa480: {
-          label: 'Octa L',
+          label: 'Octa M (480 m<sup>2</sup>)',
           name: 'octa480',
           previewUrl: './img/models/Octa_L.png',
         },
         grand400: {
-          label: 'Grand S',
+          label: 'Grand S (400 m<sup>2</sup>)',
           name: 'grand400',
           previewUrl: './img/models/Grand_S.png',
         },
@@ -735,9 +739,6 @@
         return currentBranding.value === 'customLogo';
       });
       const isFullWrappBranding = computed(() => {
-        return currentBranding.value === 'fullWrapp';
-      });
-      const isTransparentWning = computed(() => {
         return currentBranding.value === 'fullWrapp';
       });
 
@@ -976,7 +977,7 @@
 
           item.material.color.set(new THREE.Color(colorValue));
 
-          if (color === 'transparent') {
+          if (color.toLowerCase().includes('transparent')) {
             item.material.opacity = 0.8;
             item.material.transparent = true;
           } else {
@@ -1006,9 +1007,12 @@
 
         setObjectsColor(wning, color);
 
-        if (color !== 'transparent') {
+        if (!color.toLowerCase().includes('transparent')) {
           setObjectsColor(logoAreasBack, color);
           setObjectsColor(walsBack, color, true);
+        } else if (color === 'brownTransparent') {
+          setObjectsColor(logoAreasBack, 'brown', true);
+          setObjectsColor(walsBack, 'brown', true);
         } else {
           setObjectsColor(logoAreasBack, 'white', true);
           setObjectsColor(walsBack, 'white', true);
@@ -1087,9 +1091,15 @@
         setObjectsStatus(logoAreasBack, true);
         setObjectsStatus(walsBack, true);
         setObjectsColor(wals, 'white');
+
+        const transparentColor =
+          whingColor.value === 'transparent' ? 'white' : 'brown';
+
         setObjectsColor(
           walsBack,
-          whingColor.value === 'transparent' ? 'white' : whingColor.value,
+          whingColor.value.toLowerCase().includes('transparent')
+            ? transparentColor
+            : whingColor.value,
           true,
         );
       };
