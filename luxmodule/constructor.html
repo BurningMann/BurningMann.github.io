@@ -346,36 +346,6 @@
                   placeholder="Name"
                 />
               </label>
-              <!--           <label class="form-input is-required">
-            <input
-              v-model="formData.company"
-              type="text"
-              class="input"
-              placeholder="Company"
-            />
-          </label> -->
-              <!-- <div class="custom-select">
-            <div class="custom-select-opener">
-              <input
-                v-model="formData.country"
-                class="custom-select-opener__value"
-                type="text"
-                placeholder="Country"
-                readonly
-              />
-            </div>
-            <div class="custom-select-dropdown">
-              <div
-                v-for="item in countries"
-                :key="item"
-                class="custom-select-option"
-                :data-value="item"
-                :class="{'is-selected': item === formData.country}"
-              >
-                {{item}}
-              </div>
-            </div>
-          </div> -->
               <label class="form-input is-required">
                 <input
                   v-model="formData.email"
@@ -550,10 +520,9 @@
         blue: '#018ED7',
         black: '#000000',
         darkGreen: '#50533C',
-        darkWhite: '#374345',
+        darkWhite: '#9b9b9b',
       };
 
-      /*       - прозрачно-коричневый (тонированный) */
       const wningColors = [
         'transparent',
         'white',
@@ -811,14 +780,8 @@
       }
 
       function addRectLight() {
-        const hemiLight = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
-        hemiLight.position.set(0, 150, 0);
-        scene.add(hemiLight);
-      }
-
-      function addHemiLight() {
-        const width = 20;
-        const height = 20;
+        const width = 100;
+        const height = 100;
         const intensity = 1;
         const rectLight = new THREE.RectAreaLight(
           0xffffff,
@@ -826,9 +789,15 @@
           width,
           height,
         );
-        rectLight.position.set(0, 150, 0);
+        rectLight.position.set(0, 200, 0);
         rectLight.lookAt(0, 0, 0);
         scene.add(rectLight);
+      }
+
+      function addHemiLight() {
+        const hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 1);
+        hemiLight.position.set(0, 100, 0);
+        scene.add(hemiLight);
       }
 
       function addDirectionalLight() {
