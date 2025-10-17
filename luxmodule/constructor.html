@@ -927,9 +927,10 @@
         );
       };
 
-      const setObjectsStatus = (items, status) => {
+      const setObjectsStatus = (items, status, side = THREE.DoubleSide) => {
         items.forEach((item) => {
           item.visible = status;
+          item.material.side = side;
         });
       };
 
@@ -1057,7 +1058,6 @@
         });
         isSideWallsVisible.value = true;
 
-        setObjectsStatus(logoAreasBack, true);
         setObjectsStatus(walsBack, true);
         setObjectsColor(wals, 'white');
 
@@ -1113,7 +1113,7 @@
             modelsSettings[currentModel.value].bannerLogoTextureOffset.x,
             modelsSettings[currentModel.value].bannerLogoTextureOffset.y,
           );
-          console.log(logoAreas);
+
           logoAreas.value.forEach((area) => {
             area.visible = true;
             if (area.material.map) {
