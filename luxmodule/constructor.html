@@ -515,7 +515,7 @@
         transparent: '#DBEAF9',
         natural: '#D9B893',
         brown: '#895129',
-        brownTransparent: '#895129',
+        brownTransparent: '#4a3526',
         green: '#00D75E',
         blue: '#018ED7',
         black: '#000000',
@@ -525,13 +525,13 @@
 
       const wningColors = [
         'transparent',
+        'brownTransparent',
         'white',
         'vanilla',
         'darkWhite',
         'darkGreen',
         'red',
         'beige',
-        'brownTransparent',
         'lightGrey',
         'black',
       ];
@@ -1030,7 +1030,7 @@
           } else {
             area.material = new THREE.MeshStandardMaterial({
               map: BannerLogoTexture,
-              side: THREE.DoubleSide,
+              side: THREE.FrontSide,
             });
             area.material.needsUpdate = true;
           }
@@ -1050,7 +1050,7 @@
           } else {
             area.material = new THREE.MeshStandardMaterial({
               map: BannerWaalTexture,
-              side: THREE.DoubleSide,
+              side: THREE.FrontSide,
             });
           }
           area.material.needsUpdate = true;
@@ -1122,7 +1122,7 @@
             } else {
               area.material = new THREE.MeshStandardMaterial({
                 map: BannerLogoTexture,
-                side: THREE.frontSide,
+                side: THREE.FrontSide,
               });
               area.material.needsUpdate = true;
             }
