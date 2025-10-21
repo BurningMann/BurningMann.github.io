@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Allergo</title>
+  <meta name="theme-color" content="#fff" />
+  <meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="black-translucent"
+  />
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+  />
+  <link
+    rel="shortcut icon"
+    href="img/favicons/favicon.ico"
+    type="image/x-icon"
+  />
+  <link
+    rel="icon"
+    sizes="16x16"
+    href="img/favicons/favicon-16x16.png"
+    type="image/png"
+  />
+  <link
+    rel="icon"
+    sizes="32x32"
+    href="img/favicons/favicon-32x32.png"
+    type="image/png"
+  />
+  <link
+    rel="apple-touch-icon-precomposed"
+    href="img/favicons/apple-touch-icon-precomposed.png"
+  />
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" />
+  <link
+    rel="apple-touch-icon"
+    sizes="57x57"
+    href="img/favicons/apple-touch-icon-57x57.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="60x60"
+    href="img/favicons/apple-touch-icon-60x60.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="72x72"
+    href="img/favicons/apple-touch-icon-72x72.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="76x76"
+    href="img/favicons/apple-touch-icon-76x76.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="114x114"
+    href="img/favicons/apple-touch-icon-114x114.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="120x120"
+    href="img/favicons/apple-touch-icon-120x120.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="144x144"
+    href="img/favicons/apple-touch-icon-144x144.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="152x152"
+    href="img/favicons/apple-touch-icon-152x152.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="167x167"
+    href="img/favicons/apple-touch-icon-167x167.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="img/favicons/apple-touch-icon-180x180.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="1024x1024"
+    href="img/favicons/apple-touch-icon-1024x1024.png"
+  />
+
+  <link rel="stylesheet" href="./styles/styles.css" />
+</head>
+
+  <body>
+    <header class="header">
+  <div class="header__container container">
+    <a href="/" class="header__logo">allergo.by</a>
+    <div class="header__right">
+      <button class="header__burger tablet-visible" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="header__contacts tablet-hidden">
+        <div class="header__contact">
+          <img
+            src="./img/phone-icon.png"
+            alt="Phone"
+            class="header__contact-icon"
+          />
+          <a href="tel:+375296032900" class="header__contact-link"
+            >+375 29 603 29 00</a
+          >
+        </div>
+        <div class="header__contact">
+          <img
+            src="./img/email-icon.png"
+            alt="Email"
+            class="header__contact-icon"
+          />
+          <a href="mailto:allergotrade@gmail.com" class="header__contact-link"
+            >allergotrade@gmail.com</a
+          >
+        </div>
+      </div>
+      <nav class="header__nav tablet-hidden">
+        <a href="#about" class="header__nav-link">О компании</a>
+        <a href="#advantages" class="header__nav-link">Преимущества</a>
+        <a href="#products" class="header__nav-link">Продукты</a>
+        <a href="#contacts" class="header__nav-link">Контакты</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="header__mobile-menu tablet-visible">
+  <nav class="header__mobile-nav">
+    <a href="#about" class="header__mobile-link">О компании</a>
+    <a href="#advantages" class="header__mobile-link">Преимущества</a>
+    <a href="#products" class="header__mobile-link">Продукты</a>
+    <a href="#contacts" class="header__mobile-link">Контакты</a>
+  </nav>
+  <div class="header__contacts">
+    <div class="header__contact">
+      <img
+        src="./img/phone-icon.png"
+        alt="Phone"
+        class="header__contact-icon"
+      />
+      <a href="tel:+375296032900" class="header__contact-link">
+        +375 29 603 29 00
+      </a>
+    </div>
+    <div class="header__contact">
+      <img
+        src="./img/email-icon.png"
+        alt="Email"
+        class="header__contact-icon"
+      />
+      <a href="mailto:allergotrade@gmail.com" class="header__contact-link">
+        allergotrade@gmail.com
+      </a>
+    </div>
+  </div>
+</div>
+
+    <main class="page">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero__bg">
+          <img
+            src="./img/hero-bg.jpg"
+            alt="Background"
+            class="hero__bg-img fit-cover"
+          />
+          <div class="hero__overlay"></div>
+        </div>
+        <div class="hero__container container">
+          <h1 class="hero__title">АЛЛЕРГОДИАГНОСТИКА</h1>
+          <p class="hero__subtitle">
+            Наша миссия — помочь лабораториям совершенствовать методы
+            диагностики аллергии.
+          </p>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about" id="about">
+        <div class="about__container container">
+          <div class="about__content">
+            <p class="about__title section-title is-animated">О компании</p>
+            <p class="about__text is-animated">
+              ООО Аллерготрейд с 2008 года является официальным дистрибьютором
+              компании R- Biopharm AG (Германия) на территории Республики
+              Беларусь. Только у нас самая точная диагностика аллергии, которая
+              соответствует последним международным стандартам Всемирной
+              Ассоциации Аллергологов (WAO - ARIA - GA²LEN).
+            </p>
+
+            <div class="about__features">
+              <div class="about__feature is-animated">
+                <div class="about__feature-icon">
+                  <img src="./img/quality-icon.png" alt="Quality" />
+                </div>
+                <p class="about__feature-text">
+                  Наш опыт говорит за нас. Уже более 15 лет мы успешно работаем
+                  с государственными и частными лабораториями.
+                </p>
+              </div>
+
+              <div class="about__feature is-animated">
+                <div class="about__feature-icon">
+                  <img src="./img/user-icon.png" alt="Individual approach" />
+                </div>
+                <p class="about__feature-text">
+                  Для каждой лаборатории у нас индивидуальный подход и набор
+                  решений для аллергодиагностики любых возрастов.
+                </p>
+              </div>
+
+              <div class="about__feature is-animated">
+                <div class="about__feature-icon">
+                  <img src="./img/improvement-icon.png" alt="Development" />
+                </div>
+                <p class="about__feature-text">
+                  Мы постоянно развиваемся и предлагаем инновационные продукты
+                  для динамичного роста лабораторий.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__image is-animated">
+            <img src="./img/about-image.jpg" alt="About company" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us Section -->
+      <section class="advantages" id="advantages">
+        <div class="advantages__container container">
+          <h2 class="advantages__title section-title is-animated">
+            Почему стоит выбрать нас
+          </h2>
+
+          <div class="advantages__grid">
+            <div class="advantages__card advantages__card--1">
+              <div class="advantages__card-img-wr is-animated">
+                <img
+                  src="./img/card-4.png"
+                  alt="Standard"
+                  class="advantages__card-img"
+                />
+              </div>
+              <div class="advantages__card-content is-animated">
+                <div class="advantages__card-number">01.</div>
+                <h3 class="advantages__card-title">
+                  Стандарт, проверенный десятилетиями
+                </h3>
+                <p class="advantages__card-text">
+                  Дистрибьютор компании R- Biopharm AG (Германия) на территории
+                  Республики Беларусь с 2008 года.
+                </p>
+              </div>
+            </div>
+
+            <div class="advantages__card advantages__card--2">
+              <div class="advantages__card-img-wr is-animated">
+                <img
+                  src="./img/card-2.png"
+                  alt="Reliability"
+                  class="advantages__card-img"
+                />
+              </div>
+              <div class="advantages__card-content is-animated">
+                <div class="advantages__card-number">02.</div>
+                <h3 class="advantages__card-title">
+                  Безопасность и надежность
+                </h3>
+                <p class="advantages__card-text">
+                  Безупречный контроль качества и строгое соответствие
+                  международным стандартам Всемирной организации
+                  здравоохранения.
+                </p>
+              </div>
+            </div>
+
+            <div class="advantages__card advantages__card--3">
+              <div class="advantages__card-img-wr is-animated">
+                <img
+                  src="./img/card-3.png"
+                  alt="Accuracy"
+                  class="advantages__card-img"
+                />
+              </div>
+              <div class="advantages__card-content is-animated">
+                <div class="advantages__card-number">03.</div>
+                <h3 class="advantages__card-title">Наивысшая достоверность</h3>
+                <p class="advantages__card-text">
+                  Иммуноблоттинговая технология анализа обеспечивает
+                  исключительную точность и надёжность результатов (Согласно
+                  требованиям WAO-ARIA-GA²LEN).
+                </p>
+              </div>
+            </div>
+
+            <div class="advantages__card advantages__card--4">
+              <div class="advantages__card-img-wr is-animated">
+                <img
+                  src="./img/card-1.png"
+                  alt="Quality control"
+                  class="advantages__card-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products Section -->
+      <section class="products" id="products">
+        <div class="products__container container">
+          <h2 class="products__title section-title is-animated">Продукты</h2>
+
+          <div class="products__grid">
+            <div class="products__item">
+              <div class="products__item-body">
+                <div class="products__item-box is-animated">
+                  <h3 class="products__item-title">
+                    Диагностика R-Biopharm AG (Германия)
+                  </h3>
+                  <div class="products__item-image">
+                    <img src="./img/product-1.png" alt="R-Biopharm AG" />
+                  </div>
+                </div>
+
+                <div class="products__item-text is-animated">
+                  <p>
+                    <strong>R- Biopharm AG</strong> – немецкая
+                    компания-разработчик и производитель тест-систем для
+                    аллергодиагностики (иммуноблоттинг) в здравоохранении.
+                  </p>
+
+                  <p>Основные преимущества системы:</p>
+
+                  <ul>
+                    <li>
+                      <strong> Настольная автоматическая система. </strong>
+                    </li>
+                    <li>
+                      <strong
+                        >Простота, легкость, надежность в использовании.</strong
+                      >
+                    </li>
+                    <li>
+                      Определение <strong>20 аллергенов</strong> (400 мкл
+                      венозной крови).
+                    </li>
+                    <li>
+                      <strong>Высокая достоверность</strong> иммуноблоттинговой
+                      технологии анализа (полное количественное определение),
+                      стандартизация, согласно требованиям Всемирной организации
+                      здравоохранения (Построение стандартной кривой на каждой
+                      панели (Согласно требованиям WAO-ARIA-GA²LEN 2013,
+                      стандартные кривые откалиброваны по международным
+                      референсным протоколам "1st WHO IRP 67/86 for human IgE").
+                    </li>
+                    <li>
+                      <strong>Применение CCD-блокирующего раствора</strong> для
+                      осаждения карбогидратных детерминант аллергенов.
+                    </li>
+                    <li>
+                      <strong
+                        >Незаменимость в аллергологии, педиатрии, пульмонологии,
+                        диетологии.</strong
+                      >
+                    </li>
+                    <li>
+                      <strong>Широкий спектр аллергенов</strong> в стандартных и
+                      белорусских аллергопанелях.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="products__item">
+              <div class="products__item-body">
+                <div class="products__item-box is-animated">
+                  <h3 class="products__item-title">
+                    Диагностика Алкор Био (РФ)
+                  </h3>
+                  <div class="products__item-image">
+                    <img src="./img/product-2-349132.png" alt="Алкор Био" />
+                  </div>
+                </div>
+                <div class="products__item-text is-animated">
+                  <p>
+                    <strong>Алкор Био</strong> – эксперт в лабораторной
+                    диагностике аллергических заболеваний предлагает широкий
+                    спектр современных решений: от рутинных методик до
+                    углубленного тестирования методами ИФА и проточной
+                    цитометрии.
+                  </p>
+
+                  <p>Основные преимущества системы:</p>
+
+                  <ul>
+                    <li>
+                      <strong>Высокая достоверность результатов</strong> —
+                      обусловлена высокой чувствительностью и специфичностью
+                      иммуноферментного анализа.
+                    </li>
+                    <li>
+                      <strong>Экономическая доступность</strong> — низкая
+                      стоимость тестирования по сравнению с аналогами.
+                    </li>
+                    <li>
+                      <strong>Простота проведения</strong> — удобство в
+                      использовании как для лаборантов, так и для клиник.
+                    </li>
+                    <li>
+                      <strong
+                        >Совместимость с универсальным оборудованием</strong
+                      >
+                      — возможность применения ИФА-анализаторов открытого типа.
+                    </li>
+                    <li>
+                      <strong>Полная автоматизация процесса</strong> — все этапы
+                      анализа могут быть автоматизированы с использованием
+                      автоматического быть автоматизированы с использованием
+                      автоматического иммуноферментного анализатора «Alisei
+                      Q.S.».
+                    </li>
+                    <li>
+                      <strong>Возможность расширенной диагностики</strong> —
+                      включая молекулярное тестирование
+                      («АллергоИФА-специфические IgE») и компонентную
+                      аллергодиагностику.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="contacts">
+  <div class="footer__container container">
+    <div class="footer__left">
+      <a href="/" class="footer__logo">allergo.by</a>
+      <div class="footer__info">
+        <p>ООО «АллергоТрейд»</p>
+        <p>220102, г. Минск, ул. Лазо, д. 14, каб. 2-26</p>
+        <p>УНП 193730715</p>
+      </div>
+      <div class="footer__dev mobile-hidden">
+        Разработка сайта
+
+        <a href="https://gapdev.ru/" target="_blank">
+          <svg
+            width="123"
+            height="20"
+            viewBox="0 0 123 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M60.4727 19.5647H54.8828V0H60.4727V1.60922H56.4799V17.9555H60.4727V19.5647Z"
+              fill="#3EFFEC"
+            />
+            <path
+              d="M67.588 19.5647H61.998V17.9555H65.9908V1.60922H61.998V0H67.588V19.5647Z"
+              fill="#3EFFEC"
+            />
+            <path
+              d="M81.4329 17.024H73.9395V2.54102H81.4329C85.2168 2.54102 88.2954 5.64681 88.2954 9.46423V10.1008C88.2954 13.9182 85.2168 17.024 81.4329 17.024ZM75.5346 15.4148H81.4329C84.3369 15.4148 86.7003 13.0313 86.7003 10.1008V9.46423C86.7003 6.53456 84.3377 4.15023 81.4329 4.15023H75.5346V15.4148Z"
+              fill="white"
+            />
+            <path
+              d="M103.414 4.15023V2.54102H89.8203V17.024H103.414V15.4148H91.4196V10.5871H103.414V8.97789H91.4196V4.15023H103.414Z"
+              fill="white"
+            />
+            <path
+              d="M120.821 2.54102L113.767 16.8345L106.713 2.54102H104.938L112.085 17.024H113.673H113.861H115.449L122.597 2.54102H120.821Z"
+              fill="white"
+            />
+            <path
+              d="M9.57062 9.7825V11.3917H12.6031C12.0297 13.7001 9.95698 15.4148 7.49344 15.4148H6.86249C3.95851 15.4148 1.5951 13.0313 1.5951 10.1008V9.46423C1.5951 6.53456 3.95763 4.15023 6.86249 4.15023H7.49344C9.17716 4.15023 10.72 4.93339 11.7249 6.29943L13.0054 5.34016C11.716 3.5879 9.6548 2.54102 7.49344 2.54102H6.86249C3.07855 2.54102 0 5.64681 0 9.46423V10.1008C0 13.9182 3.07855 17.024 6.86249 17.024H7.49344C9.60783 17.024 11.5007 16.054 12.7608 14.5324V17.024H14.3559V9.7825H9.57062Z"
+              fill="white"
+            />
+            <path
+              d="M45.6843 2.54102H35.0645V17.024H36.6454V10.5871H45.6843C47.6746 10.5871 49.2933 8.93945 49.2933 6.91362V6.2145C49.2933 4.18868 47.6746 2.54102 45.6843 2.54102ZM47.7123 6.91362C47.7123 8.05169 46.8024 8.97789 45.6843 8.97789H36.6454V4.15023H45.6843C46.8024 4.15023 47.7123 5.07643 47.7123 6.2145V6.91362Z"
+              fill="white"
+            />
+            <path
+              d="M31.3797 17.024H33.1585L25.9974 2.54102H23.4229L16.2617 17.024H18.0405L20.0297 13.0009H29.3905L31.3797 17.024ZM20.8254 11.3917L24.7101 3.53516L28.5948 11.3917H20.8254Z"
+              fill="white"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__right">
+      <div class="footer__contacts">
+        <div class="footer__contact">
+          <img
+            src="./img/phone-icon.png"
+            alt="Phone"
+            class="footer__contact-icon"
+          />
+          <a href="tel:+375296032900" class="footer__contact-link">
+            +375 29 603 29 00
+          </a>
+        </div>
+        <div class="footer__contact">
+          <img
+            src="./img/email-icon.png"
+            alt="Email"
+            class="footer__contact-icon"
+          />
+          <a href="mailto:allergotrade@gmail.com" class="footer__contact-link">
+            allergotrade@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__dev mobile-visible">
+      Разработка сайта
+
+      <a href="https://gapdev.ru/" target="_blank">
+        <svg
+          width="123"
+          height="20"
+          viewBox="0 0 123 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M60.4727 19.5647H54.8828V0H60.4727V1.60922H56.4799V17.9555H60.4727V19.5647Z"
+            fill="#3EFFEC"
+          />
+          <path
+            d="M67.588 19.5647H61.998V17.9555H65.9908V1.60922H61.998V0H67.588V19.5647Z"
+            fill="#3EFFEC"
+          />
+          <path
+            d="M81.4329 17.024H73.9395V2.54102H81.4329C85.2168 2.54102 88.2954 5.64681 88.2954 9.46423V10.1008C88.2954 13.9182 85.2168 17.024 81.4329 17.024ZM75.5346 15.4148H81.4329C84.3369 15.4148 86.7003 13.0313 86.7003 10.1008V9.46423C86.7003 6.53456 84.3377 4.15023 81.4329 4.15023H75.5346V15.4148Z"
+            fill="white"
+          />
+          <path
+            d="M103.414 4.15023V2.54102H89.8203V17.024H103.414V15.4148H91.4196V10.5871H103.414V8.97789H91.4196V4.15023H103.414Z"
+            fill="white"
+          />
+          <path
+            d="M120.821 2.54102L113.767 16.8345L106.713 2.54102H104.938L112.085 17.024H113.673H113.861H115.449L122.597 2.54102H120.821Z"
+            fill="white"
+          />
+          <path
+            d="M9.57062 9.7825V11.3917H12.6031C12.0297 13.7001 9.95698 15.4148 7.49344 15.4148H6.86249C3.95851 15.4148 1.5951 13.0313 1.5951 10.1008V9.46423C1.5951 6.53456 3.95763 4.15023 6.86249 4.15023H7.49344C9.17716 4.15023 10.72 4.93339 11.7249 6.29943L13.0054 5.34016C11.716 3.5879 9.6548 2.54102 7.49344 2.54102H6.86249C3.07855 2.54102 0 5.64681 0 9.46423V10.1008C0 13.9182 3.07855 17.024 6.86249 17.024H7.49344C9.60783 17.024 11.5007 16.054 12.7608 14.5324V17.024H14.3559V9.7825H9.57062Z"
+            fill="white"
+          />
+          <path
+            d="M45.6843 2.54102H35.0645V17.024H36.6454V10.5871H45.6843C47.6746 10.5871 49.2933 8.93945 49.2933 6.91362V6.2145C49.2933 4.18868 47.6746 2.54102 45.6843 2.54102ZM47.7123 6.91362C47.7123 8.05169 46.8024 8.97789 45.6843 8.97789H36.6454V4.15023H45.6843C46.8024 4.15023 47.7123 5.07643 47.7123 6.2145V6.91362Z"
+            fill="white"
+          />
+          <path
+            d="M31.3797 17.024H33.1585L25.9974 2.54102H23.4229L16.2617 17.024H18.0405L20.0297 13.0009H29.3905L31.3797 17.024ZM20.8254 11.3917L24.7101 3.53516L28.5948 11.3917H20.8254Z"
+            fill="white"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+    <script src="./js/vendor.js"></script>
+<script src="./js/scripts.js"></script>
+
+  </body>
+</html>
