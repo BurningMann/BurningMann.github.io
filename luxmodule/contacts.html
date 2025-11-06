@@ -471,55 +471,199 @@
 </div>
 
     <main class="page">
-      <style>
-        .site-links {
-          display: flex;
-          flex-direction: column;
-          padding: 4rem 0 6rem;
-        }
-
-        .site-links__item {
-          font-weight: 500;
-          font-size: 2rem;
-          margin-bottom: 2rem;
-          text-transform: uppercase;
-          width: max-content;
-        }
-      </style>
-      <div class="container">
-        <div class="site-links">
-          <a href="./home.html" target="_blank" class="site-links__item"
-            >Главная</a
-          >
-          <a href="./production.html" target="_blank" class="site-links__item"
-            >Продукция</a
-          >
-          <a href="./constructor.html" target="_blank" class="site-links__item"
-            >Конструктор</a
-          >
-
-          <a href="./portfolio.html" target="_blank" class="site-links__item"
-            >Портфолио</a
-          >
-          <a href="./about.html" target="_blank" class="site-links__item"
-            >О компании</a
-          >
-          <a href="./contacts.html" target="_blank" class="site-links__item"
-            >Контакты</a
-          >
-
-          <a href="./events.html" target="_blank" class="site-links__item"
-            >События</a
-          >
-
-          <a href="./additional.html" target="_blank" class="site-links__item"
-            >Additional services</a
-          >
-
-          <a href="./404.html" target="_blank" class="site-links__item">404</a>
+      <div class="page-hero">
+        <img src="./img/main-hero.jpg" alt="" class="fit-cover" />
+        <div class="page-hero__wrapper container">
+          <h1 class="page-hero__title">Contacts</h1>
         </div>
       </div>
+      <div class="contacts-page-wrapper">
+        <section class="page-section">
+          <div class="page-section__inner container">
+            <div class="contacts-info">
+              <div class="contacts-info__form-wr">
+                <div class="h2 contacts-info__form-title">
+                  Write to us and we will contact you shortly!
+                </div>
+                <form action="#" class="contacts-info__form js-validate-form">
+                  <div class="contacts-info__form-fields">
+                    <label class="form-input is-required">
+                      <input type="text" class="input" placeholder="Name" />
+                    </label>
+                    <label class="form-input is-required is-phone">
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="Phone number"
+                      />
+                    </label>
+                    <label class="form-input is-email">
+                      <input type="text" class="input" placeholder="E-mail" />
+                    </label>
+                    <textarea
+                      class="input textarea"
+                      placeholder="Message"
+                    ></textarea>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="button is-primary contacts-info__form-button"
+                  >
+                    Send
+                  </button>
+                </form>
+              </div>
+              <div class="contacts-info__content">
+                <div class="contacts-info__content-box">
+                  <div class="h2 contacts-info__content-box-title">
+                    Where we are
+                  </div>
+
+                  <div class="contacts-info__content-box-list">
+                    <div class="contacts-info__item">
+                      <svg
+                        width="16"
+                        height="19"
+                        viewBox="0 0 16 19"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_1165_237)">
+                          <path
+                            d="M15 8C15 13.4444 8 18.1111 8 18.1111C8 18.1111 1 13.4444 1 8C1 6.14348 1.7375 4.36301 3.05025 3.05025C4.36301 1.7375 6.14348 1 8 1C9.85652 1 11.637 1.7375 12.9497 3.05025C14.2625 4.36301 15 6.14348 15 8Z"
+                            stroke="#111111"
+                            stroke-width="1.55556"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M8.0013 10.3333C9.28997 10.3333 10.3346 9.28862 10.3346 7.99996C10.3346 6.71129 9.28997 5.66663 8.0013 5.66663C6.71264 5.66663 5.66797 6.71129 5.66797 7.99996C5.66797 9.28862 6.71264 10.3333 8.0013 10.3333Z"
+                            stroke="#111111"
+                            stroke-width="1.55556"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1165_237">
+                            <rect width="16" height="19" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <div class="contacts-info__item-value">
+                        220090, г.Минск, Логойский тракт, 37, <br />
+                        МФК “Nord-City”, оф. 14
+                      </div>
+                    </div>
+                    <div class="contacts-info__item">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19Z"
+                          stroke="#111111"
+                          stroke-width="1.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12 7.79999V12L14.8 13.4"
+                          stroke="#111111"
+                          stroke-width="1.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <div class="contacts-info__item-value">
+                        Mon-Fri: 9:00-18:00; Sat-Sun: Closed
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contacts-info__content-box">
+                  <div class="h2 contacts-info__content-box-title">
+                    Contact Us
+                  </div>
+
+                  <div class="contacts-info__content-box-list">
+                    <a
+                      href="tel:+375 29 109 33 99"
+                      class="contacts-info__item text-link"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M18.9996 15.4824V17.5901C19.0004 17.7858 18.9602 17.9795 18.8817 18.1588C18.8031 18.338 18.6879 18.499 18.5435 18.6312C18.399 18.7635 18.2285 18.8642 18.0428 18.9269C17.8571 18.9896 17.6603 19.0129 17.465 18.9953C15.299 18.7604 13.2183 18.0216 11.3902 16.8384C9.68945 15.7597 8.24748 14.3205 7.16674 12.623C5.9771 10.7901 5.23677 8.70331 5.00571 6.53167C4.98812 6.33739 5.01126 6.14158 5.07364 5.95671C5.13603 5.77183 5.2363 5.60195 5.36807 5.45788C5.49984 5.3138 5.66022 5.19869 5.839 5.11987C6.01779 5.04105 6.21106 5.00025 6.40651 5.00007H8.51826C8.85987 4.99671 9.19105 5.11745 9.45007 5.33978C9.70909 5.56212 9.87828 5.87087 9.92609 6.20849C10.0152 6.883 10.1805 7.54529 10.4188 8.18271C10.5135 8.43418 10.534 8.70747 10.4779 8.97021C10.4218 9.23295 10.2913 9.47412 10.1021 9.66514L9.20809 10.5574C10.2102 12.3163 11.6693 13.7727 13.4316 14.7728L14.3256 13.8806C14.517 13.6917 14.7586 13.5615 15.0218 13.5055C15.2851 13.4494 15.5589 13.4699 15.8108 13.5644C16.4495 13.8023 17.113 13.9672 17.7888 14.0562C18.1308 14.1044 18.4431 14.2763 18.6663 14.5392C18.8895 14.8022 19.0081 15.1379 18.9996 15.4824Z"
+                          stroke="#111111"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <div class="contacts-info__item-value">
+                        +375 29 109 33 99
+                      </div>
+                    </a>
+                    <a
+                      href="mailto:info@luxtent.com"
+                      class="contacts-info__item text-link"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.4 6H17.6C18.37 6 19 6.63 19 7.4V15.8C19 16.57 18.37 17.2 17.6 17.2H6.4C5.63 17.2 5 16.57 5 15.8V7.4C5 6.63 5.63 6 6.4 6Z"
+                          stroke="#111111"
+                          stroke-width="1.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M19 7.39996L12 12.3L5 7.39996"
+                          stroke="#111111"
+                          stroke-width="1.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <div class="contacts-info__item-value">
+                        info@luxtent.com
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contacts-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1173.849788155061!2d27.619080899735668!3d53.95484371552655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbdbdbfe7d1ae9%3A0x82d1ea68d341fa5!2z0JDRgNC10L3QtNCwINGI0LDRgtGA0L7QsiAtIExVWFRFTlQ!5e0!3m2!1sru!2sby!4v1762464676812!5m2!1sru!2sby"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
+
     <footer class="footer">
   <div class="container">
     <div class="footer-wrapper">
