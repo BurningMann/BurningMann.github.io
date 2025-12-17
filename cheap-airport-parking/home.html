@@ -98,6 +98,9 @@
     rel="stylesheet"
   />
 
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
   <link rel="stylesheet" href="./styles/styles.css" />
 </head>
 
@@ -340,7 +343,354 @@
             <img src="./img/hero.svg" alt="main-hero-img" class="fit-cover" />
           </div>
           <div class="container">
-            <div class="main-configurator"></div>
+            <form action="#" class="main-configurator">
+  <div class="main-configurator__row">
+    <div class="main-configurator-dropdown__wr">
+      <div class="main-configurator-dropdown">
+        <div class="main-configurator-dropdown__header">
+          <div>
+            <div class="main-configurator-dropdown__header-title">
+              <input
+                type="hidden"
+                name="airport"
+                readonly
+                class="main-configurator-dropdown__header-title-input"
+              />
+              <span class="main-configurator-dropdown__header-title-text">
+                Airport
+              </span>
+              <img
+                src="./img/check-icon.svg"
+                class="main-configurator-dropdown__header-icon-check"
+              />
+            </div>
+            <div class="main-configurator-dropdown__header-value">LAX</div>
+            <input
+              type="text"
+              name="search"
+              class="main-configurator-dropdown__header-input tablet-hidden"
+            />
+          </div>
+          <div class="main-configurator-dropdown__header-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 9L12 15L18 9"
+                stroke="#363739"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div class="main-configurator-dropdown__content">
+          <div class="tablet-visible">
+            <div class="main-configurator-dropdown__conten-search-close">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18 6L6 18M6 6L18 18"
+                  stroke="#363739"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="main-configurator-dropdown__conten-search">
+              <div
+                class="main-configurator-dropdown__conten-search-placeholder"
+              >
+                Airport
+              </div>
+              <input
+                type="text"
+                name="search"
+                class="main-configurator-dropdown__header-input"
+                placeholder="Search for an airport"
+              />
+            </div>
+            <div class="main-configurator-dropdown__content-parking-type">
+              <div class="parking-type-list parking-type-list--mobile">
+                <div class="parking-type-list__item" data-value="SEA">
+                  <div class="parking-type-list__item-inner">
+                    <div class="parking-type-list__item-icon">
+                      <div class="parking-type-list__item-icon--default">
+                        <img src="./img/airport-icon-default.svg" />
+                      </div>
+                      <div class="parking-type-list__item-icon--active">
+                        <img src="./img/airport-icon-active.svg" />
+                      </div>
+                    </div>
+                    <div class="parking-type-list__item-content">
+                      <div class="parking-type-list__item-title">
+                        <span>SEA</span> <img src="./img/check-icon.svg" />
+                      </div>
+                      <div class="parking-type-list__item-subtitle">
+                        Seattle SeaTac
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="parking-type-list__item is-active" data-value="LAX">
+                  <div class="parking-type-list__item-inner">
+                    <div class="parking-type-list__item-icon">
+                      <div class="parking-type-list__item-icon--default">
+                        <img src="./img/airport-icon-default.svg" />
+                      </div>
+                      <div class="parking-type-list__item-icon--active">
+                        <img src="./img/airport-icon-active.svg" />
+                      </div>
+                    </div>
+                    <div class="parking-type-list__item-content">
+                      <div class="parking-type-list__item-title">
+                        <span>LAX</span> <img src="./img/check-icon.svg" />
+                      </div>
+                      <div class="parking-type-list__item-subtitle">
+                        Los Angeles International
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-configurator-dropdown__options">
+            <div class="main-configurator-dropdown__options-box">
+              <div class="main-configurator-dropdown__options-box-title">
+                West coast
+              </div>
+              <div class="main-configurator-dropdown-option">Burbank (BUR)</div>
+              <div class="main-configurator-dropdown-option">Atlanta (ATL)</div>
+              <div class="main-configurator-dropdown-option">
+                Houston George Bush (IAH)
+              </div>
+              <div class="main-configurator-dropdown-option">
+                Dallas/Fort Worth (DFW)
+              </div>
+              <div class="main-configurator-dropdown-option">
+                Denver International (DEN)
+              </div>
+              <div class="main-configurator-dropdown-option">
+                Detroit Metro (DTW)
+              </div>
+              <div class="main-configurator-dropdown-option">
+                Fort Lauderdale (FLL)
+              </div>
+              <div class="main-configurator-dropdown-option">
+                Las Vegas McCarran (LAS)
+              </div>
+              <div class="main-configurator-dropdown-option">
+                Los Angeles International (LAX)
+              </div>
+              <div class="main-configurator-dropdown-option">
+                Miami International (MIA)
+              </div>
+              <div class="main-configurator-dropdown-option">
+                Minneapolis-Saint Paul (MSP)
+              </div>
+            </div>
+            <div class="main-configurator-dropdown__options-box">
+              <div class="main-configurator-dropdown__options-box-title">
+                Central
+              </div>
+              <div class="main-configurator-dropdown-option">
+                Chicago O'Hare (ORD)
+              </div>
+              <div class="main-configurator-dropdown-option">
+                Denver International (DEN)
+              </div>
+              <div class="main-configurator-dropdown-option">
+                Detroit Metro (DTW)
+              </div>
+              <div class="main-configurator-dropdown-option">
+                Fort Lauderdale (FLL)
+              </div>
+              <div class="main-configurator-dropdown-option">
+                Las Vegas McCarran (LAS)
+              </div>
+              <div class="main-configurator-dropdown-option">
+                Los Angeles International (LAX)
+              </div>
+              <div class="main-configurator-dropdown-option">
+                Miami International (MIA)
+              </div>
+              <div class="main-configurator-dropdown-option">
+                Minneapolis-Saint Paul (MSP)
+              </div>
+              <div class="main-configurator-dropdown-option">
+                New York John F. Kennedy (JFK)
+              </div>
+              <div class="main-configurator-dropdown-option">
+                New York LaGuardia (LGA)
+              </div>
+              <div class="main-configurator-dropdown-option">
+                New York Newark Liberty (EWR)
+              </div>
+              <div class="main-configurator-dropdown-option">
+                Orlando International (MCO)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="main-configurator-datepicker">
+        <div class="main-configurator-datepicker__col">
+          <div class="main-configurator-datepicker__header">
+            From <img src="./img/check-icon.svg" alt="Calendar" />
+          </div>
+          <div class="main-configurator-datepicker__inputs">
+            <label class="main-configurator-datepicker__input-wr">
+              <input
+                type="text"
+                name="from_date"
+                readonly
+                class="main-configurator-datepicker__input main-configurator-datepicker__input--from is-date"
+                placeholder="Date"
+              />
+            </label>
+            <label class="main-configurator-datepicker__input-wr">
+              <input
+                type="text"
+                name="from_time"
+                readonly
+                class="main-configurator-datepicker__input is-time"
+                placeholder="Time"
+              />
+            </label>
+          </div>
+        </div>
+        <div class="main-configurator-datepicker__col">
+          <div class="main-configurator-datepicker__header">
+            To <img src="./img/check-icon.svg" alt="Calendar" />
+          </div>
+          <div class="main-configurator-datepicker__inputs">
+            <label class="main-configurator-datepicker__input-wr">
+              <input
+                type="text"
+                name="to_date"
+                readonly
+                class="main-configurator-datepicker__input main-configurator-datepicker__input--to is-date"
+                placeholder="Date"
+              />
+            </label>
+            <label class="main-configurator-datepicker__input-wr">
+              <input
+                type="text"
+                name="to_time"
+                readonly
+                class="main-configurator-datepicker__input is-time"
+                placeholder="Time"
+              />
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-configurator-button__wr">
+      <button type="submit" class="button is-primary main-configurator-button">
+        Search parking
+      </button>
+    </div>
+  </div>
+  <div class="main-configurator__divider tablet-hidden"></div>
+  <div class="main-configurator__row">
+    <div class="parking-type-list tablet-hidden">
+      <label class="parking-type-list__item">
+        <input type="radio" name="parking-type" value="SEA" />
+        <div class="parking-type-list__item-inner">
+          <div class="parking-type-list__item-icon">
+            <div class="parking-type-list__item-icon--default">
+              <img src="./img/airport-icon-default.svg" />
+            </div>
+            <div class="parking-type-list__item-icon--active">
+              <img src="./img/airport-icon-active.svg" />
+            </div>
+          </div>
+          <div class="parking-type-list__item-content">
+            <div class="parking-type-list__item-title">
+              <span>SEA</span> <img src="./img/check-icon.svg" />
+            </div>
+            <div class="parking-type-list__item-subtitle">Seattle SeaTac</div>
+          </div>
+        </div>
+      </label>
+      <label class="parking-type-list__item">
+        <input type="radio" name="parking-type" value="LAX" checked />
+        <div class="parking-type-list__item-inner">
+          <div class="parking-type-list__item-icon">
+            <div class="parking-type-list__item-icon--default">
+              <img src="./img/airport-icon-default.svg" />
+            </div>
+            <div class="parking-type-list__item-icon--active">
+              <img src="./img/airport-icon-active.svg" />
+            </div>
+          </div>
+          <div class="parking-type-list__item-content">
+            <div class="parking-type-list__item-title">
+              <span>LAX</span> <img src="./img/check-icon.svg" />
+            </div>
+            <div class="parking-type-list__item-subtitle">
+              Los Angeles International
+            </div>
+          </div>
+        </div>
+      </label>
+    </div>
+    <div class="promocode-input__wr">
+      <div class="promocode-input__header">
+        Have a Promo Code?
+        <span class="promocode-input__header-link">Click to enter </span>
+      </div>
+      <div class="promocode-input__container">
+        <div class="promocode-input">
+          <div class="promocode-input__field">
+            <input
+              type="text"
+              placeholder="Enter promocode"
+              class="promocode-input__input"
+            />
+            <button
+              type="button"
+              class="promocode-input__clear"
+              aria-label="Clear"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0ZM11.707 4.29297C11.3165 3.90253 10.6835 3.90253 10.293 4.29297L8 6.58594L5.70703 4.29297C5.31654 3.90254 4.68348 3.90257 4.29297 4.29297C3.90246 4.68347 3.90251 5.3165 4.29297 5.70703L6.58594 8L4.29297 10.293C3.90249 10.6835 3.90252 11.3165 4.29297 11.707C4.68349 12.0975 5.31651 12.0975 5.70703 11.707L8 9.41406L10.293 11.707C10.6835 12.0975 11.3165 12.0975 11.707 11.707C12.0974 11.3165 12.0974 10.6835 11.707 10.293L9.41406 8L11.707 5.70703C12.0975 5.31651 12.0975 4.68348 11.707 4.29297Z"
+                  fill="#A6B72A"
+                />
+              </svg>
+            </button>
+          </div>
+          <button type="button" class="promocode-input__btn">Apply</button>
+          <span class="promocode-input__error">Incorrect promocode</span>
+        </div>
+        <span class="promocode-input__header-link">Hide</span>
+      </div>
+    </div>
+  </div>
+</form>
 
           </div>
         </div>
