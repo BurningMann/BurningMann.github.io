@@ -98,9 +98,6 @@
     rel="stylesheet"
   />
 
-  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
-
   <link rel="stylesheet" href="./styles/styles.css" />
 </head>
 
@@ -547,7 +544,7 @@
         </div>
       </div>
     </div>
-    <div>
+    <div class="main-configurator-datepicker__wr">
       <div class="main-configurator-datepicker">
         <div class="main-configurator-datepicker__col">
           <div class="main-configurator-datepicker__header">
@@ -557,21 +554,139 @@
             <label class="main-configurator-datepicker__input-wr">
               <input
                 type="text"
-                name="from_date"
                 readonly
                 class="main-configurator-datepicker__input main-configurator-datepicker__input--from is-date"
                 placeholder="Date"
               />
+              <input id="dfrom" type="hidden" name="from_date" />
             </label>
-            <label class="main-configurator-datepicker__input-wr">
+            <div class="main-configurator-timepicker">
               <input
                 type="text"
                 name="from_time"
                 readonly
-                class="main-configurator-datepicker__input is-time"
+                class="main-configurator-datepicker__input main-configurator-timepicker__input is-time"
                 placeholder="Time"
               />
-            </label>
+              <div class="main-configurator-timepicker__dropdown">
+                <div class="main-configurator-timepicker__section">
+                  <div class="main-configurator-timepicker__section-title">
+                    Night
+                  </div>
+                  <div class="main-configurator-timepicker__grid">
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="12:00 AM"
+                    >
+                      12:00 AM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="1:00 AM"
+                    >
+                      1:00 AM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="2:00 AM"
+                    >
+                      2:00 AM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="3:00 AM"
+                    >
+                      3:00 AM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="4:00 AM"
+                    >
+                      4:00 AM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="5:00 AM"
+                    >
+                      5:00 AM
+                    </div>
+                  </div>
+                </div>
+                <div class="main-configurator-timepicker__section">
+                  <div class="main-configurator-timepicker__section-title">
+                    Morning — Afternoon
+                  </div>
+                  <div class="main-configurator-timepicker__grid">
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="6:00 AM"
+                    >
+                      6:00 AM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="7:00 AM"
+                    >
+                      7:00 AM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="8:00 AM"
+                    >
+                      8:00 AM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="9:00 AM"
+                    >
+                      9:00 AM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="10:00 AM"
+                    >
+                      10:00 AM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="11:00 AM"
+                    >
+                      11:00 AM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="12:00 PM"
+                    >
+                      12:00 PM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="1:00 PM"
+                    >
+                      1:00 PM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="2:00 PM"
+                    >
+                      2:00 PM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="3:00 PM"
+                    >
+                      3:00 PM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="4:00 PM"
+                    >
+                      4:00 PM
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="main-configurator-datepicker__col">
@@ -582,21 +697,139 @@
             <label class="main-configurator-datepicker__input-wr">
               <input
                 type="text"
-                name="to_date"
                 readonly
                 class="main-configurator-datepicker__input main-configurator-datepicker__input--to is-date"
                 placeholder="Date"
               />
+              <input id="dto" type="hidden" name="to_date" />
             </label>
-            <label class="main-configurator-datepicker__input-wr">
+            <div class="main-configurator-timepicker">
               <input
                 type="text"
                 name="to_time"
                 readonly
-                class="main-configurator-datepicker__input is-time"
+                class="main-configurator-datepicker__input main-configurator-timepicker__input is-time"
                 placeholder="Time"
               />
-            </label>
+              <div class="main-configurator-timepicker__dropdown">
+                <div class="main-configurator-timepicker__section">
+                  <div class="main-configurator-timepicker__section-title">
+                    Night
+                  </div>
+                  <div class="main-configurator-timepicker__grid">
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="12:00 AM"
+                    >
+                      12:00 AM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="1:00 AM"
+                    >
+                      1:00 AM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="2:00 AM"
+                    >
+                      2:00 AM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="3:00 AM"
+                    >
+                      3:00 AM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="4:00 AM"
+                    >
+                      4:00 AM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="5:00 AM"
+                    >
+                      5:00 AM
+                    </div>
+                  </div>
+                </div>
+                <div class="main-configurator-timepicker__section">
+                  <div class="main-configurator-timepicker__section-title">
+                    Morning — Afternoon
+                  </div>
+                  <div class="main-configurator-timepicker__grid">
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="6:00 AM"
+                    >
+                      6:00 AM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="7:00 AM"
+                    >
+                      7:00 AM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="8:00 AM"
+                    >
+                      8:00 AM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="9:00 AM"
+                    >
+                      9:00 AM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="10:00 AM"
+                    >
+                      10:00 AM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="11:00 AM"
+                    >
+                      11:00 AM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="12:00 PM"
+                    >
+                      12:00 PM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="1:00 PM"
+                    >
+                      1:00 PM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="2:00 PM"
+                    >
+                      2:00 PM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="3:00 PM"
+                    >
+                      3:00 PM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="4:00 PM"
+                    >
+                      4:00 PM
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -692,6 +925,8 @@
   </div>
 </form>
 
+<div class="dropdown-overlay tablet-visible"></div>
+
           </div>
         </div>
       </div>
@@ -702,7 +937,7 @@
             <p class="h3 is-text-green">Parking Deals at</p>
             <p class="h2">Los Angeles Airport (LAX)</p>
           </div>
-          <div class="advantages-list">
+          <div class="advantages-list hidden-scrollbar">
             <div class="advantages-list__item">
               <p class="advantages-list__item-title">
                 Discounted longterm rates
@@ -816,14 +1051,9 @@
                     height="15"
                     rx="7.5"
                     stroke="currentColor"
-                  />
-                  <circle
-                    cx="8"
-                    cy="8"
-                    r="5"
                     fill="currentColor"
-                    class="toggle-dot"
                   />
+                  <circle cx="8" cy="8" r="7" fill="white" class="toggle-dot" />
                 </svg>
               </div>
               <button
@@ -1427,7 +1657,8 @@
   </div>
 </footer>
 
-    <!-- <script src="./js/forms.js"></script> -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+<script src="./js/jquery-ui.min.js"></script>
 <script src="./js/scripts.js"></script>
 
   </body>
