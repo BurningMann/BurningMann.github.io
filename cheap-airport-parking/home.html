@@ -565,7 +565,7 @@
                 type="text"
                 name="from_time"
                 readonly
-                class="main-configurator-datepicker__input main-configurator-timepicker__input is-time"
+                class="main-configurator-datepicker__input main-configurator-timepicker__input main-configurator-timepicker__input--from is-time"
                 placeholder="Time"
               />
               <div class="main-configurator-timepicker__dropdown">
@@ -682,6 +682,55 @@
                       data-value="4:00 PM"
                     >
                       4:00 PM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="5:00 PM"
+                    >
+                      5:00 PM
+                    </div>
+                  </div>
+                </div>
+                <div class="main-configurator-timepicker__section">
+                  <div class="main-configurator-timepicker__section-title">
+                    Evening
+                  </div>
+                  <div class="main-configurator-timepicker__grid">
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="6:00 PM"
+                    >
+                      6:00 PM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="7:00 PM"
+                    >
+                      7:00 PM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="8:00 PM"
+                    >
+                      8:00 PM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="9:00 PM"
+                    >
+                      9:00 PM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="10:00 PM"
+                    >
+                      10:00 PM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="11:00 PM"
+                    >
+                      11:00 PM
                     </div>
                   </div>
                 </div>
@@ -708,7 +757,7 @@
                 type="text"
                 name="to_time"
                 readonly
-                class="main-configurator-datepicker__input main-configurator-timepicker__input is-time"
+                class="main-configurator-datepicker__input main-configurator-timepicker__input main-configurator-timepicker__input--to is-time"
                 placeholder="Time"
               />
               <div class="main-configurator-timepicker__dropdown">
@@ -825,6 +874,55 @@
                       data-value="4:00 PM"
                     >
                       4:00 PM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="5:00 PM"
+                    >
+                      5:00 PM
+                    </div>
+                  </div>
+                </div>
+                <div class="main-configurator-timepicker__section">
+                  <div class="main-configurator-timepicker__section-title">
+                    Evening
+                  </div>
+                  <div class="main-configurator-timepicker__grid">
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="6:00 PM"
+                    >
+                      6:00 PM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="7:00 PM"
+                    >
+                      7:00 PM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="8:00 PM"
+                    >
+                      8:00 PM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="9:00 PM"
+                    >
+                      9:00 PM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="10:00 PM"
+                    >
+                      10:00 PM
+                    </div>
+                    <div
+                      class="main-configurator-timepicker__option"
+                      data-value="11:00 PM"
+                    >
+                      11:00 PM
                     </div>
                   </div>
                 </div>
@@ -924,6 +1022,43 @@
     </div>
   </div>
 </form>
+
+<div class="main-configurator-mobile tablet-visible">
+  <div class="main-configurator-mobile__main">
+    <div class="main-configurator-mobile__main-item">
+      <div
+        class="main-configurator-mobile__main-item-title main-configurator-mobile__main-item-title--from"
+      >
+        From <img src="./img/check-icon.svg" alt="Calendar" />
+      </div>
+      <div class="main-configurator-mobile__main-item-value">
+        <div class="main-configurator-mobile__from-value-date">Date</div>
+        <span>/</span>
+        <div class="main-configurator-mobile__from-value-time">Select Time</div>
+      </div>
+    </div>
+    <div class="main-configurator-mobile__divider"></div>
+    <div class="main-configurator-mobile__main-item">
+      <div
+        class="main-configurator-mobile__main-item-title main-configurator-mobile__main-item-title--to"
+      >
+        To <img src="./img/check-icon.svg" alt="Calendar" />
+      </div>
+      <div class="main-configurator-mobile__main-item-value">
+        <div class="main-configurator-mobile__to-value-date">Date</div>
+        <span>/</span>
+        <div class="main-configurator-mobile__to-value-time">Select Time</div>
+      </div>
+    </div>
+  </div>
+  <button
+    type="button"
+    disabled
+    class="button is-primary main-configurator-mobile__button"
+  >
+    Select Dates
+  </button>
+</div>
 
 <div class="dropdown-overlay tablet-visible"></div>
 
