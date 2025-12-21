@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Luxmodule</title>
+  <title>Cheap Airport Parking</title>
   <meta name="theme-color" content="#fff" />
   <meta
     name="apple-mobile-web-app-status-bar-style"
@@ -91,12 +91,12 @@
     href="img/favicons/apple-touch-icon-1024x1024.png"
   />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!--   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet"
-  />
+  /> -->
 
   <link rel="stylesheet" href="./styles/styles.css" />
 </head>
@@ -337,7 +337,14 @@
             </h1>
           </div>
           <div class="main-hero__img-wr">
-            <img src="./img/hero.svg" alt="main-hero-img" class="fit-cover" />
+            <picture>
+              <source media="(max-width: 780px)" srcset="./img/hero.svg" />
+              <img
+                src="./img/hero.svg"
+                alt="main-hero-img"
+                class="main-hero__img fit-cover"
+              />
+            </picture>
           </div>
           <div class="container">
             <form action="#" class="main-configurator">
@@ -421,7 +428,11 @@
             </div>
             <div class="main-configurator-dropdown__content-parking-type">
               <div class="parking-type-list parking-type-list--mobile">
-                <div class="parking-type-list__item" data-value="SEA">
+                <div
+                  class="parking-type-list__item"
+                  data-value-short="SEA"
+                  data-value-long="Seattle SeaTac"
+                >
                   <div class="parking-type-list__item-inner">
                     <div class="parking-type-list__item-icon">
                       <div class="parking-type-list__item-icon--default">
@@ -441,7 +452,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="parking-type-list__item is-active" data-value="LAX">
+                <div
+                  class="parking-type-list__item is-active"
+                  data-value-short="LAX"
+                  data-value-long="Los Angeles International"
+                >
                   <div class="parking-type-list__item-inner">
                     <div class="parking-type-list__item-icon">
                       <div class="parking-type-list__item-icon--default">
@@ -469,33 +484,81 @@
               <div class="main-configurator-dropdown__options-box-title">
                 West coast
               </div>
-              <div class="main-configurator-dropdown-option">Burbank (BUR)</div>
-              <div class="main-configurator-dropdown-option">Atlanta (ATL)</div>
-              <div class="main-configurator-dropdown-option">
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="BUR"
+                data-value-long="Burbank"
+              >
+                Burbank (BUR)
+              </div>
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="ATL"
+                data-value-long="Atlanta"
+              >
+                Atlanta (ATL)
+              </div>
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="IAH"
+                data-value-long="Houston George Bush"
+              >
                 Houston George Bush (IAH)
               </div>
-              <div class="main-configurator-dropdown-option">
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="DFW"
+                data-value-long="Dallas/Fort Worth"
+              >
                 Dallas/Fort Worth (DFW)
               </div>
-              <div class="main-configurator-dropdown-option">
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="DEN"
+                data-value-long="Denver International"
+              >
                 Denver International (DEN)
               </div>
-              <div class="main-configurator-dropdown-option">
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="DTW"
+                data-value-long="Detroit Metro"
+              >
                 Detroit Metro (DTW)
               </div>
-              <div class="main-configurator-dropdown-option">
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="FLL"
+                data-value-long="Fort Lauderdale"
+              >
                 Fort Lauderdale (FLL)
               </div>
-              <div class="main-configurator-dropdown-option">
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="LAS"
+                data-value-long="Las Vegas McCarran"
+              >
                 Las Vegas McCarran (LAS)
               </div>
-              <div class="main-configurator-dropdown-option">
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="LAX"
+                data-value-long="Los Angeles International"
+              >
                 Los Angeles International (LAX)
               </div>
-              <div class="main-configurator-dropdown-option">
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="MIA"
+                data-value-long="Miami International"
+              >
                 Miami International (MIA)
               </div>
-              <div class="main-configurator-dropdown-option">
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="MSP"
+                data-value-long="Minneapolis-Saint Paul"
+              >
                 Minneapolis-Saint Paul (MSP)
               </div>
             </div>
@@ -503,40 +566,88 @@
               <div class="main-configurator-dropdown__options-box-title">
                 Central
               </div>
-              <div class="main-configurator-dropdown-option">
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="ORD"
+                data-value-long="Chicago O'Hare"
+              >
                 Chicago O'Hare (ORD)
               </div>
-              <div class="main-configurator-dropdown-option">
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="DEN"
+                data-value-long="Denver International"
+              >
                 Denver International (DEN)
               </div>
-              <div class="main-configurator-dropdown-option">
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="DTW"
+                data-value-long="Detroit Metro"
+              >
                 Detroit Metro (DTW)
               </div>
-              <div class="main-configurator-dropdown-option">
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="FLL"
+                data-value-long="Fort Lauderdale"
+              >
                 Fort Lauderdale (FLL)
               </div>
-              <div class="main-configurator-dropdown-option">
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="LAS"
+                data-value-long="Las Vegas McCarran"
+              >
                 Las Vegas McCarran (LAS)
               </div>
-              <div class="main-configurator-dropdown-option">
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="LAX"
+                data-value-long="Los Angeles International"
+              >
                 Los Angeles International (LAX)
               </div>
-              <div class="main-configurator-dropdown-option">
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="MIA"
+                data-value-long="Miami International"
+              >
                 Miami International (MIA)
               </div>
-              <div class="main-configurator-dropdown-option">
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="MSP"
+                data-value-long="Minneapolis-Saint Paul"
+              >
                 Minneapolis-Saint Paul (MSP)
               </div>
-              <div class="main-configurator-dropdown-option">
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="JFK"
+                data-value-long="New York John F. Kennedy"
+              >
                 New York John F. Kennedy (JFK)
               </div>
-              <div class="main-configurator-dropdown-option">
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="LGA"
+                data-value-long="New York LaGuardia"
+              >
                 New York LaGuardia (LGA)
               </div>
-              <div class="main-configurator-dropdown-option">
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="EWR"
+                data-value-long="New York Newark Liberty"
+              >
                 New York Newark Liberty (EWR)
               </div>
-              <div class="main-configurator-dropdown-option">
+              <div
+                class="main-configurator-dropdown-option"
+                data-value-short="MCO"
+                data-value-long="Orlando International"
+              >
                 Orlando International (MCO)
               </div>
             </div>
@@ -941,8 +1052,11 @@
   <div class="main-configurator__divider tablet-hidden"></div>
   <div class="main-configurator__row">
     <div class="parking-type-list tablet-hidden">
-      <label class="parking-type-list__item">
-        <input type="radio" name="parking-type" value="SEA" />
+      <div
+        class="parking-type-list__item"
+        data-value-short="SEA"
+        data-value-long="Seattle SeaTac"
+      >
         <div class="parking-type-list__item-inner">
           <div class="parking-type-list__item-icon">
             <div class="parking-type-list__item-icon--default">
@@ -959,9 +1073,12 @@
             <div class="parking-type-list__item-subtitle">Seattle SeaTac</div>
           </div>
         </div>
-      </label>
-      <label class="parking-type-list__item">
-        <input type="radio" name="parking-type" value="LAX" checked />
+      </div>
+      <div
+        class="parking-type-list__item"
+        data-value-short="LAX"
+        data-value-long="Los Angeles International"
+      >
         <div class="parking-type-list__item-inner">
           <div class="parking-type-list__item-icon">
             <div class="parking-type-list__item-icon--default">
@@ -980,7 +1097,7 @@
             </div>
           </div>
         </div>
-      </label>
+      </div>
     </div>
     <div class="promocode-input__wr">
       <div class="promocode-input__header">
@@ -1131,7 +1248,7 @@
         <div class="container">
           <div class="page-section__title is-container">
             <div class="h2">Popular lots at LAX airport</div>
-            <div class="popular-section__action tablet-hidden">
+            <div class="popular-section__action">
               <button
                 type="button"
                 class="popular-section__action-btn is-active"
@@ -1524,10 +1641,13 @@
       <section class="page-section">
         <div class="container">
           <div class="faq-section">
-            <div>
-              <div><img src="./img/faq.png" alt="" /></div>
+            <div class="faq-section__box">
+              <div class="faq-section__box-img-wr">
+                <img src="./img/faq.png" alt="" class="faq-section__box-img" />
+              </div>
             </div>
-            <div><div class="accordion">
+            <div class="faq-section__box">
+              <div class="accordion">
   <div class="accordion-item js-accordion-item">
     <div class="accordion-item__header js-accordion-item-header">
       <div class="accordion-item__header-text">
@@ -1667,7 +1787,8 @@
     </div>
   </div>
 </div>
-</div>
+
+            </div>
           </div>
         </div>
       </section>
@@ -1677,7 +1798,13 @@
   <div class="container">
     <div class="footer__inner">
       <div class="footer__logo">
-        <img src="./img/footer-car.png" alt="" />
+        <img
+          src="./img/footer-car.png"
+          alt="footer-logo"
+          class="footer__logo-img"
+        />
+        <p class="footer__logo-title">Cheap <span>Airport</span> Parking</p>
+        <p class="footer__logo-subtitle">Best Parking lots at Lowest Rates</p>
       </div>
       <div class="footer__partners">
         <div class="footer__partners-item">
