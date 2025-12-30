@@ -112,7 +112,7 @@
       <nav class="header__nav netbook-hidden">
         <div class="header__nav-item-wr">
           <div class="header__nav-item-main">
-            <a href="#" class="header__nav-item"> Airports </a>
+            <span class="header__nav-item"> Airports </span>
 
             <div class="header__nav-item-main-icon">
               <svg
@@ -137,7 +137,7 @@
             <a href="#" class="header__nav-item-dropdown-item"> Lorem Ipsum </a>
           </div>
         </div>
-        <div class="header__nav-item-wr">
+        <div class="header__nav-item-wr is-child">
           <div class="header__nav-item-main">
             <a href="#" class="header__nav-item"> Partners </a>
 
@@ -242,11 +242,43 @@
 
 <div class="header-burger-menu netbook-visible">
   <div class="header-burger-menu__inner">
-    <a href="#" class="button is-white is-small">
-      <img src="./img/map-icon.svg" alt="map-icon" />
-      My Reservations
-    </a>
     <nav class="header__nav">
+      <div class="header__nav-mobile-item js-accordion-item">
+        <div class="js-accordion-item-header">
+          <div class="header__nav-item-wr-mobile">
+            <a href="#" class="header__nav-item"> My Reservations </a>
+
+            <div class="header__nav-item-main-icon">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.6348 6.24414C10.9472 5.9188 11.4532 5.91873 11.7656 6.24414C12.078 6.56959 12.078 7.09744 11.7656 7.42285L8.56543 10.7559C8.25305 11.0811 7.74697 11.0811 7.43457 10.7559L4.23438 7.42285C3.92196 7.09742 3.92199 6.56959 4.23438 6.24414C4.54678 5.91871 5.05281 5.91875 5.36523 6.24414L8 8.98828L10.6348 6.24414Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="js-accordion-item__content">
+          <div class="header__nav-item-drowdown-inner">
+            <div class="header__nav-item-wr-mobile">
+              <a href="#" class="header__nav-item"> View / Rrint </a>
+            </div>
+            <div class="header__nav-item-wr-mobile">
+              <a href="#" class="header__nav-item"> Change Dates </a>
+            </div>
+            <div class="header__nav-item-wr-mobile">
+              <a href="#" class="header__nav-item"> Cancel </a>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="header__nav-mobile-item js-accordion-item">
         <div class="js-accordion-item-header">
           <div class="header__nav-item-wr-mobile">
@@ -351,9 +383,9 @@
           </div>
           <div class="main-hero__img-wr">
             <picture>
-              <source media="(max-width: 780px)" srcset="./img/hero.svg" />
+              <source media="(max-width: 780px)" srcset="./img/hero-2.png" />
               <img
-                src="./img/hero.svg"
+                src="./img/hero-2.png"
                 alt="main-hero-img"
                 class="main-hero__img fit-cover"
               />
