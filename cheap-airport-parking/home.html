@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -260,7 +260,7 @@
         </div>
 
         <div class="js-accordion-item__content">
-          <div class="header__nav-item-drowdown-inner">
+          <div class="header__nav-item-dropdown-inner">
             <div class="header__nav-item-wr-mobile">
               <a href="#" class="header__nav-item"> View / Rrint </a>
             </div>
@@ -296,7 +296,7 @@
         </div>
 
         <div class="js-accordion-item__content">
-          <div class="header__nav-item-drowdown-inner">
+          <div class="header__nav-item-dropdown-inner">
             <div class="header__nav-item-wr-mobile">
               <a href="#" class="header__nav-item"> Lorem Ipsum </a>
             </div>
@@ -335,7 +335,7 @@
         </div>
 
         <div class="js-accordion-item__content">
-          <div class="header__nav-item-drowdown-inner">
+          <div class="header__nav-item-dropdown-inner">
             <div class="header__nav-item-wr-mobile">
               <a href="#" class="header__nav-item"> Lorem Ipsum </a>
             </div>
@@ -375,16 +375,25 @@
               <span>Los Angeles Airport (LAX)</span>
             </h1>
           </div>
-          <div class="main-hero__img-wr">
-            <picture>
-              <source media="(max-width: 780px)" srcset="./img/hero-2.png" />
-              <img
-                src="./img/hero-2.png"
-                alt="main-hero-img"
-                class="main-hero__img fit-cover"
-              />
-            </picture>
+          <div class="main-hero__img-wr-container">
+            <div class="main-hero__img-wr">
+              <picture>
+                <source
+                  media="(max-width: 780px)"
+                  srcset="./img/hero-2.webp"
+                  type="image/webp"
+                />
+                <source media="(max-width: 780px)" srcset="./img/hero-2.png" />
+                <source srcset="./img/hero-2.webp" type="image/webp" />
+                <img
+                  src="./img/hero-2.png"
+                  alt="main-hero-img"
+                  class="main-hero__img fit-cover"
+                />
+              </picture>
+            </div>
           </div>
+
           <div class="container">
             <form action="#" class="main-configurator">
   <div class="main-configurator__row">
@@ -1352,7 +1361,10 @@
               </p>
               <p class="advantages-list__item-subtitle">$8.75+</p>
               <div class="advantages-list__item-icon">
-                <img src="./img/advantage-1.png" alt="advantages-icon-1" />
+                <picture>
+                  <source srcset="./img/advantage-1.webp" type="image/webp" />
+                  <img src="./img/advantage-1.png" alt="advantages-icon-1" />
+                </picture>
               </div>
             </div>
             <div class="advantages-list__item">
@@ -1360,7 +1372,10 @@
                 Free shuttles run every 10-20 min
               </p>
               <div class="advantages-list__item-icon">
-                <img src="./img/advantage-2.png" alt="advantages-icon-2" />
+                <picture>
+                  <source srcset="./img/advantage-2.webp" type="image/webp" />
+                  <img src="./img/advantage-2.png" alt="advantages-icon-2" />
+                </picture>
               </div>
             </div>
             <div class="advantages-list__item">
@@ -1368,7 +1383,10 @@
                 Free and easy cancellations
               </p>
               <div class="advantages-list__item-icon">
-                <img src="./img/advantage-3.png" alt="advantages-icon-1" />
+                <picture>
+                  <source srcset="./img/advantage-3.webp" type="image/webp" />
+                  <img src="./img/advantage-3.png" alt="advantages-icon-1" />
+                </picture>
               </div>
             </div>
             <div class="advantages-list__item">
@@ -1376,7 +1394,10 @@
                 Spacious indoor parking spots
               </p>
               <div class="advantages-list__item-icon">
-                <img src="./img/advantage-4.png" alt="advantages-icon-1" />
+                <picture>
+                  <source srcset="./img/advantage-4.webp" type="image/webp" />
+                  <img src="./img/advantage-4.png" alt="advantages-icon-1" />
+                </picture>
               </div>
             </div>
             <div class="advantages-list__item">
@@ -1385,7 +1406,10 @@
               </p>
               <p class="advantages-list__item-subtitle">24/7</p>
               <div class="advantages-list__item-icon">
-                <img src="./img/advantage-5.png" alt="advantages-icon-1" />
+                <picture>
+                  <source srcset="./img/advantage-5.webp" type="image/webp" />
+                  <img src="./img/advantage-5.png" alt="advantages-icon-1" />
+                </picture>
               </div>
             </div>
             <div class="advantages-list__item">
@@ -1393,7 +1417,10 @@
                 LAX Parking lots are safe and secure
               </p>
               <div class="advantages-list__item-icon">
-                <img src="./img/advantage-6.png" alt="advantages-icon-1" />
+                <picture>
+                  <source srcset="./img/advantage-6.webp" type="image/webp" />
+                  <img src="./img/advantage-6.png" alt="advantages-icon-1" />
+                </picture>
               </div>
             </div>
           </div>
@@ -1501,11 +1528,14 @@
             <div class="popular-section__list">
               <a href="#" class="popular-card">
                 <div class="popular-card__img-wr">
-                  <img
-                    src="./img/popular-1.jpg"
-                    alt="popular-img-1"
-                    class="fit-cover"
-                  />
+                  <picture>
+                    <source srcset="./img/popular-1.webp" type="image/webp" />
+                    <img
+                      src="./img/popular-1.jpg"
+                      alt="popular-img-1"
+                      class="fit-cover"
+                    />
+                  </picture>
                 </div>
                 <div class="popular-card__content">
                   <div class="popular-card__badge is-deal">
@@ -1555,11 +1585,14 @@
               </a>
               <a href="#" class="popular-default-card">
                 <div class="popular-default-card__img-wr">
-                  <img
-                    src="./img/popular-2.jpg"
-                    alt="popular-img-2"
-                    class="fit-cover"
-                  />
+                  <picture>
+                    <source srcset="./img/popular-2.webp" type="image/webp" />
+                    <img
+                      src="./img/popular-2.jpg"
+                      alt="popular-img-2"
+                      class="fit-cover"
+                    />
+                  </picture>
                   <div class="popular-default-card__badge tablet-hidden">
                     <svg
                       width="12"
@@ -1607,11 +1640,14 @@
               </a>
               <a href="#" class="popular-default-card">
                 <div class="popular-default-card__img-wr">
-                  <img
-                    src="./img/popular-3.jpg"
-                    alt="popular-img-3"
-                    class="fit-cover"
-                  />
+                  <picture>
+                    <source srcset="./img/popular-3.webp" type="image/webp" />
+                    <img
+                      src="./img/popular-3.jpg"
+                      alt="popular-img-3"
+                      class="fit-cover"
+                    />
+                  </picture>
                   <div class="popular-default-card__badge">
                     <svg
                       width="12"
@@ -1646,11 +1682,14 @@
               </a>
               <a href="#" class="popular-default-card">
                 <div class="popular-default-card__img-wr">
-                  <img
-                    src="./img/popular-4.jpg"
-                    alt="popular-img-4"
-                    class="fit-cover"
-                  />
+                  <picture>
+                    <source srcset="./img/popular-4.webp" type="image/webp" />
+                    <img
+                      src="./img/popular-4.jpg"
+                      alt="popular-img-4"
+                      class="fit-cover"
+                    />
+                  </picture>
                   <div class="popular-default-card__badge">
                     <svg
                       width="12"
@@ -1683,11 +1722,14 @@
               </a>
               <a href="#" class="popular-default-card">
                 <div class="popular-default-card__img-wr">
-                  <img
-                    src="./img/popular-5.jpg"
-                    alt="popular-img-5"
-                    class="fit-cover"
-                  />
+                  <picture>
+                    <source srcset="./img/popular-5.webp" type="image/webp" />
+                    <img
+                      src="./img/popular-5.jpg"
+                      alt="popular-img-5"
+                      class="fit-cover"
+                    />
+                  </picture>
                   <div class="popular-default-card__badge">
                     <svg
                       width="12"
@@ -1720,7 +1762,10 @@
               </a>
             </div>
             <div class="popular-section__map">
-              <img src="./img/map-preview.jpg" alt="map" class="fit-cover" />
+              <picture>
+                <source srcset="./img/map-preview.webp" type="image/webp" />
+                <img src="./img/map-preview.jpg" alt="map" class="fit-cover" />
+              </picture>
             </div>
           </div>
         </div>
@@ -1731,11 +1776,14 @@
           <div class="main-description__item">
             <h2>LAX Parking</h2>
             <div class="main-description__img-wr">
-              <img
-                src="./img/description-1.jpg"
-                alt="lax-parking"
-                class="fit-cover"
-              />
+              <picture>
+                <source srcset="./img/description-1.webp" type="image/webp" />
+                <img
+                  src="./img/description-1.jpg"
+                  alt="lax-parking"
+                  class="fit-cover"
+                />
+              </picture>
             </div>
             <div class="main-description__content">
               <p>
@@ -1770,11 +1818,14 @@
           <div class="main-description__item">
             <h2>Reserve your LAX Parking</h2>
             <div class="main-description__img-wr">
-              <img
-                src="./img/description-2.jpg"
-                alt="lax-parking"
-                class="fit-cover"
-              />
+              <picture>
+                <source srcset="./img/description-2.webp" type="image/webp" />
+                <img
+                  src="./img/description-2.jpg"
+                  alt="lax-parking"
+                  class="fit-cover"
+                />
+              </picture>
             </div>
             <div class="main-description__content">
               <p>
@@ -1799,7 +1850,10 @@
           <div class="faq-section">
             <div class="faq-section__box">
               <div class="faq-section__box-img-wr">
-                <img src="./img/faq.png" alt="" class="faq-section__box-img" />
+                <picture>
+                  <source srcset="./img/faq.webp" type="image/webp" />
+                  <img src="./img/faq.png" alt="" class="faq-section__box-img" />
+                </picture>
               </div>
             </div>
             <div class="faq-section__box">
@@ -1999,11 +2053,17 @@
                 <div class="swiper-slide">
                   <a href="#" class="articel-card">
                     <div class="articel-card__img-wr">
-                      <img
-                        src="./img/article-card-1.jpg"
-                        alt=""
-                        class="fit-cover"
-                      />
+                      <picture>
+                        <source
+                          srcset="./img/article-card-1.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          src="./img/article-card-1.jpg"
+                          alt=""
+                          class="fit-cover"
+                        />
+                      </picture>
                     </div>
                     <div class="articel-card__content">
                       <div class="articel-card__title">
@@ -2016,11 +2076,17 @@
                 <div class="swiper-slide">
                   <a href="#" class="articel-card">
                     <div class="articel-card__img-wr">
-                      <img
-                        src="./img/article-card-2.jpg"
-                        alt=""
-                        class="fit-cover"
-                      />
+                      <picture>
+                        <source
+                          srcset="./img/article-card-2.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          src="./img/article-card-2.jpg"
+                          alt=""
+                          class="fit-cover"
+                        />
+                      </picture>
                     </div>
                     <div class="articel-card__content">
                       <div class="articel-card__title">
@@ -2032,11 +2098,17 @@
                 <div class="swiper-slide">
                   <a href="#" class="articel-card">
                     <div class="articel-card__img-wr">
-                      <img
-                        src="./img/article-card-3.jpg"
-                        alt=""
-                        class="fit-cover"
-                      />
+                      <picture>
+                        <source
+                          srcset="./img/article-card-3.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          src="./img/article-card-3.jpg"
+                          alt=""
+                          class="fit-cover"
+                        />
+                      </picture>
                     </div>
                     <div class="articel-card__content">
                       <div class="articel-card__title">
@@ -2049,11 +2121,17 @@
                 <div class="swiper-slide">
                   <a href="#" class="articel-card">
                     <div class="articel-card__img-wr">
-                      <img
-                        src="./img/article-card-1.jpg"
-                        alt=""
-                        class="fit-cover"
-                      />
+                      <picture>
+                        <source
+                          srcset="./img/article-card-1.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          src="./img/article-card-1.jpg"
+                          alt=""
+                          class="fit-cover"
+                        />
+                      </picture>
                     </div>
                     <div class="articel-card__content">
                       <div class="articel-card__title">
@@ -2066,11 +2144,17 @@
                 <div class="swiper-slide">
                   <a href="#" class="articel-card">
                     <div class="articel-card__img-wr">
-                      <img
-                        src="./img/article-card-2.jpg"
-                        alt=""
-                        class="fit-cover"
-                      />
+                      <picture>
+                        <source
+                          srcset="./img/article-card-2.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          src="./img/article-card-2.jpg"
+                          alt=""
+                          class="fit-cover"
+                        />
+                      </picture>
                     </div>
                     <div class="articel-card__content">
                       <div class="articel-card__title">
@@ -2082,11 +2166,17 @@
                 <div class="swiper-slide">
                   <a href="#" class="articel-card">
                     <div class="articel-card__img-wr">
-                      <img
-                        src="./img/article-card-3.jpg"
-                        alt=""
-                        class="fit-cover"
-                      />
+                      <picture>
+                        <source
+                          srcset="./img/article-card-3.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          src="./img/article-card-3.jpg"
+                          alt=""
+                          class="fit-cover"
+                        />
+                      </picture>
                     </div>
                     <div class="articel-card__content">
                       <div class="articel-card__title">
@@ -2107,11 +2197,14 @@
   <div class="container">
     <div class="footer__inner">
       <div class="footer__logo">
-        <img
-          src="./img/footer-car.png"
-          alt="footer-logo"
-          class="footer__logo-img"
-        />
+        <picture>
+          <source srcset="./img/footer-car.webp" type="image/webp" />
+          <img
+            src="./img/footer-car.png"
+            alt="footer-logo"
+            class="footer__logo-img"
+          />
+        </picture>
         <p class="footer__logo-title">Cheap <span>Airport</span> Parking</p>
         <p class="footer__logo-subtitle">Best Parking lots at Lowest Rates</p>
       </div>
