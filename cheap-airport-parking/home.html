@@ -91,6 +91,7 @@
     href="img/favicons/apple-touch-icon-1024x1024.png"
   />
 
+  <link rel="stylesheet" href="./styles/daterangepicker.css" />
   <link rel="stylesheet" href="./styles/swiper.min.css" />
   <link rel="stylesheet" href="./styles/styles.css" />
 </head>
@@ -809,7 +810,12 @@
                 class="main-configurator-datepicker__input main-configurator-datepicker__input--from is-date"
                 placeholder="Date"
               />
-              <input id="dfrom" type="hidden" name="from_date" />
+              <input
+                id="dfrom"
+                type="hidden"
+                name="from_date"
+                value="04/10/2026"
+              />
               <span
                 class="main-configurator__error main-configurator__error--from-date"
                 >Choose date</span
@@ -1013,7 +1019,7 @@
                 class="main-configurator-datepicker__input main-configurator-datepicker__input--to is-date"
                 placeholder="Date"
               />
-              <input id="dto" type="hidden" name="to_date" />
+              <input id="dto" type="hidden" name="to_date" value="04/15/2026" />
               <span
                 class="main-configurator__error main-configurator__error--to-date"
                 >Choose date</span
@@ -2322,7 +2328,9 @@
 </footer>
 
     <script src="./js/jquery-3.7.1.min.js"></script>
-<script src="./js/jquery-ui.min.js"></script>
+<script src="./js/moment.min.js"></script>
+<script src="./js/daterangepicker.min.js"></script>
+
 <script src="./js/swiper.min.js"></script>
 <script src="./js/scripts.js"></script>
 
