@@ -217,13 +217,6 @@
   border-radius: 4px;
 }
 
-.daterangepicker td.active,
-.daterangepicker td.active:hover {
-  background-color: #357ebd;
-  border-color: transparent;
-  color: #fff;
-}
-
 .daterangepicker th.month {
   width: auto;
 }
