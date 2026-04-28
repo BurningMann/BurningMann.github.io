@@ -176,11 +176,13 @@
   border-collapse: collapse;
 }
 
-.daterangepicker td.available:hover,
-.daterangepicker th.available:hover {
-  background-color: #eee;
-  border-color: transparent;
-  color: inherit;
+@media screen and (min-width: 1024px) {
+  .daterangepicker td.available:hover,
+  .daterangepicker th.available:hover {
+    background-color: #eee;
+    border-color: transparent;
+    color: inherit;
+  }
 }
 
 .daterangepicker td.week,
@@ -332,9 +334,10 @@
   padding: 8px 12px;
   cursor: pointer;
 }
-
-.daterangepicker .ranges li:hover {
-  background-color: #eee;
+@media screen and (min-width: 1024px) {
+  .daterangepicker .ranges li:hover {
+    background-color: #eee;
+  }
 }
 
 .daterangepicker .ranges li.active {
