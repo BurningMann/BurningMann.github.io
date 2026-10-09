@@ -1,0 +1,1 @@
+console.log(`[app] Vite template ready`);
